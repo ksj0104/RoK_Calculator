@@ -37,4 +37,8 @@ export default {
   'res.food': 'Food', 'res.wood': 'Wood', 'res.stone': 'Stone', 'res.gold': 'Gold',
   'tree.economic': 'Economic', 'tree.military': 'Military', 'category.other': 'Other',
   'level': 'Lv.',
+  'app.export': 'Export',
+  'app.import': 'Import',
+  'app.importOk': 'Imported',
+  'app.importError': 'Import failed: not a valid backup file',
 } as Record<string, string>;

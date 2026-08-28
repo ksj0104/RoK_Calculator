@@ -13,6 +13,9 @@ nav button, .lang { background: var(--panel); color: var(--text);
   border: 1px solid var(--border); padding: 8px 16px; cursor: pointer; border-radius: 6px; }
 nav button.active { background: var(--gold); color: #1a1610; font-weight: 700; }
 .lang { margin-left: auto; }
+.status { font-size: 0.85rem; padding: 4px 8px; }
+.status.ok { color: var(--accent); }
+.status.error { color: #d96c4c; }
 section { background: var(--panel); border: 1px solid var(--border);
   border-radius: 10px; padding: 16px; margin: 16px 0; }
 h2 { color: var(--gold); margin-top: 0; font-size: 1.1rem; }

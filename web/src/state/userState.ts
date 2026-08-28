@@ -10,9 +10,10 @@ export type Action =
   | { type: 'setSpeedup'; speedupType: SpeedupType; duration: string; count: number }
   | { type: 'setBuff'; key: 'buildingSpeedPct' | 'researchSpeedPct'; value: number }
   | { type: 'setSecondBuilder'; value: boolean }
-  | { type: 'reset' };
+  | { type: 'reset' }
+  | { type: 'replace'; state: UserState };
 
-function reducer(state: UserState, action: Action): UserState {
+export function reducer(state: UserState, action: Action): UserState {
   switch (action.type) {
     case 'setBuilding':
       return { ...state, buildings: { ...state.buildings, [action.id]: action.level } };
@@ -27,6 +28,8 @@ function reducer(state: UserState, action: Action): UserState {
       return { ...state, secondBuilder: action.value };
     case 'reset':
       return defaultUserState();
+    case 'replace':
+      return action.state;
   }
 }
 

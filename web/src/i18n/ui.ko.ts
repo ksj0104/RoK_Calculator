@@ -37,4 +37,8 @@ export default {
   'res.food': '식량', 'res.wood': '목재', 'res.stone': '석재', 'res.gold': '금화',
   'tree.economic': '경제', 'tree.military': '군사', 'category.other': '기타',
   'level': 'Lv.',
+  'app.export': '내보내기',
+  'app.import': '가져오기',
+  'app.importOk': '불러왔습니다',
+  'app.importError': '가져오기 실패: 올바른 백업 파일이 아닙니다',
 } as Record<string, string>;
