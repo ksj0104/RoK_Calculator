@@ -4,6 +4,53 @@
    "24": {
     "power": 1322480
    }
+  },
+  "academy": {
+   "25": {
+    "timeSec": 2192400
+   }
+  },
+  "storehouse": {
+   "25": {
+    "timeSec": 1342800
+   }
+  },
+  "alliance_center": {
+   "25": {
+    "timeSec": 1767600
+   }
+  },
+  "scout_camp": {
+   "25": {
+    "timeSec": 633600,
+    "cost": {
+     "food": 1000000,
+     "wood": 1000000,
+     "stone": 0,
+     "gold": 0
+    }
+   }
+  },
+  "archery_range": {
+   "25": {
+    "timeSec": 2944800
+   }
+  },
+  "siege_workshop": {
+   "25": {
+    "timeSec": 2944800,
+    "cost": {
+     "food": 16200000,
+     "wood": 20800000,
+     "stone": 15200000,
+     "gold": 0
+    }
+   }
+  },
+  "hospital": {
+   "25": {
+    "timeSec": 475200
+   }
   }
  },
  "research": {
@@ -15,6 +62,59 @@
   },
   "jewelry": {
    "effectName": "Gem Gathering Unlock"
+  },
+  "stone_saw": {
+   "10": {
+    "timeSec": 745200
+   }
+  },
+  "machinery": {
+   "10": {
+    "timeSec": 745200
+   }
+  },
+  "shaft_mining": {
+   "10": {
+    "timeSec": 745200,
+    "cost": {
+     "food": 11500000,
+     "wood": 11500000,
+     "stone": 8700000,
+     "gold": 5800000
+    }
+   }
+  },
+  "ballistics": {
+   "10": {
+    "timeSec": 13302000
+   }
+  },
+  "pavise": {
+   "10": {
+    "timeSec": 13302000,
+    "cost": {
+     "food": 15375000,
+     "wood": 15375000,
+     "stone": 11550000,
+     "gold": 9225000
+    }
+   }
+  },
+  "plate_armor": {
+   "10": {
+    "timeSec": 13302000
+   }
+  },
+  "heavy_frame": {
+   "10": {
+    "timeSec": 20008800,
+    "cost": {
+     "food": 15375000,
+     "wood": 15375000,
+     "stone": 11550000,
+     "gold": 9225000
+    }
+   }
   }
  }
 }

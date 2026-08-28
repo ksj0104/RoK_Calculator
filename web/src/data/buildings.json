@@ -3745,7 +3745,7 @@
      "stone": 10200000,
      "gold": 0
     },
-    "timeSec": 0,
+    "timeSec": 2192400,
     "power": 783449
    }
   ]
@@ -4201,7 +4201,7 @@
      "stone": 12000000,
      "gold": 0
     },
-    "timeSec": 0,
+    "timeSec": 1342800,
     "power": 478367
    }
   ]
@@ -4640,7 +4640,7 @@
      "stone": 14000000,
      "gold": 0
     },
-    "timeSec": 0,
+    "timeSec": 1767600,
     "power": 667083
    }
   ]
@@ -5944,12 +5944,12 @@
     "level": 25,
     "requirements": [],
     "cost": {
-     "food": 0,
-     "wood": 0,
+     "food": 1000000,
+     "wood": 1000000,
      "stone": 0,
      "gold": 0
     },
-    "timeSec": 0,
+    "timeSec": 633600,
     "power": 139023
    }
   ]
@@ -6857,7 +6857,7 @@
      "stone": 11200000,
      "gold": 0
     },
-    "timeSec": 0,
+    "timeSec": 2944800,
     "power": 592329
    }
   ]
@@ -8006,12 +8006,12 @@
      }
     ],
     "cost": {
-     "food": 0,
-     "wood": 0,
-     "stone": 0,
+     "food": 16200000,
+     "wood": 20800000,
+     "stone": 15200000,
      "gold": 0
     },
-    "timeSec": 0,
+    "timeSec": 2944800,
     "power": 716764
    }
   ]
@@ -8462,7 +8462,7 @@
      "stone": 24000000,
      "gold": 0
     },
-    "timeSec": 0,
+    "timeSec": 475200,
     "power": 881480
    }
   ]
