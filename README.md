@@ -1,5 +1,7 @@
 # RoK Calculator
 
+**Live:** [https://ksj0104.github.io/RoK_Calculator/](https://ksj0104.github.io/RoK_Calculator/)
+
 라이즈 오브 킹덤즈(Rise of Kingdoms)의 건물·연구 업그레이드 계획을 세우기 위한 계산기입니다. 목표로 삼은 건물/연구 레벨을 입력하면 선행 조건을 역산해 전체 작업 목록과 소요 시간, 자원, 가속 아이템 배분안을 계산해 줍니다.
 
 데이터는 [Rise of Kingdoms Wiki](https://riseofkingdoms.fandom.com)를 스크래핑해 만들었고, 계산 엔진과 UI는 이 저장소 안에서 직접 구현했습니다.
@@ -21,7 +23,7 @@ npm run dev
 
 `master` 브랜치에 변경 사항을 푸시하면 `.github/workflows/deploy.yml`이 린트, 테스트, 프로덕션 빌드를 검증한 뒤 GitHub Pages에 자동 배포합니다. Vite는 상대 경로로 빌드되므로 저장소 이름 아래의 프로젝트 페이지에서도 아이콘과 번들이 정상 로드됩니다.
 
-최초 배포 후 저장소의 **Settings → Pages**에서 배포 소스가 **GitHub Actions**인지 확인하세요. 수동 재배포는 **Actions → Deploy to GitHub Pages → Run workflow**에서 실행할 수 있습니다.
+배포 소스는 **GitHub Actions**로 구성되어 있습니다. 수동 재배포는 **Actions → Deploy to GitHub Pages → Run workflow**에서 실행할 수 있습니다.
 
 브라우저에서 안내된 주소(기본 `http://localhost:5173`)로 접속하면 됩니다.
 
