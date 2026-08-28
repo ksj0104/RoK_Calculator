@@ -1,0 +1,51 @@
+:root {
+  --bg: #1a1610; --panel: #262019; --border: #4a3b28;
+  --gold: #d9a94c; --text: #e8dcc8; --muted: #9a8b73; --accent: #6da34d;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text);
+  font-family: 'Segoe UI', system-ui, sans-serif; }
+.app { max-width: 1100px; margin: 0 auto; padding: 0 16px 64px; }
+header { display: flex; align-items: center; gap: 24px; padding: 16px 0;
+  border-bottom: 2px solid var(--border); flex-wrap: wrap; }
+header h1 { color: var(--gold); font-size: 1.4rem; margin: 0; }
+nav button, .lang { background: var(--panel); color: var(--text);
+  border: 1px solid var(--border); padding: 8px 16px; cursor: pointer; border-radius: 6px; }
+nav button.active { background: var(--gold); color: #1a1610; font-weight: 700; }
+.lang { margin-left: auto; }
+section { background: var(--panel); border: 1px solid var(--border);
+  border-radius: 10px; padding: 16px; margin: 16px 0; }
+h2 { color: var(--gold); margin-top: 0; font-size: 1.1rem; }
+h3 { color: var(--muted); font-size: 0.95rem; }
+.building-grid, .tier-row { display: flex; flex-wrap: wrap; gap: 10px; }
+.card { width: 110px; background: var(--bg); border: 1px solid var(--border);
+  border-radius: 8px; padding: 8px; text-align: center; }
+.card img { width: 56px; height: 56px; object-fit: contain; }
+.card.small { width: 92px; }
+.card.small img { width: 40px; height: 40px; }
+.card-name { font-size: 0.75rem; min-height: 2.2em; margin: 4px 0; }
+.card select, .card input { width: 100%; background: var(--panel); color: var(--text);
+  border: 1px solid var(--border); border-radius: 4px; padding: 2px; }
+label { display: block; margin: 8px 0; }
+input[type='number'] { width: 70px; background: var(--bg); color: var(--text);
+  border: 1px solid var(--border); border-radius: 4px; padding: 4px; }
+.speedup-panel { overflow-x: auto; }
+.speedup-panel table { border-collapse: collapse; }
+.speedup-panel th, .speedup-panel td { padding: 3px 5px; font-size: 0.8rem; }
+.speedup-panel input { width: 52px; }
+button { cursor: pointer; }
+.timeline { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+.timeline th, .timeline td { border-bottom: 1px solid var(--border);
+  padding: 6px 8px; text-align: left; }
+.timeline img { width: 24px; height: 24px; vertical-align: middle; margin-right: 6px; }
+.stat-cards { display: flex; gap: 12px; flex-wrap: wrap; }
+.stat-card { background: var(--bg); border: 1px solid var(--border); border-radius: 8px;
+  padding: 12px 16px; min-width: 140px; }
+.stat-card .value { color: var(--gold); font-size: 1.2rem; font-weight: 700; }
+.goal-row { display: flex; gap: 8px; align-items: center; margin: 6px 0; flex-wrap: wrap; }
+.goal-row select { background: var(--bg); color: var(--text);
+  border: 1px solid var(--border); border-radius: 4px; padding: 4px; }
+.presets { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; }
+.presets button { background: var(--bg); border: 1px solid var(--gold);
+  color: var(--gold); border-radius: 6px; padding: 6px 12px; }
+@media (max-width: 600px) { .card { width: 30%; } header { gap: 8px; } }
