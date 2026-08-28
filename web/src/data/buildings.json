@@ -1018,7 +1018,13 @@
    },
    {
     "level": 2,
-    "requirements": [],
+    "requirements": [
+     {
+      "type": "building",
+      "id": "wall",
+      "level": 2
+     }
+    ],
     "cost": {
      "food": 800,
      "wood": 800,
@@ -1030,7 +1036,13 @@
    },
    {
     "level": 3,
-    "requirements": [],
+    "requirements": [
+     {
+      "type": "building",
+      "id": "wall",
+      "level": 3
+     }
+    ],
     "cost": {
      "food": 1500,
      "wood": 1500,
@@ -1042,7 +1054,13 @@
    },
    {
     "level": 4,
-    "requirements": [],
+    "requirements": [
+     {
+      "type": "building",
+      "id": "wall",
+      "level": 4
+     }
+    ],
     "cost": {
      "food": 2800,
      "wood": 2800,
@@ -1054,7 +1072,13 @@
    },
    {
     "level": 5,
-    "requirements": [],
+    "requirements": [
+     {
+      "type": "building",
+      "id": "wall",
+      "level": 5
+     }
+    ],
     "cost": {
      "food": 5000,
      "wood": 5000,
@@ -1066,7 +1090,13 @@
    },
    {
     "level": 6,
-    "requirements": [],
+    "requirements": [
+     {
+      "type": "building",
+      "id": "wall",
+      "level": 6
+     }
+    ],
     "cost": {
      "food": 8500,
      "wood": 8500,
@@ -1078,7 +1108,13 @@
    },
    {
     "level": 7,
-    "requirements": [],
+    "requirements": [
+     {
+      "type": "building",
+      "id": "wall",
+      "level": 7
+     }
+    ],
     "cost": {
      "food": 12800,
      "wood": 12800,
@@ -1090,7 +1126,13 @@
    },
    {
     "level": 8,
-    "requirements": [],
+    "requirements": [
+     {
+      "type": "building",
+      "id": "wall",
+      "level": 8
+     }
+    ],
     "cost": {
      "food": 19300,
      "wood": 19300,
@@ -1102,7 +1144,13 @@
    },
    {
     "level": 9,
-    "requirements": [],
+    "requirements": [
+     {
+      "type": "building",
+      "id": "wall",
+      "level": 9
+     }
+    ],
     "cost": {
      "food": 29000,
      "wood": 29000,
@@ -1114,7 +1162,13 @@
    },
    {
     "level": 10,
-    "requirements": [],
+    "requirements": [
+     {
+      "type": "building",
+      "id": "wall",
+      "level": 10
+     }
+    ],
     "cost": {
      "food": 43500,
      "wood": 43500,
@@ -1126,7 +1180,13 @@
    },
    {
     "level": 11,
-    "requirements": [],
+    "requirements": [
+     {
+      "type": "building",
+      "id": "wall",
+      "level": 11
+     }
+    ],
     "cost": {
      "food": 67500,
      "wood": 67500,
@@ -1138,7 +1198,13 @@
    },
    {
     "level": 12,
-    "requirements": [],
+    "requirements": [
+     {
+      "type": "building",
+      "id": "wall",
+      "level": 12
+     }
+    ],
     "cost": {
      "food": 102500,
      "wood": 102500,
@@ -1150,7 +1216,13 @@
    },
    {
     "level": 13,
-    "requirements": [],
+    "requirements": [
+     {
+      "type": "building",
+      "id": "wall",
+      "level": 13
+     }
+    ],
     "cost": {
      "food": 155000,
      "wood": 155000,
@@ -1162,7 +1234,13 @@
    },
    {
     "level": 14,
-    "requirements": [],
+    "requirements": [
+     {
+      "type": "building",
+      "id": "wall",
+      "level": 14
+     }
+    ],
     "cost": {
      "food": 232500,
      "wood": 232500,
@@ -1174,7 +1252,13 @@
    },
    {
     "level": 15,
-    "requirements": [],
+    "requirements": [
+     {
+      "type": "building",
+      "id": "wall",
+      "level": 15
+     }
+    ],
     "cost": {
      "food": 350000,
      "wood": 350000,
@@ -1186,7 +1270,13 @@
    },
    {
     "level": 16,
-    "requirements": [],
+    "requirements": [
+     {
+      "type": "building",
+      "id": "wall",
+      "level": 16
+     }
+    ],
     "cost": {
      "food": 525000,
      "wood": 525000,
@@ -1198,7 +1288,13 @@
    },
    {
     "level": 17,
-    "requirements": [],
+    "requirements": [
+     {
+      "type": "building",
+      "id": "wall",
+      "level": 17
+     }
+    ],
     "cost": {
      "food": 787500,
      "wood": 787500,
@@ -1210,7 +1306,13 @@
    },
    {
     "level": 18,
-    "requirements": [],
+    "requirements": [
+     {
+      "type": "building",
+      "id": "wall",
+      "level": 18
+     }
+    ],
     "cost": {
      "food": 1200000,
      "wood": 1200000,
@@ -1222,7 +1324,13 @@
    },
    {
     "level": 19,
-    "requirements": [],
+    "requirements": [
+     {
+      "type": "building",
+      "id": "wall",
+      "level": 19
+     }
+    ],
     "cost": {
      "food": 1800000,
      "wood": 1800000,
@@ -1234,7 +1342,13 @@
    },
    {
     "level": 20,
-    "requirements": [],
+    "requirements": [
+     {
+      "type": "building",
+      "id": "wall",
+      "level": 20
+     }
+    ],
     "cost": {
      "food": 2700000,
      "wood": 2700000,
@@ -1246,7 +1360,13 @@
    },
    {
     "level": 21,
-    "requirements": [],
+    "requirements": [
+     {
+      "type": "building",
+      "id": "wall",
+      "level": 21
+     }
+    ],
     "cost": {
      "food": 4100000,
      "wood": 4100000,
@@ -1258,7 +1378,13 @@
    },
    {
     "level": 22,
-    "requirements": [],
+    "requirements": [
+     {
+      "type": "building",
+      "id": "wall",
+      "level": 22
+     }
+    ],
     "cost": {
      "food": 6100000,
      "wood": 6100000,
@@ -1270,7 +1396,13 @@
    },
    {
     "level": 23,
-    "requirements": [],
+    "requirements": [
+     {
+      "type": "building",
+      "id": "wall",
+      "level": 23
+     }
+    ],
     "cost": {
      "food": 9100000,
      "wood": 9100000,
@@ -1282,7 +1414,13 @@
    },
    {
     "level": 24,
-    "requirements": [],
+    "requirements": [
+     {
+      "type": "building",
+      "id": "wall",
+      "level": 24
+     }
+    ],
     "cost": {
      "food": 13800000,
      "wood": 13800000,
@@ -1294,7 +1432,18 @@
    },
    {
     "level": 25,
-    "requirements": [],
+    "requirements": [
+     {
+      "type": "building",
+      "id": "storehouse",
+      "level": 25
+     },
+     {
+      "type": "building",
+      "id": "wall",
+      "level": 25
+     }
+    ],
     "cost": {
      "food": 20800000,
      "wood": 20800000,
@@ -4039,6 +4188,11 @@
       "type": "building",
       "id": "city_hall",
       "level": 25
+     },
+     {
+      "type": "building",
+      "id": "hospital",
+      "level": 25
      }
     ],
     "cost": {
@@ -4662,7 +4816,13 @@
    },
    {
     "level": 10,
-    "requirements": [],
+    "requirements": [
+     {
+      "type": "building",
+      "id": "goldmine",
+      "level": 10
+     }
+    ],
     "cost": {
      "food": 43500,
      "wood": 67500,
@@ -4674,7 +4834,13 @@
    },
    {
     "level": 11,
-    "requirements": [],
+    "requirements": [
+     {
+      "type": "building",
+      "id": "goldmine",
+      "level": 11
+     }
+    ],
     "cost": {
      "food": 67500,
      "wood": 102500,
@@ -4686,7 +4852,13 @@
    },
    {
     "level": 12,
-    "requirements": [],
+    "requirements": [
+     {
+      "type": "building",
+      "id": "goldmine",
+      "level": 12
+     }
+    ],
     "cost": {
      "food": 102500,
      "wood": 155000,
@@ -4698,7 +4870,13 @@
    },
    {
     "level": 13,
-    "requirements": [],
+    "requirements": [
+     {
+      "type": "building",
+      "id": "goldmine",
+      "level": 13
+     }
+    ],
     "cost": {
      "food": 155000,
      "wood": 232500,
@@ -4710,7 +4888,13 @@
    },
    {
     "level": 14,
-    "requirements": [],
+    "requirements": [
+     {
+      "type": "building",
+      "id": "goldmine",
+      "level": 14
+     }
+    ],
     "cost": {
      "food": 232500,
      "wood": 350000,
@@ -4722,7 +4906,13 @@
    },
    {
     "level": 15,
-    "requirements": [],
+    "requirements": [
+     {
+      "type": "building",
+      "id": "goldmine",
+      "level": 15
+     }
+    ],
     "cost": {
      "food": 350000,
      "wood": 525000,
@@ -4734,7 +4924,13 @@
    },
    {
     "level": 16,
-    "requirements": [],
+    "requirements": [
+     {
+      "type": "building",
+      "id": "goldmine",
+      "level": 16
+     }
+    ],
     "cost": {
      "food": 525000,
      "wood": 787500,
@@ -4746,7 +4942,13 @@
    },
    {
     "level": 17,
-    "requirements": [],
+    "requirements": [
+     {
+      "type": "building",
+      "id": "goldmine",
+      "level": 17
+     }
+    ],
     "cost": {
      "food": 787500,
      "wood": 1200000,
@@ -4758,7 +4960,13 @@
    },
    {
     "level": 18,
-    "requirements": [],
+    "requirements": [
+     {
+      "type": "building",
+      "id": "goldmine",
+      "level": 18
+     }
+    ],
     "cost": {
      "food": 1200000,
      "wood": 1800000,
@@ -4770,7 +4978,13 @@
    },
    {
     "level": 19,
-    "requirements": [],
+    "requirements": [
+     {
+      "type": "building",
+      "id": "goldmine",
+      "level": 19
+     }
+    ],
     "cost": {
      "food": 1800000,
      "wood": 2700000,
@@ -4782,7 +4996,13 @@
    },
    {
     "level": 20,
-    "requirements": [],
+    "requirements": [
+     {
+      "type": "building",
+      "id": "goldmine",
+      "level": 20
+     }
+    ],
     "cost": {
      "food": 2700000,
      "wood": 4000000,
@@ -4794,7 +5014,13 @@
    },
    {
     "level": 21,
-    "requirements": [],
+    "requirements": [
+     {
+      "type": "building",
+      "id": "goldmine",
+      "level": 21
+     }
+    ],
     "cost": {
      "food": 4100000,
      "wood": 6100000,
@@ -4806,7 +5032,13 @@
    },
    {
     "level": 22,
-    "requirements": [],
+    "requirements": [
+     {
+      "type": "building",
+      "id": "goldmine",
+      "level": 22
+     }
+    ],
     "cost": {
      "food": 6100000,
      "wood": 9100000,
@@ -4818,7 +5050,13 @@
    },
    {
     "level": 23,
-    "requirements": [],
+    "requirements": [
+     {
+      "type": "building",
+      "id": "goldmine",
+      "level": 23
+     }
+    ],
     "cost": {
      "food": 9100000,
      "wood": 13600000,
@@ -4830,7 +5068,13 @@
    },
    {
     "level": 24,
-    "requirements": [],
+    "requirements": [
+     {
+      "type": "building",
+      "id": "goldmine",
+      "level": 24
+     }
+    ],
     "cost": {
      "food": 13800000,
      "wood": 20500000,
@@ -4842,7 +5086,13 @@
    },
    {
     "level": 25,
-    "requirements": [],
+    "requirements": [
+     {
+      "type": "building",
+      "id": "goldmine",
+      "level": 25
+     }
+    ],
     "cost": {
      "food": 20800000,
      "wood": 30800000,
@@ -8199,7 +8449,13 @@
    },
    {
     "level": 25,
-    "requirements": [],
+    "requirements": [
+     {
+      "type": "building",
+      "id": "castle",
+      "level": 25
+     }
+    ],
     "cost": {
      "food": 47200000,
      "wood": 47200000,
@@ -8675,7 +8931,18 @@
    },
    {
     "level": 25,
-    "requirements": [],
+    "requirements": [
+     {
+      "type": "building",
+      "id": "siege_workshop",
+      "level": 25
+     },
+     {
+      "type": "building",
+      "id": "alliance_center",
+      "level": 25
+     }
+    ],
     "cost": {
      "food": 9500000,
      "wood": 16200000,

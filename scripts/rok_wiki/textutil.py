@@ -5,9 +5,10 @@ _UNIT_SEC = {"s": 1, "m": 60, "h": 3600, "d": 86400}
 
 
 def is_placeholder(s: str) -> bool:
-    """위키가 아직 값을 채우지 않은 자리("?", "???" 등)인지 확인한다."""
-    s = (s or "").strip()
-    return bool(s) and set(s) <= {"?"}
+    """위키가 아직 값을 채우지 않은 자리인지 확인한다. "?", "???"뿐 아니라 자원별로 개별
+    "?"가 공백으로 나열된 cost 셀("? ? ? ?", food/wood/stone/gold 각각 미기재)도 잡아야 한다."""
+    compact = (s or "").strip().replace(" ", "")
+    return bool(compact) and set(compact) <= {"?"}
 
 
 def parse_amount(s: str) -> int:

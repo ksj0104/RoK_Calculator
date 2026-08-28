@@ -7,7 +7,8 @@
 4. 시간/비용/파워 음수 없음
 5. 모든 id에 아이콘 파일 존재
 
-추가로 위키 원문이 "unknown"이라 0으로 파싱된 알려진 placeholder 값들은
+추가로 위키 원문이 "?"/"???" placeholder이거나(KNOWN_ZERO_PLACEHOLDERS) 최대 레벨에서만
+단조 증가가 갑자기 0으로 끊기는 데이터 누락(KNOWN_DATA_GAPS)이라 0으로 파싱된 값들은
 비치명적 WARNING으로만 출력한다 (exit 코드에 영향 없음).
 """
 import json
@@ -19,21 +20,40 @@ ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "web" / "src" / "data"
 ICONS = ROOT / "web" / "public" / "icons"
 
-# 위키에 "unknown"으로 표기되어 0으로 파싱된 것으로 알려진 (kind, id, level, field) 목록.
-# 이 조합에서만 0 값을 오류가 아닌 경고로 취급한다.
+# 위키에 "?"/"???"로 명시된 placeholder라 0으로 파싱된 (kind, id, level, field) 목록
+# (scrape_wiki.py 실행 시 "unknown ... value" 경고로 확인됨). academy/scout_camp/blacksmith는
+# building이지 research가 아니다 — 리뷰에서 지적된 오류.
 KNOWN_ZERO_PLACEHOLDERS = {
-    ("research", "academy", 25, "timeSec"),
-    ("research", "scout_camp", 25, "timeSec"),
-    ("research", "scout_camp", 25, "cost"),
+    ("building", "academy", 25, "timeSec"),
+    ("building", "scout_camp", 25, "timeSec"),
+    ("building", "scout_camp", 25, "cost"),
     ("building", "blacksmith", 1, "power"),
     ("research", "stone_saw", 10, "timeSec"),
     ("research", "machinery", 10, "timeSec"),
     ("research", "shaft_mining", 10, "timeSec"),
     ("research", "ballistics", 10, "timeSec"),
     ("research", "pavise", 10, "timeSec"),
+    ("research", "pavise", 10, "cost"),
     ("research", "plate_armor", 10, "timeSec"),
     ("research", "heavy_frame", 10, "timeSec"),
+    ("research", "heavy_frame", 10, "cost"),
 }
+
+# 위키가 "?"로 명시하진 않았지만(빈 셀이거나 리터럴 "0") 같은 건물의 다른 레벨들이 뚜렷하게
+# 단조 증가하다가 오직 이 레벨(전부 최대 레벨)에서만 0으로 끊기는, 데이터 누락으로 사실상
+# 확실한 케이스. (부록: 이전 레벨까지의 시퀀스를 직접 확인해 근거로 삼음 — 예: storehouse
+# timeSec 20..24레벨 176400 -> 583200 계속 증가하다 25에서 돌연 0.) "None"(power 0)처럼
+# 위키가 의도적으로 0을 명시한 경우와는 구별된다.
+KNOWN_DATA_GAPS = {
+    ("building", "storehouse", 25, "timeSec"),
+    ("building", "alliance_center", 25, "timeSec"),
+    ("building", "archery_range", 25, "timeSec"),
+    ("building", "siege_workshop", 25, "timeSec"),
+    ("building", "siege_workshop", 25, "cost"),
+    ("building", "hospital", 25, "timeSec"),
+}
+
+KNOWN_ZERO_WARNINGS = KNOWN_ZERO_PLACEHOLDERS | KNOWN_DATA_GAPS
 
 
 def main() -> int:
@@ -51,24 +71,20 @@ def main() -> int:
         if levels != list(range(1, entry["maxLevel"] + 1)):
             errors.append(f"{kind}:{cid}: non-contiguous levels {levels}")
         for row in entry["levels"]:
-            zero_time = ("time" if (kind, cid, row["level"], "timeSec") in KNOWN_ZERO_PLACEHOLDERS else None)
-            zero_power = ("power" if (kind, cid, row["level"], "power") in KNOWN_ZERO_PLACEHOLDERS else None)
-            zero_cost = (kind, cid, row["level"], "cost") in KNOWN_ZERO_PLACEHOLDERS
-
             if row["timeSec"] < 0:
                 errors.append(f"{kind}:{cid}:{row['level']}: negative timeSec")
-            elif row["timeSec"] == 0 and (kind, cid, row["level"], "timeSec") in KNOWN_ZERO_PLACEHOLDERS:
-                warnings.append(f"{kind}:{cid}:{row['level']}: timeSec=0 (wiki 'unknown' placeholder)")
+            elif row["timeSec"] == 0 and (kind, cid, row["level"], "timeSec") in KNOWN_ZERO_WARNINGS:
+                warnings.append(f"{kind}:{cid}:{row['level']}: timeSec=0 (known wiki data gap)")
 
             if row["power"] < 0:
                 errors.append(f"{kind}:{cid}:{row['level']}: negative power")
-            elif row["power"] == 0 and (kind, cid, row["level"], "power") in KNOWN_ZERO_PLACEHOLDERS:
-                warnings.append(f"{kind}:{cid}:{row['level']}: power=0 (wiki 'unknown' placeholder)")
+            elif row["power"] == 0 and (kind, cid, row["level"], "power") in KNOWN_ZERO_WARNINGS:
+                warnings.append(f"{kind}:{cid}:{row['level']}: power=0 (known wiki data gap)")
 
             if any(v < 0 for v in row["cost"].values()):
                 errors.append(f"{kind}:{cid}:{row['level']}: negative cost")
-            elif zero_cost and all(v == 0 for v in row["cost"].values()):
-                warnings.append(f"{kind}:{cid}:{row['level']}: cost=0 (wiki 'unknown' placeholder)")
+            elif (kind, cid, row["level"], "cost") in KNOWN_ZERO_WARNINGS and all(v == 0 for v in row["cost"].values()):
+                warnings.append(f"{kind}:{cid}:{row['level']}: cost=0 (known wiki data gap)")
 
             for req in row["requirements"]:
                 target = catalog.get((req["type"], req["id"]))

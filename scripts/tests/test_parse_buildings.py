@@ -1,6 +1,8 @@
 from pathlib import Path
 
-from rok_wiki.parse_buildings import parse_building_table
+from bs4 import BeautifulSoup
+
+from rok_wiki.parse_buildings import _requirements_from_cell, parse_building_table
 
 HTML = (Path(__file__).parent / "fixtures" / "city_hall_requirements.html").read_text(encoding="utf-8")
 
@@ -76,6 +78,35 @@ def test_missing_power_column_defaults_to_zero_with_warning():
     rows = parse_building_table(html, "no_power_building", warnings)
     assert rows[0]["power"] == 0
     assert any("power" in w for w in warnings)
+
+
+def test_requirements_p_separated_cell_with_redlink_and_bare_number():
+    # Watchtower Lv25: <p>로 구분되고, 두 항목 다 "Lv."/"Level" 접두어 없이 이름 뒤에 레벨
+    # 숫자만 붙는다. 두 번째 항목(Wall)은 위키에 문서가 없어 레드링크로 렌더링된다 — 둘 다
+    # 놓치지 않고 파싱되어야 한다 (과거: <br>만 분할 + 레드링크 미처리로 완전히 누락됨).
+    cell = BeautifulSoup(
+        '<td>\n<p><b><a href="/wiki/Storehouse" title="Storehouse">Storehouse</a></b> 25\n</p>'
+        '<p><b><span class="new" title="Wall (page does not exist)">Wall</span></b> 25\n</p></td>',
+        "html.parser",
+    ).find("td")
+    reqs = _requirements_from_cell(cell)
+    assert {"type": "building", "id": "storehouse", "level": 25} in reqs
+    assert {"type": "building", "id": "wall", "level": 25} in reqs
+    assert len(reqs) == 2
+
+
+def test_requirements_mixed_lv_prefix_and_bare_number_in_p_cell():
+    # Storehouse Lv25: 첫 항목은 "Lv. 25" 접두어가 있고, <p> 뒤 두 번째 항목(레드링크)은
+    # 접두어 없이 숫자만 있다.
+    cell = BeautifulSoup(
+        '<td><b><a class="mw-redirect" href="/wiki/City_Hall" title="City Hall">City Hall</a></b>'
+        ' Lv. 25\n<p><b><span class="new" title="Hospital (page does not exist)">Hospital</span></b>'
+        " 25\n</p></td>",
+        "html.parser",
+    ).find("td")
+    reqs = _requirements_from_cell(cell)
+    assert {"type": "building", "id": "city_hall", "level": 25} in reqs
+    assert {"type": "building", "id": "hospital", "level": 25} in reqs
 
 
 def test_placeholder_time_value_becomes_zero_with_warning():

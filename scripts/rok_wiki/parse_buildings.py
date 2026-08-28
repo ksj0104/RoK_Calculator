@@ -15,14 +15,26 @@ RESOURCES = ("food", "wood", "stone", "gold")
 
 def _requirements_from_cell(cell) -> list[dict]:
     reqs = []
-    # 렌더링된 셀은 "<a>Wall</a> Lv.2<br/><a>Hospital</a> Lv.4" 형태.
-    # <br> 기준으로 나눠 각 조각에서 링크 텍스트와 "Lv.N"/"Level N"을 짝짓는다.
-    for part in re.split(r"<br\s*/?>", cell.decode_contents()):
+    # 렌더링된 셀은 보통 "<a>Wall</a> Lv.2<br/><a>Hospital</a> Lv.4" 형태다. 다만 일부 건물의
+    # 최대 레벨 행(Watchtower/Storehouse/Castle 등)은 <br> 대신 <p>로 항목을 구분하고, 첫
+    # 항목 이후로는 "Lv."/"Level" 접두어 없이 이름 뒤에 레벨 숫자만 붙는다(예: "Hospital 25").
+    # 대상 건물이 위키에 문서가 없으면 <a>가 아니라 <span class="new">(레드링크)로 렌더링되는데,
+    # 이를 처리하지 않으면 요구사항이 통째로 누락된다(예: Watchtower가 모든 레벨에서 요구하는
+    # "Wall"은 항상 레드링크).
+    for part in re.split(r"<br\s*/?>|</?p>", cell.decode_contents()):
         frag = BeautifulSoup(part, "html.parser")
         link = frag.find("a")
-        m = re.search(r"(?:Lv\.?|Level)\s*(\d+)", frag.get_text())
-        if link and m:
-            reqs.append({"type": "building", "id": slugify(link.get_text()), "level": int(m.group(1))})
+        redlink = frag.find("span", class_="new")
+        if link is not None:
+            name = link.get_text()
+        elif redlink is not None:
+            name = redlink.get_text()
+        else:
+            continue
+        text = frag.get_text()
+        m = re.search(r"(?:Lv\.?|Level)\s*(\d+)", text) or re.search(r"(\d+)\s*$", text.strip())
+        if m:
+            reqs.append({"type": "building", "id": slugify(name), "level": int(m.group(1))})
     return reqs
 
 
