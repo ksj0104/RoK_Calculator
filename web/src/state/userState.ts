@@ -9,13 +9,18 @@ export type Action =
   | { type: 'setBuilding'; id: string; level: number }
   | { type: 'setResearch'; id: string; level: number }
   | { type: 'setSpeedup'; speedupType: SpeedupType; duration: string; count: number }
-  | { type: 'setBuff'; key: 'buildingSpeedPct' | 'researchSpeedPct'; value: number }
+  | { type: 'setBuff'; key: keyof UserState['buffs']; value: number }
   | { type: 'setSecondBuilder'; value: boolean }
   | { type: 'reset' }
   | { type: 'replace'; state: UserState };
 
 const nonNegativeInteger = (value: number): number =>
   Number.isFinite(value) ? Math.max(0, Math.floor(value)) : 0;
+
+export const BUFF_MAX: Record<keyof UserState['buffs'], number> = {
+  buildingSpeedPct: 500, researchSpeedPct: 500,
+  allianceHelpCount: 100, allianceHelpSec: 3600,
+};
 
 export function reducer(state: UserState, action: Action): UserState {
   switch (action.type) {
@@ -29,7 +34,7 @@ export function reducer(state: UserState, action: Action): UserState {
           [action.duration]: nonNegativeInteger(action.count) } } };
     case 'setBuff':
       return { ...state, buffs: { ...state.buffs,
-        [action.key]: Math.min(500, nonNegativeInteger(action.value)) } };
+        [action.key]: Math.min(BUFF_MAX[action.key], nonNegativeInteger(action.value)) } };
     case 'setSecondBuilder':
       return { ...state, secondBuilder: action.value };
     case 'reset':

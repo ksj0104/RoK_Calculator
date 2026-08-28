@@ -14,10 +14,16 @@ export interface SelectedBoost {
   bonusPct: number;
 }
 
+export interface KindTime {
+  finishSec: number;  // 해당 종류 마지막 작업이 끝나는 시점 (가속 적용 후)
+  workSec: number;    // 해당 종류 작업 시간 단순 합계 (가속 적용 후)
+}
+
 export interface Plan {
   tasks: Array<ScheduledTask & { node: TaskNode }>;
   totalSecRaw: number;
   totalSecWithSpeedups: number;
+  kindTimes: Record<'building' | 'research', KindTime>;
   totalCost: Cost;
   totalPower: number;
   speedupsUsed: SpeedupAllocation['used'];
@@ -53,6 +59,7 @@ function makePlan(
     builders: state.secondBuilder ? 2 : 1,
     buildingSpeedPct: state.buffs.buildingSpeedPct,
     researchSpeedPct: state.buffs.researchSpeedPct,
+    allianceReductionSec: state.buffs.allianceHelpCount * state.buffs.allianceHelpSec,
     researchLevels: state.research,
     preferredNodes,
   };
@@ -64,8 +71,13 @@ function makePlan(
     totalPower += n.power;
   }
 
+  const emptyKindTimes = (): Plan['kindTimes'] => ({
+    building: { finishSec: 0, workSec: 0 }, research: { finishSec: 0, workSec: 0 },
+  });
+
   if (nodes.size === 0) {
-    return { tasks: [], totalSecRaw: 0, totalSecWithSpeedups: 0, totalCost, totalPower,
+    return { tasks: [], totalSecRaw: 0, totalSecWithSpeedups: 0, kindTimes: emptyKindTimes(),
+             totalCost, totalPower,
              speedupsUsed: {}, speedupsRemaining: state.speedups, mode, selectedBoosts: [] };
   }
 
@@ -89,10 +101,17 @@ function makePlan(
       bonusPct: technologyBonus(technology.id, finalLevel) }];
   });
 
+  const kindTimes = emptyKindTimes();
+  for (const t of finalTasks) {
+    kindTimes[t.kind].finishSec = Math.max(kindTimes[t.kind].finishSec, t.endSec);
+    kindTimes[t.kind].workSec += t.durationSec;
+  }
+
   return {
     tasks: finalTasks.map((t) => ({ ...t, node: nodes.get(t.key)! })),
     totalSecRaw,
     totalSecWithSpeedups: Math.max(...finalTasks.map((t) => t.endSec)),
+    kindTimes,
     totalCost, totalPower,
     speedupsUsed: used, speedupsRemaining: remaining,
     mode, selectedBoosts,

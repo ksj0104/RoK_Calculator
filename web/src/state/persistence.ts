@@ -39,6 +39,8 @@ export function normalizeState(raw: unknown): UserState {
     buffs: {
       buildingSpeedPct: Math.min(500, nonNegativeInteger(rawBuffs.buildingSpeedPct)),
       researchSpeedPct: Math.min(500, nonNegativeInteger(rawBuffs.researchSpeedPct)),
+      allianceHelpCount: Math.min(100, nonNegativeInteger(rawBuffs.allianceHelpCount)),
+      allianceHelpSec: Math.min(3600, nonNegativeInteger(rawBuffs.allianceHelpSec)),
     },
     secondBuilder: raw.secondBuilder === true,
   };

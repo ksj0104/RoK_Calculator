@@ -209,13 +209,13 @@ button:focus-visible, input:focus-visible, select:focus-visible, summary:focus-v
 .boost-list span { padding: 5px 7px; display: flex; align-items: center; gap: 5px; border-radius: 6px;
   background: var(--bg); color: #b9d3ad; font-size: .62rem; }
 .boost-list img { width: 20px; height: 20px; object-fit: contain; }
-.result-stats { display: grid; grid-template-columns: 1.5fr repeat(6, 1fr); gap: 8px; }
+.result-stats { display: grid; grid-template-columns: 1.5fr repeat(4, 1fr); gap: 8px; }
 .result-stats article { min-width: 0; min-height: 77px; padding: 11px; display: flex; flex-direction: column;
   justify-content: center; border: 1px solid var(--line); border-radius: 9px; background: var(--bg); }
 .result-stats article span, .result-stats article small { color: var(--muted); font-size: .62rem; }
 .result-stats article strong { margin-top: 5px; overflow: hidden; color: var(--text); font-size: .88rem; text-overflow: ellipsis; }
 .result-stats .primary-stat strong { color: var(--gold-soft); font-family: Georgia, serif; font-size: 1.1rem; }
-.result-stats .primary-stat small { margin-top: 4px; }
+.result-stats .primary-stat small, .result-stats .kind-stat small { margin-top: 4px; }
 .speedup-summary { margin-top: 9px; padding: 8px 10px; display: flex; align-items: center; flex-wrap: wrap; gap: 7px;
   border: 1px dashed var(--line); border-radius: 8px; color: var(--muted); font-size: .66rem; }
 .speedup-summary strong { margin-right: 5px; color: var(--text); }

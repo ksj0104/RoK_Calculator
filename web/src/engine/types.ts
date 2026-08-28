@@ -53,7 +53,13 @@ export interface UserState {
   buildings: Record<string, number>;   // id → 현재 레벨 (없으면 0)
   research: Record<string, number>;
   speedups: SpeedupInventory;
-  buffs: { buildingSpeedPct: number; researchSpeedPct: number };
+  /** allianceHelpCount × allianceHelpSec 만큼 각 작업 시간이 차감된다 */
+  buffs: {
+    buildingSpeedPct: number;
+    researchSpeedPct: number;
+    allianceHelpCount: number;
+    allianceHelpSec: number;
+  };
   secondBuilder: boolean;
 }
 
@@ -65,6 +71,6 @@ export const defaultUserState = (): UserState => ({
   buildings: { city_hall: 1 },
   research: {},
   speedups: emptySpeedups(),
-  buffs: { buildingSpeedPct: 0, researchSpeedPct: 0 },
+  buffs: { buildingSpeedPct: 0, researchSpeedPct: 0, allianceHelpCount: 0, allianceHelpSec: 0 },
   secondBuilder: false,
 });

@@ -8,7 +8,7 @@ const sampleState = (): UserState => ({
   buildings: { city_hall: 5, wall: 2 },
   research: { agriculture: 3 },
   speedups: { universal: { '1m': 4 }, building: { '5m': 1 }, research: {} },
-  buffs: { buildingSpeedPct: 10, researchSpeedPct: 5 },
+  buffs: { buildingSpeedPct: 10, researchSpeedPct: 5, allianceHelpCount: 30, allianceHelpSec: 90 },
   secondBuilder: true,
 });
 
@@ -88,14 +88,16 @@ describe('buildExport / parseImport', () => {
       state: {
         buildings: { city_hall: -4, wall: 2.9 }, research: null,
         speedups: { universal: null, building: { '1m': -2 }, research: { '5m': 3.8 } },
-        buffs: { buildingSpeedPct: 999, researchSpeedPct: -5 }, secondBuilder: 'yes',
+        buffs: { buildingSpeedPct: 999, researchSpeedPct: -5,
+          allianceHelpCount: 9999, allianceHelpSec: -30 }, secondBuilder: 'yes',
       },
       goals: [],
     });
     const parsed = parseImport(dirty);
     expect(parsed.state.buildings).toMatchObject({ city_hall: 0, wall: 2 });
     expect(parsed.state.speedups).toEqual({ universal: {}, building: { '1m': 0 }, research: { '5m': 3 } });
-    expect(parsed.state.buffs).toEqual({ buildingSpeedPct: 500, researchSpeedPct: 0 });
+    expect(parsed.state.buffs).toEqual({ buildingSpeedPct: 500, researchSpeedPct: 0,
+      allianceHelpCount: 100, allianceHelpSec: 0 });
     expect(parsed.state.secondBuilder).toBe(false);
   });
 });
@@ -113,5 +115,12 @@ describe('userState reducer replace action', () => {
     state = reducer(state, { type: 'setBuff', key: 'buildingSpeedPct', value: 999 });
     expect(state.speedups.building['1m']).toBe(0);
     expect(state.buffs.buildingSpeedPct).toBe(500);
+  });
+
+  it('clamps alliance help buffs to their own ranges', () => {
+    let state = reducer(defaultUserState(), { type: 'setBuff', key: 'allianceHelpCount', value: 999 });
+    state = reducer(state, { type: 'setBuff', key: 'allianceHelpSec', value: 99_999 });
+    expect(state.buffs.allianceHelpCount).toBe(100);
+    expect(state.buffs.allianceHelpSec).toBe(3600);
   });
 });

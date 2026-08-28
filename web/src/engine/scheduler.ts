@@ -8,6 +8,7 @@ export interface ScheduleOptions {
   researchSpeedPct: number;
   durationOverride?: Map<NodeId, number>; // 가속 적용 후 시간 (speedups.ts가 사용)
   durationReduction?: Map<NodeId, number>;
+  allianceReductionSec?: number;  // 연맹 지원: 작업마다 차감되는 총 시간(횟수 × 회당 감소)
   researchLevels?: Readonly<Record<string, number>>;
   preferredNodes?: ReadonlySet<NodeId>;
 }
@@ -26,7 +27,7 @@ export function effectiveDuration(
   if (override !== undefined) return override;
   const basePct = node.kind === 'building' ? opts.buildingSpeedPct : opts.researchSpeedPct;
   const pct = basePct + researchBonus(node.kind, researchLevels);
-  const reduction = opts.durationReduction?.get(node.key) ?? 0;
+  const reduction = (opts.allianceReductionSec ?? 0) + (opts.durationReduction?.get(node.key) ?? 0);
   return Math.max(0, Math.ceil(node.timeSec / (1 + pct / 100)) - reduction);
 }
 

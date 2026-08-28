@@ -75,6 +75,13 @@ export function ResultTab({ state, goals, mode }: { state: UserState; goals: Goa
           <strong>{formatDuration(plan.totalSecWithSpeedups, t)}</strong>
           <small>{t('result.beforeSpeedups')}: {formatDuration(plan.totalSecRaw, t)}</small>
         </article>
+        {(['building', 'research'] as const).map((kind) => (
+          <article key={kind} className="kind-stat">
+            <span>{t(kind === 'building' ? 'result.buildingTime' : 'result.researchTime')}</span>
+            <strong>{formatDuration(plan.kindTimes[kind].finishSec, t)}</strong>
+            <small>{t('result.workSum')}: {formatDuration(plan.kindTimes[kind].workSec, t)}</small>
+          </article>
+        ))}
         <article><span>{t('result.tasks')}</span><strong>{formatNumber(plan.tasks.length)}</strong></article>
         <article><span>{t('result.totalPower')}</span><strong>+{formatNumber(plan.totalPower)}</strong></article>
         {RESOURCES.map((resource) => (

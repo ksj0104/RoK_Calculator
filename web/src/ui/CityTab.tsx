@@ -85,6 +85,24 @@ export function CityTab({ state, dispatch }: { state: UserState; dispatch: Dispa
               value={state.buffs.researchSpeedPct}
               onChange={(e) => dispatch({ type: 'setBuff', key: 'researchSpeedPct', value: Number(e.target.value) })} />%</span>
           </label>
+          <label><span>{t('city.allianceHelpCount')}</span>
+            <span className="number-field"><input type="number" min={0} max={100}
+              value={state.buffs.allianceHelpCount}
+              onChange={(e) => dispatch({ type: 'setBuff', key: 'allianceHelpCount', value: Number(e.target.value) })} />{t('unit.times')}</span>
+          </label>
+          <label><span>{t('city.allianceHelpReduction')}</span>
+            <span className="number-field">
+              <input type="number" min={0} max={60}
+                value={Math.floor(state.buffs.allianceHelpSec / 60)}
+                onChange={(e) => dispatch({ type: 'setBuff', key: 'allianceHelpSec',
+                  value: Number(e.target.value) * 60 + (state.buffs.allianceHelpSec % 60) })} />{t('unit.min')}
+              <input type="number" min={0} max={59}
+                value={state.buffs.allianceHelpSec % 60}
+                onChange={(e) => dispatch({ type: 'setBuff', key: 'allianceHelpSec',
+                  value: Math.floor(state.buffs.allianceHelpSec / 60) * 60 + Number(e.target.value) })} />{t('unit.sec')}
+            </span>
+          </label>
+          <p className="field-note">{t('city.allianceHelpNote')}</p>
           <label className="checkbox-field">
             <input type="checkbox" checked={state.secondBuilder}
               onChange={(e) => dispatch({ type: 'setSecondBuilder', value: e.target.checked })} />

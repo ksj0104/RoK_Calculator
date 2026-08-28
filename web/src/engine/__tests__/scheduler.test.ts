@@ -50,6 +50,13 @@ describe('schedule', () => {
     expect(Math.max(...tasks.map((t) => t.endSec))).toBe(245);
   });
 
+  it('연맹 지원: 작업마다 총 감소 시간을 빼고 0 밑으로 내려가지 않는다', () => {
+    const nodes = requiredNodes(index, goalHall3, freshState());
+    const tasks = schedule(nodes, { ...opts, allianceReductionSec: 55 });
+    // wall1 50→0, wall2 60→5, hall2 100→45, academy1 80→25, hall3 200→145 = 220
+    expect(Math.max(...tasks.map((t) => t.endSec))).toBe(220);
+  });
+
   it('속도 연구 효과는 완료 후 시작하는 작업부터 적용된다', () => {
     const speedCatalog = [
       { id: 'tower', kind: 'building' as const, category: 'other', maxLevel: 2, levels: [
