@@ -1,0 +1,190 @@
+==General Info==
+
+'''Technologies''' are researched in the [[Buildings/Academy|Academy]].
+
+{{TOC limit|1}}
+
+Technologies can be classified as either Economic or Military Technology. Economic technologies contain buffs and unlocks for various non-military aspects of your city. Military technologies contain buffs to military troops and unlock higher tier units.
+
+{{ItemBlock
+|class=icon-filter-white
+|header=[[File:Technology icon economic technology.png|40x40px|link=]] Economic Technology
+|
+    <h3>Tier 1</h3>
+    {{BlockGallery|
+        {{BlockGalleryItemTech|Quarrying}}
+    }}
+    <h3>Tier 2</h3>
+    {{BlockGallery|
+        {{BlockGalleryItemTech|Irrigation}}
+        {{BlockGalleryItemTech|Handsaw}}
+    }}
+    <h3>Tier 3</h3>
+    {{BlockGallery|
+        {{BlockGalleryItemTech|Sickle}}
+        {{BlockGalleryItemTech|Masonry}}
+        {{BlockGalleryItemTech|Handaxe}}
+    }}
+    <h3>Tier 4</h3>
+    {{BlockGallery|
+        {{BlockGalleryItemTech|Metallurgy}}
+    }}
+    <h3>Tier 5</h3>
+    {{BlockGallery|
+        {{BlockGalleryItemTech|Chisel}}
+        {{BlockGalleryItemTech|Writing}}
+        {{BlockGalleryItemTech|Metalworking}}
+    }}
+    <h3>Tier 6</h3>
+    {{BlockGallery|
+        {{BlockGalleryItemTech|Handcart}}
+        {{BlockGalleryItemTech|Multilayer Structure}}
+        {{BlockGalleryItemTech|Placer Mining}}
+    }}
+    <h3>Tier 7</h3>
+    {{BlockGallery|
+        {{BlockGalleryItemTech|Wheel}}
+        {{BlockGalleryItemTech|Jewelry}}
+    }}
+    <h3>Tier 8</h3>
+    {{BlockGallery|
+        {{BlockGalleryItemTech|Plow}}
+        {{BlockGalleryItemTech|Sawmill}}
+    }}
+    <h3>Tier 9</h3>
+    {{BlockGallery|
+        {{BlockGalleryItemTech|Scythe}}
+        {{BlockGalleryItemTech|Engineering}}
+        {{BlockGalleryItemTech|Whipsaw}}
+    }}
+    <h3>Tier 10</h3>
+    {{BlockGallery|
+        {{BlockGalleryItemTech|Mathematics}}
+    }}
+    <h3>Tier 11</h3>
+    {{BlockGallery|
+        {{BlockGalleryItemTech|Open-pit Quarry}}
+        {{BlockGalleryItemTech|Coinage}}
+    }}
+    <h3>Tier 12</h3>
+    {{BlockGallery|
+        {{BlockGalleryItemTech|Stone Saw}}
+        {{BlockGalleryItemTech|Machinery}}
+        {{BlockGalleryItemTech|Shaft Mining}}
+    }}
+    <h3>Tier 13</h3>
+    {{BlockGallery|
+        {{BlockGalleryItemTech|Carriage}}
+        {{BlockGalleryItemTech|Cutting & Polishing}}
+    }}|
+}}
+
+{{ItemBlock
+|class=icon-filter-white
+|header=[[File:Technology icon military technology.png|40x40px|link=]] Military Technology
+|
+    <h3>Tier 1</h3>
+    {{BlockGallery|
+        {{BlockGalleryItemTech|Military Discipline}}
+    }}
+    <h3>Tier 2</h3>
+    {{BlockGallery|
+        {{BlockGalleryItemTech|Iron Working}}
+        {{BlockGalleryItemTech|Improved Fletching}}
+        {{BlockGalleryItemTech|Horsemanship}}
+        {{BlockGalleryItemTech|Flaming Projectile}}
+    }}
+    <h3>Tier 3</h3>
+    {{BlockGallery|
+        {{BlockGalleryItemTech|Swordsman}}
+        {{BlockGalleryItemTech|Bowman}}
+        {{BlockGalleryItemTech|Light Cavalry}}
+        {{BlockGalleryItemTech|Arcuballista}}
+    }}
+    <h3>Tier 4</h3>
+    {{BlockGallery|
+        {{BlockGalleryItemTech|Tracking}}
+        {{BlockGalleryItemTech|Pathfinding}}
+    }}
+    <h3>Tier 5</h3>
+    {{BlockGallery|
+        {{BlockGalleryItemTech|Buckler}}
+        {{BlockGalleryItemTech|Leather Armor}}
+        {{BlockGalleryItemTech|Scale Armor}}
+        {{BlockGalleryItemTech|Enhanced Axle}}
+    }}
+    <h3>Tier 6</h3>
+    {{BlockGallery|
+        {{BlockGalleryItemTech|Spearman}}
+        {{BlockGalleryItemTech|Composite Bowman}}
+        {{BlockGalleryItemTech|Heavy Cavalry}}
+        {{BlockGalleryItemTech|Mangonel}}
+    }}
+    <h3>Tier 7</h3>
+    {{BlockGallery|
+        {{BlockGalleryItemTech|Camouflage}}
+    }}
+    <h3>Tier 8</h3>
+    {{BlockGallery|
+        {{BlockGalleryItemTech|Combat Tactics}}
+        {{BlockGalleryItemTech|Defensive Formation}}
+        {{BlockGalleryItemTech|Herbal Medicine}}
+    }}
+    <h3>Tier 9</h3>
+    {{BlockGallery|
+        {{BlockGalleryItemTech|Cartography}}
+    }}
+    <h3>Tier 10</h3>
+    {{BlockGallery|
+        {{BlockGalleryItemTech|Long Swordsman}}
+        {{BlockGalleryItemTech|Crossbowman}}
+        {{BlockGalleryItemTech|Knight}}
+        {{BlockGalleryItemTech|Ballista}}
+        {{BlockGalleryItemTech|Legionary|category=Long Swordsman|civ=Rome}}
+        {{BlockGalleryItemTech|Teutonic Knight|category=Knight|civ=Germany}}
+        {{BlockGalleryItemTech|Longbowman|category=Crossbowman|civ=Britain}}
+        {{BlockGalleryItemTech|Throwing Axeman|category=Long Swordsman|civ=France}}
+        {{BlockGalleryItemTech|Conquistador|category=Knight|civ=Spain}}
+        {{BlockGalleryItemTech|Chu-Ko-Nu|category=Crossbowman|civ=China}}
+        {{BlockGalleryItemTech|Samurai|category=Long Swordsman|civ=Japan}}
+        {{BlockGalleryItemTech|Hwarang|category=Crossbowman|civ=Korea}}
+    }}
+    <h3>Tier 10</h3>
+    {{BlockGallery|
+        {{BlockGalleryItemTech|Wootz Steel}}
+        {{BlockGalleryItemTech|Bodkin Arrows}}
+        {{BlockGalleryItemTech|Stirrups}}
+        {{BlockGalleryItemTech|Ballistics}}
+    }}
+    <h3>Tier 11</h3>
+    {{BlockGallery|
+        {{BlockGalleryItemTech|Scutum}}
+        {{BlockGalleryItemTech|Pavise}}
+        {{BlockGalleryItemTech|Plate Armor}}
+        {{BlockGalleryItemTech|Heavy Frame}}
+    }}
+    <h3>Tier 12</h3>
+    {{BlockGallery|
+        {{BlockGalleryItemTech|Medical Corps}}
+    }}
+    <h3>Tier 13</h3>
+    {{BlockGallery|
+        {{BlockGalleryItemTech|Combined Arms}}
+        {{BlockGalleryItemTech|Encampment}}
+    }}
+    <h3>Tier 14</h3>
+    {{BlockGallery|
+        {{BlockGalleryItemTech|Royal Guard}}
+        {{BlockGalleryItemTech|Royal Crossbowman}}
+        {{BlockGalleryItemTech|Royal Knight}}
+        {{BlockGalleryItemTech|Trebuchet}}
+        {{BlockGalleryItemTech|Elite Legionary|category=Royal Guard|civ=Rome}}
+        {{BlockGalleryItemTech|Elite Teutonic Knight|category=Royal Knight|civ=Germany}}
+        {{BlockGalleryItemTech|Elite Longbowman|category=Royal Crossbowman|civ=Britain}}
+        {{BlockGalleryItemTech|Elite Throwing Axeman|category=Royal Guard|civ=France}}
+        {{BlockGalleryItemTech|Elite Conquistador|category=Royal Knight|civ=Spain}}
+        {{BlockGalleryItemTech|Elite Chu-Ko-Nu|category=Royal Crossbowman|civ=China}}
+        {{BlockGalleryItemTech|Elite Samurai|category=Royal Guard|civ=Japan}}
+        {{BlockGalleryItemTech|Elite Hwarang|category=Royal Crossbowman|civ=Korea}}
+    }}|
+}}
