@@ -1,4 +1,4 @@
-"""위키에서 건물/연구 데이터와 아이콘을 수집해 web/src/data + web/public/icons 에 저장한다.
+r"""위키에서 건물/연구 데이터와 아이콘을 수집해 web/src/data + web/public/icons 에 저장한다.
 
 사용법: ..\.venv\Scripts\python scrape_wiki.py [--skip-icons]
 캐시(.cache/)가 있으면 네트워크 요청 없이 재생성된다.
@@ -8,6 +8,7 @@ import json
 import re
 import sys
 from pathlib import Path
+from typing import Callable
 
 from rok_wiki.api import fetch_html, fetch_parse
 from rok_wiki.icons import download_all_icons
@@ -49,6 +50,70 @@ def apply_overrides(entries: list[dict], overrides: dict, section: str) -> None:
                     row.update(patch)
 
 
+def resolve_research(
+    tech_list: list[dict],
+    parse_one: Callable[[str], list[dict]],
+    fetch_wikitext: Callable[[str], str],
+    warnings: list[str],
+) -> tuple[list[dict], dict[str, str], list[tuple[str, str]]]:
+    """tech_list의 각 항목을 parse_one으로 실제 파싱해 research 리스트를 만든다.
+
+    문명별 병사 명칭(예: Legionary)은 공용 연구 페이지(Long Swordsman)로 가는 위키
+    리다이렉트인 경우가 있다 — parse_one이 실패하면 fetch_wikitext로 리다이렉트 여부를
+    확인해, 리다이렉트라면 별칭은 건너뛰고 대상만 (별칭의 tree/tier로) 한 번만 수집한다.
+    대상이 별칭보다 먼저 tech_list에 나와 이미 수집돼 있으면 다시 파싱하지 않는다.
+    네트워크 I/O는 parse_one/fetch_wikitext 뒤로 분리되어 있어 합성 입력으로 단위 테스트할
+    수 있다.
+
+    Returns: (research 목록, {id: 이름} 딕셔너리, [(별칭 이름, 대상 이름), ...] 별칭 목록)
+    """
+    research: list[dict] = []
+    research_ids: set[str] = set()
+    names_en: dict[str, str] = {}
+    aliases: list[tuple[str, str]] = []
+
+    def add(tech_name: str, tid: str, tree: str, tier: int) -> None:
+        levels = parse_one(tech_name)
+        names_en[tid] = tech_name
+        research.append({"id": tid, "tree": tree, "tier": tier,
+                         "maxLevel": max(r["level"] for r in levels), "levels": levels})
+        research_ids.add(tid)
+
+    for tech in tech_list:
+        tid = slugify(tech["name"])
+        if tid in research_ids:
+            continue  # 앞서 다른 문명별 별칭을 통해 이미 이 대상으로 추가됨
+        try:
+            add(tech["name"], tid, tech["tree"], tech["tier"])
+            continue
+        except Exception as e:  # noqa: BLE001
+            first_error = e
+
+        # 표를 못 찾은 경우, 문명별 병사 명칭이 공용 연구 페이지로 가는 위키 리다이렉트인지 확인한다
+        # (예: Legionary -> Long Swordsman). 리다이렉트라면 별칭은 건너뛰고 실제 대상만 한 번 수집한다.
+        try:
+            wikitext = fetch_wikitext(tech["name"])
+        except Exception:  # noqa: BLE001
+            wikitext = ""
+        target = _redirect_target(wikitext)
+        if target is None:
+            names_en[tid] = tech["name"]  # 진짜 실패는 건물과 동일하게 이름은 남겨 둔다
+            warnings.append(f"research {tid}: {first_error}")
+            continue
+
+        target_id = slugify(target)
+        aliases.append((tech["name"], target))
+        warnings.append(f"research {tid}: alias of {target_id}")
+        if target_id in research_ids:
+            continue
+        try:
+            add(target, target_id, tech["tree"], tech["tier"])
+        except Exception as e2:  # noqa: BLE001
+            warnings.append(f"research {target_id} (via alias {tid}): {e2}")
+
+    return research, names_en, aliases
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--skip-icons", action="store_true")
@@ -79,50 +144,16 @@ def main() -> int:
         buildings.append({"id": bid, "category": category,
                           "maxLevel": max(r["level"] for r in levels), "levels": levels})
 
-    tech_list = parse_tech_list(fetch_parse("Technology")["wikitext"])
-    research: list[dict] = []
-    research_ids: set[str] = set()
-    aliases: list[tuple[str, str]] = []  # (별칭 연구명, 실제 대상 연구명) — 보고용
-
-    def add_research(tech_name: str, tid: str, tree: str, tier: int) -> None:
+    def parse_one(tech_name: str) -> list[dict]:
         page = f"Technology/{tech_name.replace(' ', '_')}"
-        levels = parse_tech_table(fetch_html(page), tid, warnings)
-        names_en[tid] = tech_name
-        research.append({"id": tid, "tree": tree, "tier": tier,
-                         "maxLevel": max(r["level"] for r in levels), "levels": levels})
-        research_ids.add(tid)
+        return parse_tech_table(fetch_html(page), slugify(tech_name), warnings)
 
-    for tech in tech_list:
-        tid = slugify(tech["name"])
-        if tid in research_ids:
-            continue  # 앞서 다른 문명별 별칭을 통해 이미 이 대상으로 추가됨
-        try:
-            add_research(tech["name"], tid, tech["tree"], tech["tier"])
-            continue
-        except Exception as e:  # noqa: BLE001
-            first_error = e
+    def fetch_wikitext(tech_name: str) -> str:
+        return fetch_parse(f"Technology/{tech_name.replace(' ', '_')}")["wikitext"]
 
-        # 표를 못 찾은 경우, 문명별 병사 명칭이 공용 연구 페이지로 가는 위키 리다이렉트인지 확인한다
-        # (예: Legionary -> Long Swordsman). 리다이렉트라면 별칭은 건너뛰고 실제 대상만 한 번 수집한다.
-        try:
-            wikitext = fetch_parse(f"Technology/{tech['name'].replace(' ', '_')}")["wikitext"]
-        except Exception:  # noqa: BLE001
-            wikitext = ""
-        target = _redirect_target(wikitext)
-        if target is None:
-            names_en[tid] = tech["name"]  # 진짜 실패는 건물과 동일하게 이름은 남겨 둔다
-            warnings.append(f"research {tid}: {first_error}")
-            continue
-
-        target_id = slugify(target)
-        aliases.append((tech["name"], target))
-        warnings.append(f"research {tid}: alias of {target_id}")
-        if target_id in research_ids:
-            continue
-        try:
-            add_research(target, target_id, tech["tree"], tech["tier"])
-        except Exception as e2:  # noqa: BLE001
-            warnings.append(f"research {target_id} (via alias {tid}): {e2}")
+    tech_list = parse_tech_list(fetch_parse("Technology")["wikitext"])
+    research, research_names, aliases = resolve_research(tech_list, parse_one, fetch_wikitext, warnings)
+    names_en.update(research_names)
 
     overrides_file = DATA_DIR / "overrides.json"
     overrides = json.loads(overrides_file.read_text(encoding="utf-8")) if overrides_file.exists() else {}

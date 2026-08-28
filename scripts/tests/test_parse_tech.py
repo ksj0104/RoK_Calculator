@@ -30,6 +30,18 @@ def test_masonry_table():
     assert {"type": "research", "id": "masonry", "level": 1} in lv2["requirements"]
 
 
+def test_missing_power_column_defaults_to_zero_with_warning():
+    html = (
+        '<table class="tech-table"><tr><th>Level</th><th>Requirements</th><th>Cost</th>'
+        "<th>Time</th></tr>"
+        "<tr><td>1</td><td>None</td><td>None</td><td>10s</td></tr></table>"
+    )
+    warnings: list[str] = []
+    rows = parse_tech_table(html, "no_power_tech", warnings)
+    assert rows[0]["power"] == 0
+    assert any("power" in w for w in warnings)
+
+
 def test_placeholder_time_value_becomes_zero_with_warning():
     # 일부 연구는 위키에 시간이 아직 "?"로만 적혀 있다 (예: Stone Saw, Machinery).
     html = (
