@@ -4,8 +4,7 @@ import { LangProvider, useLang } from '../i18n';
 import { useUserState } from '../state/userState';
 import { CityTab } from './CityTab';
 import { GoalsTab } from './GoalsTab';
-// TODO(Task 14): re-enable once ResultTab exists
-// import { ResultTab } from './ResultTab';
+import { ResultTab } from './ResultTab';
 
 function Shell() {
   const { t, lang, setLang } = useLang();
@@ -31,8 +30,7 @@ function Shell() {
       <main>
         {tab === 'city' && <CityTab state={state} dispatch={dispatch} />}
         {tab === 'goals' && <GoalsTab goals={goals} setGoals={setGoals} />}
-        {/* TODO(Task 14): re-enable once ResultTab exists */}
-        {/* {tab === 'result' && <ResultTab state={state} goals={goals} />} */}
+        {tab === 'result' && <ResultTab state={state} goals={goals} />}
       </main>
     </div>
   );
