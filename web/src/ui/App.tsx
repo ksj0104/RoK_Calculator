@@ -1,17 +1,16 @@
 import { useState } from 'react';
-// import type { Goal } from '../engine/types';
+import type { Goal } from '../engine/types';
 import { LangProvider, useLang } from '../i18n';
 import { useUserState } from '../state/userState';
 import { CityTab } from './CityTab';
-// TODO(Task 13): re-enable once GoalsTab exists
-// import { GoalsTab } from './GoalsTab';
+import { GoalsTab } from './GoalsTab';
 // TODO(Task 14): re-enable once ResultTab exists
 // import { ResultTab } from './ResultTab';
 
 function Shell() {
   const { t, lang, setLang } = useLang();
   const [state, dispatch] = useUserState();
-  // const [goals, setGoals] = useState<Goal[]>([]);
+  const [goals, setGoals] = useState<Goal[]>([]);
   const [tab, setTab] = useState<'city' | 'goals' | 'result'>('city');
 
   return (
@@ -31,8 +30,7 @@ function Shell() {
       </header>
       <main>
         {tab === 'city' && <CityTab state={state} dispatch={dispatch} />}
-        {/* TODO(Task 13): re-enable once GoalsTab exists */}
-        {/* {tab === 'goals' && <GoalsTab goals={goals} setGoals={setGoals} />} */}
+        {tab === 'goals' && <GoalsTab goals={goals} setGoals={setGoals} />}
         {/* TODO(Task 14): re-enable once ResultTab exists */}
         {/* {tab === 'result' && <ResultTab state={state} goals={goals} />} */}
       </main>
