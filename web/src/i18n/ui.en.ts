@@ -45,6 +45,7 @@ export default {
   'result.buildingTime': 'Construction done', 'result.researchTime': 'Research done', 'result.workSum': 'Work total',
   'result.speedupsUsed': 'Speedups used', 'result.noGoals': 'Choose a target icon and level above.',
   'result.done': 'All goals are already complete.',
+  'tip.cost': 'Cost', 'tip.max': 'Max',
   'unit.day': 'd', 'unit.hour': 'h', 'unit.min': 'm', 'unit.sec': 's', 'unit.times': '×',
   'res.food': 'Food', 'res.wood': 'Wood', 'res.stone': 'Stone', 'res.gold': 'Gold',
   'tree.economic': 'Economic', 'tree.military': 'Military', 'tree.tier': 'Tier {n}', 'category.other': 'Other',

@@ -58,6 +58,7 @@ export default {
   'effect.resource_protection_capacity': '자원 보호량', 'effect.troops_load': '부대 적재량',
   'effect.feature': '정찰 정보', 'effect.stone_gathering_unlock': '석재 채집 해금',
   'effect.gold_gathering_unlock': '금화 채집 해금', 'effect.gem_gathering_unlock': '보석 채집 해금',
+  'tip.cost': '자원', 'tip.max': '최대',
   'unit.day': '일', 'unit.hour': '시간', 'unit.min': '분', 'unit.sec': '초', 'unit.times': '회',
   'res.food': '식량', 'res.wood': '목재', 'res.stone': '석재', 'res.gold': '금화',
   'tree.economic': '경제', 'tree.military': '군사', 'tree.tier': '티어 {n}', 'category.other': '기타',

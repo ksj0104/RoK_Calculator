@@ -3,6 +3,9 @@ import { buildings, iconUrl } from '../catalog';
 import type { UserState } from '../engine/types';
 import { useLang } from '../i18n/useLang';
 import type { Action } from '../state/userState';
+import { LevelInfoCard } from './InfoHover';
+import { useInfoTip } from './useInfoTip';
+import { upgradeTarget } from './levelInfo';
 import { ResearchTree } from './ResearchTree';
 import { SpeedupPanel } from './SpeedupPanel';
 
@@ -10,6 +13,7 @@ const CATEGORIES = ['other', 'economic', 'military'] as const;
 
 export function CityTab({ state, dispatch }: { state: UserState; dispatch: Dispatch<Action> }) {
   const { t, name } = useLang();
+  const { bind, portal } = useInfoTip();
   const configuredBuildings = Object.values(state.buildings).filter((level) => level > 0).length;
   const configuredResearch = Object.values(state.research).filter((level) => level > 0).length;
   const buffHelpImage = `${import.meta.env.BASE_URL}images/buff-speed-example.png`;
@@ -26,8 +30,11 @@ export function CityTab({ state, dispatch }: { state: UserState; dispatch: Dispa
             <div key={cat} className="city-category">
               <h3>{t(cat === 'other' ? 'category.other' : `tree.${cat}`)}</h3>
               <div className="building-grid">
-                {buildings.filter((b) => b.category === cat).map((b) => (
-                  <label className="level-card" key={b.id}>
+                {buildings.filter((b) => b.category === cat).map((b) => {
+                  const target = upgradeTarget(b, state.buildings[b.id] ?? 0);
+                  return (
+                  <label className="level-card" key={b.id}
+                    {...(target ? bind(<LevelInfoCard entry={b} row={target.row} isMax={target.isMax} />) : {})}>
                     <img src={iconUrl('building', b.id)} alt="" loading="lazy" />
                     <span className="card-name">{name(b.id)}</span>
                     <select
@@ -40,7 +47,8 @@ export function CityTab({ state, dispatch }: { state: UserState; dispatch: Dispa
                       ))}
                     </select>
                   </label>
-                ))}
+                  );
+                })}
               </div>
             </div>
           ))}
@@ -111,6 +119,7 @@ export function CityTab({ state, dispatch }: { state: UserState; dispatch: Dispa
           <button className="danger-button" onClick={() => dispatch({ type: 'reset' })}>{t('city.reset')}</button>
         </div>
       </details>
+      {portal}
     </div>
   );
 }

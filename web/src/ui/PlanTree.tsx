@@ -1,11 +1,16 @@
-import { iconUrl } from '../catalog';
+import { catalog, iconUrl } from '../catalog';
 import type { Plan } from '../engine/plan';
 import type { NodeId } from '../engine/types';
 import { useLang } from '../i18n/useLang';
 import { formatDuration } from './format';
+import { LevelInfoCard } from './InfoHover';
+import { useInfoTip } from './useInfoTip';
+
+const entryByKey = new Map(catalog.map((entry) => [`${entry.kind}:${entry.id}`, entry]));
 
 export function PlanTree({ plan }: { plan: Plan }) {
   const { t, name } = useLang();
+  const { bind, portal } = useInfoTip();
   const taskByKey = new Map(plan.tasks.map((task) => [task.key, task]));
   const stageMemo = new Map<NodeId, number>();
   const stageOf = (key: NodeId): number => {
@@ -33,9 +38,15 @@ export function PlanTree({ plan }: { plan: Plan }) {
           <div className="tree-stage" key={stage}>
             <div className="tree-stage-label">{t('result.stage', { n: stage + 1 })}</div>
             <div className="tree-stage-items">
-              {tasks.sort((a, b) => a.startSec - b.startSec).map((task) => (
+              {tasks.sort((a, b) => a.startSec - b.startSec).map((task) => {
+                const entry = entryByKey.get(`${task.kind}:${task.node.id}`);
+                const row = entry?.levels.find((level) => level.level === task.node.level);
+                return (
                 <article className={`tree-node ${task.kind} ${boostIds.has(task.node.id) ? 'boost' : ''}`}
-                  key={task.key}>
+                  key={task.key}
+                  {...(entry && row
+                    ? bind(<LevelInfoCard entry={entry} row={row} durationSec={task.durationSec} />)
+                    : {})}>
                   <img src={iconUrl(task.kind, task.node.id)} alt="" />
                   <div>
                     <strong>{name(task.node.id)}</strong>
@@ -46,12 +57,14 @@ export function PlanTree({ plan }: { plan: Plan }) {
                   </div>
                   {boostIds.has(task.node.id) && <b title={t('result.routeBoost')}>+</b>}
                 </article>
-              ))}
+                );
+              })}
             </div>
             {index < all.length - 1 && <div className="stage-arrow" aria-hidden="true">→</div>}
           </div>
         ))}
       </div>
+      {portal}
     </div>
   );
 }

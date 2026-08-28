@@ -195,6 +195,19 @@ button:focus-visible, input:focus-visible, select:focus-visible, summary:focus-v
 .req-chip { display: inline-flex; align-items: center; gap: 5px; padding: 3px 7px;
   border-radius: 5px; background: var(--surface-2); color: var(--text); }
 .req-chip img { width: 16px; height: 16px; object-fit: contain; }
+.info-card { position: fixed; z-index: 60; width: max-content; max-width: 270px; padding: 10px 12px;
+  display: flex; flex-direction: column; gap: 6px; border: 1px solid var(--line-bright); border-radius: 9px;
+  background: var(--surface-2); box-shadow: 0 10px 26px rgb(0 0 0 / 45%); font-size: .68rem;
+  pointer-events: none; }
+.info-card-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+.info-card-head strong { color: var(--gold-soft); font-size: .76rem; }
+.info-card-head span { flex-shrink: 0; color: var(--muted); font-size: .62rem; }
+.info-card-row { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+.info-card-row > span { flex-shrink: 0; color: var(--muted); }
+.info-card-row b { color: var(--text); font-weight: 600; text-align: right; }
+.info-card-reqs { margin-top: 2px; padding-top: 7px; display: flex; flex-wrap: wrap; gap: 5px;
+  border-top: 1px dashed var(--line); }
+.info-card-reqs > span:first-child { width: 100%; color: var(--muted); }
 .primary-button:hover { background: var(--gold-soft); }
 .compact-heading { margin-bottom: 12px; }
 .selected-goals { display: flex; flex-wrap: wrap; gap: 8px; }
