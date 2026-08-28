@@ -1,0 +1,8740 @@
+[
+ {
+  "id": "city_hall",
+  "category": "other",
+  "maxLevel": 25,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [],
+    "cost": {
+     "food": 0,
+     "wood": 0,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 0,
+    "power": 7
+   },
+   {
+    "level": 2,
+    "requirements": [],
+    "cost": {
+     "food": 3500,
+     "wood": 3500,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 2,
+    "power": 21
+   },
+   {
+    "level": 3,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "wall",
+      "level": 2
+     }
+    ],
+    "cost": {
+     "food": 6500,
+     "wood": 6500,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 300,
+    "power": 59
+   },
+   {
+    "level": 4,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "wall",
+      "level": 3
+     }
+    ],
+    "cost": {
+     "food": 11800,
+     "wood": 11800,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 1200,
+    "power": 154
+   },
+   {
+    "level": 5,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "wall",
+      "level": 4
+     },
+     {
+      "type": "building",
+      "id": "hospital",
+      "level": 4
+     }
+    ],
+    "cost": {
+     "food": 21300,
+     "wood": 21300,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 3600,
+    "power": 383
+   },
+   {
+    "level": 6,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "wall",
+      "level": 5
+     },
+     {
+      "type": "building",
+      "id": "scout_camp",
+      "level": 5
+     }
+    ],
+    "cost": {
+     "food": 36300,
+     "wood": 36300,
+     "stone": 12000,
+     "gold": 0
+    },
+    "timeSec": 7200,
+    "power": 852
+   },
+   {
+    "level": 7,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "wall",
+      "level": 6
+     },
+     {
+      "type": "building",
+      "id": "storehouse",
+      "level": 6
+     }
+    ],
+    "cost": {
+     "food": 54400,
+     "wood": 54400,
+     "stone": 19200,
+     "gold": 0
+    },
+    "timeSec": 18000,
+    "power": 1847
+   },
+   {
+    "level": 8,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "wall",
+      "level": 7
+     },
+     {
+      "type": "building",
+      "id": "barracks",
+      "level": 7
+     }
+    ],
+    "cost": {
+     "food": 81800,
+     "wood": 81800,
+     "stone": 30800,
+     "gold": 0
+    },
+    "timeSec": 36000,
+    "power": 3706
+   },
+   {
+    "level": 9,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "wall",
+      "level": 8
+     },
+     {
+      "type": "building",
+      "id": "alliance_center",
+      "level": 8
+     }
+    ],
+    "cost": {
+     "food": 122800,
+     "wood": 122800,
+     "stone": 49200,
+     "gold": 0
+    },
+    "timeSec": 54000,
+    "power": 6504
+   },
+   {
+    "level": 10,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "wall",
+      "level": 9
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 9
+     }
+    ],
+    "cost": {
+     "food": 184300,
+     "wood": 184300,
+     "stone": 78700,
+     "gold": 0
+    },
+    "timeSec": 79200,
+    "power": 10933
+   },
+   {
+    "level": 11,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "wall",
+      "level": 10
+     },
+     {
+      "type": "building",
+      "id": "hospital",
+      "level": 10
+     }
+    ],
+    "cost": {
+     "food": 277500,
+     "wood": 277500,
+     "stone": 120000,
+     "gold": 0
+    },
+    "timeSec": 108000,
+    "power": 16723
+   },
+   {
+    "level": 12,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "wall",
+      "level": 11
+     },
+     {
+      "type": "building",
+      "id": "storehouse",
+      "level": 11
+     }
+    ],
+    "cost": {
+     "food": 417500,
+     "wood": 417500,
+     "stone": 180000,
+     "gold": 0
+    },
+    "timeSec": 144000,
+    "power": 24693
+   },
+   {
+    "level": 13,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "wall",
+      "level": 12
+     },
+     {
+      "type": "building",
+      "id": "archery_range",
+      "level": 12
+     }
+    ],
+    "cost": {
+     "food": 627500,
+     "wood": 627500,
+     "stone": 270000,
+     "gold": 0
+    },
+    "timeSec": 180000,
+    "power": 35213
+   },
+   {
+    "level": 14,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "wall",
+      "level": 13
+     },
+     {
+      "type": "building",
+      "id": "alliance_center",
+      "level": 13
+     },
+     {
+      "type": "building",
+      "id": "trading_post",
+      "level": 13
+     }
+    ],
+    "cost": {
+     "food": 942500,
+     "wood": 942500,
+     "stone": 405000,
+     "gold": 0
+    },
+    "timeSec": 216000,
+    "power": 48838
+   },
+   {
+    "level": 15,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "wall",
+      "level": 14
+     },
+     {
+      "type": "building",
+      "id": "scout_camp",
+      "level": 14
+     }
+    ],
+    "cost": {
+     "food": 1400000,
+     "wood": 1400000,
+     "stone": 607500,
+     "gold": 0
+    },
+    "timeSec": 252000,
+    "power": 66400
+   },
+   {
+    "level": 16,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "wall",
+      "level": 15
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 15
+     }
+    ],
+    "cost": {
+     "food": 2100000,
+     "wood": 2100000,
+     "stone": 912500,
+     "gold": 0
+    },
+    "timeSec": 345600,
+    "power": 91451
+   },
+   {
+    "level": 17,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "wall",
+      "level": 16
+     },
+     {
+      "type": "building",
+      "id": "hospital",
+      "level": 16
+     }
+    ],
+    "cost": {
+     "food": 3200000,
+     "wood": 3200000,
+     "stone": 1400000,
+     "gold": 0
+    },
+    "timeSec": 417600,
+    "power": 125005
+   },
+   {
+    "level": 18,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "wall",
+      "level": 17
+     },
+     {
+      "type": "building",
+      "id": "storehouse",
+      "level": 17
+     }
+    ],
+    "cost": {
+     "food": 4800000,
+     "wood": 4800000,
+     "stone": 2100000,
+     "gold": 0
+    },
+    "timeSec": 504000,
+    "power": 170590
+   },
+   {
+    "level": 19,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "wall",
+      "level": 18
+     },
+     {
+      "type": "building",
+      "id": "stable",
+      "level": 18
+     }
+    ],
+    "cost": {
+     "food": 7200000,
+     "wood": 7200000,
+     "stone": 3100000,
+     "gold": 0
+    },
+    "timeSec": 604800,
+    "power": 232957
+   },
+   {
+    "level": 20,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "wall",
+      "level": 19
+     },
+     {
+      "type": "building",
+      "id": "alliance_center",
+      "level": 19
+     }
+    ],
+    "cost": {
+     "food": 10800000,
+     "wood": 10800000,
+     "stone": 4700000,
+     "gold": 0
+    },
+    "timeSec": 712800,
+    "power": 318769
+   },
+   {
+    "level": 21,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "wall",
+      "level": 20
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 20
+     }
+    ],
+    "cost": {
+     "food": 16200000,
+     "wood": 16200000,
+     "stone": 7000000,
+     "gold": 0
+    },
+    "timeSec": 950400,
+    "power": 442735
+   },
+   {
+    "level": 22,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "wall",
+      "level": 21
+     },
+     {
+      "type": "building",
+      "id": "hospital",
+      "level": 21
+     }
+    ],
+    "cost": {
+     "food": 24300000,
+     "wood": 24300000,
+     "stone": 10600000,
+     "gold": 0
+    },
+    "timeSec": 1479600,
+    "power": 630860
+   },
+   {
+    "level": 23,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "wall",
+      "level": 22
+     },
+     {
+      "type": "building",
+      "id": "storehouse",
+      "level": 22
+     }
+    ],
+    "cost": {
+     "food": 36500000,
+     "wood": 36500000,
+     "stone": 15900000,
+     "gold": 0
+    },
+    "timeSec": 2070000,
+    "power": 907085
+   },
+   {
+    "level": 24,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "wall",
+      "level": 23
+     },
+     {
+      "type": "building",
+      "id": "siege_workshop",
+      "level": 23
+     }
+    ],
+    "cost": {
+     "food": 54800000,
+     "wood": 54800000,
+     "stone": 24000000,
+     "gold": 0
+    },
+    "timeSec": 3110400,
+    "power": 132248
+   },
+   {
+    "level": 25,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "wall",
+      "level": 24
+     },
+     {
+      "type": "building",
+      "id": "trading_post",
+      "level": 24
+     }
+    ],
+    "cost": {
+     "food": 82200000,
+     "wood": 82200000,
+     "stone": 36000000,
+     "gold": 0
+    },
+    "timeSec": 10915200,
+    "power": 2195458
+   }
+  ]
+ },
+ {
+  "id": "wall",
+  "category": "other",
+  "maxLevel": 25,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [],
+    "cost": {
+     "food": 0,
+     "wood": 0,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 0,
+    "power": 5
+   },
+   {
+    "level": 2,
+    "requirements": [],
+    "cost": {
+     "food": 2300,
+     "wood": 2800,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 2,
+    "power": 15
+   },
+   {
+    "level": 3,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 3
+     }
+    ],
+    "cost": {
+     "food": 4300,
+     "wood": 5000,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 90,
+    "power": 37
+   },
+   {
+    "level": 4,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 4
+     }
+    ],
+    "cost": {
+     "food": 7800,
+     "wood": 9000,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 600,
+    "power": 94
+   },
+   {
+    "level": 5,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "tavern",
+      "level": 5
+     }
+    ],
+    "cost": {
+     "food": 14000,
+     "wood": 16300,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 1800,
+    "power": 226
+   },
+   {
+    "level": 6,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "tavern",
+      "level": 6
+     }
+    ],
+    "cost": {
+     "food": 18000,
+     "wood": 21000,
+     "stone": 25000,
+     "gold": 0
+    },
+    "timeSec": 3500,
+    "power": 519
+   },
+   {
+    "level": 7,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "tavern",
+      "level": 7
+     }
+    ],
+    "cost": {
+     "food": 27000,
+     "wood": 32000,
+     "stone": 40000,
+     "gold": 0
+    },
+    "timeSec": 7020,
+    "power": 1037
+   },
+   {
+    "level": 8,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "tavern",
+      "level": 8
+     }
+    ],
+    "cost": {
+     "food": 41000,
+     "wood": 47000,
+     "stone": 64000,
+     "gold": 0
+    },
+    "timeSec": 13980,
+    "power": 1965
+   },
+   {
+    "level": 9,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "tavern",
+      "level": 9
+     }
+    ],
+    "cost": {
+     "food": 61000,
+     "wood": 71000,
+     "stone": 102400,
+     "gold": 0
+    },
+    "timeSec": 28020,
+    "power": 3656
+   },
+   {
+    "level": 10,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "tavern",
+      "level": 10
+     }
+    ],
+    "cost": {
+     "food": 92000,
+     "wood": 106000,
+     "stone": 164000,
+     "gold": 0
+    },
+    "timeSec": 55980,
+    "power": 6784
+   },
+   {
+    "level": 11,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "tavern",
+      "level": 11
+     }
+    ],
+    "cost": {
+     "food": 137000,
+     "wood": 160000,
+     "stone": 250000,
+     "gold": 0
+    },
+    "timeSec": 67200,
+    "power": 10816
+   },
+   {
+    "level": 12,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "tavern",
+      "level": 12
+     }
+    ],
+    "cost": {
+     "food": 207000,
+     "wood": 240000,
+     "stone": 375000,
+     "gold": 0
+    },
+    "timeSec": 80640,
+    "power": 16060
+   },
+   {
+    "level": 13,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "tavern",
+      "level": 13
+     }
+    ],
+    "cost": {
+     "food": 310000,
+     "wood": 360000,
+     "stone": 565000,
+     "gold": 0
+    },
+    "timeSec": 97200,
+    "power": 22965
+   },
+   {
+    "level": 14,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "tavern",
+      "level": 14
+     }
+    ],
+    "cost": {
+     "food": 465000,
+     "wood": 540000,
+     "stone": 850000,
+     "gold": 0
+    },
+    "timeSec": 115200,
+    "power": 32169
+   },
+   {
+    "level": 15,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "tavern",
+      "level": 15
+     }
+    ],
+    "cost": {
+     "food": 698000,
+     "wood": 810000,
+     "stone": 1300000,
+     "gold": 0
+    },
+    "timeSec": 165600,
+    "power": 44583
+   },
+   {
+    "level": 16,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "tavern",
+      "level": 16
+     }
+    ],
+    "cost": {
+     "food": 1000000,
+     "wood": 1200000,
+     "stone": 1900000,
+     "gold": 0
+    },
+    "timeSec": 165600,
+    "power": 61540
+   },
+   {
+    "level": 17,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "tavern",
+      "level": 17
+     }
+    ],
+    "cost": {
+     "food": 1600000,
+     "wood": 1800000,
+     "stone": 2900000,
+     "gold": 0
+    },
+    "timeSec": 201600,
+    "power": 84977
+   },
+   {
+    "level": 18,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "tavern",
+      "level": 18
+     }
+    ],
+    "cost": {
+     "food": 2400000,
+     "wood": 2700000,
+     "stone": 4400000,
+     "gold": 0
+    },
+    "timeSec": 241200,
+    "power": 117860
+   },
+   {
+    "level": 19,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "tavern",
+      "level": 19
+     }
+    ],
+    "cost": {
+     "food": 3500000,
+     "wood": 4100000,
+     "stone": 6600000,
+     "gold": 0
+    },
+    "timeSec": 288000,
+    "power": 164369
+   },
+   {
+    "level": 20,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "tavern",
+      "level": 20
+     }
+    ],
+    "cost": {
+     "food": 5300000,
+     "wood": 6200000,
+     "stone": 9900000,
+     "gold": 0
+    },
+    "timeSec": 345600,
+    "power": 230776
+   },
+   {
+    "level": 21,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "tavern",
+      "level": 21
+     }
+    ],
+    "cost": {
+     "food": 8000000,
+     "wood": 9300000,
+     "stone": 14800000,
+     "gold": 0
+    },
+    "timeSec": 417600,
+    "power": 326321
+   },
+   {
+    "level": 22,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "tavern",
+      "level": 22
+     }
+    ],
+    "cost": {
+     "food": 12000000,
+     "wood": 13900000,
+     "stone": 22200000,
+     "gold": 0
+    },
+    "timeSec": 540000,
+    "power": 466309
+   },
+   {
+    "level": 23,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "tavern",
+      "level": 23
+     }
+    ],
+    "cost": {
+     "food": 18000000,
+     "wood": 20900000,
+     "stone": 33300000,
+     "gold": 0
+    },
+    "timeSec": 756000,
+    "power": 674163
+   },
+   {
+    "level": 24,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "tavern",
+      "level": 24
+     }
+    ],
+    "cost": {
+     "food": 27000000,
+     "wood": 31300000,
+     "stone": 50000000,
+     "gold": 0
+    },
+    "timeSec": 1134000,
+    "power": 986224
+   },
+   {
+    "level": 25,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "tavern",
+      "level": 25
+     }
+    ],
+    "cost": {
+     "food": 40500000,
+     "wood": 47100000,
+     "stone": 75000000,
+     "gold": 0
+    },
+    "timeSec": 3556800,
+    "power": 1545374
+   }
+  ]
+ },
+ {
+  "id": "watchtower",
+  "category": "other",
+  "maxLevel": 25,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [],
+    "cost": {
+     "food": 0,
+     "wood": 0,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 0,
+    "power": 5
+   },
+   {
+    "level": 2,
+    "requirements": [],
+    "cost": {
+     "food": 800,
+     "wood": 800,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 30,
+    "power": 11
+   },
+   {
+    "level": 3,
+    "requirements": [],
+    "cost": {
+     "food": 1500,
+     "wood": 1500,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 100,
+    "power": 21
+   },
+   {
+    "level": 4,
+    "requirements": [],
+    "cost": {
+     "food": 2800,
+     "wood": 2800,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 300,
+    "power": 44
+   },
+   {
+    "level": 5,
+    "requirements": [],
+    "cost": {
+     "food": 5000,
+     "wood": 5000,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 900,
+    "power": 100
+   },
+   {
+    "level": 6,
+    "requirements": [],
+    "cost": {
+     "food": 8500,
+     "wood": 8500,
+     "stone": 1300,
+     "gold": 0
+    },
+    "timeSec": 2100,
+    "power": 221
+   },
+   {
+    "level": 7,
+    "requirements": [],
+    "cost": {
+     "food": 12800,
+     "wood": 12800,
+     "stone": 2000,
+     "gold": 0
+    },
+    "timeSec": 4200,
+    "power": 446
+   },
+   {
+    "level": 8,
+    "requirements": [],
+    "cost": {
+     "food": 19300,
+     "wood": 19300,
+     "stone": 3200,
+     "gold": 0
+    },
+    "timeSec": 8400,
+    "power": 868
+   },
+   {
+    "level": 9,
+    "requirements": [],
+    "cost": {
+     "food": 29000,
+     "wood": 29000,
+     "stone": 5200,
+     "gold": 0
+    },
+    "timeSec": 16800,
+    "power": 1671
+   },
+   {
+    "level": 10,
+    "requirements": [],
+    "cost": {
+     "food": 43500,
+     "wood": 43500,
+     "stone": 8200,
+     "gold": 0
+    },
+    "timeSec": 33600,
+    "power": 3213
+   },
+   {
+    "level": 11,
+    "requirements": [],
+    "cost": {
+     "food": 67500,
+     "wood": 67500,
+     "stone": 12500,
+     "gold": 0
+    },
+    "timeSec": 40320,
+    "power": 5133
+   },
+   {
+    "level": 12,
+    "requirements": [],
+    "cost": {
+     "food": 102500,
+     "wood": 102500,
+     "stone": 20000,
+     "gold": 0
+    },
+    "timeSec": 48360,
+    "power": 7538
+   },
+   {
+    "level": 13,
+    "requirements": [],
+    "cost": {
+     "food": 155000,
+     "wood": 155000,
+     "stone": 30000,
+     "gold": 0
+    },
+    "timeSec": 58080,
+    "power": 10570
+   },
+   {
+    "level": 14,
+    "requirements": [],
+    "cost": {
+     "food": 232500,
+     "wood": 232500,
+     "stone": 45000,
+     "gold": 0
+    },
+    "timeSec": 69660,
+    "power": 14421
+   },
+   {
+    "level": 15,
+    "requirements": [],
+    "cost": {
+     "food": 350000,
+     "wood": 350000,
+     "stone": 67500,
+     "gold": 0
+    },
+    "timeSec": 83580,
+    "power": 19367
+   },
+   {
+    "level": 16,
+    "requirements": [],
+    "cost": {
+     "food": 525000,
+     "wood": 525000,
+     "stone": 102500,
+     "gold": 0
+    },
+    "timeSec": 100800,
+    "power": 25787
+   },
+   {
+    "level": 17,
+    "requirements": [],
+    "cost": {
+     "food": 787500,
+     "wood": 787500,
+     "stone": 155000,
+     "gold": 0
+    },
+    "timeSec": 118800,
+    "power": 34217
+   },
+   {
+    "level": 18,
+    "requirements": [],
+    "cost": {
+     "food": 1200000,
+     "wood": 1200000,
+     "stone": 250000,
+     "gold": 0
+    },
+    "timeSec": 144000,
+    "power": 45545
+   },
+   {
+    "level": 19,
+    "requirements": [],
+    "cost": {
+     "food": 1800000,
+     "wood": 1800000,
+     "stone": 375000,
+     "gold": 0
+    },
+    "timeSec": 172800,
+    "power": 60804
+   },
+   {
+    "level": 20,
+    "requirements": [],
+    "cost": {
+     "food": 2700000,
+     "wood": 2700000,
+     "stone": 575000,
+     "gold": 0
+    },
+    "timeSec": 208800,
+    "power": 81650
+   },
+   {
+    "level": 21,
+    "requirements": [],
+    "cost": {
+     "food": 4100000,
+     "wood": 4100000,
+     "stone": 875000,
+     "gold": 0
+    },
+    "timeSec": 248400,
+    "power": 110460
+   },
+   {
+    "level": 22,
+    "requirements": [],
+    "cost": {
+     "food": 6100000,
+     "wood": 6100000,
+     "stone": 1300000,
+     "gold": 0
+    },
+    "timeSec": 324000,
+    "power": 151716
+   },
+   {
+    "level": 23,
+    "requirements": [],
+    "cost": {
+     "food": 9100000,
+     "wood": 9100000,
+     "stone": 2000000,
+     "gold": 0
+    },
+    "timeSec": 453600,
+    "power": 212389
+   },
+   {
+    "level": 24,
+    "requirements": [],
+    "cost": {
+     "food": 13800000,
+     "wood": 13800000,
+     "stone": 3000000,
+     "gold": 0
+    },
+    "timeSec": 680400,
+    "power": 303649
+   },
+   {
+    "level": 25,
+    "requirements": [],
+    "cost": {
+     "food": 20800000,
+     "wood": 20800000,
+     "stone": 4500000,
+     "gold": 0
+    },
+    "timeSec": 1234800,
+    "power": 495562
+   }
+  ]
+ },
+ {
+  "id": "farm",
+  "category": "economic",
+  "maxLevel": 25,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 1
+     }
+    ],
+    "cost": {
+     "food": 0,
+     "wood": 100,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 2,
+    "power": 5
+   },
+   {
+    "level": 2,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 2
+     }
+    ],
+    "cost": {
+     "food": 0,
+     "wood": 200,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 15,
+    "power": 11
+   },
+   {
+    "level": 3,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 2
+     }
+    ],
+    "cost": {
+     "food": 0,
+     "wood": 300,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 60,
+    "power": 18
+   },
+   {
+    "level": 4,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 2
+     }
+    ],
+    "cost": {
+     "food": 0,
+     "wood": 500,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 90,
+    "power": 28
+   },
+   {
+    "level": 5,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 5
+     }
+    ],
+    "cost": {
+     "food": 0,
+     "wood": 1000,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 120,
+    "power": 38
+   },
+   {
+    "level": 6,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 6
+     }
+    ],
+    "cost": {
+     "food": 0,
+     "wood": 1800,
+     "stone": 1000,
+     "gold": 0
+    },
+    "timeSec": 600,
+    "power": 68
+   },
+   {
+    "level": 7,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 7
+     }
+    ],
+    "cost": {
+     "food": 0,
+     "wood": 2700,
+     "stone": 1600,
+     "gold": 0
+    },
+    "timeSec": 1800,
+    "power": 150
+   },
+   {
+    "level": 8,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 8
+     }
+    ],
+    "cost": {
+     "food": 0,
+     "wood": 4000,
+     "stone": 2600,
+     "gold": 0
+    },
+    "timeSec": 3600,
+    "power": 309
+   },
+   {
+    "level": 9,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 9
+     }
+    ],
+    "cost": {
+     "food": 0,
+     "wood": 6000,
+     "stone": 4200,
+     "gold": 0
+    },
+    "timeSec": 5400,
+    "power": 549
+   },
+   {
+    "level": 10,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 10
+     }
+    ],
+    "cost": {
+     "food": 0,
+     "wood": 9000,
+     "stone": 6600,
+     "gold": 0
+    },
+    "timeSec": 7200,
+    "power": 874
+   },
+   {
+    "level": 11,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 11
+     }
+    ],
+    "cost": {
+     "food": 0,
+     "wood": 15000,
+     "stone": 10000,
+     "gold": 0
+    },
+    "timeSec": 10800,
+    "power": 1366
+   },
+   {
+    "level": 12,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 12
+     }
+    ],
+    "cost": {
+     "food": 0,
+     "wood": 22500,
+     "stone": 15000,
+     "gold": 0
+    },
+    "timeSec": 14400,
+    "power": 2032
+   },
+   {
+    "level": 13,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 13
+     }
+    ],
+    "cost": {
+     "food": 0,
+     "wood": 35000,
+     "stone": 22500,
+     "gold": 0
+    },
+    "timeSec": 22020,
+    "power": 3049
+   },
+   {
+    "level": 14,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 14
+     }
+    ],
+    "cost": {
+     "food": 0,
+     "wood": 52500,
+     "stone": 35000,
+     "gold": 0
+    },
+    "timeSec": 28980,
+    "power": 4419
+   },
+   {
+    "level": 15,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 15
+     }
+    ],
+    "cost": {
+     "food": 0,
+     "wood": 80000,
+     "stone": 52500,
+     "gold": 0
+    },
+    "timeSec": 36000,
+    "power": 6176
+   },
+   {
+    "level": 16,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 16
+     }
+    ],
+    "cost": {
+     "food": 0,
+     "wood": 120000,
+     "stone": 80000,
+     "gold": 0
+    },
+    "timeSec": 48000,
+    "power": 8576
+   },
+   {
+    "level": 17,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 17
+     }
+    ],
+    "cost": {
+     "food": 0,
+     "wood": 180000,
+     "stone": 120000,
+     "gold": 0
+    },
+    "timeSec": 64980,
+    "power": 11896
+   },
+   {
+    "level": 18,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 18
+     }
+    ],
+    "cost": {
+     "food": 0,
+     "wood": 275000,
+     "stone": 200000,
+     "gold": 0
+    },
+    "timeSec": 79980,
+    "power": 16246
+   },
+   {
+    "level": 19,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 19
+     }
+    ],
+    "cost": {
+     "food": 0,
+     "wood": 425000,
+     "stone": 300000,
+     "gold": 0
+    },
+    "timeSec": 100800,
+    "power": 21966
+   },
+   {
+    "level": 20,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 20
+     }
+    ],
+    "cost": {
+     "food": 0,
+     "wood": 650000,
+     "stone": 450000,
+     "gold": 0
+    },
+    "timeSec": 129600,
+    "power": 29846
+   },
+   {
+    "level": 21,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 21
+     }
+    ],
+    "cost": {
+     "food": 0,
+     "wood": 975000,
+     "stone": 675000,
+     "gold": 0
+    },
+    "timeSec": 158400,
+    "power": 40211
+   },
+   {
+    "level": 22,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 22
+     }
+    ],
+    "cost": {
+     "food": 0,
+     "wood": 1500000,
+     "stone": 1000000,
+     "gold": 0
+    },
+    "timeSec": 208800,
+    "power": 54646
+   },
+   {
+    "level": 23,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 23
+     }
+    ],
+    "cost": {
+     "food": 0,
+     "wood": 2200000,
+     "stone": 1600000,
+     "gold": 0
+    },
+    "timeSec": 280800,
+    "power": 74946
+   },
+   {
+    "level": 24,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 24
+     }
+    ],
+    "cost": {
+     "food": 0,
+     "wood": 3500000,
+     "stone": 2500000,
+     "gold": 0
+    },
+    "timeSec": 349200,
+    "power": 103446
+   },
+   {
+    "level": 25,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 25
+     }
+    ],
+    "cost": {
+     "food": 0,
+     "wood": 5200000,
+     "stone": 3800000,
+     "gold": 0
+    },
+    "timeSec": 439200,
+    "power": 143196
+   }
+  ]
+ },
+ {
+  "id": "lumber_mill",
+  "category": "economic",
+  "maxLevel": 25,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 1
+     }
+    ],
+    "cost": {
+     "food": 100,
+     "wood": 0,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 2,
+    "power": 5
+   },
+   {
+    "level": 2,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 2
+     }
+    ],
+    "cost": {
+     "food": 200,
+     "wood": 0,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 15,
+    "power": 11
+   },
+   {
+    "level": 3,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 2
+     }
+    ],
+    "cost": {
+     "food": 300,
+     "wood": 0,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 60,
+    "power": 18
+   },
+   {
+    "level": 4,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 2
+     }
+    ],
+    "cost": {
+     "food": 500,
+     "wood": 0,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 90,
+    "power": 28
+   },
+   {
+    "level": 5,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 5
+     }
+    ],
+    "cost": {
+     "food": 1000,
+     "wood": 0,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 120,
+    "power": 38
+   },
+   {
+    "level": 6,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 6
+     }
+    ],
+    "cost": {
+     "food": 1800,
+     "wood": 0,
+     "stone": 1000,
+     "gold": 0
+    },
+    "timeSec": 600,
+    "power": 68
+   },
+   {
+    "level": 7,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 7
+     }
+    ],
+    "cost": {
+     "food": 2700,
+     "wood": 0,
+     "stone": 1600,
+     "gold": 0
+    },
+    "timeSec": 1800,
+    "power": 150
+   },
+   {
+    "level": 8,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 8
+     }
+    ],
+    "cost": {
+     "food": 4000,
+     "wood": 0,
+     "stone": 2600,
+     "gold": 0
+    },
+    "timeSec": 3600,
+    "power": 309
+   },
+   {
+    "level": 9,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 9
+     }
+    ],
+    "cost": {
+     "food": 6000,
+     "wood": 0,
+     "stone": 4200,
+     "gold": 0
+    },
+    "timeSec": 5400,
+    "power": 549
+   },
+   {
+    "level": 10,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 10
+     }
+    ],
+    "cost": {
+     "food": 9000,
+     "wood": 0,
+     "stone": 6600,
+     "gold": 0
+    },
+    "timeSec": 7200,
+    "power": 874
+   },
+   {
+    "level": 11,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 11
+     }
+    ],
+    "cost": {
+     "food": 15000,
+     "wood": 0,
+     "stone": 10000,
+     "gold": 0
+    },
+    "timeSec": 10800,
+    "power": 1366
+   },
+   {
+    "level": 12,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 12
+     }
+    ],
+    "cost": {
+     "food": 22500,
+     "wood": 0,
+     "stone": 15000,
+     "gold": 0
+    },
+    "timeSec": 14400,
+    "power": 2032
+   },
+   {
+    "level": 13,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 13
+     }
+    ],
+    "cost": {
+     "food": 35000,
+     "wood": 0,
+     "stone": 22500,
+     "gold": 0
+    },
+    "timeSec": 22020,
+    "power": 3049
+   },
+   {
+    "level": 14,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 14
+     }
+    ],
+    "cost": {
+     "food": 52500,
+     "wood": 0,
+     "stone": 35000,
+     "gold": 0
+    },
+    "timeSec": 28980,
+    "power": 4419
+   },
+   {
+    "level": 15,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 15
+     }
+    ],
+    "cost": {
+     "food": 80000,
+     "wood": 0,
+     "stone": 52500,
+     "gold": 0
+    },
+    "timeSec": 36000,
+    "power": 6176
+   },
+   {
+    "level": 16,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 16
+     }
+    ],
+    "cost": {
+     "food": 120000,
+     "wood": 0,
+     "stone": 80000,
+     "gold": 0
+    },
+    "timeSec": 48000,
+    "power": 8576
+   },
+   {
+    "level": 17,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 17
+     }
+    ],
+    "cost": {
+     "food": 180000,
+     "wood": 0,
+     "stone": 120000,
+     "gold": 0
+    },
+    "timeSec": 64980,
+    "power": 11896
+   },
+   {
+    "level": 18,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 18
+     }
+    ],
+    "cost": {
+     "food": 275000,
+     "wood": 0,
+     "stone": 200000,
+     "gold": 0
+    },
+    "timeSec": 79980,
+    "power": 16246
+   },
+   {
+    "level": 19,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 19
+     }
+    ],
+    "cost": {
+     "food": 425000,
+     "wood": 0,
+     "stone": 300000,
+     "gold": 0
+    },
+    "timeSec": 100800,
+    "power": 21966
+   },
+   {
+    "level": 20,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 20
+     }
+    ],
+    "cost": {
+     "food": 650000,
+     "wood": 0,
+     "stone": 450000,
+     "gold": 0
+    },
+    "timeSec": 129600,
+    "power": 29846
+   },
+   {
+    "level": 21,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 21
+     }
+    ],
+    "cost": {
+     "food": 975000,
+     "wood": 0,
+     "stone": 675000,
+     "gold": 0
+    },
+    "timeSec": 158400,
+    "power": 40211
+   },
+   {
+    "level": 22,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 22
+     }
+    ],
+    "cost": {
+     "food": 1500000,
+     "wood": 0,
+     "stone": 1000000,
+     "gold": 0
+    },
+    "timeSec": 208800,
+    "power": 54646
+   },
+   {
+    "level": 23,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 23
+     }
+    ],
+    "cost": {
+     "food": 2200000,
+     "wood": 0,
+     "stone": 1600000,
+     "gold": 0
+    },
+    "timeSec": 280800,
+    "power": 74946
+   },
+   {
+    "level": 24,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 24
+     }
+    ],
+    "cost": {
+     "food": 3500000,
+     "wood": 0,
+     "stone": 2500000,
+     "gold": 0
+    },
+    "timeSec": 349200,
+    "power": 103446
+   },
+   {
+    "level": 25,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 25
+     }
+    ],
+    "cost": {
+     "food": 5200000,
+     "wood": 0,
+     "stone": 3800000,
+     "gold": 0
+    },
+    "timeSec": 439200,
+    "power": 143196
+   }
+  ]
+ },
+ {
+  "id": "quarry",
+  "category": "economic",
+  "maxLevel": 25,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 6
+     }
+    ],
+    "cost": {
+     "food": 100,
+     "wood": 100,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 10,
+    "power": 5
+   },
+   {
+    "level": 2,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 6
+     }
+    ],
+    "cost": {
+     "food": 300,
+     "wood": 300,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 60,
+    "power": 10
+   },
+   {
+    "level": 3,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 6
+     }
+    ],
+    "cost": {
+     "food": 500,
+     "wood": 500,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 120,
+    "power": 16
+   },
+   {
+    "level": 4,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 6
+     }
+    ],
+    "cost": {
+     "food": 1000,
+     "wood": 1000,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 300,
+    "power": 32
+   },
+   {
+    "level": 5,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 6
+     }
+    ],
+    "cost": {
+     "food": 2000,
+     "wood": 2000,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 1200,
+    "power": 88
+   },
+   {
+    "level": 6,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 6
+     }
+    ],
+    "cost": {
+     "food": 3500,
+     "wood": 3500,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 2400,
+    "power": 198
+   },
+   {
+    "level": 7,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 7
+     }
+    ],
+    "cost": {
+     "food": 5300,
+     "wood": 5300,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 4200,
+    "power": 387
+   },
+   {
+    "level": 8,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 8
+     }
+    ],
+    "cost": {
+     "food": 8000,
+     "wood": 8000,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 5220,
+    "power": 627
+   },
+   {
+    "level": 9,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 9
+     }
+    ],
+    "cost": {
+     "food": 12000,
+     "wood": 12000,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 6480,
+    "power": 934
+   },
+   {
+    "level": 10,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 10
+     }
+    ],
+    "cost": {
+     "food": 18000,
+     "wood": 18000,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 8640,
+    "power": 1351
+   },
+   {
+    "level": 11,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 11
+     }
+    ],
+    "cost": {
+     "food": 27500,
+     "wood": 27500,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 12960,
+    "power": 1979
+   },
+   {
+    "level": 12,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 12
+     }
+    ],
+    "cost": {
+     "food": 42500,
+     "wood": 42500,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 19440,
+    "power": 2926
+   },
+   {
+    "level": 13,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 13
+     }
+    ],
+    "cost": {
+     "food": 65000,
+     "wood": 65000,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 24180,
+    "power": 4152
+   },
+   {
+    "level": 14,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 14
+     }
+    ],
+    "cost": {
+     "food": 97500,
+     "wood": 97500,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 29160,
+    "power": 5708
+   },
+   {
+    "level": 15,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 15
+     }
+    ],
+    "cost": {
+     "food": 147500,
+     "wood": 147500,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 34800,
+    "power": 7690
+   },
+   {
+    "level": 16,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 16
+     }
+    ],
+    "cost": {
+     "food": 222500,
+     "wood": 222500,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 42000,
+    "power": 10260
+   },
+   {
+    "level": 17,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 17
+     }
+    ],
+    "cost": {
+     "food": 335000,
+     "wood": 335000,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 60000,
+    "power": 14000
+   },
+   {
+    "level": 18,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 18
+     }
+    ],
+    "cost": {
+     "food": 525000,
+     "wood": 525000,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 78000,
+    "power": 19220
+   },
+   {
+    "level": 19,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 19
+     }
+    ],
+    "cost": {
+     "food": 800000,
+     "wood": 800000,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 97200,
+    "power": 26260
+   },
+   {
+    "level": 20,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 20
+     }
+    ],
+    "cost": {
+     "food": 1200000,
+     "wood": 1200000,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 118800,
+    "power": 35860
+   },
+   {
+    "level": 21,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 21
+     }
+    ],
+    "cost": {
+     "food": 1800000,
+     "wood": 1800000,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 154800,
+    "power": 49300
+   },
+   {
+    "level": 22,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 22
+     }
+    ],
+    "cost": {
+     "food": 2700000,
+     "wood": 2700000,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 190800,
+    "power": 67780
+   },
+   {
+    "level": 23,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 23
+     }
+    ],
+    "cost": {
+     "food": 4100000,
+     "wood": 4100000,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 252000,
+    "power": 94060
+   },
+   {
+    "level": 24,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 24
+     }
+    ],
+    "cost": {
+     "food": 6300000,
+     "wood": 6300000,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 334800,
+    "power": 132500
+   },
+   {
+    "level": 25,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 25
+     }
+    ],
+    "cost": {
+     "food": 9500000,
+     "wood": 9500000,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 540000,
+    "power": 192100
+   }
+  ]
+ },
+ {
+  "id": "goldmine",
+  "category": "economic",
+  "maxLevel": 25,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 10
+     }
+    ],
+    "cost": {
+     "food": 500,
+     "wood": 500,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 10,
+    "power": 6
+   },
+   {
+    "level": 2,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 10
+     }
+    ],
+    "cost": {
+     "food": 1000,
+     "wood": 1000,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 240,
+    "power": 19
+   },
+   {
+    "level": 3,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 10
+     }
+    ],
+    "cost": {
+     "food": 2000,
+     "wood": 2000,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 480,
+    "power": 46
+   },
+   {
+    "level": 4,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 10
+     }
+    ],
+    "cost": {
+     "food": 3800,
+     "wood": 3800,
+     "stone": 2500,
+     "gold": 0
+    },
+    "timeSec": 800,
+    "power": 100
+   },
+   {
+    "level": 5,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 10
+     }
+    ],
+    "cost": {
+     "food": 6800,
+     "wood": 6800,
+     "stone": 5000,
+     "gold": 0
+    },
+    "timeSec": 1920,
+    "power": 219
+   },
+   {
+    "level": 6,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 10
+     }
+    ],
+    "cost": {
+     "food": 11500,
+     "wood": 11500,
+     "stone": 12000,
+     "gold": 0
+    },
+    "timeSec": 2500,
+    "power": 401
+   },
+   {
+    "level": 7,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 10
+     }
+    ],
+    "cost": {
+     "food": 17300,
+     "wood": 17300,
+     "stone": 19200,
+     "gold": 0
+    },
+    "timeSec": 4320,
+    "power": 699
+   },
+   {
+    "level": 8,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 10
+     }
+    ],
+    "cost": {
+     "food": 26000,
+     "wood": 26000,
+     "stone": 30800,
+     "gold": 0
+    },
+    "timeSec": 6000,
+    "power": 1335
+   },
+   {
+    "level": 9,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 10
+     }
+    ],
+    "cost": {
+     "food": 39000,
+     "wood": 39000,
+     "stone": 49200,
+     "gold": 0
+    },
+    "timeSec": 7980,
+    "power": 1758
+   },
+   {
+    "level": 10,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 10
+     }
+    ],
+    "cost": {
+     "food": 58500,
+     "wood": 58500,
+     "stone": 78700,
+     "gold": 0
+    },
+    "timeSec": 10980,
+    "power": 2668
+   },
+   {
+    "level": 11,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 11
+     }
+    ],
+    "cost": {
+     "food": 90000,
+     "wood": 90000,
+     "stone": 120000,
+     "gold": 0
+    },
+    "timeSec": 14880,
+    "power": 3984
+   },
+   {
+    "level": 12,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 12
+     }
+    ],
+    "cost": {
+     "food": 135000,
+     "wood": 135000,
+     "stone": 180000,
+     "gold": 0
+    },
+    "timeSec": 22380,
+    "power": 5958
+   },
+   {
+    "level": 13,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 13
+     }
+    ],
+    "cost": {
+     "food": 202500,
+     "wood": 202500,
+     "stone": 270000,
+     "gold": 0
+    },
+    "timeSec": 27480,
+    "power": 8678
+   },
+   {
+    "level": 14,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 14
+     }
+    ],
+    "cost": {
+     "food": 305000,
+     "wood": 305000,
+     "stone": 405000,
+     "gold": 0
+    },
+    "timeSec": 33540,
+    "power": 12454
+   },
+   {
+    "level": 15,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 15
+     }
+    ],
+    "cost": {
+     "food": 457500,
+     "wood": 457500,
+     "stone": 607500,
+     "gold": 0
+    },
+    "timeSec": 40020,
+    "power": 17707
+   },
+   {
+    "level": 16,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 16
+     }
+    ],
+    "cost": {
+     "food": 687500,
+     "wood": 687500,
+     "stone": 912500,
+     "gold": 0
+    },
+    "timeSec": 48300,
+    "power": 25126
+   },
+   {
+    "level": 17,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 17
+     }
+    ],
+    "cost": {
+     "food": 1000000,
+     "wood": 1000000,
+     "stone": 1400000,
+     "gold": 0
+    },
+    "timeSec": 69000,
+    "power": 36126
+   },
+   {
+    "level": 18,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 18
+     }
+    ],
+    "cost": {
+     "food": 1600000,
+     "wood": 1600000,
+     "stone": 2100000,
+     "gold": 0
+    },
+    "timeSec": 86400,
+    "power": 52139
+   },
+   {
+    "level": 19,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 19
+     }
+    ],
+    "cost": {
+     "food": 2300000,
+     "wood": 2300000,
+     "stone": 3100000,
+     "gold": 0
+    },
+    "timeSec": 111600,
+    "power": 75230
+   },
+   {
+    "level": 20,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 20
+     }
+    ],
+    "cost": {
+     "food": 3500000,
+     "wood": 3500000,
+     "stone": 4700000,
+     "gold": 0
+    },
+    "timeSec": 136800,
+    "power": 108850
+   },
+   {
+    "level": 21,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 21
+     }
+    ],
+    "cost": {
+     "food": 5300000,
+     "wood": 5300000,
+     "stone": 7100000,
+     "gold": 0
+    },
+    "timeSec": 180000,
+    "power": 158176
+   },
+   {
+    "level": 22,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 22
+     }
+    ],
+    "cost": {
+     "food": 7900000,
+     "wood": 7900000,
+     "stone": 10600000,
+     "gold": 0
+    },
+    "timeSec": 219600,
+    "power": 230233
+   },
+   {
+    "level": 23,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 23
+     }
+    ],
+    "cost": {
+     "food": 11800000,
+     "wood": 11800000,
+     "stone": 15900000,
+     "gold": 0
+    },
+    "timeSec": 291600,
+    "power": 336750
+   },
+   {
+    "level": 24,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 24
+     }
+    ],
+    "cost": {
+     "food": 17800000,
+     "wood": 17800000,
+     "stone": 24000000,
+     "gold": 0
+    },
+    "timeSec": 385200,
+    "power": 495206
+   },
+   {
+    "level": 25,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 25
+     }
+    ],
+    "cost": {
+     "food": 26800000,
+     "wood": 26800000,
+     "stone": 36000000,
+     "gold": 0
+    },
+    "timeSec": 612000,
+    "power": 735046
+   }
+  ]
+ },
+ {
+  "id": "academy",
+  "category": "economic",
+  "maxLevel": 25,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 6
+     }
+    ],
+    "cost": {
+     "food": 500,
+     "wood": 800,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 6,
+    "power": 5
+   },
+   {
+    "level": 2,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 6
+     }
+    ],
+    "cost": {
+     "food": 1000,
+     "wood": 1500,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 40,
+    "power": 11
+   },
+   {
+    "level": 3,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 6
+     }
+    ],
+    "cost": {
+     "food": 2000,
+     "wood": 2800,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 160,
+    "power": 27
+   },
+   {
+    "level": 4,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 6
+     }
+    ],
+    "cost": {
+     "food": 3800,
+     "wood": 5000,
+     "stone": 800,
+     "gold": 0
+    },
+    "timeSec": 360,
+    "power": 61
+   },
+   {
+    "level": 5,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 6
+     }
+    ],
+    "cost": {
+     "food": 6800,
+     "wood": 9000,
+     "stone": 1500,
+     "gold": 0
+    },
+    "timeSec": 1200,
+    "power": 145
+   },
+   {
+    "level": 6,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 6
+     }
+    ],
+    "cost": {
+     "food": 11500,
+     "wood": 15500,
+     "stone": 3200,
+     "gold": 0
+    },
+    "timeSec": 3200,
+    "power": 336
+   },
+   {
+    "level": 7,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 7
+     }
+    ],
+    "cost": {
+     "food": 17300,
+     "wood": 23300,
+     "stone": 5000,
+     "gold": 0
+    },
+    "timeSec": 6420,
+    "power": 688
+   },
+   {
+    "level": 8,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 8
+     }
+    ],
+    "cost": {
+     "food": 26000,
+     "wood": 35000,
+     "stone": 8000,
+     "gold": 0
+    },
+    "timeSec": 12780,
+    "power": 1346
+   },
+   {
+    "level": 9,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 9
+     }
+    ],
+    "cost": {
+     "food": 39000,
+     "wood": 52500,
+     "stone": 12800,
+     "gold": 0
+    },
+    "timeSec": 25620,
+    "power": 2591
+   },
+   {
+    "level": 10,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 10
+     }
+    ],
+    "cost": {
+     "food": 58500,
+     "wood": 78800,
+     "stone": 20500,
+     "gold": 0
+    },
+    "timeSec": 51180,
+    "power": 4975
+   },
+   {
+    "level": 11,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 11
+     }
+    ],
+    "cost": {
+     "food": 90000,
+     "wood": 120000,
+     "stone": 32500,
+     "gold": 0
+    },
+    "timeSec": 61440,
+    "power": 7970
+   },
+   {
+    "level": 12,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 12
+     }
+    ],
+    "cost": {
+     "food": 135000,
+     "wood": 180000,
+     "stone": 50000,
+     "gold": 0
+    },
+    "timeSec": 73740,
+    "power": 11679
+   },
+   {
+    "level": 13,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 13
+     }
+    ],
+    "cost": {
+     "food": 202500,
+     "wood": 270000,
+     "stone": 75000,
+     "gold": 0
+    },
+    "timeSec": 90000,
+    "power": 16387
+   },
+   {
+    "level": 14,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 14
+     }
+    ],
+    "cost": {
+     "food": 305000,
+     "wood": 405000,
+     "stone": 112500,
+     "gold": 0
+    },
+    "timeSec": 104400,
+    "power": 22391
+   },
+   {
+    "level": 15,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 15
+     }
+    ],
+    "cost": {
+     "food": 457500,
+     "wood": 607500,
+     "stone": 170000,
+     "gold": 0
+    },
+    "timeSec": 126000,
+    "power": 30127
+   },
+   {
+    "level": 16,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 16
+     }
+    ],
+    "cost": {
+     "food": 687500,
+     "wood": 912500,
+     "stone": 255000,
+     "gold": 0
+    },
+    "timeSec": 151200,
+    "power": 40207
+   },
+   {
+    "level": 17,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 17
+     }
+    ],
+    "cost": {
+     "food": 1000000,
+     "wood": 1400000,
+     "stone": 382500,
+     "gold": 0
+    },
+    "timeSec": 183600,
+    "power": 53497
+   },
+   {
+    "level": 18,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 18
+     }
+    ],
+    "cost": {
+     "food": 1600000,
+     "wood": 2100000,
+     "stone": 575000,
+     "gold": 0
+    },
+    "timeSec": 219600,
+    "power": 71227
+   },
+   {
+    "level": 19,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 19
+     }
+    ],
+    "cost": {
+     "food": 2300000,
+     "wood": 3100000,
+     "stone": 875000,
+     "gold": 0
+    },
+    "timeSec": 262800,
+    "power": 95369
+   },
+   {
+    "level": 20,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 20
+     }
+    ],
+    "cost": {
+     "food": 3500000,
+     "wood": 4700000,
+     "stone": 1300000,
+     "gold": 0
+    },
+    "timeSec": 316800,
+    "power": 128424
+   },
+   {
+    "level": 21,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 21
+     }
+    ],
+    "cost": {
+     "food": 5250000,
+     "wood": 7050000,
+     "stone": 2000000,
+     "gold": 0
+    },
+    "timeSec": 536400,
+    "power": 174240
+   },
+   {
+    "level": 22,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 22
+     }
+    ],
+    "cost": {
+     "food": 7900000,
+     "wood": 10600000,
+     "stone": 3000000,
+     "gold": 0
+    },
+    "timeSec": 493200,
+    "power": 239921
+   },
+   {
+    "level": 23,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 23
+     }
+    ],
+    "cost": {
+     "food": 11800000,
+     "wood": 15900000,
+     "stone": 4500000,
+     "gold": 0
+    },
+    "timeSec": 691200,
+    "power": 336515
+   },
+   {
+    "level": 24,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 24
+     }
+    ],
+    "cost": {
+     "food": 17800000,
+     "wood": 24000000,
+     "stone": 6800000,
+     "gold": 0
+    },
+    "timeSec": 1036800,
+    "power": 481806
+   },
+   {
+    "level": 25,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "watchtower",
+      "level": 25
+     },
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 25
+     },
+     {
+      "type": "building",
+      "id": "trading_post",
+      "level": 25
+     }
+    ],
+    "cost": {
+     "food": 26800000,
+     "wood": 36000000,
+     "stone": 10200000,
+     "gold": 0
+    },
+    "timeSec": 0,
+    "power": 783449
+   }
+  ]
+ },
+ {
+  "id": "storehouse",
+  "category": "economic",
+  "maxLevel": 25,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [],
+    "cost": {
+     "food": 0,
+     "wood": 0,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 0,
+    "power": 5
+   },
+   {
+    "level": 2,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 2
+     }
+    ],
+    "cost": {
+     "food": 500,
+     "wood": 500,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 18,
+    "power": 10
+   },
+   {
+    "level": 3,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 3
+     }
+    ],
+    "cost": {
+     "food": 1000,
+     "wood": 1000,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 80,
+    "power": 17
+   },
+   {
+    "level": 4,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 4
+     }
+    ],
+    "cost": {
+     "food": 2000,
+     "wood": 2000,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 400,
+    "power": 41
+   },
+   {
+    "level": 5,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 5
+     }
+    ],
+    "cost": {
+     "food": 3800,
+     "wood": 3800,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 900,
+    "power": 92
+   },
+   {
+    "level": 6,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 6
+     }
+    ],
+    "cost": {
+     "food": 6500,
+     "wood": 6500,
+     "stone": 3800,
+     "gold": 0
+    },
+    "timeSec": 1800,
+    "power": 201
+   },
+   {
+    "level": 7,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 7
+     }
+    ],
+    "cost": {
+     "food": 9800,
+     "wood": 9800,
+     "stone": 6000,
+     "gold": 0
+    },
+    "timeSec": 3600,
+    "power": 402
+   },
+   {
+    "level": 8,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 8
+     }
+    ],
+    "cost": {
+     "food": 14800,
+     "wood": 14800,
+     "stone": 9600,
+     "gold": 0
+    },
+    "timeSec": 7200,
+    "power": 778
+   },
+   {
+    "level": 9,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 9
+     }
+    ],
+    "cost": {
+     "food": 22300,
+     "wood": 22300,
+     "stone": 15400,
+     "gold": 0
+    },
+    "timeSec": 14400,
+    "power": 1489
+   },
+   {
+    "level": 10,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 10
+     }
+    ],
+    "cost": {
+     "food": 33500,
+     "wood": 33500,
+     "stone": 24600,
+     "gold": 0
+    },
+    "timeSec": 28800,
+    "power": 2848
+   },
+   {
+    "level": 11,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 11
+     }
+    ],
+    "cost": {
+     "food": 52500,
+     "wood": 52500,
+     "stone": 37500,
+     "gold": 0
+    },
+    "timeSec": 34560,
+    "power": 4552
+   },
+   {
+    "level": 12,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 12
+     }
+    ],
+    "cost": {
+     "food": 80000,
+     "wood": 80000,
+     "stone": 57500,
+     "gold": 0
+    },
+    "timeSec": 41460,
+    "power": 6703
+   },
+   {
+    "level": 13,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 13
+     }
+    ],
+    "cost": {
+     "food": 120000,
+     "wood": 120000,
+     "stone": 87500,
+     "gold": 0
+    },
+    "timeSec": 49740,
+    "power": 9436
+   },
+   {
+    "level": 14,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 14
+     }
+    ],
+    "cost": {
+     "food": 180000,
+     "wood": 180000,
+     "stone": 132500,
+     "gold": 0
+    },
+    "timeSec": 59700,
+    "power": 12942
+   },
+   {
+    "level": 15,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 15
+     }
+    ],
+    "cost": {
+     "food": 270000,
+     "wood": 270000,
+     "stone": 200000,
+     "gold": 0
+    },
+    "timeSec": 71640,
+    "power": 17488
+   },
+   {
+    "level": 16,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 16
+     }
+    ],
+    "cost": {
+     "food": 405000,
+     "wood": 405000,
+     "stone": 300000,
+     "gold": 0
+    },
+    "timeSec": 85980,
+    "power": 23447
+   },
+   {
+    "level": 17,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 17
+     }
+    ],
+    "cost": {
+     "food": 607500,
+     "wood": 607500,
+     "stone": 450000,
+     "gold": 0
+    },
+    "timeSec": 104400,
+    "power": 31354
+   },
+   {
+    "level": 18,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 18
+     }
+    ],
+    "cost": {
+     "food": 925000,
+     "wood": 925000,
+     "stone": 675000,
+     "gold": 0
+    },
+    "timeSec": 122400,
+    "power": 42032
+   },
+   {
+    "level": 19,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 19
+     }
+    ],
+    "cost": {
+     "food": 1400000,
+     "wood": 1400000,
+     "stone": 1000000,
+     "gold": 0
+    },
+    "timeSec": 147600,
+    "power": 56560
+   },
+   {
+    "level": 20,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 20
+     }
+    ],
+    "cost": {
+     "food": 2100000,
+     "wood": 2100000,
+     "stone": 1600000,
+     "gold": 0
+    },
+    "timeSec": 176400,
+    "power": 76832
+   },
+   {
+    "level": 21,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 21
+     }
+    ],
+    "cost": {
+     "food": 3200000,
+     "wood": 3200000,
+     "stone": 2300000,
+     "gold": 0
+    },
+    "timeSec": 212400,
+    "power": 104966
+   },
+   {
+    "level": 22,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 22
+     }
+    ],
+    "cost": {
+     "food": 4700000,
+     "wood": 4700000,
+     "stone": 3500000,
+     "gold": 0
+    },
+    "timeSec": 277200,
+    "power": 145492
+   },
+   {
+    "level": 23,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 23
+     }
+    ],
+    "cost": {
+     "food": 7100000,
+     "wood": 7100000,
+     "stone": 5300000,
+     "gold": 0
+    },
+    "timeSec": 388800,
+    "power": 205219
+   },
+   {
+    "level": 24,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 24
+     }
+    ],
+    "cost": {
+     "food": 10800000,
+     "wood": 10800000,
+     "stone": 8000000,
+     "gold": 0
+    },
+    "timeSec": 583200,
+    "power": 295585
+   },
+   {
+    "level": 25,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 25
+     }
+    ],
+    "cost": {
+     "food": 16200000,
+     "wood": 16200000,
+     "stone": 12000000,
+     "gold": 0
+    },
+    "timeSec": 0,
+    "power": 478367
+   }
+  ]
+ },
+ {
+  "id": "alliance_center",
+  "category": "economic",
+  "maxLevel": 25,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 3
+     }
+    ],
+    "cost": {
+     "food": 500,
+     "wood": 500,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 7,
+    "power": 5
+   },
+   {
+    "level": 2,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 3
+     }
+    ],
+    "cost": {
+     "food": 1000,
+     "wood": 1000,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 35,
+    "power": 10
+   },
+   {
+    "level": 3,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 3
+     }
+    ],
+    "cost": {
+     "food": 2000,
+     "wood": 2000,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 90,
+    "power": 21
+   },
+   {
+    "level": 4,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 4
+     }
+    ],
+    "cost": {
+     "food": 3800,
+     "wood": 3800,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 420,
+    "power": 53
+   },
+   {
+    "level": 5,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 5
+     }
+    ],
+    "cost": {
+     "food": 6800,
+     "wood": 6800,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 900,
+    "power": 116
+   },
+   {
+    "level": 6,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 6
+     }
+    ],
+    "cost": {
+     "food": 11500,
+     "wood": 11500,
+     "stone": 4400,
+     "gold": 0
+    },
+    "timeSec": 2250,
+    "power": 265
+   },
+   {
+    "level": 7,
+    "requirements": [],
+    "cost": {
+     "food": 17300,
+     "wood": 17300,
+     "stone": 7000,
+     "gold": 0
+    },
+    "timeSec": 4500,
+    "power": 535
+   },
+   {
+    "level": 8,
+    "requirements": [],
+    "cost": {
+     "food": 26000,
+     "wood": 26000,
+     "stone": 11200,
+     "gold": 0
+    },
+    "timeSec": 9000,
+    "power": 1032
+   },
+   {
+    "level": 9,
+    "requirements": [],
+    "cost": {
+     "food": 39000,
+     "wood": 39000,
+     "stone": 18000,
+     "gold": 0
+    },
+    "timeSec": 18000,
+    "power": 1962
+   },
+   {
+    "level": 10,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 10
+     }
+    ],
+    "cost": {
+     "food": 58500,
+     "wood": 58500,
+     "stone": 28700,
+     "gold": 0
+    },
+    "timeSec": 36000,
+    "power": 3722
+   },
+   {
+    "level": 11,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 11
+     }
+    ],
+    "cost": {
+     "food": 90000,
+     "wood": 90000,
+     "stone": 45000,
+     "gold": 0
+    },
+    "timeSec": 43200,
+    "power": 5945
+   },
+   {
+    "level": 12,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 12
+     }
+    ],
+    "cost": {
+     "food": 135000,
+     "wood": 135000,
+     "stone": 67500,
+     "gold": 0
+    },
+    "timeSec": 51840,
+    "power": 8761
+   },
+   {
+    "level": 13,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 13
+     }
+    ],
+    "cost": {
+     "food": 202500,
+     "wood": 202500,
+     "stone": 102500,
+     "gold": 0
+    },
+    "timeSec": 62160,
+    "power": 12366
+   },
+   {
+    "level": 14,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 14
+     }
+    ],
+    "cost": {
+     "food": 305000,
+     "wood": 305000,
+     "stone": 155000,
+     "gold": 0
+    },
+    "timeSec": 74640,
+    "power": 17036
+   },
+   {
+    "level": 15,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 15
+     }
+    ],
+    "cost": {
+     "food": 457500,
+     "wood": 457500,
+     "stone": 232500,
+     "gold": 0
+    },
+    "timeSec": 90000,
+    "power": 23146
+   },
+   {
+    "level": 16,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 16
+     }
+    ],
+    "cost": {
+     "food": 687500,
+     "wood": 687500,
+     "stone": 350000,
+     "gold": 0
+    },
+    "timeSec": 108000,
+    "power": 31245
+   },
+   {
+    "level": 17,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 17
+     }
+    ],
+    "cost": {
+     "food": 1000000,
+     "wood": 1000000,
+     "stone": 525000,
+     "gold": 0
+    },
+    "timeSec": 129600,
+    "power": 42109
+   },
+   {
+    "level": 18,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 18
+     }
+    ],
+    "cost": {
+     "food": 1600000,
+     "wood": 1600000,
+     "stone": 800000,
+     "gold": 0
+    },
+    "timeSec": 151200,
+    "power": 56900
+   },
+   {
+    "level": 19,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 19
+     }
+    ],
+    "cost": {
+     "food": 2300000,
+     "wood": 2300000,
+     "stone": 1200000,
+     "gold": 0
+    },
+    "timeSec": 183600,
+    "power": 77229
+   },
+   {
+    "level": 20,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 20
+     }
+    ],
+    "cost": {
+     "food": 3500000,
+     "wood": 3500000,
+     "stone": 1800000,
+     "gold": 0
+    },
+    "timeSec": 223200,
+    "power": 105544
+   },
+   {
+    "level": 21,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 21
+     }
+    ],
+    "cost": {
+     "food": 5300000,
+     "wood": 5300000,
+     "stone": 2700000,
+     "gold": 0
+    },
+    "timeSec": 266400,
+    "power": 145342
+   },
+   {
+    "level": 22,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 22
+     }
+    ],
+    "cost": {
+     "food": 7900000,
+     "wood": 7900000,
+     "stone": 4100000,
+     "gold": 0
+    },
+    "timeSec": 345600,
+    "power": 202900
+   },
+   {
+    "level": 23,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 23
+     }
+    ],
+    "cost": {
+     "food": 11800000,
+     "wood": 11800000,
+     "stone": 6100000,
+     "gold": 0
+    },
+    "timeSec": 486000,
+    "power": 287897
+   },
+   {
+    "level": 24,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 24
+     }
+    ],
+    "cost": {
+     "food": 17800000,
+     "wood": 17800000,
+     "stone": 9300000,
+     "gold": 0
+    },
+    "timeSec": 730800,
+    "power": 415855
+   },
+   {
+    "level": 25,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 25
+     }
+    ],
+    "cost": {
+     "food": 26800000,
+     "wood": 26800000,
+     "stone": 14000000,
+     "gold": 0
+    },
+    "timeSec": 0,
+    "power": 667083
+   }
+  ]
+ },
+ {
+  "id": "builders_hut",
+  "category": "economic",
+  "maxLevel": 1,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 5
+     }
+    ],
+    "cost": {
+     "food": 300,
+     "wood": 300,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 60,
+    "power": 0
+   }
+  ]
+ },
+ {
+  "id": "shop",
+  "category": "economic",
+  "maxLevel": 1,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 5
+     }
+    ],
+    "cost": {
+     "food": 300,
+     "wood": 300,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 3,
+    "power": 0
+   }
+  ]
+ },
+ {
+  "id": "trading_post",
+  "category": "economic",
+  "maxLevel": 25,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 12
+     }
+    ],
+    "cost": {
+     "food": 400,
+     "wood": 700,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 15,
+    "power": 5
+   },
+   {
+    "level": 2,
+    "requirements": [],
+    "cost": {
+     "food": 800,
+     "wood": 1300,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 90,
+    "power": 10
+   },
+   {
+    "level": 3,
+    "requirements": [],
+    "cost": {
+     "food": 1500,
+     "wood": 2300,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 240,
+    "power": 27
+   },
+   {
+    "level": 4,
+    "requirements": [],
+    "cost": {
+     "food": 2800,
+     "wood": 4300,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 1080,
+    "power": 84
+   },
+   {
+    "level": 5,
+    "requirements": [],
+    "cost": {
+     "food": 5000,
+     "wood": 7800,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 2100,
+    "power": 193
+   },
+   {
+    "level": 6,
+    "requirements": [],
+    "cost": {
+     "food": 8500,
+     "wood": 13300,
+     "stone": 5000,
+     "gold": 0
+    },
+    "timeSec": 3200,
+    "power": 379
+   },
+   {
+    "level": 7,
+    "requirements": [],
+    "cost": {
+     "food": 12800,
+     "wood": 19900,
+     "stone": 7500,
+     "gold": 0
+    },
+    "timeSec": 4200,
+    "power": 634
+   },
+   {
+    "level": 8,
+    "requirements": [],
+    "cost": {
+     "food": 19300,
+     "wood": 30000,
+     "stone": 11300,
+     "gold": 0
+    },
+    "timeSec": 8400,
+    "power": 1102
+   },
+   {
+    "level": 9,
+    "requirements": [],
+    "cost": {
+     "food": 29000,
+     "wood": 45000,
+     "stone": 17000,
+     "gold": 0
+    },
+    "timeSec": 16800,
+    "power": 1973
+   },
+   {
+    "level": 10,
+    "requirements": [],
+    "cost": {
+     "food": 43500,
+     "wood": 67500,
+     "stone": 25500,
+     "gold": 0
+    },
+    "timeSec": 33600,
+    "power": 3615
+   },
+   {
+    "level": 11,
+    "requirements": [],
+    "cost": {
+     "food": 67500,
+     "wood": 102500,
+     "stone": 40000,
+     "gold": 0
+    },
+    "timeSec": 40320,
+    "power": 5687
+   },
+   {
+    "level": 12,
+    "requirements": [],
+    "cost": {
+     "food": 102500,
+     "wood": 155000,
+     "stone": 60000,
+     "gold": 0
+    },
+    "timeSec": 48360,
+    "power": 8317
+   },
+   {
+    "level": 13,
+    "requirements": [],
+    "cost": {
+     "food": 155000,
+     "wood": 232500,
+     "stone": 90000,
+     "gold": 0
+    },
+    "timeSec": 58080,
+    "power": 11684
+   },
+   {
+    "level": 14,
+    "requirements": [],
+    "cost": {
+     "food": 232500,
+     "wood": 350000,
+     "stone": 135000,
+     "gold": 0
+    },
+    "timeSec": 69660,
+    "power": 16040
+   },
+   {
+    "level": 15,
+    "requirements": [],
+    "cost": {
+     "food": 350000,
+     "wood": 525000,
+     "stone": 202500,
+     "gold": 0
+    },
+    "timeSec": 83580,
+    "power": 21741
+   },
+   {
+    "level": 16,
+    "requirements": [],
+    "cost": {
+     "food": 525000,
+     "wood": 787500,
+     "stone": 305000,
+     "gold": 0
+    },
+    "timeSec": 100800,
+    "power": 29294
+   },
+   {
+    "level": 17,
+    "requirements": [],
+    "cost": {
+     "food": 787500,
+     "wood": 1200000,
+     "stone": 457500,
+     "gold": 0
+    },
+    "timeSec": 118800,
+    "power": 39422
+   },
+   {
+    "level": 18,
+    "requirements": [],
+    "cost": {
+     "food": 1200000,
+     "wood": 1800000,
+     "stone": 700000,
+     "gold": 0
+    },
+    "timeSec": 144000,
+    "power": 53250
+   },
+   {
+    "level": 19,
+    "requirements": [],
+    "cost": {
+     "food": 1800000,
+     "wood": 2700000,
+     "stone": 1100000,
+     "gold": 0
+    },
+    "timeSec": 172800,
+    "power": 72284
+   },
+   {
+    "level": 20,
+    "requirements": [],
+    "cost": {
+     "food": 2700000,
+     "wood": 4000000,
+     "stone": 1600000,
+     "gold": 0
+    },
+    "timeSec": 208800,
+    "power": 98780
+   },
+   {
+    "level": 21,
+    "requirements": [],
+    "cost": {
+     "food": 4100000,
+     "wood": 6100000,
+     "stone": 2400000,
+     "gold": 0
+    },
+    "timeSec": 248400,
+    "power": 136090
+   },
+   {
+    "level": 22,
+    "requirements": [],
+    "cost": {
+     "food": 6100000,
+     "wood": 9100000,
+     "stone": 3600000,
+     "gold": 0
+    },
+    "timeSec": 324000,
+    "power": 190096
+   },
+   {
+    "level": 23,
+    "requirements": [],
+    "cost": {
+     "food": 9100000,
+     "wood": 13600000,
+     "stone": 5400000,
+     "gold": 0
+    },
+    "timeSec": 453600,
+    "power": 269894
+   },
+   {
+    "level": 24,
+    "requirements": [],
+    "cost": {
+     "food": 13800000,
+     "wood": 20500000,
+     "stone": 8300000,
+     "gold": 0
+    },
+    "timeSec": 680400,
+    "power": 390404
+   },
+   {
+    "level": 25,
+    "requirements": [],
+    "cost": {
+     "food": 20800000,
+     "wood": 30800000,
+     "stone": 12500000,
+     "gold": 0
+    },
+    "timeSec": 2384640,
+    "power": 626317
+   }
+  ]
+ },
+ {
+  "id": "lyceum_of_wisdom",
+  "category": "economic",
+  "maxLevel": 1,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 10
+     }
+    ],
+    "cost": {
+     "food": 1000,
+     "wood": 1000,
+     "stone": 1000,
+     "gold": 0
+    },
+    "timeSec": 2,
+    "power": 0
+   }
+  ]
+ },
+ {
+  "id": "courier_station",
+  "category": "economic",
+  "maxLevel": 1,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 6
+     }
+    ],
+    "cost": {
+     "food": 100,
+     "wood": 100,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 3,
+    "power": 0
+   }
+  ]
+ },
+ {
+  "id": "tavern",
+  "category": "military",
+  "maxLevel": 25,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [],
+    "cost": {
+     "food": 200,
+     "wood": 200,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 2,
+    "power": 5
+   },
+   {
+    "level": 2,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 2
+     }
+    ],
+    "cost": {
+     "food": 300,
+     "wood": 300,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 15,
+    "power": 10
+   },
+   {
+    "level": 3,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 3
+     }
+    ],
+    "cost": {
+     "food": 500,
+     "wood": 500,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 60,
+    "power": 16
+   },
+   {
+    "level": 4,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 4
+     }
+    ],
+    "cost": {
+     "food": 1000,
+     "wood": 1000,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 180,
+    "power": 27
+   },
+   {
+    "level": 5,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 5
+     }
+    ],
+    "cost": {
+     "food": 2000,
+     "wood": 2000,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 600,
+    "power": 59
+   },
+   {
+    "level": 6,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "quarry",
+      "level": 6
+     }
+    ],
+    "cost": {
+     "food": 2700,
+     "wood": 2700,
+     "stone": 7000,
+     "gold": 0
+    },
+    "timeSec": 2200,
+    "power": 178
+   },
+   {
+    "level": 7,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "quarry",
+      "level": 7
+     }
+    ],
+    "cost": {
+     "food": 4000,
+     "wood": 4000,
+     "stone": 10600,
+     "gold": 0
+    },
+    "timeSec": 4380,
+    "power": 401
+   },
+   {
+    "level": 8,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "quarry",
+      "level": 8
+     }
+    ],
+    "cost": {
+     "food": 6000,
+     "wood": 6000,
+     "stone": 16000,
+     "gold": 0
+    },
+    "timeSec": 8820,
+    "power": 825
+   },
+   {
+    "level": 9,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "quarry",
+      "level": 9
+     }
+    ],
+    "cost": {
+     "food": 9000,
+     "wood": 9000,
+     "stone": 24000,
+     "gold": 0
+    },
+    "timeSec": 17580,
+    "power": 1637
+   },
+   {
+    "level": 10,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "quarry",
+      "level": 10
+     }
+    ],
+    "cost": {
+     "food": 13500,
+     "wood": 13500,
+     "stone": 36000,
+     "gold": 0
+    },
+    "timeSec": 35220,
+    "power": 3207
+   },
+   {
+    "level": 11,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "quarry",
+      "level": 11
+     }
+    ],
+    "cost": {
+     "food": 21000,
+     "wood": 21000,
+     "stone": 55000,
+     "gold": 0
+    },
+    "timeSec": 42240,
+    "power": 5145
+   },
+   {
+    "level": 12,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "quarry",
+      "level": 12
+     }
+    ],
+    "cost": {
+     "food": 32000,
+     "wood": 32000,
+     "stone": 85000,
+     "gold": 0
+    },
+    "timeSec": 50700,
+    "power": 7555
+   },
+   {
+    "level": 13,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "quarry",
+      "level": 13
+     }
+    ],
+    "cost": {
+     "food": 49000,
+     "wood": 49000,
+     "stone": 130000,
+     "gold": 0
+    },
+    "timeSec": 60840,
+    "power": 10574
+   },
+   {
+    "level": 14,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "quarry",
+      "level": 14
+     }
+    ],
+    "cost": {
+     "food": 74000,
+     "wood": 74000,
+     "stone": 195000,
+     "gold": 0
+    },
+    "timeSec": 73020,
+    "power": 14374
+   },
+   {
+    "level": 15,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "quarry",
+      "level": 15
+     }
+    ],
+    "cost": {
+     "food": 111000,
+     "wood": 111000,
+     "stone": 295000,
+     "gold": 0
+    },
+    "timeSec": 86400,
+    "power": 19206
+   },
+   {
+    "level": 16,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "quarry",
+      "level": 16
+     }
+    ],
+    "cost": {
+     "food": 167000,
+     "wood": 167000,
+     "stone": 445000,
+     "gold": 0
+    },
+    "timeSec": 104400,
+    "power": 25413
+   },
+   {
+    "level": 17,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "quarry",
+      "level": 17
+     }
+    ],
+    "cost": {
+     "food": 252000,
+     "wood": 252000,
+     "stone": 670000,
+     "gold": 0
+    },
+    "timeSec": 126000,
+    "power": 33476
+   },
+   {
+    "level": 18,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "quarry",
+      "level": 18
+     }
+    ],
+    "cost": {
+     "food": 394000,
+     "wood": 394000,
+     "stone": 1100000,
+     "gold": 0
+    },
+    "timeSec": 151200,
+    "power": 44256
+   },
+   {
+    "level": 19,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "quarry",
+      "level": 19
+     }
+    ],
+    "cost": {
+     "food": 600000,
+     "wood": 600000,
+     "stone": 1600000,
+     "gold": 0
+    },
+    "timeSec": 180000,
+    "power": 58720
+   },
+   {
+    "level": 20,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "quarry",
+      "level": 20
+     }
+    ],
+    "cost": {
+     "food": 900000,
+     "wood": 900000,
+     "stone": 2400000,
+     "gold": 0
+    },
+    "timeSec": 219600,
+    "power": 78237
+   },
+   {
+    "level": 21,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "quarry",
+      "level": 21
+     }
+    ],
+    "cost": {
+     "food": 1400000,
+     "wood": 1400000,
+     "stone": 3600000,
+     "gold": 0
+    },
+    "timeSec": 259200,
+    "power": 104898
+   },
+   {
+    "level": 22,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "quarry",
+      "level": 22
+     }
+    ],
+    "cost": {
+     "food": 2000000,
+     "wood": 2000000,
+     "stone": 5400000,
+     "gold": 0
+    },
+    "timeSec": 338400,
+    "power": 142797
+   },
+   {
+    "level": 23,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "quarry",
+      "level": 23
+     }
+    ],
+    "cost": {
+     "food": 3000000,
+     "wood": 3000000,
+     "stone": 8100000,
+     "gold": 0
+    },
+    "timeSec": 475200,
+    "power": 198288
+   },
+   {
+    "level": 24,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "quarry",
+      "level": 24
+     }
+    ],
+    "cost": {
+     "food": 4700000,
+     "wood": 4700000,
+     "stone": 12500000,
+     "gold": 0
+    },
+    "timeSec": 712800,
+    "power": 283099
+   },
+   {
+    "level": 25,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "quarry",
+      "level": 25
+     }
+    ],
+    "cost": {
+     "food": 7100000,
+     "wood": 7100000,
+     "stone": 19000000,
+     "gold": 0
+    },
+    "timeSec": 2451600,
+    "power": 468557
+   }
+  ]
+ },
+ {
+  "id": "scout_camp",
+  "category": "military",
+  "maxLevel": 25,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 2
+     }
+    ],
+    "cost": {
+     "food": 300,
+     "wood": 300,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 4,
+    "power": 5
+   },
+   {
+    "level": 2,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 2
+     }
+    ],
+    "cost": {
+     "food": 500,
+     "wood": 500,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 15,
+    "power": 10
+   },
+   {
+    "level": 3,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 3
+     }
+    ],
+    "cost": {
+     "food": 1000,
+     "wood": 1000,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 60,
+    "power": 16
+   },
+   {
+    "level": 4,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 4
+     }
+    ],
+    "cost": {
+     "food": 2000,
+     "wood": 2000,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 210,
+    "power": 32
+   },
+   {
+    "level": 5,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 5
+     }
+    ],
+    "cost": {
+     "food": 3800,
+     "wood": 3800,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 850,
+    "power": 81
+   },
+   {
+    "level": 6,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 6
+     }
+    ],
+    "cost": {
+     "food": 6500,
+     "wood": 6500,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 2100,
+    "power": 191
+   },
+   {
+    "level": 7,
+    "requirements": [],
+    "cost": {
+     "food": 9800,
+     "wood": 9800,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 4200,
+    "power": 398
+   },
+   {
+    "level": 8,
+    "requirements": [],
+    "cost": {
+     "food": 14800,
+     "wood": 14800,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 7800,
+    "power": 769
+   },
+   {
+    "level": 9,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 9
+     }
+    ],
+    "cost": {
+     "food": 22300,
+     "wood": 22300,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 10380,
+    "power": 1274
+   },
+   {
+    "level": 10,
+    "requirements": [],
+    "cost": {
+     "food": 31300,
+     "wood": 31300,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 14280,
+    "power": 1971
+   },
+   {
+    "level": 11,
+    "requirements": [],
+    "cost": {
+     "food": 42500,
+     "wood": 42500,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 19380,
+    "power": 2916
+   },
+   {
+    "level": 12,
+    "requirements": [],
+    "cost": {
+     "food": 52500,
+     "wood": 52500,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 28980,
+    "power": 4286
+   },
+   {
+    "level": 13,
+    "requirements": [],
+    "cost": {
+     "food": 60000,
+     "wood": 60000,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 35760,
+    "power": 5956
+   },
+   {
+    "level": 14,
+    "requirements": [],
+    "cost": {
+     "food": 67500,
+     "wood": 67500,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 43560,
+    "power": 7969
+   },
+   {
+    "level": 15,
+    "requirements": [],
+    "cost": {
+     "food": 75000,
+     "wood": 75000,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 52020,
+    "power": 10350
+   },
+   {
+    "level": 16,
+    "requirements": [],
+    "cost": {
+     "food": 82500,
+     "wood": 82500,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 62760,
+    "power": 13191
+   },
+   {
+    "level": 17,
+    "requirements": [],
+    "cost": {
+     "food": 92500,
+     "wood": 92500,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 86400,
+    "power": 17149
+   },
+   {
+    "level": 18,
+    "requirements": [],
+    "cost": {
+     "food": 102500,
+     "wood": 102500,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 115200,
+    "power": 22223
+   },
+   {
+    "level": 19,
+    "requirements": [],
+    "cost": {
+     "food": 115000,
+     "wood": 115000,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 144000,
+    "power": 28423
+   },
+   {
+    "level": 20,
+    "requirements": [],
+    "cost": {
+     "food": 127500,
+     "wood": 127500,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 180000,
+    "power": 36109
+   },
+   {
+    "level": 21,
+    "requirements": [],
+    "cost": {
+     "food": 142500,
+     "wood": 142500,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 234000,
+    "power": 46007
+   },
+   {
+    "level": 22,
+    "requirements": [],
+    "cost": {
+     "food": 157500,
+     "wood": 157500,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 288000,
+    "power": 58118
+   },
+   {
+    "level": 23,
+    "requirements": [],
+    "cost": {
+     "food": 250000,
+     "wood": 250000,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 378000,
+    "power": 74187
+   },
+   {
+    "level": 24,
+    "requirements": [],
+    "cost": {
+     "food": 500000,
+     "wood": 500000,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 504000,
+    "power": 96279
+   },
+   {
+    "level": 25,
+    "requirements": [],
+    "cost": {
+     "food": 0,
+     "wood": 0,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 0,
+    "power": 139023
+   }
+  ]
+ },
+ {
+  "id": "barracks",
+  "category": "military",
+  "maxLevel": 25,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [],
+    "cost": {
+     "food": 0,
+     "wood": 0,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 0,
+    "power": 5
+   },
+   {
+    "level": 2,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 2
+     }
+    ],
+    "cost": {
+     "food": 500,
+     "wood": 800,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 20,
+    "power": 10
+   },
+   {
+    "level": 3,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 3
+     }
+    ],
+    "cost": {
+     "food": 1000,
+     "wood": 1500,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 60,
+    "power": 20
+   },
+   {
+    "level": 4,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 4
+     }
+    ],
+    "cost": {
+     "food": 2000,
+     "wood": 2800,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 200,
+    "power": 37
+   },
+   {
+    "level": 5,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "farm",
+      "level": 5
+     }
+    ],
+    "cost": {
+     "food": 3800,
+     "wood": 5000,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 1000,
+    "power": 94
+   },
+   {
+    "level": 6,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "farm",
+      "level": 6
+     }
+    ],
+    "cost": {
+     "food": 6500,
+     "wood": 8500,
+     "stone": 3400,
+     "gold": 0
+    },
+    "timeSec": 2750,
+    "power": 244
+   },
+   {
+    "level": 7,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "farm",
+      "level": 7
+     }
+    ],
+    "cost": {
+     "food": 9800,
+     "wood": 12800,
+     "stone": 5400,
+     "gold": 0
+    },
+    "timeSec": 5520,
+    "power": 525
+   },
+   {
+    "level": 8,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "farm",
+      "level": 8
+     }
+    ],
+    "cost": {
+     "food": 14800,
+     "wood": 19300,
+     "stone": 8700,
+     "gold": 0
+    },
+    "timeSec": 10980,
+    "power": 1059
+   },
+   {
+    "level": 9,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "farm",
+      "level": 9
+     }
+    ],
+    "cost": {
+     "food": 22300,
+     "wood": 29000,
+     "stone": 13900,
+     "gold": 0
+    },
+    "timeSec": 22020,
+    "power": 2083
+   },
+   {
+    "level": 10,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "farm",
+      "level": 10
+     }
+    ],
+    "cost": {
+     "food": 33500,
+     "wood": 43500,
+     "stone": 22200,
+     "gold": 0
+    },
+    "timeSec": 43980,
+    "power": 4063
+   },
+   {
+    "level": 11,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "farm",
+      "level": 11
+     }
+    ],
+    "cost": {
+     "food": 52500,
+     "wood": 67500,
+     "stone": 35000,
+     "gold": 0
+    },
+    "timeSec": 52800,
+    "power": 6520
+   },
+   {
+    "level": 12,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "farm",
+      "level": 12
+     }
+    ],
+    "cost": {
+     "food": 80000,
+     "wood": 102500,
+     "stone": 52500,
+     "gold": 0
+    },
+    "timeSec": 63360,
+    "power": 9576
+   },
+   {
+    "level": 13,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "farm",
+      "level": 13
+     }
+    ],
+    "cost": {
+     "food": 120000,
+     "wood": 155000,
+     "stone": 80000,
+     "gold": 0
+    },
+    "timeSec": 76020,
+    "power": 13407
+   },
+   {
+    "level": 14,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "farm",
+      "level": 14
+     }
+    ],
+    "cost": {
+     "food": 180000,
+     "wood": 232500,
+     "stone": 120000,
+     "gold": 0
+    },
+    "timeSec": 90000,
+    "power": 18241
+   },
+   {
+    "level": 15,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "farm",
+      "level": 15
+     }
+    ],
+    "cost": {
+     "food": 270000,
+     "wood": 350000,
+     "stone": 180000,
+     "gold": 0
+    },
+    "timeSec": 108000,
+    "power": 24400
+   },
+   {
+    "level": 16,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "farm",
+      "level": 16
+     }
+    ],
+    "cost": {
+     "food": 405000,
+     "wood": 525000,
+     "stone": 270000,
+     "gold": 0
+    },
+    "timeSec": 129600,
+    "power": 32325
+   },
+   {
+    "level": 17,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "farm",
+      "level": 17
+     }
+    ],
+    "cost": {
+     "food": 607500,
+     "wood": 787500,
+     "stone": 405000,
+     "gold": 0
+    },
+    "timeSec": 158400,
+    "power": 42636
+   },
+   {
+    "level": 18,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "farm",
+      "level": 18
+     }
+    ],
+    "cost": {
+     "food": 925000,
+     "wood": 1200000,
+     "stone": 625000,
+     "gold": 0
+    },
+    "timeSec": 190800,
+    "power": 56328
+   },
+   {
+    "level": 19,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "farm",
+      "level": 19
+     }
+    ],
+    "cost": {
+     "food": 1400000,
+     "wood": 1800000,
+     "stone": 950000,
+     "gold": 0
+    },
+    "timeSec": 226800,
+    "power": 74659
+   },
+   {
+    "level": 20,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "farm",
+      "level": 20
+     }
+    ],
+    "cost": {
+     "food": 2100000,
+     "wood": 2700000,
+     "stone": 1400000,
+     "gold": 0
+    },
+    "timeSec": 273600,
+    "power": 99431
+   },
+   {
+    "level": 21,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "farm",
+      "level": 21
+     }
+    ],
+    "cost": {
+     "food": 3200000,
+     "wood": 4100000,
+     "stone": 2200000,
+     "gold": 0
+    },
+    "timeSec": 327600,
+    "power": 133357
+   },
+   {
+    "level": 22,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "farm",
+      "level": 22
+     }
+    ],
+    "cost": {
+     "food": 4700000,
+     "wood": 6100000,
+     "stone": 3200000,
+     "gold": 0
+    },
+    "timeSec": 424800,
+    "power": 181631
+   },
+   {
+    "level": 23,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "farm",
+      "level": 23
+     }
+    ],
+    "cost": {
+     "food": 7100000,
+     "wood": 9100000,
+     "stone": 4900000,
+     "gold": 0
+    },
+    "timeSec": 594000,
+    "power": 252430
+   },
+   {
+    "level": 24,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "farm",
+      "level": 24
+     }
+    ],
+    "cost": {
+     "food": 10800000,
+     "wood": 13800000,
+     "stone": 7500000,
+     "gold": 0
+    },
+    "timeSec": 892800,
+    "power": 359629
+   },
+   {
+    "level": 25,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "farm",
+      "level": 25
+     }
+    ],
+    "cost": {
+     "food": 16200000,
+     "wood": 20800000,
+     "stone": 11200000,
+     "gold": 0
+    },
+    "timeSec": 2944800,
+    "power": 592326
+   }
+  ]
+ },
+ {
+  "id": "archery_range",
+  "category": "military",
+  "maxLevel": 25,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 2
+     }
+    ],
+    "cost": {
+     "food": 300,
+     "wood": 500,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 4,
+    "power": 5
+   },
+   {
+    "level": 2,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 2
+     }
+    ],
+    "cost": {
+     "food": 500,
+     "wood": 800,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 30,
+    "power": 10
+   },
+   {
+    "level": 3,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 3
+     }
+    ],
+    "cost": {
+     "food": 1000,
+     "wood": 1500,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 100,
+    "power": 19
+   },
+   {
+    "level": 4,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 4
+     }
+    ],
+    "cost": {
+     "food": 2000,
+     "wood": 2800,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 300,
+    "power": 40
+   },
+   {
+    "level": 5,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "lumber_mill",
+      "level": 5
+     }
+    ],
+    "cost": {
+     "food": 3800,
+     "wood": 5000,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 1000,
+    "power": 97
+   },
+   {
+    "level": 6,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "lumber_mill",
+      "level": 6
+     }
+    ],
+    "cost": {
+     "food": 6500,
+     "wood": 8500,
+     "stone": 3400,
+     "gold": 0
+    },
+    "timeSec": 2750,
+    "power": 247
+   },
+   {
+    "level": 7,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "lumber_mill",
+      "level": 7
+     }
+    ],
+    "cost": {
+     "food": 9800,
+     "wood": 12800,
+     "stone": 5400,
+     "gold": 0
+    },
+    "timeSec": 5520,
+    "power": 528
+   },
+   {
+    "level": 8,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "lumber_mill",
+      "level": 8
+     }
+    ],
+    "cost": {
+     "food": 14800,
+     "wood": 19300,
+     "stone": 8700,
+     "gold": 0
+    },
+    "timeSec": 10980,
+    "power": 1062
+   },
+   {
+    "level": 9,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "lumber_mill",
+      "level": 9
+     }
+    ],
+    "cost": {
+     "food": 22300,
+     "wood": 29000,
+     "stone": 13900,
+     "gold": 0
+    },
+    "timeSec": 22020,
+    "power": 2086
+   },
+   {
+    "level": 10,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "lumber_mill",
+      "level": 10
+     }
+    ],
+    "cost": {
+     "food": 33500,
+     "wood": 43500,
+     "stone": 22200,
+     "gold": 0
+    },
+    "timeSec": 43980,
+    "power": 4066
+   },
+   {
+    "level": 11,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "lumber_mill",
+      "level": 11
+     }
+    ],
+    "cost": {
+     "food": 52500,
+     "wood": 67500,
+     "stone": 35000,
+     "gold": 0
+    },
+    "timeSec": 52800,
+    "power": 6523
+   },
+   {
+    "level": 12,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "lumber_mill",
+      "level": 12
+     }
+    ],
+    "cost": {
+     "food": 80000,
+     "wood": 102500,
+     "stone": 52500,
+     "gold": 0
+    },
+    "timeSec": 63360,
+    "power": 9579
+   },
+   {
+    "level": 13,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "lumber_mill",
+      "level": 13
+     }
+    ],
+    "cost": {
+     "food": 120000,
+     "wood": 155000,
+     "stone": 80000,
+     "gold": 0
+    },
+    "timeSec": 76020,
+    "power": 13410
+   },
+   {
+    "level": 14,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "lumber_mill",
+      "level": 14
+     }
+    ],
+    "cost": {
+     "food": 180000,
+     "wood": 232500,
+     "stone": 120000,
+     "gold": 0
+    },
+    "timeSec": 90000,
+    "power": 18244
+   },
+   {
+    "level": 15,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "lumber_mill",
+      "level": 15
+     }
+    ],
+    "cost": {
+     "food": 270000,
+     "wood": 350000,
+     "stone": 180000,
+     "gold": 0
+    },
+    "timeSec": 108000,
+    "power": 24403
+   },
+   {
+    "level": 16,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "lumber_mill",
+      "level": 16
+     }
+    ],
+    "cost": {
+     "food": 405000,
+     "wood": 525000,
+     "stone": 270000,
+     "gold": 0
+    },
+    "timeSec": 129600,
+    "power": 32328
+   },
+   {
+    "level": 17,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "lumber_mill",
+      "level": 17
+     }
+    ],
+    "cost": {
+     "food": 607500,
+     "wood": 787500,
+     "stone": 405000,
+     "gold": 0
+    },
+    "timeSec": 158400,
+    "power": 42639
+   },
+   {
+    "level": 18,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "lumber_mill",
+      "level": 18
+     }
+    ],
+    "cost": {
+     "food": 925000,
+     "wood": 1200000,
+     "stone": 625000,
+     "gold": 0
+    },
+    "timeSec": 190800,
+    "power": 56331
+   },
+   {
+    "level": 19,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "lumber_mill",
+      "level": 19
+     }
+    ],
+    "cost": {
+     "food": 1400000,
+     "wood": 1800000,
+     "stone": 950000,
+     "gold": 0
+    },
+    "timeSec": 226800,
+    "power": 74662
+   },
+   {
+    "level": 20,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "lumber_mill",
+      "level": 20
+     }
+    ],
+    "cost": {
+     "food": 2100000,
+     "wood": 2700000,
+     "stone": 1400000,
+     "gold": 0
+    },
+    "timeSec": 273600,
+    "power": 99434
+   },
+   {
+    "level": 21,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "lumber_mill",
+      "level": 21
+     }
+    ],
+    "cost": {
+     "food": 3200000,
+     "wood": 4100000,
+     "stone": 2200000,
+     "gold": 0
+    },
+    "timeSec": 327600,
+    "power": 133360
+   },
+   {
+    "level": 22,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "lumber_mill",
+      "level": 22
+     }
+    ],
+    "cost": {
+     "food": 4700000,
+     "wood": 6100000,
+     "stone": 3200000,
+     "gold": 0
+    },
+    "timeSec": 424800,
+    "power": 181634
+   },
+   {
+    "level": 23,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "lumber_mill",
+      "level": 23
+     }
+    ],
+    "cost": {
+     "food": 7100000,
+     "wood": 9100000,
+     "stone": 4900000,
+     "gold": 0
+    },
+    "timeSec": 594000,
+    "power": 252433
+   },
+   {
+    "level": 24,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "lumber_mill",
+      "level": 24
+     }
+    ],
+    "cost": {
+     "food": 10800000,
+     "wood": 13800000,
+     "stone": 7500000,
+     "gold": 0
+    },
+    "timeSec": 892800,
+    "power": 359632
+   },
+   {
+    "level": 25,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "lumber_mill",
+      "level": 25
+     }
+    ],
+    "cost": {
+     "food": 16200000,
+     "wood": 20800000,
+     "stone": 11200000,
+     "gold": 0
+    },
+    "timeSec": 0,
+    "power": 592329
+   }
+  ]
+ },
+ {
+  "id": "stable",
+  "category": "military",
+  "maxLevel": 25,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 3
+     }
+    ],
+    "cost": {
+     "food": 300,
+     "wood": 400,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 8,
+    "power": 5
+   },
+   {
+    "level": 2,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 3
+     }
+    ],
+    "cost": {
+     "food": 500,
+     "wood": 800,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 40,
+    "power": 10
+   },
+   {
+    "level": 3,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 3
+     }
+    ],
+    "cost": {
+     "food": 1000,
+     "wood": 1500,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 120,
+    "power": 19
+   },
+   {
+    "level": 4,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 4
+     }
+    ],
+    "cost": {
+     "food": 2000,
+     "wood": 2800,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 400,
+    "power": 44
+   },
+   {
+    "level": 5,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "quarry",
+      "level": 5
+     }
+    ],
+    "cost": {
+     "food": 3800,
+     "wood": 5000,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 1000,
+    "power": 101
+   },
+   {
+    "level": 6,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "quarry",
+      "level": 6
+     }
+    ],
+    "cost": {
+     "food": 6500,
+     "wood": 8500,
+     "stone": 3400,
+     "gold": 0
+    },
+    "timeSec": 2750,
+    "power": 251
+   },
+   {
+    "level": 7,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "quarry",
+      "level": 7
+     }
+    ],
+    "cost": {
+     "food": 9800,
+     "wood": 12800,
+     "stone": 5400,
+     "gold": 0
+    },
+    "timeSec": 5520,
+    "power": 532
+   },
+   {
+    "level": 8,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "quarry",
+      "level": 8
+     }
+    ],
+    "cost": {
+     "food": 14800,
+     "wood": 19300,
+     "stone": 8700,
+     "gold": 0
+    },
+    "timeSec": 10980,
+    "power": 1066
+   },
+   {
+    "level": 9,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "quarry",
+      "level": 9
+     }
+    ],
+    "cost": {
+     "food": 22300,
+     "wood": 29000,
+     "stone": 13900,
+     "gold": 0
+    },
+    "timeSec": 22020,
+    "power": 2090
+   },
+   {
+    "level": 10,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "quarry",
+      "level": 10
+     }
+    ],
+    "cost": {
+     "food": 33500,
+     "wood": 43500,
+     "stone": 22200,
+     "gold": 0
+    },
+    "timeSec": 43980,
+    "power": 4070
+   },
+   {
+    "level": 11,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "quarry",
+      "level": 11
+     }
+    ],
+    "cost": {
+     "food": 52500,
+     "wood": 67500,
+     "stone": 35000,
+     "gold": 0
+    },
+    "timeSec": 52800,
+    "power": 6527
+   },
+   {
+    "level": 12,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "quarry",
+      "level": 12
+     }
+    ],
+    "cost": {
+     "food": 80000,
+     "wood": 102500,
+     "stone": 52500,
+     "gold": 0
+    },
+    "timeSec": 63360,
+    "power": 9583
+   },
+   {
+    "level": 13,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "quarry",
+      "level": 13
+     }
+    ],
+    "cost": {
+     "food": 120000,
+     "wood": 155000,
+     "stone": 80000,
+     "gold": 0
+    },
+    "timeSec": 76020,
+    "power": 13414
+   },
+   {
+    "level": 14,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "quarry",
+      "level": 14
+     }
+    ],
+    "cost": {
+     "food": 180000,
+     "wood": 232500,
+     "stone": 120000,
+     "gold": 0
+    },
+    "timeSec": 90000,
+    "power": 18248
+   },
+   {
+    "level": 15,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "quarry",
+      "level": 15
+     }
+    ],
+    "cost": {
+     "food": 270000,
+     "wood": 350000,
+     "stone": 180000,
+     "gold": 0
+    },
+    "timeSec": 108000,
+    "power": 24407
+   },
+   {
+    "level": 16,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "quarry",
+      "level": 16
+     }
+    ],
+    "cost": {
+     "food": 405000,
+     "wood": 525000,
+     "stone": 270000,
+     "gold": 0
+    },
+    "timeSec": 129600,
+    "power": 32332
+   },
+   {
+    "level": 17,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "quarry",
+      "level": 17
+     }
+    ],
+    "cost": {
+     "food": 607500,
+     "wood": 787500,
+     "stone": 405000,
+     "gold": 0
+    },
+    "timeSec": 158400,
+    "power": 42643
+   },
+   {
+    "level": 18,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "quarry",
+      "level": 18
+     }
+    ],
+    "cost": {
+     "food": 925000,
+     "wood": 1200000,
+     "stone": 625000,
+     "gold": 0
+    },
+    "timeSec": 190800,
+    "power": 56335
+   },
+   {
+    "level": 19,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "quarry",
+      "level": 19
+     }
+    ],
+    "cost": {
+     "food": 1400000,
+     "wood": 1800000,
+     "stone": 950000,
+     "gold": 0
+    },
+    "timeSec": 226800,
+    "power": 74666
+   },
+   {
+    "level": 20,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "quarry",
+      "level": 20
+     }
+    ],
+    "cost": {
+     "food": 2100000,
+     "wood": 2700000,
+     "stone": 1400000,
+     "gold": 0
+    },
+    "timeSec": 273600,
+    "power": 99438
+   },
+   {
+    "level": 21,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "quarry",
+      "level": 21
+     }
+    ],
+    "cost": {
+     "food": 3200000,
+     "wood": 4100000,
+     "stone": 2200000,
+     "gold": 0
+    },
+    "timeSec": 327600,
+    "power": 133364
+   },
+   {
+    "level": 22,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "quarry",
+      "level": 22
+     }
+    ],
+    "cost": {
+     "food": 4700000,
+     "wood": 6100000,
+     "stone": 3200000,
+     "gold": 0
+    },
+    "timeSec": 424800,
+    "power": 181638
+   },
+   {
+    "level": 23,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "quarry",
+      "level": 23
+     }
+    ],
+    "cost": {
+     "food": 7100000,
+     "wood": 9100000,
+     "stone": 4900000,
+     "gold": 0
+    },
+    "timeSec": 594000,
+    "power": 252437
+   },
+   {
+    "level": 24,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "quarry",
+      "level": 24
+     }
+    ],
+    "cost": {
+     "food": 10800000,
+     "wood": 13800000,
+     "stone": 7500000,
+     "gold": 0
+    },
+    "timeSec": 892800,
+    "power": 359636
+   },
+   {
+    "level": 25,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "quarry",
+      "level": 25
+     }
+    ],
+    "cost": {
+     "food": 16200000,
+     "wood": 20800000,
+     "stone": 11200000,
+     "gold": 0
+    },
+    "timeSec": 1753200,
+    "power": 592333
+   }
+  ]
+ },
+ {
+  "id": "siege_workshop",
+  "category": "military",
+  "maxLevel": 25,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 4
+     }
+    ],
+    "cost": {
+     "food": 400,
+     "wood": 500,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 10,
+    "power": 5
+   },
+   {
+    "level": 2,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "barracks",
+      "level": 2
+     },
+     {
+      "type": "building",
+      "id": "archery_range",
+      "level": 2
+     },
+     {
+      "type": "building",
+      "id": "stable",
+      "level": 2
+     }
+    ],
+    "cost": {
+     "food": 800,
+     "wood": 1000,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 90,
+    "power": 10
+   },
+   {
+    "level": 3,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "barracks",
+      "level": 3
+     },
+     {
+      "type": "building",
+      "id": "archery_range",
+      "level": 3
+     },
+     {
+      "type": "building",
+      "id": "stable",
+      "level": 3
+     }
+    ],
+    "cost": {
+     "food": 1500,
+     "wood": 2000,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 240,
+    "power": 26
+   },
+   {
+    "level": 4,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "barracks",
+      "level": 4
+     },
+     {
+      "type": "building",
+      "id": "archery_range",
+      "level": 4
+     },
+     {
+      "type": "building",
+      "id": "stable",
+      "level": 4
+     }
+    ],
+    "cost": {
+     "food": 2800,
+     "wood": 3800,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 600,
+    "power": 63
+   },
+   {
+    "level": 5,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "barracks",
+      "level": 5
+     },
+     {
+      "type": "building",
+      "id": "archery_range",
+      "level": 5
+     },
+     {
+      "type": "building",
+      "id": "stable",
+      "level": 5
+     }
+    ],
+    "cost": {
+     "food": 5000,
+     "wood": 6800,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 1000,
+    "power": 126
+   },
+   {
+    "level": 6,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "barracks",
+      "level": 6
+     },
+     {
+      "type": "building",
+      "id": "archery_range",
+      "level": 6
+     },
+     {
+      "type": "building",
+      "id": "stable",
+      "level": 6
+     }
+    ],
+    "cost": {
+     "food": 8500,
+     "wood": 11500,
+     "stone": 5700,
+     "gold": 0
+    },
+    "timeSec": 2750,
+    "power": 293
+   },
+   {
+    "level": 7,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "barracks",
+      "level": 7
+     },
+     {
+      "type": "building",
+      "id": "archery_range",
+      "level": 7
+     },
+     {
+      "type": "building",
+      "id": "stable",
+      "level": 7
+     }
+    ],
+    "cost": {
+     "food": 12800,
+     "wood": 17300,
+     "stone": 9000,
+     "gold": 0
+    },
+    "timeSec": 5520,
+    "power": 600
+   },
+   {
+    "level": 8,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "barracks",
+      "level": 8
+     },
+     {
+      "type": "building",
+      "id": "archery_range",
+      "level": 8
+     },
+     {
+      "type": "building",
+      "id": "stable",
+      "level": 8
+     }
+    ],
+    "cost": {
+     "food": 19300,
+     "wood": 26000,
+     "stone": 14400,
+     "gold": 0
+    },
+    "timeSec": 22020,
+    "power": 1173
+   },
+   {
+    "level": 9,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "barracks",
+      "level": 9
+     },
+     {
+      "type": "building",
+      "id": "archery_range",
+      "level": 9
+     },
+     {
+      "type": "building",
+      "id": "stable",
+      "level": 9
+     }
+    ],
+    "cost": {
+     "food": 19300,
+     "wood": 26000,
+     "stone": 14400,
+     "gold": 0
+    },
+    "timeSec": 22020,
+    "power": 2258
+   },
+   {
+    "level": 10,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "barracks",
+      "level": 10
+     },
+     {
+      "type": "building",
+      "id": "archery_range",
+      "level": 10
+     },
+     {
+      "type": "building",
+      "id": "stable",
+      "level": 10
+     }
+    ],
+    "cost": {
+     "food": 43500,
+     "wood": 58500,
+     "stone": 36900,
+     "gold": 0
+    },
+    "timeSec": 43980,
+    "power": 4332
+   },
+   {
+    "level": 11,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "barracks",
+      "level": 11
+     },
+     {
+      "type": "building",
+      "id": "archery_range",
+      "level": 11
+     },
+     {
+      "type": "building",
+      "id": "stable",
+      "level": 11
+     }
+    ],
+    "cost": {
+     "food": 67500,
+     "wood": 90000,
+     "stone": 57500,
+     "gold": 0
+    },
+    "timeSec": 52800,
+    "power": 6931
+   },
+   {
+    "level": 12,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "barracks",
+      "level": 12
+     },
+     {
+      "type": "building",
+      "id": "archery_range",
+      "level": 12
+     },
+     {
+      "type": "building",
+      "id": "stable",
+      "level": 12
+     }
+    ],
+    "cost": {
+     "food": 102500,
+     "wood": 135000,
+     "stone": 87500,
+     "gold": 0
+    },
+    "timeSec": 63360,
+    "power": 10202
+   },
+   {
+    "level": 13,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "barracks",
+      "level": 13
+     },
+     {
+      "type": "building",
+      "id": "archery_range",
+      "level": 13
+     },
+     {
+      "type": "building",
+      "id": "stable",
+      "level": 13
+     }
+    ],
+    "cost": {
+     "food": 102500,
+     "wood": 135000,
+     "stone": 87500,
+     "gold": 0
+    },
+    "timeSec": 76020,
+    "power": 14355
+   },
+   {
+    "level": 14,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "barracks",
+      "level": 14
+     },
+     {
+      "type": "building",
+      "id": "archery_range",
+      "level": 14
+     },
+     {
+      "type": "building",
+      "id": "stable",
+      "level": 14
+     }
+    ],
+    "cost": {
+     "food": 232500,
+     "wood": 305000,
+     "stone": 200000,
+     "gold": 0
+    },
+    "timeSec": 90000,
+    "power": 19679
+   },
+   {
+    "level": 15,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "barracks",
+      "level": 15
+     },
+     {
+      "type": "building",
+      "id": "archery_range",
+      "level": 15
+     },
+     {
+      "type": "building",
+      "id": "stable",
+      "level": 15
+     }
+    ],
+    "cost": {
+     "food": 350000,
+     "wood": 457500,
+     "stone": 300000,
+     "gold": 0
+    },
+    "timeSec": 129600,
+    "power": 26573
+   },
+   {
+    "level": 16,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "barracks",
+      "level": 16
+     },
+     {
+      "type": "building",
+      "id": "archery_range",
+      "level": 16
+     },
+     {
+      "type": "building",
+      "id": "stable",
+      "level": 16
+     }
+    ],
+    "cost": {
+     "food": 525000,
+     "wood": 687500,
+     "stone": 450000,
+     "gold": 0
+    },
+    "timeSec": 129600,
+    "power": 35603
+   },
+   {
+    "level": 17,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "barracks",
+      "level": 17
+     },
+     {
+      "type": "building",
+      "id": "archery_range",
+      "level": 17
+     },
+     {
+      "type": "building",
+      "id": "stable",
+      "level": 17
+     }
+    ],
+    "cost": {
+     "food": 787500,
+     "wood": 1000000,
+     "stone": 675000,
+     "gold": 0
+    },
+    "timeSec": 158400,
+    "power": 47574
+   },
+   {
+    "level": 18,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "barracks",
+      "level": 18
+     },
+     {
+      "type": "building",
+      "id": "archery_range",
+      "level": 18
+     },
+     {
+      "type": "building",
+      "id": "stable",
+      "level": 18
+     }
+    ],
+    "cost": {
+     "food": 1200000,
+     "wood": 1600000,
+     "stone": 1000000,
+     "gold": 0
+    },
+    "timeSec": 190800,
+    "power": 63716
+   },
+   {
+    "level": 19,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "barracks",
+      "level": 19
+     },
+     {
+      "type": "building",
+      "id": "archery_range",
+      "level": 19
+     },
+     {
+      "type": "building",
+      "id": "stable",
+      "level": 19
+     }
+    ],
+    "cost": {
+     "food": 1800000,
+     "wood": 2300000,
+     "stone": 1600000,
+     "gold": 0
+    },
+    "timeSec": 273600,
+    "power": 85697
+   },
+   {
+    "level": 20,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "barracks",
+      "level": 20
+     },
+     {
+      "type": "building",
+      "id": "archery_range",
+      "level": 20
+     },
+     {
+      "type": "building",
+      "id": "stable",
+      "level": 20
+     }
+    ],
+    "cost": {
+     "food": 2700000,
+     "wood": 3500000,
+     "stone": 2300000,
+     "gold": 0
+    },
+    "timeSec": 273600,
+    "power": 115969
+   },
+   {
+    "level": 21,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "barracks",
+      "level": 21
+     },
+     {
+      "type": "building",
+      "id": "archery_range",
+      "level": 21
+     },
+     {
+      "type": "building",
+      "id": "stable",
+      "level": 21
+     }
+    ],
+    "cost": {
+     "food": 4100000,
+     "wood": 5300000,
+     "stone": 3500000,
+     "gold": 0
+    },
+    "timeSec": 327600,
+    "power": 158145
+   },
+   {
+    "level": 22,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "barracks",
+      "level": 22
+     },
+     {
+      "type": "building",
+      "id": "archery_range",
+      "level": 22
+     },
+     {
+      "type": "building",
+      "id": "stable",
+      "level": 22
+     }
+    ],
+    "cost": {
+     "food": 6100000,
+     "wood": 7900000,
+     "stone": 5300000,
+     "gold": 0
+    },
+    "timeSec": 424800,
+    "power": 218794
+   },
+   {
+    "level": 23,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "barracks",
+      "level": 23
+     },
+     {
+      "type": "building",
+      "id": "archery_range",
+      "level": 23
+     },
+     {
+      "type": "building",
+      "id": "stable",
+      "level": 23
+     }
+    ],
+    "cost": {
+     "food": 9100000,
+     "wood": 11800000,
+     "stone": 7900000,
+     "gold": 0
+    },
+    "timeSec": 594000,
+    "power": 308118
+   },
+   {
+    "level": 24,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "barracks",
+      "level": 24
+     },
+     {
+      "type": "building",
+      "id": "archery_range",
+      "level": 24
+     },
+     {
+      "type": "building",
+      "id": "stable",
+      "level": 24
+     }
+    ],
+    "cost": {
+     "food": 13800000,
+     "wood": 17800000,
+     "stone": 12000000,
+     "gold": 0
+    },
+    "timeSec": 892800,
+    "power": 442817
+   },
+   {
+    "level": 25,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "barracks",
+      "level": 25
+     },
+     {
+      "type": "building",
+      "id": "archery_range",
+      "level": 25
+     },
+     {
+      "type": "building",
+      "id": "stable",
+      "level": 25
+     }
+    ],
+    "cost": {
+     "food": 0,
+     "wood": 0,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 0,
+    "power": 716764
+   }
+  ]
+ },
+ {
+  "id": "hospital",
+  "category": "military",
+  "maxLevel": 25,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [],
+    "cost": {
+     "food": 0,
+     "wood": 0,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 0,
+    "power": 5
+   },
+   {
+    "level": 2,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 2
+     }
+    ],
+    "cost": {
+     "food": 2000,
+     "wood": 2000,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 24,
+    "power": 13
+   },
+   {
+    "level": 3,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 3
+     }
+    ],
+    "cost": {
+     "food": 3800,
+     "wood": 3800,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 100,
+    "power": 32
+   },
+   {
+    "level": 4,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 4
+     }
+    ],
+    "cost": {
+     "food": 3800,
+     "wood": 3800,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 150,
+    "power": 65
+   },
+   {
+    "level": 5,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 5
+     }
+    ],
+    "cost": {
+     "food": 12300,
+     "wood": 12300,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 1200,
+    "power": 162
+   },
+   {
+    "level": 6,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 6
+     }
+    ],
+    "cost": {
+     "food": 21000,
+     "wood": 21000,
+     "stone": 8200,
+     "gold": 0
+    },
+    "timeSec": 2400,
+    "power": 366
+   },
+   {
+    "level": 7,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 7
+     }
+    ],
+    "cost": {
+     "food": 31500,
+     "wood": 31500,
+     "stone": 13000,
+     "gold": 0
+    },
+    "timeSec": 4800,
+    "power": 723
+   },
+   {
+    "level": 8,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 8
+     }
+    ],
+    "cost": {
+     "food": 47300,
+     "wood": 47300,
+     "stone": 20800,
+     "gold": 0
+    },
+    "timeSec": 7200,
+    "power": 1262
+   },
+   {
+    "level": 9,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 9
+     }
+    ],
+    "cost": {
+     "food": 71000,
+     "wood": 71000,
+     "stone": 33300,
+     "gold": 0
+    },
+    "timeSec": 10800,
+    "power": 2077
+   },
+   {
+    "level": 10,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "stable",
+      "level": 10
+     }
+    ],
+    "cost": {
+     "food": 106500,
+     "wood": 106500,
+     "stone": 53300,
+     "gold": 0
+    },
+    "timeSec": 16200,
+    "power": 3310
+   },
+   {
+    "level": 11,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 11
+     }
+    ],
+    "cost": {
+     "food": 160000,
+     "wood": 160000,
+     "stone": 80000,
+     "gold": 0
+    },
+    "timeSec": 19440,
+    "power": 4967
+   },
+   {
+    "level": 12,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 12
+     }
+    ],
+    "cost": {
+     "food": 240000,
+     "wood": 240000,
+     "stone": 120000,
+     "gold": 0
+    },
+    "timeSec": 23340,
+    "power": 7220
+   },
+   {
+    "level": 13,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 13
+     }
+    ],
+    "cost": {
+     "food": 360000,
+     "wood": 360000,
+     "stone": 180000,
+     "gold": 0
+    },
+    "timeSec": 28020,
+    "power": 10319
+   },
+   {
+    "level": 14,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 14
+     }
+    ],
+    "cost": {
+     "food": 540000,
+     "wood": 540000,
+     "stone": 270000,
+     "gold": 0
+    },
+    "timeSec": 33540,
+    "power": 14632
+   },
+   {
+    "level": 15,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 15
+     }
+    ],
+    "cost": {
+     "food": 810000,
+     "wood": 810000,
+     "stone": 405000,
+     "gold": 0
+    },
+    "timeSec": 40320,
+    "power": 20699
+   },
+   {
+    "level": 16,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "barracks",
+      "level": 16
+     }
+    ],
+    "cost": {
+     "food": 1200000,
+     "wood": 1200000,
+     "stone": 607500,
+     "gold": 0
+    },
+    "timeSec": 48360,
+    "power": 29316
+   },
+   {
+    "level": 17,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 17
+     }
+    ],
+    "cost": {
+     "food": 1800000,
+     "wood": 1800000,
+     "stone": 912500,
+     "gold": 0
+    },
+    "timeSec": 58020,
+    "power": 41665
+   },
+   {
+    "level": 18,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 18
+     }
+    ],
+    "cost": {
+     "food": 2800000,
+     "wood": 2800000,
+     "stone": 1400000,
+     "gold": 0
+    },
+    "timeSec": 69660,
+    "power": 59576
+   },
+   {
+    "level": 19,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 19
+     }
+    ],
+    "cost": {
+     "food": 4100000,
+     "wood": 4100000,
+     "stone": 2100000,
+     "gold": 0
+    },
+    "timeSec": 83580,
+    "power": 85644
+   },
+   {
+    "level": 20,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 20
+     }
+    ],
+    "cost": {
+     "food": 6200000,
+     "wood": 6200000,
+     "stone": 3100000,
+     "gold": 0
+    },
+    "timeSec": 100800,
+    "power": 123830
+   },
+   {
+    "level": 21,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "archery_range",
+      "level": 21
+     }
+    ],
+    "cost": {
+     "food": 9300000,
+     "wood": 9300000,
+     "stone": 4700000,
+     "gold": 0
+    },
+    "timeSec": 118800,
+    "power": 179944
+   },
+   {
+    "level": 22,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 22
+     }
+    ],
+    "cost": {
+     "food": 14000000,
+     "wood": 14000000,
+     "stone": 7100000,
+     "gold": 0
+    },
+    "timeSec": 154800,
+    "power": 263152
+   },
+   {
+    "level": 23,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 23
+     }
+    ],
+    "cost": {
+     "food": 20900000,
+     "wood": 20900000,
+     "stone": 10600000,
+     "gold": 0
+    },
+    "timeSec": 219600,
+    "power": 387338
+   },
+   {
+    "level": 24,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 24
+     }
+    ],
+    "cost": {
+     "food": 31500000,
+     "wood": 31500000,
+     "stone": 16000000,
+     "gold": 0
+    },
+    "timeSec": 327600,
+    "power": 574480
+   },
+   {
+    "level": 25,
+    "requirements": [],
+    "cost": {
+     "food": 47200000,
+     "wood": 47200000,
+     "stone": 24000000,
+     "gold": 0
+    },
+    "timeSec": 0,
+    "power": 881480
+   }
+  ]
+ },
+ {
+  "id": "monument",
+  "category": "military",
+  "maxLevel": 1,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 8
+     }
+    ],
+    "cost": {
+     "food": 0,
+     "wood": 1000,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 2,
+    "power": 0
+   }
+  ]
+ },
+ {
+  "id": "castle",
+  "category": "military",
+  "maxLevel": 25,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "alliance_center",
+      "level": 1
+     }
+    ],
+    "cost": {
+     "food": 200,
+     "wood": 300,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 12,
+    "power": 5
+   },
+   {
+    "level": 2,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "alliance_center",
+      "level": 2
+     }
+    ],
+    "cost": {
+     "food": 300,
+     "wood": 500,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 60,
+    "power": 11
+   },
+   {
+    "level": 3,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "alliance_center",
+      "level": 3
+     }
+    ],
+    "cost": {
+     "food": 500,
+     "wood": 1000,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 300,
+    "power": 26
+   },
+   {
+    "level": 4,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "alliance_center",
+      "level": 4
+     }
+    ],
+    "cost": {
+     "food": 1000,
+     "wood": 2000,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 1000,
+    "power": 72
+   },
+   {
+    "level": 5,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "alliance_center",
+      "level": 5
+     }
+    ],
+    "cost": {
+     "food": 2000,
+     "wood": 3800,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 2100,
+    "power": 167
+   },
+   {
+    "level": 6,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "alliance_center",
+      "level": 6
+     }
+    ],
+    "cost": {
+     "food": 3500,
+     "wood": 6500,
+     "stone": 3500,
+     "gold": 0
+    },
+    "timeSec": 3200,
+    "power": 325
+   },
+   {
+    "level": 7,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "alliance_center",
+      "level": 7
+     }
+    ],
+    "cost": {
+     "food": 5300,
+     "wood": 9800,
+     "stone": 5300,
+     "gold": 0
+    },
+    "timeSec": 6420,
+    "power": 627
+   },
+   {
+    "level": 8,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "alliance_center",
+      "level": 8
+     }
+    ],
+    "cost": {
+     "food": 8000,
+     "wood": 14800,
+     "stone": 8000,
+     "gold": 0
+    },
+    "timeSec": 12780,
+    "power": 1208
+   },
+   {
+    "level": 9,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "alliance_center",
+      "level": 9
+     }
+    ],
+    "cost": {
+     "food": 12000,
+     "wood": 22300,
+     "stone": 12000,
+     "gold": 0
+    },
+    "timeSec": 25620,
+    "power": 2336
+   },
+   {
+    "level": 10,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "alliance_center",
+      "level": 10
+     }
+    ],
+    "cost": {
+     "food": 18000,
+     "wood": 33500,
+     "stone": 18000,
+     "gold": 0
+    },
+    "timeSec": 51180,
+    "power": 4541
+   },
+   {
+    "level": 11,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "alliance_center",
+      "level": 11
+     }
+    ],
+    "cost": {
+     "food": 27500,
+     "wood": 52500,
+     "stone": 27500,
+     "gold": 0
+    },
+    "timeSec": 61440,
+    "power": 7241
+   },
+   {
+    "level": 12,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "alliance_center",
+      "level": 12
+     }
+    ],
+    "cost": {
+     "food": 42500,
+     "wood": 80000,
+     "stone": 42500,
+     "gold": 0
+    },
+    "timeSec": 73740,
+    "power": 10562
+   },
+   {
+    "level": 13,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "alliance_center",
+      "level": 13
+     }
+    ],
+    "cost": {
+     "food": 65000,
+     "wood": 120000,
+     "stone": 65000,
+     "gold": 0
+    },
+    "timeSec": 86400,
+    "power": 14665
+   },
+   {
+    "level": 14,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "alliance_center",
+      "level": 14
+     }
+    ],
+    "cost": {
+     "food": 97500,
+     "wood": 180000,
+     "stone": 97500,
+     "gold": 0
+    },
+    "timeSec": 86400,
+    "power": 19759
+   },
+   {
+    "level": 15,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "alliance_center",
+      "level": 15
+     }
+    ],
+    "cost": {
+     "food": 147500,
+     "wood": 270000,
+     "stone": 147500,
+     "gold": 0
+    },
+    "timeSec": 126000,
+    "power": 26132
+   },
+   {
+    "level": 16,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "alliance_center",
+      "level": 16
+     }
+    ],
+    "cost": {
+     "food": 222500,
+     "wood": 405000,
+     "stone": 222500,
+     "gold": 0
+    },
+    "timeSec": 151200,
+    "power": 34169
+   },
+   {
+    "level": 17,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "alliance_center",
+      "level": 17
+     }
+    ],
+    "cost": {
+     "food": 335000,
+     "wood": 607500,
+     "stone": 335000,
+     "gold": 0
+    },
+    "timeSec": 183600,
+    "power": 44397
+   },
+   {
+    "level": 18,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "alliance_center",
+      "level": 18
+     }
+    ],
+    "cost": {
+     "food": 525000,
+     "wood": 925000,
+     "stone": 525000,
+     "gold": 0
+    },
+    "timeSec": 219600,
+    "power": 57677
+   },
+   {
+    "level": 19,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "alliance_center",
+      "level": 19
+     }
+    ],
+    "cost": {
+     "food": 800000,
+     "wood": 1400000,
+     "stone": 800000,
+     "gold": 0
+    },
+    "timeSec": 262800,
+    "power": 75044
+   },
+   {
+    "level": 20,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "alliance_center",
+      "level": 20
+     }
+    ],
+    "cost": {
+     "food": 1200000,
+     "wood": 2100000,
+     "stone": 1200000,
+     "gold": 0
+    },
+    "timeSec": 316800,
+    "power": 97924
+   },
+   {
+    "level": 21,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "alliance_center",
+      "level": 21
+     }
+    ],
+    "cost": {
+     "food": 1800000,
+     "wood": 3200000,
+     "stone": 1800000,
+     "gold": 0
+    },
+    "timeSec": 381600,
+    "power": 128440
+   },
+   {
+    "level": 22,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "alliance_center",
+      "level": 22
+     }
+    ],
+    "cost": {
+     "food": 2700000,
+     "wood": 4700000,
+     "stone": 2700000,
+     "gold": 0
+    },
+    "timeSec": 493200,
+    "power": 171171
+   },
+   {
+    "level": 23,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "alliance_center",
+      "level": 23
+     }
+    ],
+    "cost": {
+     "food": 4100000,
+     "wood": 7100000,
+     "stone": 4100000,
+     "gold": 0
+    },
+    "timeSec": 691200,
+    "power": 233315
+   },
+   {
+    "level": 24,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "alliance_center",
+      "level": 24
+     }
+    ],
+    "cost": {
+     "food": 6300000,
+     "wood": 10800000,
+     "stone": 6300000,
+     "gold": 0
+    },
+    "timeSec": 1036800,
+    "power": 327606
+   },
+   {
+    "level": 25,
+    "requirements": [],
+    "cost": {
+     "food": 9500000,
+     "wood": 16200000,
+     "stone": 9500000,
+     "gold": 0
+    },
+    "timeSec": 2005200,
+    "power": 552999
+   }
+  ]
+ },
+ {
+  "id": "blacksmith",
+  "category": "military",
+  "maxLevel": 1,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 16
+     }
+    ],
+    "cost": {
+     "food": 1000,
+     "wood": 1000,
+     "stone": 1000,
+     "gold": 0
+    },
+    "timeSec": 11,
+    "power": 0
+   }
+  ]
+ },
+ {
+  "id": "bulletin_board",
+  "category": "military",
+  "maxLevel": 1,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 5
+     }
+    ],
+    "cost": {
+     "food": 0,
+     "wood": 1000,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 2,
+    "power": 0
+   }
+  ]
+ }
+]

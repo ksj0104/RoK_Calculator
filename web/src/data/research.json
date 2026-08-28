@@ -1,0 +1,10059 @@
+[
+ {
+  "id": "quarrying",
+  "tree": "economic",
+  "tier": 1,
+  "maxLevel": 1,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "buildings_academy",
+      "level": 1
+     }
+    ],
+    "cost": {
+     "food": 100,
+     "wood": 100,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 60,
+    "power": 5
+   }
+  ]
+ },
+ {
+  "id": "irrigation",
+  "tree": "economic",
+  "tier": 2,
+  "maxLevel": 5,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "quarrying",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "buildings_academy",
+      "level": 1
+     }
+    ],
+    "cost": {
+     "food": 5000,
+     "wood": 5000,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 600,
+    "power": 44
+   },
+   {
+    "level": 2,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "irrigation",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "buildings_academy",
+      "level": 2
+     }
+    ],
+    "cost": {
+     "food": 10000,
+     "wood": 10000,
+     "stone": 7500,
+     "gold": 0
+    },
+    "timeSec": 900,
+    "power": 142
+   },
+   {
+    "level": 3,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "irrigation",
+      "level": 2
+     },
+     {
+      "type": "building",
+      "id": "buildings_academy",
+      "level": 3
+     }
+    ],
+    "cost": {
+     "food": 20000,
+     "wood": 20000,
+     "stone": 15000,
+     "gold": 0
+    },
+    "timeSec": 2000,
+    "power": 347
+   },
+   {
+    "level": 4,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "irrigation",
+      "level": 3
+     },
+     {
+      "type": "building",
+      "id": "buildings_academy",
+      "level": 4
+     }
+    ],
+    "cost": {
+     "food": 40000,
+     "wood": 40000,
+     "stone": 30000,
+     "gold": 0
+    },
+    "timeSec": 4980,
+    "power": 797
+   },
+   {
+    "level": 5,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "irrigation",
+      "level": 4
+     },
+     {
+      "type": "building",
+      "id": "buildings_academy",
+      "level": 5
+     }
+    ],
+    "cost": {
+     "food": 80000,
+     "wood": 80000,
+     "stone": 60000,
+     "gold": 0
+    },
+    "timeSec": 9960,
+    "power": 1697
+   }
+  ]
+ },
+ {
+  "id": "handsaw",
+  "tree": "economic",
+  "tier": 2,
+  "maxLevel": 5,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "quarrying",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "buildings_academy",
+      "level": 1
+     }
+    ],
+    "cost": {
+     "food": 5000,
+     "wood": 5000,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 600,
+    "power": 44
+   },
+   {
+    "level": 2,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "handsaw",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "buildings_academy",
+      "level": 2
+     }
+    ],
+    "cost": {
+     "food": 10000,
+     "wood": 10000,
+     "stone": 7500,
+     "gold": 0
+    },
+    "timeSec": 900,
+    "power": 142
+   },
+   {
+    "level": 3,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "handsaw",
+      "level": 2
+     },
+     {
+      "type": "building",
+      "id": "buildings_academy",
+      "level": 3
+     }
+    ],
+    "cost": {
+     "food": 20000,
+     "wood": 20000,
+     "stone": 15000,
+     "gold": 0
+    },
+    "timeSec": 2000,
+    "power": 347
+   },
+   {
+    "level": 4,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "handsaw",
+      "level": 3
+     },
+     {
+      "type": "building",
+      "id": "buildings_academy",
+      "level": 4
+     }
+    ],
+    "cost": {
+     "food": 40000,
+     "wood": 40000,
+     "stone": 30000,
+     "gold": 0
+    },
+    "timeSec": 4980,
+    "power": 797
+   },
+   {
+    "level": 5,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "handsaw",
+      "level": 4
+     },
+     {
+      "type": "building",
+      "id": "buildings_academy",
+      "level": 5
+     }
+    ],
+    "cost": {
+     "food": 80000,
+     "wood": 80000,
+     "stone": 60000,
+     "gold": 0
+    },
+    "timeSec": 10020,
+    "power": 1697
+   }
+  ]
+ },
+ {
+  "id": "sickle",
+  "tree": "economic",
+  "tier": 3,
+  "maxLevel": 5,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "irrigation",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 5
+     }
+    ],
+    "cost": {
+     "food": 20000,
+     "wood": 20000,
+     "stone": 15000,
+     "gold": 0
+    },
+    "timeSec": 900,
+    "power": 161
+   },
+   {
+    "level": 2,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "sickle",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 6
+     }
+    ],
+    "cost": {
+     "food": 40000,
+     "wood": 40000,
+     "stone": 30000,
+     "gold": 0
+    },
+    "timeSec": 1800,
+    "power": 483
+   },
+   {
+    "level": 3,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "sickle",
+      "level": 2
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 7
+     }
+    ],
+    "cost": {
+     "food": 80000,
+     "wood": 80000,
+     "stone": 60000,
+     "gold": 0
+    },
+    "timeSec": 3600,
+    "power": 1127
+   },
+   {
+    "level": 4,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "sickle",
+      "level": 3
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 8
+     }
+    ],
+    "cost": {
+     "food": 160000,
+     "wood": 160000,
+     "stone": 120000,
+     "gold": 0
+    },
+    "timeSec": 7200,
+    "power": 2415
+   },
+   {
+    "level": 5,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "sickle",
+      "level": 4
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 9
+     }
+    ],
+    "cost": {
+     "food": 320000,
+     "wood": 320000,
+     "stone": 240000,
+     "gold": 0
+    },
+    "timeSec": 14400,
+    "power": 4991
+   }
+  ]
+ },
+ {
+  "id": "masonry",
+  "tree": "economic",
+  "tier": 3,
+  "maxLevel": 5,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "irrigation",
+      "level": 1
+     },
+     {
+      "type": "research",
+      "id": "handsaw",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 5
+     }
+    ],
+    "cost": {
+     "food": 20000,
+     "wood": 20000,
+     "stone": 15000,
+     "gold": 0
+    },
+    "timeSec": 3600,
+    "power": 269
+   },
+   {
+    "level": 2,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "masonry",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 6
+     }
+    ],
+    "cost": {
+     "food": 30000,
+     "wood": 30000,
+     "stone": 22500,
+     "gold": 0
+    },
+    "timeSec": 5400,
+    "power": 672
+   },
+   {
+    "level": 3,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "masonry",
+      "level": 2
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 7
+     }
+    ],
+    "cost": {
+     "food": 50000,
+     "wood": 50000,
+     "stone": 37500,
+     "gold": 0
+    },
+    "timeSec": 7200,
+    "power": 1272
+   },
+   {
+    "level": 4,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "masonry",
+      "level": 3
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 8
+     }
+    ],
+    "cost": {
+     "food": 70000,
+     "wood": 70000,
+     "stone": 52500,
+     "gold": 0
+    },
+    "timeSec": 10800,
+    "power": 2141
+   },
+   {
+    "level": 5,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "masonry",
+      "level": 4
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 9
+     }
+    ],
+    "cost": {
+     "food": 100000,
+     "wood": 100000,
+     "stone": 75000,
+     "gold": 0
+    },
+    "timeSec": 28800,
+    "power": 3918
+   }
+  ]
+ },
+ {
+  "id": "handaxe",
+  "tree": "economic",
+  "tier": 3,
+  "maxLevel": 5,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "handsaw",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 5
+     }
+    ],
+    "cost": {
+     "food": 20000,
+     "wood": 20000,
+     "stone": 15000,
+     "gold": 0
+    },
+    "timeSec": 900,
+    "power": 161
+   },
+   {
+    "level": 2,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "handaxe",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 6
+     }
+    ],
+    "cost": {
+     "food": 40000,
+     "wood": 40000,
+     "stone": 30000,
+     "gold": 0
+    },
+    "timeSec": 1800,
+    "power": 483
+   },
+   {
+    "level": 3,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "handaxe",
+      "level": 2
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 7
+     }
+    ],
+    "cost": {
+     "food": 80000,
+     "wood": 80000,
+     "stone": 60000,
+     "gold": 0
+    },
+    "timeSec": 3600,
+    "power": 1127
+   },
+   {
+    "level": 4,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "handaxe",
+      "level": 3
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 8
+     }
+    ],
+    "cost": {
+     "food": 160000,
+     "wood": 160000,
+     "stone": 120000,
+     "gold": 0
+    },
+    "timeSec": 7200,
+    "power": 2415
+   },
+   {
+    "level": 5,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "handaxe",
+      "level": 4
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 9
+     }
+    ],
+    "cost": {
+     "food": 320000,
+     "wood": 320000,
+     "stone": 240000,
+     "gold": 0
+    },
+    "timeSec": 14400,
+    "power": 4991
+   }
+  ]
+ },
+ {
+  "id": "metallurgy",
+  "tree": "economic",
+  "tier": 4,
+  "maxLevel": 1,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "masonry",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 10
+     }
+    ],
+    "cost": {
+     "food": 50000,
+     "wood": 50000,
+     "stone": 37500,
+     "gold": 0
+    },
+    "timeSec": 1800,
+    "power": 384
+   }
+  ]
+ },
+ {
+  "id": "chisel",
+  "tree": "economic",
+  "tier": 5,
+  "maxLevel": 5,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "metallurgy",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 10
+     }
+    ],
+    "cost": {
+     "food": 30000,
+     "wood": 30000,
+     "stone": 22500,
+     "gold": 15000
+    },
+    "timeSec": 3600,
+    "power": 406
+   },
+   {
+    "level": 2,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "chisel",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 10
+     }
+    ],
+    "cost": {
+     "food": 60000,
+     "wood": 60000,
+     "stone": 45000,
+     "gold": 30000
+    },
+    "timeSec": 5400,
+    "power": 1147
+   },
+   {
+    "level": 3,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "chisel",
+      "level": 2
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 11
+     }
+    ],
+    "cost": {
+     "food": 120000,
+     "wood": 120000,
+     "stone": 90000,
+     "gold": 60000
+    },
+    "timeSec": 7200,
+    "power": 2485
+   },
+   {
+    "level": 4,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "chisel",
+      "level": 3
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 12
+     }
+    ],
+    "cost": {
+     "food": 240000,
+     "wood": 240000,
+     "stone": 180000,
+     "gold": 120000
+    },
+    "timeSec": 14400,
+    "power": 5161
+   },
+   {
+    "level": 5,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "chisel",
+      "level": 4
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 13
+     }
+    ],
+    "cost": {
+     "food": 480000,
+     "wood": 480000,
+     "stone": 360000,
+     "gold": 240000
+    },
+    "timeSec": 28800,
+    "power": 10513
+   }
+  ]
+ },
+ {
+  "id": "writing",
+  "tree": "economic",
+  "tier": 5,
+  "maxLevel": 5,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "metallurgy",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 10
+     }
+    ],
+    "cost": {
+     "food": 50000,
+     "wood": 50000,
+     "stone": 37500,
+     "gold": 25000
+    },
+    "timeSec": 7200,
+    "power": 725
+   },
+   {
+    "level": 2,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "writing",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 10
+     }
+    ],
+    "cost": {
+     "food": 100000,
+     "wood": 100000,
+     "stone": 75000,
+     "gold": 50000
+    },
+    "timeSec": 14400,
+    "power": 2176
+   },
+   {
+    "level": 3,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "writing",
+      "level": 2
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 11
+     }
+    ],
+    "cost": {
+     "food": 200000,
+     "wood": 200000,
+     "stone": 150000,
+     "gold": 100000
+    },
+    "timeSec": 28800,
+    "power": 5078
+   },
+   {
+    "level": 4,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "writing",
+      "level": 3
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 12
+     }
+    ],
+    "cost": {
+     "food": 400000,
+     "wood": 400000,
+     "stone": 300000,
+     "gold": 200000
+    },
+    "timeSec": 57600,
+    "power": 10882
+   },
+   {
+    "level": 5,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "writing",
+      "level": 4
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 13
+     }
+    ],
+    "cost": {
+     "food": 800000,
+     "wood": 800000,
+     "stone": 600000,
+     "gold": 400000
+    },
+    "timeSec": 115200,
+    "power": 22490
+   }
+  ]
+ },
+ {
+  "id": "metalworking",
+  "tree": "economic",
+  "tier": 5,
+  "maxLevel": 5,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "metallurgy",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 10
+     }
+    ],
+    "cost": {
+     "food": 30000,
+     "wood": 30000,
+     "stone": 22500,
+     "gold": 15000
+    },
+    "timeSec": 3600,
+    "power": 406
+   },
+   {
+    "level": 2,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "metalworking",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 10
+     }
+    ],
+    "cost": {
+     "food": 60000,
+     "wood": 60000,
+     "stone": 45000,
+     "gold": 30000
+    },
+    "timeSec": 5400,
+    "power": 1147
+   },
+   {
+    "level": 3,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "metalworking",
+      "level": 2
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 11
+     }
+    ],
+    "cost": {
+     "food": 120000,
+     "wood": 120000,
+     "stone": 90000,
+     "gold": 60000
+    },
+    "timeSec": 7200,
+    "power": 2485
+   },
+   {
+    "level": 4,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "metalworking",
+      "level": 3
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 12
+     }
+    ],
+    "cost": {
+     "food": 240000,
+     "wood": 240000,
+     "stone": 180000,
+     "gold": 120000
+    },
+    "timeSec": 14400,
+    "power": 5161
+   },
+   {
+    "level": 5,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "metalworking",
+      "level": 4
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 13
+     }
+    ],
+    "cost": {
+     "food": 480000,
+     "wood": 480000,
+     "stone": 360000,
+     "gold": 240000
+    },
+    "timeSec": 28800,
+    "power": 10513
+   }
+  ]
+ },
+ {
+  "id": "handcart",
+  "tree": "economic",
+  "tier": 6,
+  "maxLevel": 5,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "chisel",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 12
+     }
+    ],
+    "cost": {
+     "food": 50000,
+     "wood": 50000,
+     "stone": 37500,
+     "gold": 25000
+    },
+    "timeSec": 3600,
+    "power": 581
+   },
+   {
+    "level": 2,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "handcart",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 12
+     }
+    ],
+    "cost": {
+     "food": 100000,
+     "wood": 100000,
+     "stone": 75000,
+     "gold": 50000
+    },
+    "timeSec": 5400,
+    "power": 1672
+   },
+   {
+    "level": 3,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "handcart",
+      "level": 2
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 13
+     }
+    ],
+    "cost": {
+     "food": 200000,
+     "wood": 200000,
+     "stone": 150000,
+     "gold": 100000
+    },
+    "timeSec": 7200,
+    "power": 3710
+   },
+   {
+    "level": 4,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "handcart",
+      "level": 3
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 14
+     }
+    ],
+    "cost": {
+     "food": 400000,
+     "wood": 400000,
+     "stone": 300000,
+     "gold": 200000
+    },
+    "timeSec": 14400,
+    "power": 7786
+   },
+   {
+    "level": 5,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "handcart",
+      "level": 4
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 15
+     }
+    ],
+    "cost": {
+     "food": 800000,
+     "wood": 800000,
+     "stone": 600000,
+     "gold": 400000
+    },
+    "timeSec": 28800,
+    "power": 15938
+   }
+  ]
+ },
+ {
+  "id": "multilayer_structure",
+  "tree": "economic",
+  "tier": 6,
+  "maxLevel": 5,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 12
+     }
+    ],
+    "cost": {
+     "food": 40000,
+     "wood": 40000,
+     "stone": 30000,
+     "gold": 20000
+    },
+    "timeSec": 3600,
+    "power": 494
+   },
+   {
+    "level": 2,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "multilayer_structure",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 12
+     }
+    ],
+    "cost": {
+     "food": 80000,
+     "wood": 80000,
+     "stone": 60000,
+     "gold": 40000
+    },
+    "timeSec": 7200,
+    "power": 1482
+   },
+   {
+    "level": 3,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "multilayer_structure",
+      "level": 2
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 13
+     }
+    ],
+    "cost": {
+     "food": 160000,
+     "wood": 160000,
+     "stone": 120000,
+     "gold": 80000
+    },
+    "timeSec": 14400,
+    "power": 3458
+   },
+   {
+    "level": 4,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "multilayer_structure",
+      "level": 3
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 14
+     }
+    ],
+    "cost": {
+     "food": 320000,
+     "wood": 320000,
+     "stone": 240000,
+     "gold": 160000
+    },
+    "timeSec": 28800,
+    "power": 7410
+   },
+   {
+    "level": 5,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "multilayer_structure",
+      "level": 4
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 15
+     }
+    ],
+    "cost": {
+     "food": 640000,
+     "wood": 640000,
+     "stone": 480000,
+     "gold": 320000
+    },
+    "timeSec": 57600,
+    "power": 15314
+   }
+  ]
+ },
+ {
+  "id": "placer_mining",
+  "tree": "economic",
+  "tier": 6,
+  "maxLevel": 5,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 12
+     }
+    ],
+    "cost": {
+     "food": 50000,
+     "wood": 50000,
+     "stone": 37500,
+     "gold": 25000
+    },
+    "timeSec": 3600,
+    "power": 581
+   },
+   {
+    "level": 2,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "placer_mining",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 12
+     }
+    ],
+    "cost": {
+     "food": 100000,
+     "wood": 100000,
+     "stone": 75000,
+     "gold": 50000
+    },
+    "timeSec": 5400,
+    "power": 1672
+   },
+   {
+    "level": 3,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "placer_mining",
+      "level": 2
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 13
+     }
+    ],
+    "cost": {
+     "food": 200000,
+     "wood": 200000,
+     "stone": 150000,
+     "gold": 100000
+    },
+    "timeSec": 7200,
+    "power": 3710
+   },
+   {
+    "level": 4,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "placer_mining",
+      "level": 3
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 14
+     }
+    ],
+    "cost": {
+     "food": 400000,
+     "wood": 400000,
+     "stone": 300000,
+     "gold": 200000
+    },
+    "timeSec": 14400,
+    "power": 7786
+   },
+   {
+    "level": 5,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "placer_mining",
+      "level": 4
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 15
+     }
+    ],
+    "cost": {
+     "food": 800000,
+     "wood": 800000,
+     "stone": 600000,
+     "gold": 400000
+    },
+    "timeSec": 28800,
+    "power": 15938
+   }
+  ]
+ },
+ {
+  "id": "wheel",
+  "tree": "economic",
+  "tier": 7,
+  "maxLevel": 5,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 13
+     }
+    ],
+    "cost": {
+     "food": 60000,
+     "wood": 60000,
+     "stone": 45000,
+     "gold": 30000
+    },
+    "timeSec": 3600,
+    "power": 669
+   },
+   {
+    "level": 2,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "wheel",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 13
+     }
+    ],
+    "cost": {
+     "food": 120000,
+     "wood": 120000,
+     "stone": 90000,
+     "gold": 60000
+    },
+    "timeSec": 7200,
+    "power": 2007
+   },
+   {
+    "level": 3,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "wheel",
+      "level": 2
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 14
+     }
+    ],
+    "cost": {
+     "food": 240000,
+     "wood": 240000,
+     "stone": 180000,
+     "gold": 120000
+    },
+    "timeSec": 14400,
+    "power": 4683
+   },
+   {
+    "level": 4,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "wheel",
+      "level": 3
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 14
+     }
+    ],
+    "cost": {
+     "food": 480000,
+     "wood": 480000,
+     "stone": 360000,
+     "gold": 240000
+    },
+    "timeSec": 28800,
+    "power": 10035
+   },
+   {
+    "level": 5,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "wheel",
+      "level": 4
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 15
+     }
+    ],
+    "cost": {
+     "food": 960000,
+     "wood": 960000,
+     "stone": 720000,
+     "gold": 480000
+    },
+    "timeSec": 57600,
+    "power": 20739
+   }
+  ]
+ },
+ {
+  "id": "jewelry",
+  "tree": "economic",
+  "tier": 7,
+  "maxLevel": 1,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "multilayer_structure",
+      "level": 4
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 16
+     }
+    ],
+    "cost": {
+     "food": 1000000,
+     "wood": 1000000,
+     "stone": 750000,
+     "gold": 500000
+    },
+    "timeSec": 10800,
+    "power": 9182
+   }
+  ]
+ },
+ {
+  "id": "plow",
+  "tree": "economic",
+  "tier": 8,
+  "maxLevel": 10,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "jewelry",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 16
+     }
+    ],
+    "cost": {
+     "food": 100000,
+     "wood": 100000,
+     "stone": 75000,
+     "gold": 50000
+    },
+    "timeSec": 28800,
+    "power": 2027
+   },
+   {
+    "level": 2,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "plow",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 16
+     }
+    ],
+    "cost": {
+     "food": 150000,
+     "wood": 150000,
+     "stone": 113000,
+     "gold": 75000
+    },
+    "timeSec": 40320,
+    "power": 4953
+   },
+   {
+    "level": 3,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "plow",
+      "level": 2
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 16
+     }
+    ],
+    "cost": {
+     "food": 225000,
+     "wood": 225000,
+     "stone": 170000,
+     "gold": 113000
+    },
+    "timeSec": 56460,
+    "power": 9185
+   },
+   {
+    "level": 4,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "plow",
+      "level": 3
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 17
+     }
+    ],
+    "cost": {
+     "food": 338000,
+     "wood": 338000,
+     "stone": 255000,
+     "gold": 170000
+    },
+    "timeSec": 79020,
+    "power": 15313
+   },
+   {
+    "level": 5,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "plow",
+      "level": 4
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 17
+     }
+    ],
+    "cost": {
+     "food": 507000,
+     "wood": 507000,
+     "stone": 383000,
+     "gold": 255000
+    },
+    "timeSec": 111600,
+    "power": 24190
+   },
+   {
+    "level": 6,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "plow",
+      "level": 5
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 17
+     }
+    ],
+    "cost": {
+     "food": 761000,
+     "wood": 761000,
+     "stone": 575000,
+     "gold": 383000
+    },
+    "timeSec": 154800,
+    "power": 37069
+   },
+   {
+    "level": 7,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "plow",
+      "level": 6
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 18
+     }
+    ],
+    "cost": {
+     "food": 1140000,
+     "wood": 1140000,
+     "stone": 863000,
+     "gold": 575000
+    },
+    "timeSec": 216000,
+    "power": 55775
+   },
+   {
+    "level": 8,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "plow",
+      "level": 7
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 18
+     }
+    ],
+    "cost": {
+     "food": 1710000,
+     "wood": 1710000,
+     "stone": 1300000,
+     "gold": 863000
+    },
+    "timeSec": 302400,
+    "power": 82970
+   },
+   {
+    "level": 9,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "plow",
+      "level": 8
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 18
+     }
+    ],
+    "cost": {
+     "food": 2570000,
+     "wood": 2570000,
+     "stone": 1940000,
+     "gold": 1300000
+    },
+    "timeSec": 424800,
+    "power": 122555
+   },
+   {
+    "level": 10,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "plow",
+      "level": 9
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 19
+     }
+    ],
+    "cost": {
+     "food": 3860000,
+     "wood": 3860000,
+     "stone": 2920000,
+     "gold": 1940000
+    },
+    "timeSec": 594000,
+    "power": 180236
+   }
+  ]
+ },
+ {
+  "id": "sawmill",
+  "tree": "economic",
+  "tier": 8,
+  "maxLevel": 10,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "jewelry",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 16
+     }
+    ],
+    "cost": {
+     "food": 100000,
+     "wood": 100000,
+     "stone": 75000,
+     "gold": 50000
+    },
+    "timeSec": 28800,
+    "power": 2027
+   },
+   {
+    "level": 2,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "sawmill",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 16
+     }
+    ],
+    "cost": {
+     "food": 150000,
+     "wood": 150000,
+     "stone": 113000,
+     "gold": 75000
+    },
+    "timeSec": 40320,
+    "power": 4953
+   },
+   {
+    "level": 3,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "sawmill",
+      "level": 2
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 16
+     }
+    ],
+    "cost": {
+     "food": 225000,
+     "wood": 225000,
+     "stone": 170000,
+     "gold": 113000
+    },
+    "timeSec": 56460,
+    "power": 9185
+   },
+   {
+    "level": 4,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "sawmill",
+      "level": 3
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 17
+     }
+    ],
+    "cost": {
+     "food": 338000,
+     "wood": 338000,
+     "stone": 255000,
+     "gold": 170000
+    },
+    "timeSec": 79020,
+    "power": 15313
+   },
+   {
+    "level": 5,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "sawmill",
+      "level": 4
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 17
+     }
+    ],
+    "cost": {
+     "food": 507000,
+     "wood": 507000,
+     "stone": 383000,
+     "gold": 255000
+    },
+    "timeSec": 111600,
+    "power": 24190
+   },
+   {
+    "level": 6,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "sawmill",
+      "level": 5
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 17
+     }
+    ],
+    "cost": {
+     "food": 761000,
+     "wood": 761000,
+     "stone": 575000,
+     "gold": 383000
+    },
+    "timeSec": 154800,
+    "power": 37069
+   },
+   {
+    "level": 7,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "sawmill",
+      "level": 6
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 18
+     }
+    ],
+    "cost": {
+     "food": 1140000,
+     "wood": 1140000,
+     "stone": 863000,
+     "gold": 575000
+    },
+    "timeSec": 216000,
+    "power": 55775
+   },
+   {
+    "level": 8,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "sawmill",
+      "level": 7
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 18
+     }
+    ],
+    "cost": {
+     "food": 1710000,
+     "wood": 1710000,
+     "stone": 1300000,
+     "gold": 863000
+    },
+    "timeSec": 302400,
+    "power": 82970
+   },
+   {
+    "level": 9,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "sawmill",
+      "level": 8
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 18
+     }
+    ],
+    "cost": {
+     "food": 2570000,
+     "wood": 2570000,
+     "stone": 1940000,
+     "gold": 1300000
+    },
+    "timeSec": 424800,
+    "power": 122555
+   },
+   {
+    "level": 10,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "sawmill",
+      "level": 9
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 19
+     }
+    ],
+    "cost": {
+     "food": 3860000,
+     "wood": 3860000,
+     "stone": 2920000,
+     "gold": 1940000
+    },
+    "timeSec": 594000,
+    "power": 180236
+   }
+  ]
+ },
+ {
+  "id": "scythe",
+  "tree": "economic",
+  "tier": 9,
+  "maxLevel": 10,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 17
+     }
+    ],
+    "cost": {
+     "food": 200000,
+     "wood": 200000,
+     "stone": 150000,
+     "gold": 100000
+    },
+    "timeSec": 36000,
+    "power": 3190
+   },
+   {
+    "level": 2,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "scythe",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 17
+     }
+    ],
+    "cost": {
+     "food": 300000,
+     "wood": 300000,
+     "stone": 225000,
+     "gold": 150000
+    },
+    "timeSec": 50400,
+    "power": 7831
+   },
+   {
+    "level": 3,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "scythe",
+      "level": 2
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 17
+     }
+    ],
+    "cost": {
+     "food": 450000,
+     "wood": 450000,
+     "stone": 338000,
+     "gold": 225000
+    },
+    "timeSec": 70560,
+    "power": 14592
+   },
+   {
+    "level": 4,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "scythe",
+      "level": 3
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 17
+     }
+    ],
+    "cost": {
+     "food": 675000,
+     "wood": 675000,
+     "stone": 507000,
+     "gold": 338000
+    },
+    "timeSec": 97200,
+    "power": 24454
+   },
+   {
+    "level": 5,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "scythe",
+      "level": 4
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 18
+     }
+    ],
+    "cost": {
+     "food": 1010000,
+     "wood": 1010000,
+     "stone": 761000,
+     "gold": 507000
+    },
+    "timeSec": 136800,
+    "power": 38855
+   },
+   {
+    "level": 6,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "scythe",
+      "level": 5
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 18
+     }
+    ],
+    "cost": {
+     "food": 1520000,
+     "wood": 1520000,
+     "stone": 1140000,
+     "gold": 761000
+    },
+    "timeSec": 194400,
+    "power": 59910
+   },
+   {
+    "level": 7,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "scythe",
+      "level": 6
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 18
+     }
+    ],
+    "cost": {
+     "food": 2280000,
+     "wood": 2280000,
+     "stone": 1710000,
+     "gold": 1140000
+    },
+    "timeSec": 270000,
+    "power": 90721
+   },
+   {
+    "level": 8,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "scythe",
+      "level": 7
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 18
+     }
+    ],
+    "cost": {
+     "food": 3420000,
+     "wood": 3420000,
+     "stone": 2570000,
+     "gold": 1710000
+    },
+    "timeSec": 378000,
+    "power": 135855
+   },
+   {
+    "level": 9,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "scythe",
+      "level": 8
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 18
+     }
+    ],
+    "cost": {
+     "food": 5130000,
+     "wood": 5130000,
+     "stone": 3860000,
+     "gold": 2570000
+    },
+    "timeSec": 532800,
+    "power": 202041
+   },
+   {
+    "level": 10,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "scythe",
+      "level": 9
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 20
+     }
+    ],
+    "cost": {
+     "food": 7700000,
+     "wood": 7700000,
+     "stone": 5780000,
+     "gold": 3860000
+    },
+    "timeSec": 745200,
+    "power": 299196
+   }
+  ]
+ },
+ {
+  "id": "engineering",
+  "tree": "economic",
+  "tier": 9,
+  "maxLevel": 10,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "plow",
+      "level": 1
+     },
+     {
+      "type": "research",
+      "id": "sawmill",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 17
+     }
+    ],
+    "cost": {
+     "food": 250000,
+     "wood": 250000,
+     "stone": 187500,
+     "gold": 125000
+    },
+    "timeSec": 43200,
+    "power": 3915
+   },
+   {
+    "level": 2,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "engineering",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 17
+     }
+    ],
+    "cost": {
+     "food": 375000,
+     "wood": 375000,
+     "stone": 282000,
+     "gold": 188000
+    },
+    "timeSec": 60480,
+    "power": 9620
+   },
+   {
+    "level": 3,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "engineering",
+      "level": 2
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 17
+     }
+    ],
+    "cost": {
+     "food": 563000,
+     "wood": 563000,
+     "stone": 423000,
+     "gold": 282000
+    },
+    "timeSec": 84660,
+    "power": 17937
+   },
+   {
+    "level": 4,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "engineering",
+      "level": 3
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 17
+     }
+    ],
+    "cost": {
+     "food": 845000,
+     "wood": 845000,
+     "stone": 635000,
+     "gold": 423000
+    },
+    "timeSec": 118800,
+    "power": 30078
+   },
+   {
+    "level": 5,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "engineering",
+      "level": 4
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 18
+     }
+    ],
+    "cost": {
+     "food": 1270000,
+     "wood": 1270000,
+     "stone": 953000,
+     "gold": 635000
+    },
+    "timeSec": 165600,
+    "power": 47822
+   },
+   {
+    "level": 6,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "engineering",
+      "level": 5
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 18
+     }
+    ],
+    "cost": {
+     "food": 1900000,
+     "wood": 1900000,
+     "stone": 1430000,
+     "gold": 953000
+    },
+    "timeSec": 234000,
+    "power": 73778
+   },
+   {
+    "level": 7,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "engineering",
+      "level": 6
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 18
+     }
+    ],
+    "cost": {
+     "food": 2850000,
+     "wood": 2850000,
+     "stone": 2150000,
+     "gold": 1430000
+    },
+    "timeSec": 324000,
+    "power": 111786
+   },
+   {
+    "level": 8,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "engineering",
+      "level": 7
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 18
+     }
+    ],
+    "cost": {
+     "food": 4280000,
+     "wood": 4280000,
+     "stone": 3220000,
+     "gold": 2150000
+    },
+    "timeSec": 453600,
+    "power": 167500
+   },
+   {
+    "level": 9,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "engineering",
+      "level": 8
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 18
+     }
+    ],
+    "cost": {
+     "food": 6420000,
+     "wood": 6420000,
+     "stone": 4830000,
+     "gold": 3220000
+    },
+    "timeSec": 637200,
+    "power": 249252
+   },
+   {
+    "level": 10,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "engineering",
+      "level": 9
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 20
+     }
+    ],
+    "cost": {
+     "food": 9630000,
+     "wood": 9630000,
+     "stone": 7240000,
+     "gold": 4830000
+    },
+    "timeSec": 892800,
+    "power": 369332
+   }
+  ]
+ },
+ {
+  "id": "whipsaw",
+  "tree": "economic",
+  "tier": 9,
+  "maxLevel": 10,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 17
+     }
+    ],
+    "cost": {
+     "food": 200000,
+     "wood": 200000,
+     "stone": 150000,
+     "gold": 100000
+    },
+    "timeSec": 36000,
+    "power": 3190
+   },
+   {
+    "level": 2,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "whipsaw",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 17
+     }
+    ],
+    "cost": {
+     "food": 300000,
+     "wood": 300000,
+     "stone": 225000,
+     "gold": 150000
+    },
+    "timeSec": 50400,
+    "power": 7831
+   },
+   {
+    "level": 3,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "whipsaw",
+      "level": 2
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 17
+     }
+    ],
+    "cost": {
+     "food": 450000,
+     "wood": 450000,
+     "stone": 338000,
+     "gold": 225000
+    },
+    "timeSec": 70560,
+    "power": 14592
+   },
+   {
+    "level": 4,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "whipsaw",
+      "level": 3
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 17
+     }
+    ],
+    "cost": {
+     "food": 675000,
+     "wood": 675000,
+     "stone": 507000,
+     "gold": 338000
+    },
+    "timeSec": 97200,
+    "power": 24454
+   },
+   {
+    "level": 5,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "whipsaw",
+      "level": 4
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 18
+     }
+    ],
+    "cost": {
+     "food": 1010000,
+     "wood": 1010000,
+     "stone": 761000,
+     "gold": 507000
+    },
+    "timeSec": 136800,
+    "power": 38855
+   },
+   {
+    "level": 6,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "whipsaw",
+      "level": 5
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 18
+     }
+    ],
+    "cost": {
+     "food": 1520000,
+     "wood": 1520000,
+     "stone": 1140000,
+     "gold": 761000
+    },
+    "timeSec": 194400,
+    "power": 59910
+   },
+   {
+    "level": 7,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "whipsaw",
+      "level": 6
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 18
+     }
+    ],
+    "cost": {
+     "food": 2280000,
+     "wood": 2280000,
+     "stone": 1710000,
+     "gold": 1140000
+    },
+    "timeSec": 270000,
+    "power": 90721
+   },
+   {
+    "level": 8,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "whipsaw",
+      "level": 7
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 18
+     }
+    ],
+    "cost": {
+     "food": 3420000,
+     "wood": 3420000,
+     "stone": 2570000,
+     "gold": 1710000
+    },
+    "timeSec": 378000,
+    "power": 135855
+   },
+   {
+    "level": 9,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "whipsaw",
+      "level": 8
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 18
+     }
+    ],
+    "cost": {
+     "food": 5130000,
+     "wood": 5130000,
+     "stone": 3860000,
+     "gold": 2570000
+    },
+    "timeSec": 532800,
+    "power": 202041
+   },
+   {
+    "level": 10,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "whipsaw",
+      "level": 9
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 20
+     }
+    ],
+    "cost": {
+     "food": 7700000,
+     "wood": 7700000,
+     "stone": 5780000,
+     "gold": 3860000
+    },
+    "timeSec": 745200,
+    "power": 299196
+   }
+  ]
+ },
+ {
+  "id": "mathematics",
+  "tree": "economic",
+  "tier": 10,
+  "maxLevel": 10,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "engineering",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 18
+     }
+    ],
+    "cost": {
+     "food": 250000,
+     "wood": 250000,
+     "stone": 187500,
+     "gold": 125000
+    },
+    "timeSec": 43200,
+    "power": 3915
+   },
+   {
+    "level": 2,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "mathematics",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 18
+     }
+    ],
+    "cost": {
+     "food": 375000,
+     "wood": 375000,
+     "stone": 282000,
+     "gold": 188000
+    },
+    "timeSec": 60480,
+    "power": 9620
+   },
+   {
+    "level": 3,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "mathematics",
+      "level": 2
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 18
+     }
+    ],
+    "cost": {
+     "food": 563000,
+     "wood": 563000,
+     "stone": 423000,
+     "gold": 282000
+    },
+    "timeSec": 84660,
+    "power": 17937
+   },
+   {
+    "level": 4,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "mathematics",
+      "level": 3
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 18
+     }
+    ],
+    "cost": {
+     "food": 845000,
+     "wood": 845000,
+     "stone": 635000,
+     "gold": 423000
+    },
+    "timeSec": 118800,
+    "power": 30078
+   },
+   {
+    "level": 5,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "mathematics",
+      "level": 4
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 19
+     }
+    ],
+    "cost": {
+     "food": 1270000,
+     "wood": 1270000,
+     "stone": 953000,
+     "gold": 635000
+    },
+    "timeSec": 165600,
+    "power": 47822
+   },
+   {
+    "level": 6,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "mathematics",
+      "level": 5
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 19
+     }
+    ],
+    "cost": {
+     "food": 1900000,
+     "wood": 1900000,
+     "stone": 1430000,
+     "gold": 953000
+    },
+    "timeSec": 234000,
+    "power": 73778
+   },
+   {
+    "level": 7,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "mathematics",
+      "level": 6
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 19
+     }
+    ],
+    "cost": {
+     "food": 2850000,
+     "wood": 2850000,
+     "stone": 2150000,
+     "gold": 1430000
+    },
+    "timeSec": 324000,
+    "power": 111786
+   },
+   {
+    "level": 8,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "mathematics",
+      "level": 7
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 19
+     }
+    ],
+    "cost": {
+     "food": 4280000,
+     "wood": 4280000,
+     "stone": 3220000,
+     "gold": 2150000
+    },
+    "timeSec": 453600,
+    "power": 167500
+   },
+   {
+    "level": 9,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "mathematics",
+      "level": 8
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 19
+     }
+    ],
+    "cost": {
+     "food": 6420000,
+     "wood": 6420000,
+     "stone": 4830000,
+     "gold": 3220000
+    },
+    "timeSec": 637200,
+    "power": 249252
+   },
+   {
+    "level": 10,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "mathematics",
+      "level": 9
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 21
+     }
+    ],
+    "cost": {
+     "food": 9630000,
+     "wood": 9630000,
+     "stone": 7240000,
+     "gold": 4830000
+    },
+    "timeSec": 892800,
+    "power": 369332
+   }
+  ]
+ },
+ {
+  "id": "open_pit_quarry",
+  "tree": "economic",
+  "tier": 11,
+  "maxLevel": 10,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 19
+     }
+    ],
+    "cost": {
+     "food": 200000,
+     "wood": 200000,
+     "stone": 150000,
+     "gold": 100000
+    },
+    "timeSec": 36000,
+    "power": 3190
+   },
+   {
+    "level": 2,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "open_pit_quarry",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 19
+     }
+    ],
+    "cost": {
+     "food": 300000,
+     "wood": 300000,
+     "stone": 225000,
+     "gold": 150000
+    },
+    "timeSec": 50400,
+    "power": 7831
+   },
+   {
+    "level": 3,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "open_pit_quarry",
+      "level": 2
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 19
+     }
+    ],
+    "cost": {
+     "food": 450000,
+     "wood": 450000,
+     "stone": 338000,
+     "gold": 225000
+    },
+    "timeSec": 70560,
+    "power": 14592
+   },
+   {
+    "level": 4,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "open_pit_quarry",
+      "level": 3
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 19
+     }
+    ],
+    "cost": {
+     "food": 675000,
+     "wood": 675000,
+     "stone": 507000,
+     "gold": 338000
+    },
+    "timeSec": 97200,
+    "power": 24454
+   },
+   {
+    "level": 5,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "open_pit_quarry",
+      "level": 4
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 21
+     }
+    ],
+    "cost": {
+     "food": 1010000,
+     "wood": 1010000,
+     "stone": 761000,
+     "gold": 507000
+    },
+    "timeSec": 136800,
+    "power": 38855
+   },
+   {
+    "level": 6,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "open_pit_quarry",
+      "level": 5
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 21
+     }
+    ],
+    "cost": {
+     "food": 1520000,
+     "wood": 1520000,
+     "stone": 1140000,
+     "gold": 761000
+    },
+    "timeSec": 194400,
+    "power": 59910
+   },
+   {
+    "level": 7,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "open_pit_quarry",
+      "level": 6
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 21
+     }
+    ],
+    "cost": {
+     "food": 2280000,
+     "wood": 2280000,
+     "stone": 1710000,
+     "gold": 1140000
+    },
+    "timeSec": 270000,
+    "power": 90721
+   },
+   {
+    "level": 8,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "open_pit_quarry",
+      "level": 7
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 21
+     }
+    ],
+    "cost": {
+     "food": 3420000,
+     "wood": 3420000,
+     "stone": 2570000,
+     "gold": 1710000
+    },
+    "timeSec": 378000,
+    "power": 135855
+   },
+   {
+    "level": 9,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "open_pit_quarry",
+      "level": 8
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 21
+     }
+    ],
+    "cost": {
+     "food": 5130000,
+     "wood": 5130000,
+     "stone": 3860000,
+     "gold": 2570000
+    },
+    "timeSec": 532800,
+    "power": 202041
+   },
+   {
+    "level": 10,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "open_pit_quarry",
+      "level": 9
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 24
+     }
+    ],
+    "cost": {
+     "food": 7700000,
+     "wood": 7700000,
+     "stone": 5780000,
+     "gold": 3860000
+    },
+    "timeSec": 745200,
+    "power": 299196
+   }
+  ]
+ },
+ {
+  "id": "coinage",
+  "tree": "economic",
+  "tier": 11,
+  "maxLevel": 10,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 19
+     }
+    ],
+    "cost": {
+     "food": 200000,
+     "wood": 200000,
+     "stone": 150000,
+     "gold": 100000
+    },
+    "timeSec": 36000,
+    "power": 3190
+   },
+   {
+    "level": 2,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "coinage",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 19
+     }
+    ],
+    "cost": {
+     "food": 300000,
+     "wood": 300000,
+     "stone": 225000,
+     "gold": 150000
+    },
+    "timeSec": 50400,
+    "power": 7831
+   },
+   {
+    "level": 3,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "coinage",
+      "level": 2
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 19
+     }
+    ],
+    "cost": {
+     "food": 450000,
+     "wood": 450000,
+     "stone": 338000,
+     "gold": 225000
+    },
+    "timeSec": 70560,
+    "power": 14592
+   },
+   {
+    "level": 4,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "coinage",
+      "level": 3
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 19
+     }
+    ],
+    "cost": {
+     "food": 675000,
+     "wood": 675000,
+     "stone": 507000,
+     "gold": 338000
+    },
+    "timeSec": 97200,
+    "power": 24454
+   },
+   {
+    "level": 5,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "coinage",
+      "level": 4
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 21
+     }
+    ],
+    "cost": {
+     "food": 1010000,
+     "wood": 1010000,
+     "stone": 761000,
+     "gold": 507000
+    },
+    "timeSec": 136800,
+    "power": 38855
+   },
+   {
+    "level": 6,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "coinage",
+      "level": 5
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 21
+     }
+    ],
+    "cost": {
+     "food": 1520000,
+     "wood": 1520000,
+     "stone": 1140000,
+     "gold": 761000
+    },
+    "timeSec": 194400,
+    "power": 59910
+   },
+   {
+    "level": 7,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "coinage",
+      "level": 6
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 21
+     }
+    ],
+    "cost": {
+     "food": 2280000,
+     "wood": 2280000,
+     "stone": 1710000,
+     "gold": 1140000
+    },
+    "timeSec": 270000,
+    "power": 90721
+   },
+   {
+    "level": 8,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "coinage",
+      "level": 7
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 21
+     }
+    ],
+    "cost": {
+     "food": 3420000,
+     "wood": 3420000,
+     "stone": 2570000,
+     "gold": 1710000
+    },
+    "timeSec": 378000,
+    "power": 135855
+   },
+   {
+    "level": 9,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "coinage",
+      "level": 8
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 21
+     }
+    ],
+    "cost": {
+     "food": 5130000,
+     "wood": 5130000,
+     "stone": 3860000,
+     "gold": 2570000
+    },
+    "timeSec": 532800,
+    "power": 202041
+   },
+   {
+    "level": 10,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "coinage",
+      "level": 9
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 24
+     }
+    ],
+    "cost": {
+     "food": 7700000,
+     "wood": 7700000,
+     "stone": 5780000,
+     "gold": 3860000
+    },
+    "timeSec": 745200,
+    "power": 299196
+   }
+  ]
+ },
+ {
+  "id": "stone_saw",
+  "tree": "economic",
+  "tier": 12,
+  "maxLevel": 10,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "open_pit_quarry",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 20
+     }
+    ],
+    "cost": {
+     "food": 300000,
+     "wood": 300000,
+     "stone": 225000,
+     "gold": 150000
+    },
+    "timeSec": 36000,
+    "power": 4065
+   },
+   {
+    "level": 2,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "stone_saw",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 20
+     }
+    ],
+    "cost": {
+     "food": 450000,
+     "wood": 450000,
+     "stone": 338000,
+     "gold": 225000
+    },
+    "timeSec": 50400,
+    "power": 10020
+   },
+   {
+    "level": 3,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "stone_saw",
+      "level": 2
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 20
+     }
+    ],
+    "cost": {
+     "food": 675000,
+     "wood": 675000,
+     "stone": 507000,
+     "gold": 338000
+    },
+    "timeSec": 70560,
+    "power": 18753
+   },
+   {
+    "level": 4,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "stone_saw",
+      "level": 3
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 20
+     }
+    ],
+    "cost": {
+     "food": 1010000,
+     "wood": 1010000,
+     "stone": 761000,
+     "gold": 507000
+    },
+    "timeSec": 97200,
+    "power": 31574
+   },
+   {
+    "level": 5,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "stone_saw",
+      "level": 4
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 22
+     }
+    ],
+    "cost": {
+     "food": 1520000,
+     "wood": 1520000,
+     "stone": 1140000,
+     "gold": 761000
+    },
+    "timeSec": 136800,
+    "power": 50416
+   },
+   {
+    "level": 6,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "stone_saw",
+      "level": 5
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 22
+     }
+    ],
+    "cost": {
+     "food": 2280000,
+     "wood": 2280000,
+     "stone": 1710000,
+     "gold": 1140000
+    },
+    "timeSec": 194400,
+    "power": 78129
+   },
+   {
+    "level": 7,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "stone_saw",
+      "level": 6
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 22
+     }
+    ],
+    "cost": {
+     "food": 3420000,
+     "wood": 3420000,
+     "stone": 2570000,
+     "gold": 1710000
+    },
+    "timeSec": 270000,
+    "power": 118926
+   },
+   {
+    "level": 8,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "stone_saw",
+      "level": 7
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 22
+     }
+    ],
+    "cost": {
+     "food": 5130000,
+     "wood": 5130000,
+     "stone": 3860000,
+     "gold": 2570000
+    },
+    "timeSec": 378000,
+    "power": 179040
+   },
+   {
+    "level": 9,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "stone_saw",
+      "level": 8
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 22
+     }
+    ],
+    "cost": {
+     "food": 7700000,
+     "wood": 7700000,
+     "stone": 5780000,
+     "gold": 3860000
+    },
+    "timeSec": 532800,
+    "power": 267695
+   },
+   {
+    "level": 10,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "stone_saw",
+      "level": 9
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 25
+     }
+    ],
+    "cost": {
+     "food": 11500000,
+     "wood": 11500000,
+     "stone": 8700000,
+     "gold": 5800000
+    },
+    "timeSec": 0,
+    "power": 398558
+   }
+  ]
+ },
+ {
+  "id": "machinery",
+  "tree": "economic",
+  "tier": 12,
+  "maxLevel": 10,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 20
+     }
+    ],
+    "cost": {
+     "food": 350000,
+     "wood": 350000,
+     "stone": 275000,
+     "gold": 175000
+    },
+    "timeSec": 36000,
+    "power": 4540
+   },
+   {
+    "level": 2,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "machinery",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 20
+     }
+    ],
+    "cost": {
+     "food": 525000,
+     "wood": 525000,
+     "stone": 413000,
+     "gold": 263000
+    },
+    "timeSec": 50400,
+    "power": 11210
+   },
+   {
+    "level": 3,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "machinery",
+      "level": 2
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 20
+     }
+    ],
+    "cost": {
+     "food": 788000,
+     "wood": 788000,
+     "stone": 620000,
+     "gold": 395000
+    },
+    "timeSec": 70560,
+    "power": 21019
+   },
+   {
+    "level": 4,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "machinery",
+      "level": 3
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 20
+     }
+    ],
+    "cost": {
+     "food": 1180000,
+     "wood": 1180000,
+     "stone": 930000,
+     "gold": 593000
+    },
+    "timeSec": 97200,
+    "power": 35453
+   },
+   {
+    "level": 5,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "machinery",
+      "level": 4
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 22
+     }
+    ],
+    "cost": {
+     "food": 1770000,
+     "wood": 1770000,
+     "stone": 1400000,
+     "gold": 890000
+    },
+    "timeSec": 136800,
+    "power": 56711
+   },
+   {
+    "level": 6,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "machinery",
+      "level": 5
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 22
+     }
+    ],
+    "cost": {
+     "food": 2660000,
+     "wood": 2660000,
+     "stone": 2090000,
+     "gold": 1340000
+    },
+    "timeSec": 194400,
+    "power": 88049
+   },
+   {
+    "level": 7,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "machinery",
+      "level": 6
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 22
+     }
+    ],
+    "cost": {
+     "food": 3990000,
+     "wood": 3990000,
+     "stone": 3140000,
+     "gold": 2000000
+    },
+    "timeSec": 270000,
+    "power": 134286
+   },
+   {
+    "level": 8,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "machinery",
+      "level": 7
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 22
+     }
+    ],
+    "cost": {
+     "food": 5990000,
+     "wood": 5990000,
+     "stone": 4710000,
+     "gold": 3010000
+    },
+    "timeSec": 378000,
+    "power": 202560
+   },
+   {
+    "level": 9,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "machinery",
+      "level": 8
+     },
+     {
+      "type": "research",
+      "id": "scythe",
+      "level": 10
+     },
+     {
+      "type": "research",
+      "id": "whipsaw",
+      "level": 10
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 22
+     }
+    ],
+    "cost": {
+     "food": 8980000,
+     "wood": 8980000,
+     "stone": 7070000,
+     "gold": 4510000
+    },
+    "timeSec": 532800,
+    "power": 303458
+   },
+   {
+    "level": 10,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "stone_saw",
+      "level": 9
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 25
+     }
+    ],
+    "cost": {
+     "food": 13500000,
+     "wood": 13500000,
+     "stone": 10600000,
+     "gold": 6800000
+    },
+    "timeSec": 0,
+    "power": 452681
+   }
+  ]
+ },
+ {
+  "id": "shaft_mining",
+  "tree": "economic",
+  "tier": 12,
+  "maxLevel": 10,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "coinage",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 20
+     }
+    ],
+    "cost": {
+     "food": 300000,
+     "wood": 300000,
+     "stone": 225000,
+     "gold": 150000
+    },
+    "timeSec": 36000,
+    "power": 4065
+   },
+   {
+    "level": 2,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "shaft_mining",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 20
+     }
+    ],
+    "cost": {
+     "food": 450000,
+     "wood": 450000,
+     "stone": 338000,
+     "gold": 225000
+    },
+    "timeSec": 50400,
+    "power": 10020
+   },
+   {
+    "level": 3,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "shaft_mining",
+      "level": 2
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 20
+     }
+    ],
+    "cost": {
+     "food": 675000,
+     "wood": 675000,
+     "stone": 507000,
+     "gold": 338000
+    },
+    "timeSec": 70560,
+    "power": 18753
+   },
+   {
+    "level": 4,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "shaft_mining",
+      "level": 3
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 20
+     }
+    ],
+    "cost": {
+     "food": 1010000,
+     "wood": 1010000,
+     "stone": 761000,
+     "gold": 507000
+    },
+    "timeSec": 97200,
+    "power": 31574
+   },
+   {
+    "level": 5,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "shaft_mining",
+      "level": 4
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 22
+     }
+    ],
+    "cost": {
+     "food": 1520000,
+     "wood": 1520000,
+     "stone": 1140000,
+     "gold": 761000
+    },
+    "timeSec": 136800,
+    "power": 50416
+   },
+   {
+    "level": 6,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "shaft_mining",
+      "level": 5
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 22
+     }
+    ],
+    "cost": {
+     "food": 2280000,
+     "wood": 2280000,
+     "stone": 1710000,
+     "gold": 1140000
+    },
+    "timeSec": 194400,
+    "power": 78129
+   },
+   {
+    "level": 7,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "shaft_mining",
+      "level": 6
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 22
+     }
+    ],
+    "cost": {
+     "food": 3420000,
+     "wood": 3420000,
+     "stone": 2570000,
+     "gold": 1710000
+    },
+    "timeSec": 270000,
+    "power": 118926
+   },
+   {
+    "level": 8,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "shaft_mining",
+      "level": 7
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 22
+     }
+    ],
+    "cost": {
+     "food": 5130000,
+     "wood": 5130000,
+     "stone": 3860000,
+     "gold": 2570000
+    },
+    "timeSec": 378000,
+    "power": 179040
+   },
+   {
+    "level": 9,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "shaft_mining",
+      "level": 8
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 22
+     }
+    ],
+    "cost": {
+     "food": 7700000,
+     "wood": 7700000,
+     "stone": 5780000,
+     "gold": 3860000
+    },
+    "timeSec": 532800,
+    "power": 267695
+   },
+   {
+    "level": 10,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "shaft_mining",
+      "level": 9
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 25
+     }
+    ],
+    "cost": {
+     "food": 12,
+     "wood": 12,
+     "stone": 9,
+     "gold": 6
+    },
+    "timeSec": 0,
+    "power": 398558
+   }
+  ]
+ },
+ {
+  "id": "carriage",
+  "tree": "economic",
+  "tier": 13,
+  "maxLevel": 10,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 20
+     }
+    ],
+    "cost": {
+     "food": 400000,
+     "wood": 400000,
+     "stone": 300000,
+     "gold": 200000
+    },
+    "timeSec": 48000,
+    "power": 5420
+   },
+   {
+    "level": 2,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "carriage",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 20
+     }
+    ],
+    "cost": {
+     "food": 600000,
+     "wood": 600000,
+     "stone": 450000,
+     "gold": 300000
+    },
+    "timeSec": 72000,
+    "power": 13550
+   },
+   {
+    "level": 3,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "carriage",
+      "level": 2
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 20
+     }
+    ],
+    "cost": {
+     "food": 900000,
+     "wood": 900000,
+     "stone": 675000,
+     "gold": 450000
+    },
+    "timeSec": 108000,
+    "power": 25745
+   },
+   {
+    "level": 4,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "carriage",
+      "level": 3
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 20
+     }
+    ],
+    "cost": {
+     "food": 1350000,
+     "wood": 1350000,
+     "stone": 1010000,
+     "gold": 675000
+    },
+    "timeSec": 162000,
+    "power": 44039
+   },
+   {
+    "level": 5,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "carriage",
+      "level": 4
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 22
+     }
+    ],
+    "cost": {
+     "food": 2030000,
+     "wood": 2030000,
+     "stone": 1520000,
+     "gold": 1010000
+    },
+    "timeSec": 244800,
+    "power": 71484
+   },
+   {
+    "level": 6,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "carriage",
+      "level": 5
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 22
+     }
+    ],
+    "cost": {
+     "food": 3040000,
+     "wood": 3040000,
+     "stone": 2280000,
+     "gold": 1520000
+    },
+    "timeSec": 363600,
+    "power": 112656
+   },
+   {
+    "level": 7,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "carriage",
+      "level": 6
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 22
+     }
+    ],
+    "cost": {
+     "food": 4600000,
+     "wood": 4600000,
+     "stone": 3400000,
+     "gold": 2300000
+    },
+    "timeSec": 547200,
+    "power": 174414
+   },
+   {
+    "level": 8,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "carriage",
+      "level": 7
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 22
+     }
+    ],
+    "cost": {
+     "food": 6840000,
+     "wood": 6840000,
+     "stone": 5130000,
+     "gold": 3420000
+    },
+    "timeSec": 820800,
+    "power": 267053
+   },
+   {
+    "level": 9,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "carriage",
+      "level": 8
+     },
+     {
+      "type": "research",
+      "id": "plow",
+      "level": 10
+     },
+     {
+      "type": "research",
+      "id": "sawmill",
+      "level": 10
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 22
+     }
+    ],
+    "cost": {
+     "food": 10250000,
+     "wood": 10250000,
+     "stone": 7700000,
+     "gold": 5130000
+    },
+    "timeSec": 1231200,
+    "power": 406011
+   },
+   {
+    "level": 10,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "carriage",
+      "level": 9
+     },
+     {
+      "type": "research",
+      "id": "open_pit_quarry",
+      "level": 10
+     },
+     {
+      "type": "research",
+      "id": "coinage",
+      "level": 10
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 25
+     }
+    ],
+    "cost": {
+     "food": 15375000,
+     "wood": 15375000,
+     "stone": 11550000,
+     "gold": 7695000
+    },
+    "timeSec": 2462400,
+    "power": 614450
+   }
+  ]
+ },
+ {
+  "id": "cutting_and_polishing",
+  "tree": "economic",
+  "tier": 13,
+  "maxLevel": 10,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 20
+     }
+    ],
+    "cost": {
+     "food": 400000,
+     "wood": 400000,
+     "stone": 300000,
+     "gold": 200000
+    },
+    "timeSec": 48000,
+    "power": 5420
+   },
+   {
+    "level": 2,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "cutting_and_polishing",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 20
+     }
+    ],
+    "cost": {
+     "food": 600000,
+     "wood": 600000,
+     "stone": 450000,
+     "gold": 300000
+    },
+    "timeSec": 67200,
+    "power": 13358
+   },
+   {
+    "level": 3,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "cutting_and_polishing",
+      "level": 2
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 21
+     }
+    ],
+    "cost": {
+     "food": 900000,
+     "wood": 900000,
+     "stone": 675000,
+     "gold": 450000
+    },
+    "timeSec": 93600,
+    "power": 24996
+   },
+   {
+    "level": 4,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "cutting_and_polishing",
+      "level": 3
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 21
+     }
+    ],
+    "cost": {
+     "food": 1350000,
+     "wood": 1350000,
+     "stone": 1010000,
+     "gold": 675000
+    },
+    "timeSec": 133200,
+    "power": 42078
+   },
+   {
+    "level": 5,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "cutting_and_polishing",
+      "level": 4
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 22
+     }
+    ],
+    "cost": {
+     "food": 2030000,
+     "wood": 2030000,
+     "stone": 1520000,
+     "gold": 1010000
+    },
+    "timeSec": 183600,
+    "power": 67178
+   },
+   {
+    "level": 6,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "cutting_and_polishing",
+      "level": 5
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 22
+     }
+    ],
+    "cost": {
+     "food": 3040000,
+     "wood": 3040000,
+     "stone": 2280000,
+     "gold": 1520000
+    },
+    "timeSec": 259200,
+    "power": 104096
+   },
+   {
+    "level": 7,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "cutting_and_polishing",
+      "level": 6
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 23
+     }
+    ],
+    "cost": {
+     "food": 4560000,
+     "wood": 4560000,
+     "stone": 3420000,
+     "gold": 2280000
+    },
+    "timeSec": 360000,
+    "power": 158440
+   },
+   {
+    "level": 8,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "cutting_and_polishing",
+      "level": 7
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 23
+     }
+    ],
+    "cost": {
+     "food": 6840000,
+     "wood": 6840000,
+     "stone": 5130000,
+     "gold": 3420000
+    },
+    "timeSec": 507600,
+    "power": 238513
+   },
+   {
+    "level": 9,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "cutting_and_polishing",
+      "level": 8
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 24
+     }
+    ],
+    "cost": {
+     "food": 10250000,
+     "wood": 10250000,
+     "stone": 7700000,
+     "gold": 5130000
+    },
+    "timeSec": 709200,
+    "power": 356599
+   },
+   {
+    "level": 10,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "cutting_and_polishing",
+      "level": 9
+     },
+     {
+      "type": "research",
+      "id": "machinery",
+      "level": 10
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 25
+     }
+    ],
+    "cost": {
+     "food": 15400000,
+     "wood": 15400000,
+     "stone": 11500000,
+     "gold": 7700000
+    },
+    "timeSec": 1418400,
+    "power": 576232
+   }
+  ]
+ },
+ {
+  "id": "military_discipline",
+  "tree": "military",
+  "tier": 1,
+  "maxLevel": 1,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "buildings_academy",
+      "level": 1
+     }
+    ],
+    "cost": {
+     "food": 5000,
+     "wood": 5000,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 900,
+    "power": 56
+   }
+  ]
+ },
+ {
+  "id": "iron_working",
+  "tree": "military",
+  "tier": 2,
+  "maxLevel": 5,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "military_discipline",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "buildings_academy",
+      "level": 1
+     }
+    ],
+    "cost": {
+     "food": 10000,
+     "wood": 10000,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 3600,
+    "power": 184
+   },
+   {
+    "level": 2,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "iron_working",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "buildings_academy",
+      "level": 3
+     }
+    ],
+    "cost": {
+     "food": 20000,
+     "wood": 20000,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 4320,
+    "power": 436
+   },
+   {
+    "level": 3,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "iron_working",
+      "level": 2
+     },
+     {
+      "type": "building",
+      "id": "buildings_academy",
+      "level": 5
+     }
+    ],
+    "cost": {
+     "food": 40000,
+     "wood": 40000,
+     "stone": 30000,
+     "gold": 0
+    },
+    "timeSec": 5160,
+    "power": 893
+   },
+   {
+    "level": 4,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "iron_working",
+      "level": 3
+     },
+     {
+      "type": "building",
+      "id": "buildings_academy",
+      "level": 7
+     }
+    ],
+    "cost": {
+     "food": 80000,
+     "wood": 80000,
+     "stone": 60000,
+     "gold": 0
+    },
+    "timeSec": 6240,
+    "power": 1641
+   },
+   {
+    "level": 5,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "iron_working",
+      "level": 4
+     },
+     {
+      "type": "building",
+      "id": "buildings_academy",
+      "level": 9
+     }
+    ],
+    "cost": {
+     "food": 160000,
+     "wood": 160000,
+     "stone": 120000,
+     "gold": 0
+    },
+    "timeSec": 7440,
+    "power": 2939
+   }
+  ]
+ },
+ {
+  "id": "improved_fletching",
+  "tree": "military",
+  "tier": 2,
+  "maxLevel": 5,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "military_discipline",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "buildings_academy",
+      "level": 1
+     }
+    ],
+    "cost": {
+     "food": 10000,
+     "wood": 10000,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 3600,
+    "power": 184
+   },
+   {
+    "level": 2,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "improved_fletching",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "buildings_academy",
+      "level": 3
+     }
+    ],
+    "cost": {
+     "food": 20000,
+     "wood": 20000,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 4320,
+    "power": 436
+   },
+   {
+    "level": 3,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "improved_fletching",
+      "level": 2
+     },
+     {
+      "type": "building",
+      "id": "buildings_academy",
+      "level": 5
+     }
+    ],
+    "cost": {
+     "food": 40000,
+     "wood": 40000,
+     "stone": 30000,
+     "gold": 0
+    },
+    "timeSec": 5160,
+    "power": 893
+   },
+   {
+    "level": 4,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "improved_fletching",
+      "level": 3
+     },
+     {
+      "type": "building",
+      "id": "buildings_academy",
+      "level": 7
+     }
+    ],
+    "cost": {
+     "food": 80000,
+     "wood": 80000,
+     "stone": 60000,
+     "gold": 0
+    },
+    "timeSec": 6240,
+    "power": 1641
+   },
+   {
+    "level": 5,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "improved_fletching",
+      "level": 4
+     },
+     {
+      "type": "building",
+      "id": "buildings_academy",
+      "level": 9
+     }
+    ],
+    "cost": {
+     "food": 160000,
+     "wood": 160000,
+     "stone": 120000,
+     "gold": 0
+    },
+    "timeSec": 7440,
+    "power": 2939
+   }
+  ]
+ },
+ {
+  "id": "horsemanship",
+  "tree": "military",
+  "tier": 2,
+  "maxLevel": 5,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "military_discipline",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "buildings_academy",
+      "level": 1
+     }
+    ],
+    "cost": {
+     "food": 10000,
+     "wood": 10000,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 3600,
+    "power": 184
+   },
+   {
+    "level": 2,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "horsemanship",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "buildings_academy",
+      "level": 3
+     }
+    ],
+    "cost": {
+     "food": 20000,
+     "wood": 20000,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 4320,
+    "power": 436
+   },
+   {
+    "level": 3,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "horsemanship",
+      "level": 2
+     },
+     {
+      "type": "building",
+      "id": "buildings_academy",
+      "level": 5
+     }
+    ],
+    "cost": {
+     "food": 40000,
+     "wood": 40000,
+     "stone": 30000,
+     "gold": 0
+    },
+    "timeSec": 5160,
+    "power": 893
+   },
+   {
+    "level": 4,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "horsemanship",
+      "level": 3
+     },
+     {
+      "type": "building",
+      "id": "buildings_academy",
+      "level": 7
+     }
+    ],
+    "cost": {
+     "food": 80000,
+     "wood": 80000,
+     "stone": 60000,
+     "gold": 0
+    },
+    "timeSec": 6240,
+    "power": 1641
+   },
+   {
+    "level": 5,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "horsemanship",
+      "level": 4
+     },
+     {
+      "type": "building",
+      "id": "buildings_academy",
+      "level": 9
+     }
+    ],
+    "cost": {
+     "food": 160000,
+     "wood": 160000,
+     "stone": 120000,
+     "gold": 0
+    },
+    "timeSec": 7440,
+    "power": 2939
+   }
+  ]
+ },
+ {
+  "id": "flaming_projectile",
+  "tree": "military",
+  "tier": 2,
+  "maxLevel": 5,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "military_discipline",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 1
+     }
+    ],
+    "cost": {
+     "food": 10000,
+     "wood": 10000,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 3600,
+    "power": 184
+   },
+   {
+    "level": 2,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "flaming_projectile",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 3
+     }
+    ],
+    "cost": {
+     "food": 20000,
+     "wood": 20000,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 4320,
+    "power": 436
+   },
+   {
+    "level": 3,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "flaming_projectile",
+      "level": 2
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 5
+     }
+    ],
+    "cost": {
+     "food": 40000,
+     "wood": 40000,
+     "stone": 30000,
+     "gold": 0
+    },
+    "timeSec": 5160,
+    "power": 893
+   },
+   {
+    "level": 4,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "flaming_projectile",
+      "level": 3
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 7
+     }
+    ],
+    "cost": {
+     "food": 80000,
+     "wood": 80000,
+     "stone": 60000,
+     "gold": 0
+    },
+    "timeSec": 6240,
+    "power": 1641
+   },
+   {
+    "level": 5,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "flaming_projectile",
+      "level": 4
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 9
+     }
+    ],
+    "cost": {
+     "food": 160000,
+     "wood": 160000,
+     "stone": 120000,
+     "gold": 0
+    },
+    "timeSec": 7440,
+    "power": 2939
+   }
+  ]
+ },
+ {
+  "id": "swordsman",
+  "tree": "military",
+  "tier": 3,
+  "maxLevel": 1,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "iron_working",
+      "level": 3
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 8
+     }
+    ],
+    "cost": {
+     "food": 200000,
+     "wood": 200000,
+     "stone": 150000,
+     "gold": 0
+    },
+    "timeSec": 36000,
+    "power": 2690
+   }
+  ]
+ },
+ {
+  "id": "bowman",
+  "tree": "military",
+  "tier": 3,
+  "maxLevel": 1,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "improved_fletching",
+      "level": 3
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 8
+     }
+    ],
+    "cost": {
+     "food": 200000,
+     "wood": 200000,
+     "stone": 150000,
+     "gold": 0
+    },
+    "timeSec": 36000,
+    "power": 2690
+   }
+  ]
+ },
+ {
+  "id": "light_cavalry",
+  "tree": "military",
+  "tier": 3,
+  "maxLevel": 1,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "horsemanship",
+      "level": 3
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 8
+     }
+    ],
+    "cost": {
+     "food": 200000,
+     "wood": 200000,
+     "stone": 150000,
+     "gold": 0
+    },
+    "timeSec": 36000,
+    "power": 2690
+   }
+  ]
+ },
+ {
+  "id": "arcuballista",
+  "tree": "military",
+  "tier": 3,
+  "maxLevel": 1,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "flaming_projectile",
+      "level": 3
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 8
+     }
+    ],
+    "cost": {
+     "food": 200000,
+     "wood": 200000,
+     "stone": 150000,
+     "gold": 0
+    },
+    "timeSec": 45000,
+    "power": 3050
+   }
+  ]
+ },
+ {
+  "id": "tracking",
+  "tree": "military",
+  "tier": 4,
+  "maxLevel": 5,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "swordsman",
+      "level": 1
+     },
+     {
+      "type": "research",
+      "id": "bowman",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "buildings_academy",
+      "level": 8
+     }
+    ],
+    "cost": {
+     "food": 15000,
+     "wood": 15000,
+     "stone": 11300,
+     "gold": 0
+    },
+    "timeSec": 7200,
+    "power": 381
+   },
+   {
+    "level": 2,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "tracking",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "buildings_academy",
+      "level": 9
+     }
+    ],
+    "cost": {
+     "food": 30000,
+     "wood": 30000,
+     "stone": 22500,
+     "gold": 0
+    },
+    "timeSec": 10080,
+    "power": 971
+   },
+   {
+    "level": 3,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "tracking",
+      "level": 2
+     },
+     {
+      "type": "building",
+      "id": "buildings_academy",
+      "level": 10
+     }
+    ],
+    "cost": {
+     "food": 60000,
+     "wood": 60000,
+     "stone": 45000,
+     "gold": 0
+    },
+    "timeSec": 14100,
+    "power": 1910
+   },
+   {
+    "level": 4,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "tracking",
+      "level": 3
+     },
+     {
+      "type": "building",
+      "id": "buildings_academy",
+      "level": 11
+     }
+    ],
+    "cost": {
+     "food": 120000,
+     "wood": 120000,
+     "stone": 90000,
+     "gold": 0
+    },
+    "timeSec": 19740,
+    "power": 3450
+   },
+   {
+    "level": 5,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "tracking",
+      "level": 4
+     },
+     {
+      "type": "building",
+      "id": "buildings_academy",
+      "level": 12
+     }
+    ],
+    "cost": {
+     "food": 240000,
+     "wood": 240000,
+     "stone": 180000,
+     "gold": 0
+    },
+    "timeSec": 27660,
+    "power": 6056
+   }
+  ]
+ },
+ {
+  "id": "pathfinding",
+  "tree": "military",
+  "tier": 4,
+  "maxLevel": 5,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "light_cavalry",
+      "level": 1
+     },
+     {
+      "type": "research",
+      "id": "arcuballista",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 8
+     }
+    ],
+    "cost": {
+     "food": 15000,
+     "wood": 15000,
+     "stone": 11300,
+     "gold": 0
+    },
+    "timeSec": 7200,
+    "power": 381
+   },
+   {
+    "level": 2,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "pathfinding",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 9
+     }
+    ],
+    "cost": {
+     "food": 30000,
+     "wood": 30000,
+     "stone": 22500,
+     "gold": 0
+    },
+    "timeSec": 10080,
+    "power": 971
+   },
+   {
+    "level": 3,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "pathfinding",
+      "level": 2
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 10
+     }
+    ],
+    "cost": {
+     "food": 60000,
+     "wood": 60000,
+     "stone": 45000,
+     "gold": 0
+    },
+    "timeSec": 14100,
+    "power": 1910
+   },
+   {
+    "level": 4,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "pathfinding",
+      "level": 3
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 11
+     }
+    ],
+    "cost": {
+     "food": 120000,
+     "wood": 120000,
+     "stone": 90000,
+     "gold": 0
+    },
+    "timeSec": 19740,
+    "power": 3450
+   },
+   {
+    "level": 5,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "pathfinding",
+      "level": 4
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 12
+     }
+    ],
+    "cost": {
+     "food": 240000,
+     "wood": 240000,
+     "stone": 180000,
+     "gold": 0
+    },
+    "timeSec": 27660,
+    "power": 6056
+   }
+  ]
+ },
+ {
+  "id": "buckler",
+  "tree": "military",
+  "tier": 5,
+  "maxLevel": 5,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "tracking",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 11
+     }
+    ],
+    "cost": {
+     "food": 40000,
+     "wood": 40000,
+     "stone": 30000,
+     "gold": 20000
+    },
+    "timeSec": 21600,
+    "power": 1214
+   },
+   {
+    "level": 2,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "buckler",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 12
+     }
+    ],
+    "cost": {
+     "food": 80000,
+     "wood": 80000,
+     "stone": 60000,
+     "gold": 40000
+    },
+    "timeSec": 30240,
+    "power": 3123
+   },
+   {
+    "level": 3,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "buckler",
+      "level": 2
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 13
+     }
+    ],
+    "cost": {
+     "food": 160000,
+     "wood": 160000,
+     "stone": 120000,
+     "gold": 80000
+    },
+    "timeSec": 42360,
+    "power": 6216
+   },
+   {
+    "level": 4,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "buckler",
+      "level": 3
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 14
+     }
+    ],
+    "cost": {
+     "food": 320000,
+     "wood": 320000,
+     "stone": 240000,
+     "gold": 160000
+    },
+    "timeSec": 59280,
+    "power": 11386
+   },
+   {
+    "level": 5,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "buckler",
+      "level": 4
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 15
+     }
+    ],
+    "cost": {
+     "food": 640000,
+     "wood": 640000,
+     "stone": 480000,
+     "gold": 320000
+    },
+    "timeSec": 82980,
+    "power": 20305
+   }
+  ]
+ },
+ {
+  "id": "leather_armor",
+  "tree": "military",
+  "tier": 5,
+  "maxLevel": 5,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "tracking",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 11
+     }
+    ],
+    "cost": {
+     "food": 40000,
+     "wood": 40000,
+     "stone": 30000,
+     "gold": 20000
+    },
+    "timeSec": 21600,
+    "power": 1214
+   },
+   {
+    "level": 2,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "leather_armor",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 12
+     }
+    ],
+    "cost": {
+     "food": 80000,
+     "wood": 80000,
+     "stone": 60000,
+     "gold": 40000
+    },
+    "timeSec": 30240,
+    "power": 3123
+   },
+   {
+    "level": 3,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "leather_armor",
+      "level": 2
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 13
+     }
+    ],
+    "cost": {
+     "food": 160000,
+     "wood": 160000,
+     "stone": 120000,
+     "gold": 80000
+    },
+    "timeSec": 42360,
+    "power": 6216
+   },
+   {
+    "level": 4,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "leather_armor",
+      "level": 3
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 14
+     }
+    ],
+    "cost": {
+     "food": 320000,
+     "wood": 320000,
+     "stone": 240000,
+     "gold": 160000
+    },
+    "timeSec": 59280,
+    "power": 11386
+   },
+   {
+    "level": 5,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "leather_armor",
+      "level": 4
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 15
+     }
+    ],
+    "cost": {
+     "food": 640000,
+     "wood": 640000,
+     "stone": 480000,
+     "gold": 320000
+    },
+    "timeSec": 82980,
+    "power": 20305
+   }
+  ]
+ },
+ {
+  "id": "scale_armor",
+  "tree": "military",
+  "tier": 5,
+  "maxLevel": 5,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "pathfinding",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 11
+     }
+    ],
+    "cost": {
+     "food": 40000,
+     "wood": 40000,
+     "stone": 30000,
+     "gold": 20000
+    },
+    "timeSec": 21600,
+    "power": 1214
+   },
+   {
+    "level": 2,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "scale_armor",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 12
+     }
+    ],
+    "cost": {
+     "food": 80000,
+     "wood": 80000,
+     "stone": 60000,
+     "gold": 40000
+    },
+    "timeSec": 30240,
+    "power": 3123
+   },
+   {
+    "level": 3,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "scale_armor",
+      "level": 2
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 13
+     }
+    ],
+    "cost": {
+     "food": 160000,
+     "wood": 160000,
+     "stone": 120000,
+     "gold": 80000
+    },
+    "timeSec": 42360,
+    "power": 6216
+   },
+   {
+    "level": 4,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "scale_armor",
+      "level": 3
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 14
+     }
+    ],
+    "cost": {
+     "food": 320000,
+     "wood": 320000,
+     "stone": 240000,
+     "gold": 160000
+    },
+    "timeSec": 59280,
+    "power": 11386
+   },
+   {
+    "level": 5,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "scale_armor",
+      "level": 4
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 15
+     }
+    ],
+    "cost": {
+     "food": 640000,
+     "wood": 640000,
+     "stone": 480000,
+     "gold": 320000
+    },
+    "timeSec": 82980,
+    "power": 20305
+   }
+  ]
+ },
+ {
+  "id": "enhanced_axle",
+  "tree": "military",
+  "tier": 5,
+  "maxLevel": 5,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "pathfinding",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 11
+     }
+    ],
+    "cost": {
+     "food": 40000,
+     "wood": 40000,
+     "stone": 30000,
+     "gold": 20000
+    },
+    "timeSec": 21600,
+    "power": 1214
+   },
+   {
+    "level": 2,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "enhanced_axle",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 12
+     }
+    ],
+    "cost": {
+     "food": 80000,
+     "wood": 80000,
+     "stone": 60000,
+     "gold": 40000
+    },
+    "timeSec": 30240,
+    "power": 3123
+   },
+   {
+    "level": 3,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "enhanced_axle",
+      "level": 2
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 13
+     }
+    ],
+    "cost": {
+     "food": 160000,
+     "wood": 160000,
+     "stone": 120000,
+     "gold": 80000
+    },
+    "timeSec": 42360,
+    "power": 6216
+   },
+   {
+    "level": 4,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "enhanced_axle",
+      "level": 3
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 14
+     }
+    ],
+    "cost": {
+     "food": 320000,
+     "wood": 320000,
+     "stone": 240000,
+     "gold": 160000
+    },
+    "timeSec": 59280,
+    "power": 11386
+   },
+   {
+    "level": 5,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "enhanced_axle",
+      "level": 4
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 15
+     }
+    ],
+    "cost": {
+     "food": 640000,
+     "wood": 640000,
+     "stone": 480000,
+     "gold": 320000
+    },
+    "timeSec": 82980,
+    "power": 20305
+   }
+  ]
+ },
+ {
+  "id": "spearman",
+  "tree": "military",
+  "tier": 6,
+  "maxLevel": 1,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "buckler",
+      "level": 3
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 16
+     }
+    ],
+    "cost": {
+     "food": 1500000,
+     "wood": 1500000,
+     "stone": 1130000,
+     "gold": 1500000
+    },
+    "timeSec": 259200,
+    "power": 27243
+   }
+  ]
+ },
+ {
+  "id": "composite_bowman",
+  "tree": "military",
+  "tier": 6,
+  "maxLevel": 1,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "leather_armor",
+      "level": 3
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 16
+     }
+    ],
+    "cost": {
+     "food": 1500000,
+     "wood": 1500000,
+     "stone": 1130000,
+     "gold": 1500000
+    },
+    "timeSec": 259200,
+    "power": 27243
+   }
+  ]
+ },
+ {
+  "id": "heavy_cavalry",
+  "tree": "military",
+  "tier": 6,
+  "maxLevel": 1,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "scale_armor",
+      "level": 3
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 16
+     }
+    ],
+    "cost": {
+     "food": 1500000,
+     "wood": 1500000,
+     "stone": 1130000,
+     "gold": 1500000
+    },
+    "timeSec": 259200,
+    "power": 27243
+   }
+  ]
+ },
+ {
+  "id": "mangonel",
+  "tree": "military",
+  "tier": 6,
+  "maxLevel": 1,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 16
+     }
+    ],
+    "cost": {
+     "food": 1500000,
+     "wood": 1500000,
+     "stone": 1130000,
+     "gold": 1500000
+    },
+    "timeSec": 388800,
+    "power": 32427
+   }
+  ]
+ },
+ {
+  "id": "camouflage",
+  "tree": "military",
+  "tier": 7,
+  "maxLevel": 5,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 16
+     }
+    ],
+    "cost": {
+     "food": 400000,
+     "wood": 400000,
+     "stone": 300000,
+     "gold": 200000
+    },
+    "timeSec": 18000,
+    "power": 4220
+   },
+   {
+    "level": 2,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "camouflage",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 16
+     }
+    ],
+    "cost": {
+     "food": 600000,
+     "wood": 600000,
+     "stone": 450000,
+     "gold": 300000
+    },
+    "timeSec": 54000,
+    "power": 11630
+   },
+   {
+    "level": 3,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "camouflage",
+      "level": 2
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 17
+     }
+    ],
+    "cost": {
+     "food": 900000,
+     "wood": 900000,
+     "stone": 675000,
+     "gold": 540000
+    },
+    "timeSec": 162000,
+    "power": 26435
+   },
+   {
+    "level": 4,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "camouflage",
+      "level": 3
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 18
+     }
+    ],
+    "cost": {
+     "food": 1350000,
+     "wood": 1350000,
+     "stone": 1010000,
+     "gold": 810000
+    },
+    "timeSec": 486000,
+    "power": 58362
+   },
+   {
+    "level": 5,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "camouflage",
+      "level": 4
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 19
+     }
+    ],
+    "cost": {
+     "food": 2030000,
+     "wood": 2030000,
+     "stone": 1520000,
+     "gold": 1220000
+    },
+    "timeSec": 1458000,
+    "power": 135413
+   }
+  ]
+ },
+ {
+  "id": "combat_tactics",
+  "tree": "military",
+  "tier": 8,
+  "maxLevel": 10,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "camouflage",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 16
+     }
+    ],
+    "cost": {
+     "food": 500000,
+     "wood": 500000,
+     "stone": 375000,
+     "gold": 250000
+    },
+    "timeSec": 32400,
+    "power": 5671
+   },
+   {
+    "level": 2,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "combat_tactics",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 16
+     }
+    ],
+    "cost": {
+     "food": 750000,
+     "wood": 750000,
+     "stone": 563000,
+     "gold": 375000
+    },
+    "timeSec": 64800,
+    "power": 14827
+   },
+   {
+    "level": 3,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "combat_tactics",
+      "level": 2
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 16
+     }
+    ],
+    "cost": {
+     "food": 1130000,
+     "wood": 1130000,
+     "stone": 845000,
+     "gold": 675000
+    },
+    "timeSec": 129600,
+    "power": 30421
+   },
+   {
+    "level": 4,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "combat_tactics",
+      "level": 3
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 16
+     }
+    ],
+    "cost": {
+     "food": 1690000,
+     "wood": 1690000,
+     "stone": 1270000,
+     "gold": 1010000
+    },
+    "timeSec": 259200,
+    "power": 56408
+   },
+   {
+    "level": 5,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "combat_tactics",
+      "level": 4
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 18
+     }
+    ],
+    "cost": {
+     "food": 2530000,
+     "wood": 2530000,
+     "stone": 1900000,
+     "gold": 1520000
+    },
+    "timeSec": 518400,
+    "power": 100570
+   },
+   {
+    "level": 6,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "combat_tactics",
+      "level": 5
+     },
+     {
+      "type": "research",
+      "id": "camouflage",
+      "level": 3
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 18
+     }
+    ],
+    "cost": {
+     "food": 3800000,
+     "wood": 3800000,
+     "stone": 2860000,
+     "gold": 2280000
+    },
+    "timeSec": 1036800,
+    "power": 177222
+   },
+   {
+    "level": 7,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "combat_tactics",
+      "level": 6
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 18
+     }
+    ],
+    "cost": {
+     "food": 5700000,
+     "wood": 5700000,
+     "stone": 4290000,
+     "gold": 3420000
+    },
+    "timeSec": 2073600,
+    "power": 312936
+   },
+   {
+    "level": 8,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "combat_tactics",
+      "level": 7
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 18
+     }
+    ],
+    "cost": {
+     "food": 8550000,
+     "wood": 8550000,
+     "stone": 6440000,
+     "gold": 5130000
+    },
+    "timeSec": 4147200,
+    "power": 557994
+   },
+   {
+    "level": 9,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "combat_tactics",
+      "level": 8
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 18
+     }
+    ],
+    "cost": {
+     "food": 12830000,
+     "wood": 12830000,
+     "stone": 9660000,
+     "gold": 7700000
+    },
+    "timeSec": 8294400,
+    "power": 1008570
+   },
+   {
+    "level": 10,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "combat_tactics",
+      "level": 9
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 20
+     }
+    ],
+    "cost": {
+     "food": 19250000,
+     "wood": 19250000,
+     "stone": 14490000,
+     "gold": 11550000
+    },
+    "timeSec": 16588800,
+    "power": 1850342
+   }
+  ]
+ },
+ {
+  "id": "defensive_formation",
+  "tree": "military",
+  "tier": 8,
+  "maxLevel": 10,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "camouflage",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 16
+     }
+    ],
+    "cost": {
+     "food": 500000,
+     "wood": 500000,
+     "stone": 375000,
+     "gold": 250000
+    },
+    "timeSec": 32400,
+    "power": 5671
+   },
+   {
+    "level": 2,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "defensive_formation",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 16
+     }
+    ],
+    "cost": {
+     "food": 750000,
+     "wood": 750000,
+     "stone": 563000,
+     "gold": 375000
+    },
+    "timeSec": 64800,
+    "power": 14827
+   },
+   {
+    "level": 3,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "defensive_formation",
+      "level": 2
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 16
+     }
+    ],
+    "cost": {
+     "food": 1130000,
+     "wood": 1130000,
+     "stone": 845000,
+     "gold": 675000
+    },
+    "timeSec": 129600,
+    "power": 30421
+   },
+   {
+    "level": 4,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "defensive_formation",
+      "level": 3
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 16
+     }
+    ],
+    "cost": {
+     "food": 1690000,
+     "wood": 1690000,
+     "stone": 1270000,
+     "gold": 1010000
+    },
+    "timeSec": 259200,
+    "power": 56408
+   },
+   {
+    "level": 5,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "defensive_formation",
+      "level": 4
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 18
+     }
+    ],
+    "cost": {
+     "food": 2530000,
+     "wood": 2530000,
+     "stone": 1900000,
+     "gold": 1520000
+    },
+    "timeSec": 518400,
+    "power": 100570
+   },
+   {
+    "level": 6,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "defensive_formation",
+      "level": 5
+     },
+     {
+      "type": "research",
+      "id": "camouflage",
+      "level": 3
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 18
+     }
+    ],
+    "cost": {
+     "food": 3800000,
+     "wood": 3800000,
+     "stone": 2860000,
+     "gold": 2280000
+    },
+    "timeSec": 1036800,
+    "power": 177222
+   },
+   {
+    "level": 7,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "defensive_formation",
+      "level": 6
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 18
+     }
+    ],
+    "cost": {
+     "food": 5700000,
+     "wood": 5700000,
+     "stone": 4290000,
+     "gold": 3420000
+    },
+    "timeSec": 2073600,
+    "power": 312936
+   },
+   {
+    "level": 8,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "defensive_formation",
+      "level": 7
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 18
+     }
+    ],
+    "cost": {
+     "food": 8550000,
+     "wood": 8550000,
+     "stone": 6440000,
+     "gold": 5130000
+    },
+    "timeSec": 4147200,
+    "power": 557994
+   },
+   {
+    "level": 9,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "defensive_formation",
+      "level": 8
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 18
+     }
+    ],
+    "cost": {
+     "food": 12830000,
+     "wood": 12830000,
+     "stone": 9660000,
+     "gold": 7700000
+    },
+    "timeSec": 8294400,
+    "power": 1008570
+   },
+   {
+    "level": 10,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "defensive_formation",
+      "level": 9
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 20
+     }
+    ],
+    "cost": {
+     "food": 19250000,
+     "wood": 19250000,
+     "stone": 14490000,
+     "gold": 11550000
+    },
+    "timeSec": 16588800,
+    "power": 1850342
+   }
+  ]
+ },
+ {
+  "id": "herbal_medicine",
+  "tree": "military",
+  "tier": 8,
+  "maxLevel": 10,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "camouflage",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 16
+     }
+    ],
+    "cost": {
+     "food": 500000,
+     "wood": 500000,
+     "stone": 375000,
+     "gold": 250000
+    },
+    "timeSec": 32400,
+    "power": 5671
+   },
+   {
+    "level": 2,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "herbal_medicine",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 16
+     }
+    ],
+    "cost": {
+     "food": 750000,
+     "wood": 750000,
+     "stone": 563000,
+     "gold": 375000
+    },
+    "timeSec": 64800,
+    "power": 14827
+   },
+   {
+    "level": 3,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "herbal_medicine",
+      "level": 2
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 16
+     }
+    ],
+    "cost": {
+     "food": 1130000,
+     "wood": 1130000,
+     "stone": 845000,
+     "gold": 675000
+    },
+    "timeSec": 129600,
+    "power": 30421
+   },
+   {
+    "level": 4,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "herbal_medicine",
+      "level": 3
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 16
+     }
+    ],
+    "cost": {
+     "food": 1690000,
+     "wood": 1690000,
+     "stone": 1270000,
+     "gold": 1010000
+    },
+    "timeSec": 259200,
+    "power": 56408
+   },
+   {
+    "level": 5,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "herbal_medicine",
+      "level": 4
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 18
+     }
+    ],
+    "cost": {
+     "food": 2530000,
+     "wood": 2530000,
+     "stone": 1900000,
+     "gold": 1520000
+    },
+    "timeSec": 518400,
+    "power": 100570
+   },
+   {
+    "level": 6,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "herbal_medicine",
+      "level": 5
+     },
+     {
+      "type": "research",
+      "id": "camouflage",
+      "level": 3
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 18
+     }
+    ],
+    "cost": {
+     "food": 3800000,
+     "wood": 3800000,
+     "stone": 2860000,
+     "gold": 2280000
+    },
+    "timeSec": 1036800,
+    "power": 177222
+   },
+   {
+    "level": 7,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "herbal_medicine",
+      "level": 6
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 18
+     }
+    ],
+    "cost": {
+     "food": 5700000,
+     "wood": 5700000,
+     "stone": 4290000,
+     "gold": 3420000
+    },
+    "timeSec": 2073600,
+    "power": 312936
+   },
+   {
+    "level": 8,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "herbal_medicine",
+      "level": 7
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 18
+     }
+    ],
+    "cost": {
+     "food": 8550000,
+     "wood": 8550000,
+     "stone": 6440000,
+     "gold": 5130000
+    },
+    "timeSec": 4147200,
+    "power": 557994
+   },
+   {
+    "level": 9,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "herbal_medicine",
+      "level": 8
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 18
+     }
+    ],
+    "cost": {
+     "food": 12830000,
+     "wood": 12830000,
+     "stone": 9660000,
+     "gold": 7700000
+    },
+    "timeSec": 8294400,
+    "power": 1008570
+   },
+   {
+    "level": 10,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "herbal_medicine",
+      "level": 9
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 20
+     }
+    ],
+    "cost": {
+     "food": 19250000,
+     "wood": 19250000,
+     "stone": 14490000,
+     "gold": 11550000
+    },
+    "timeSec": 16588800,
+    "power": 1850342
+   }
+  ]
+ },
+ {
+  "id": "cartography",
+  "tree": "military",
+  "tier": 9,
+  "maxLevel": 5,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "combat_tactics",
+      "level": 1
+     },
+     {
+      "type": "research",
+      "id": "defensive_formation",
+      "level": 1
+     },
+     {
+      "type": "research",
+      "id": "herbal_medicine",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 16
+     }
+    ],
+    "cost": {
+     "food": 850000,
+     "wood": 850000,
+     "stone": 637500,
+     "gold": 425000
+    },
+    "timeSec": 36000,
+    "power": 8877
+   },
+   {
+    "level": 2,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "cartography",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 17
+     }
+    ],
+    "cost": {
+     "food": 1280000,
+     "wood": 1280000,
+     "stone": 957000,
+     "gold": 638000
+    },
+    "timeSec": 54000,
+    "power": 22198
+   },
+   {
+    "level": 3,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "cartography",
+      "level": 2
+     },
+     {
+      "type": "research",
+      "id": "pathfinding",
+      "level": 5
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 18
+     }
+    ],
+    "cost": {
+     "food": 1910000,
+     "wood": 1910000,
+     "stone": 1440000,
+     "gold": 1150000
+    },
+    "timeSec": 81000,
+    "power": 43136
+   },
+   {
+    "level": 4,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "cartography",
+      "level": 3
+     },
+     {
+      "type": "research",
+      "id": "combat_tactics",
+      "level": 5
+     },
+     {
+      "type": "research",
+      "id": "defensive_formation",
+      "level": 5
+     },
+     {
+      "type": "research",
+      "id": "herbal_medicine",
+      "level": 5
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 19
+     }
+    ],
+    "cost": {
+     "food": 2870000,
+     "wood": 2870000,
+     "stone": 2150000,
+     "gold": 1720000
+    },
+    "timeSec": 122400,
+    "power": 74543
+   },
+   {
+    "level": 5,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "combat_tactics",
+      "level": 4
+     },
+     {
+      "type": "research",
+      "id": "defensive_formation",
+      "level": 10
+     },
+     {
+      "type": "research",
+      "id": "herbal_medicine",
+      "level": 10
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 20
+     }
+    ],
+    "cost": {
+     "food": 4300000,
+     "wood": 4300000,
+     "stone": 3230000,
+     "gold": 2580000
+    },
+    "timeSec": 183600,
+    "power": 121648
+   }
+  ]
+ },
+ {
+  "id": "long_swordsman",
+  "tree": "military",
+  "tier": 10,
+  "maxLevel": 1,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "cartography",
+      "level": 3
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 21
+     }
+    ],
+    "cost": {
+     "food": 5000000,
+     "wood": 5000000,
+     "stone": 3750000,
+     "gold": 5000000
+    },
+    "timeSec": 2592000,
+    "power": 159930
+   }
+  ]
+ },
+ {
+  "id": "crossbowman",
+  "tree": "military",
+  "tier": 10,
+  "maxLevel": 1,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "cartography",
+      "level": 3
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 21
+     }
+    ],
+    "cost": {
+     "food": 5000000,
+     "wood": 5000000,
+     "stone": 3750000,
+     "gold": 5000000
+    },
+    "timeSec": 2592000,
+    "power": 159930
+   }
+  ]
+ },
+ {
+  "id": "knight",
+  "tree": "military",
+  "tier": 10,
+  "maxLevel": 1,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "cartography",
+      "level": 3
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 21
+     }
+    ],
+    "cost": {
+     "food": 5000000,
+     "wood": 5000000,
+     "stone": 3750000,
+     "gold": 5000000
+    },
+    "timeSec": 2592000,
+    "power": 159930
+   }
+  ]
+ },
+ {
+  "id": "ballista",
+  "tree": "military",
+  "tier": 10,
+  "maxLevel": 1,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "cartography",
+      "level": 3
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 21
+     }
+    ],
+    "cost": {
+     "food": 5000000,
+     "wood": 5000000,
+     "stone": 3750000,
+     "gold": 5000000
+    },
+    "timeSec": 3888000,
+    "power": 211770
+   }
+  ]
+ },
+ {
+  "id": "wootz_steel",
+  "tree": "military",
+  "tier": 10,
+  "maxLevel": 10,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "long_swordsman",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 23
+     }
+    ],
+    "cost": {
+     "food": 400000,
+     "wood": 400000,
+     "stone": 300000,
+     "gold": 200000
+    },
+    "timeSec": 17280,
+    "power": 4191
+   },
+   {
+    "level": 2,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "wootz_steel",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 23
+     }
+    ],
+    "cost": {
+     "food": 600000,
+     "wood": 600000,
+     "stone": 450000,
+     "gold": 300000
+    },
+    "timeSec": 34560,
+    "power": 10823
+   },
+   {
+    "level": 3,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "wootz_steel",
+      "level": 2
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 23
+     }
+    ],
+    "cost": {
+     "food": 900000,
+     "wood": 900000,
+     "stone": 675000,
+     "gold": 450000
+    },
+    "timeSec": 69120,
+    "power": 21462
+   },
+   {
+    "level": 4,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "wootz_steel",
+      "level": 3
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 23
+     }
+    ],
+    "cost": {
+     "food": 1350000,
+     "wood": 1350000,
+     "stone": 1010000,
+     "gold": 675000
+    },
+    "timeSec": 136800,
+    "power": 38805
+   },
+   {
+    "level": 5,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "wootz_steel",
+      "level": 4
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 24
+     }
+    ],
+    "cost": {
+     "food": 2030000,
+     "wood": 2030000,
+     "stone": 1520000,
+     "gold": 1010000
+    },
+    "timeSec": 277200,
+    "power": 67589
+   },
+   {
+    "level": 6,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "wootz_steel",
+      "level": 5
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 24
+     }
+    ],
+    "cost": {
+     "food": 3040000,
+     "wood": 3040000,
+     "stone": 2280000,
+     "gold": 1520000
+    },
+    "timeSec": 554400,
+    "power": 116294
+   },
+   {
+    "level": 7,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "wootz_steel",
+      "level": 6
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 24
+     }
+    ],
+    "cost": {
+     "food": 4560000,
+     "wood": 4560000,
+     "stone": 3420000,
+     "gold": 2740000
+    },
+    "timeSec": 1105200,
+    "power": 202693
+   },
+   {
+    "level": 8,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "wootz_steel",
+      "level": 7
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 24
+     }
+    ],
+    "cost": {
+     "food": 6840000,
+     "wood": 6840000,
+     "stone": 5130000,
+     "gold": 4100000
+    },
+    "timeSec": 2210400,
+    "power": 354410
+   },
+   {
+    "level": 9,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "wootz_steel",
+      "level": 8
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 24
+     }
+    ],
+    "cost": {
+     "food": 10250000,
+     "wood": 10250000,
+     "stone": 7700000,
+     "gold": 6150000
+    },
+    "timeSec": 4424400,
+    "power": 626223
+   },
+   {
+    "level": 10,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "wootz_steel",
+      "level": 9
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 25
+     }
+    ],
+    "cost": {
+     "food": 15375000,
+     "wood": 15375000,
+     "stone": 11550000,
+     "gold": 9225000
+    },
+    "timeSec": 9453600,
+    "power": 1122415
+   }
+  ]
+ },
+ {
+  "id": "bodkin_arrows",
+  "tree": "military",
+  "tier": 10,
+  "maxLevel": 10,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "crossbowman",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 23
+     }
+    ],
+    "cost": {
+     "food": 400000,
+     "wood": 400000,
+     "stone": 300000,
+     "gold": 200000
+    },
+    "timeSec": 17280,
+    "power": 4191
+   },
+   {
+    "level": 2,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "bodkin_arrows",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 23
+     }
+    ],
+    "cost": {
+     "food": 600000,
+     "wood": 600000,
+     "stone": 450000,
+     "gold": 300000
+    },
+    "timeSec": 34560,
+    "power": 10823
+   },
+   {
+    "level": 3,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "bodkin_arrows",
+      "level": 2
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 23
+     }
+    ],
+    "cost": {
+     "food": 900000,
+     "wood": 900000,
+     "stone": 675000,
+     "gold": 450000
+    },
+    "timeSec": 69120,
+    "power": 21462
+   },
+   {
+    "level": 4,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "bodkin_arrows",
+      "level": 3
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 23
+     }
+    ],
+    "cost": {
+     "food": 1350000,
+     "wood": 1350000,
+     "stone": 1010000,
+     "gold": 675000
+    },
+    "timeSec": 136800,
+    "power": 38805
+   },
+   {
+    "level": 5,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "bodkin_arrows",
+      "level": 4
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 24
+     }
+    ],
+    "cost": {
+     "food": 2030000,
+     "wood": 2030000,
+     "stone": 1520000,
+     "gold": 1010000
+    },
+    "timeSec": 277200,
+    "power": 67589
+   },
+   {
+    "level": 6,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "bodkin_arrows",
+      "level": 5
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 24
+     }
+    ],
+    "cost": {
+     "food": 3040000,
+     "wood": 3040000,
+     "stone": 2280000,
+     "gold": 1520000
+    },
+    "timeSec": 554400,
+    "power": 116294
+   },
+   {
+    "level": 7,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "bodkin_arrows",
+      "level": 6
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 24
+     }
+    ],
+    "cost": {
+     "food": 4560000,
+     "wood": 4560000,
+     "stone": 3420000,
+     "gold": 2740000
+    },
+    "timeSec": 1105200,
+    "power": 202693
+   },
+   {
+    "level": 8,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "bodkin_arrows",
+      "level": 7
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 24
+     }
+    ],
+    "cost": {
+     "food": 6840000,
+     "wood": 6840000,
+     "stone": 5130000,
+     "gold": 4100000
+    },
+    "timeSec": 2210400,
+    "power": 354410
+   },
+   {
+    "level": 9,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "bodkin_arrows",
+      "level": 8
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 24
+     }
+    ],
+    "cost": {
+     "food": 10250000,
+     "wood": 10250000,
+     "stone": 7700000,
+     "gold": 6150000
+    },
+    "timeSec": 4424400,
+    "power": 626223
+   },
+   {
+    "level": 10,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "bodkin_arrows",
+      "level": 9
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 24
+     }
+    ],
+    "cost": {
+     "food": 15375000,
+     "wood": 15375000,
+     "stone": 11550000,
+     "gold": 9225000
+    },
+    "timeSec": 9453600,
+    "power": 1122415
+   }
+  ]
+ },
+ {
+  "id": "stirrups",
+  "tree": "military",
+  "tier": 10,
+  "maxLevel": 10,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "knight",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 23
+     }
+    ],
+    "cost": {
+     "food": 400000,
+     "wood": 400000,
+     "stone": 300000,
+     "gold": 200000
+    },
+    "timeSec": 17280,
+    "power": 4191
+   },
+   {
+    "level": 2,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "stirrups",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 23
+     }
+    ],
+    "cost": {
+     "food": 600000,
+     "wood": 600000,
+     "stone": 450000,
+     "gold": 300000
+    },
+    "timeSec": 34560,
+    "power": 10823
+   },
+   {
+    "level": 3,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "stirrups",
+      "level": 2
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 23
+     }
+    ],
+    "cost": {
+     "food": 900000,
+     "wood": 900000,
+     "stone": 675000,
+     "gold": 450000
+    },
+    "timeSec": 69120,
+    "power": 21462
+   },
+   {
+    "level": 4,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "stirrups",
+      "level": 3
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 23
+     }
+    ],
+    "cost": {
+     "food": 1350000,
+     "wood": 1350000,
+     "stone": 1010000,
+     "gold": 675000
+    },
+    "timeSec": 136800,
+    "power": 38805
+   },
+   {
+    "level": 5,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "stirrups",
+      "level": 4
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 24
+     }
+    ],
+    "cost": {
+     "food": 2030000,
+     "wood": 2030000,
+     "stone": 1520000,
+     "gold": 1010000
+    },
+    "timeSec": 277200,
+    "power": 67589
+   },
+   {
+    "level": 6,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "stirrups",
+      "level": 5
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 24
+     }
+    ],
+    "cost": {
+     "food": 3040000,
+     "wood": 3040000,
+     "stone": 2280000,
+     "gold": 1520000
+    },
+    "timeSec": 554400,
+    "power": 116294
+   },
+   {
+    "level": 7,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "stirrups",
+      "level": 6
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 24
+     }
+    ],
+    "cost": {
+     "food": 4560000,
+     "wood": 4560000,
+     "stone": 3420000,
+     "gold": 2740000
+    },
+    "timeSec": 1105200,
+    "power": 202693
+   },
+   {
+    "level": 8,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "stirrups",
+      "level": 7
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 24
+     }
+    ],
+    "cost": {
+     "food": 6840000,
+     "wood": 6840000,
+     "stone": 5130000,
+     "gold": 4100000
+    },
+    "timeSec": 2210400,
+    "power": 354410
+   },
+   {
+    "level": 9,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "stirrups",
+      "level": 8
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 24
+     }
+    ],
+    "cost": {
+     "food": 10250000,
+     "wood": 10250000,
+     "stone": 7700000,
+     "gold": 6150000
+    },
+    "timeSec": 4424400,
+    "power": 626223
+   },
+   {
+    "level": 10,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "stirrups",
+      "level": 9
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 25
+     }
+    ],
+    "cost": {
+     "food": 15375000,
+     "wood": 15375000,
+     "stone": 11550000,
+     "gold": 9225000
+    },
+    "timeSec": 9453600,
+    "power": 1122415
+   }
+  ]
+ },
+ {
+  "id": "ballistics",
+  "tree": "military",
+  "tier": 10,
+  "maxLevel": 10,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "ballista",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 23
+     }
+    ],
+    "cost": {
+     "food": 400000,
+     "wood": 400000,
+     "stone": 300000,
+     "gold": 200000
+    },
+    "timeSec": 25920,
+    "power": 4536
+   },
+   {
+    "level": 2,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "ballistics",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 23
+     }
+    ],
+    "cost": {
+     "food": 600000,
+     "wood": 600000,
+     "stone": 450000,
+     "gold": 300000
+    },
+    "timeSec": 51840,
+    "power": 11859
+   },
+   {
+    "level": 3,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "ballistics",
+      "level": 2
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 23
+     }
+    ],
+    "cost": {
+     "food": 900000,
+     "wood": 900000,
+     "stone": 675000,
+     "gold": 450000
+    },
+    "timeSec": 104400,
+    "power": 23881
+   },
+   {
+    "level": 4,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "ballistics",
+      "level": 3
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 23
+     }
+    ],
+    "cost": {
+     "food": 1350000,
+     "wood": 1350000,
+     "stone": 1010000,
+     "gold": 675000
+    },
+    "timeSec": 208800,
+    "power": 43989
+   },
+   {
+    "level": 5,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "ballistics",
+      "level": 4
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 24
+     }
+    ],
+    "cost": {
+     "food": 2030000,
+     "wood": 2030000,
+     "stone": 1520000,
+     "gold": 1010000
+    },
+    "timeSec": 414000,
+    "power": 78302
+   },
+   {
+    "level": 6,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "ballistics",
+      "level": 5
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 24
+     }
+    ],
+    "cost": {
+     "food": 3040000,
+     "wood": 3040000,
+     "stone": 2280000,
+     "gold": 1520000
+    },
+    "timeSec": 828000,
+    "power": 138066
+   },
+   {
+    "level": 7,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "ballistics",
+      "level": 6
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 24
+     }
+    ],
+    "cost": {
+     "food": 4560000,
+     "wood": 4560000,
+     "stone": 3420000,
+     "gold": 2740000
+    },
+    "timeSec": 1659600,
+    "power": 246584
+   },
+   {
+    "level": 8,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "ballistics",
+      "level": 7
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 24
+     }
+    ],
+    "cost": {
+     "food": 6840000,
+     "wood": 6840000,
+     "stone": 5130000,
+     "gold": 4100000
+    },
+    "timeSec": 3319200,
+    "power": 442538
+   },
+   {
+    "level": 9,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "ballistics",
+      "level": 8
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 24
+     }
+    ],
+    "cost": {
+     "food": 10250000,
+     "wood": 10250000,
+     "stone": 7700000,
+     "gold": 6150000
+    },
+    "timeSec": 6634800,
+    "power": 802824
+   },
+   {
+    "level": 10,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "ballistics",
+      "level": 9
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 24
+     }
+    ],
+    "cost": {
+     "food": 15375000,
+     "wood": 15375000,
+     "stone": 11550000,
+     "gold": 9225000
+    },
+    "timeSec": 0,
+    "power": 1475963
+   }
+  ]
+ },
+ {
+  "id": "scutum",
+  "tree": "military",
+  "tier": 11,
+  "maxLevel": 10,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "wootz_steel",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 23
+     }
+    ],
+    "cost": {
+     "food": 400000,
+     "wood": 400000,
+     "stone": 300000,
+     "gold": 200000
+    },
+    "timeSec": 25920,
+    "power": 4536
+   },
+   {
+    "level": 2,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "scutum",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 23
+     }
+    ],
+    "cost": {
+     "food": 600000,
+     "wood": 600000,
+     "stone": 450000,
+     "gold": 300000
+    },
+    "timeSec": 51840,
+    "power": 11859
+   },
+   {
+    "level": 3,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "scutum",
+      "level": 2
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 23
+     }
+    ],
+    "cost": {
+     "food": 900000,
+     "wood": 900000,
+     "stone": 675000,
+     "gold": 450000
+    },
+    "timeSec": 104400,
+    "power": 23881
+   },
+   {
+    "level": 4,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "scutum",
+      "level": 3
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 23
+     }
+    ],
+    "cost": {
+     "food": 1350000,
+     "wood": 1350000,
+     "stone": 1010000,
+     "gold": 675000
+    },
+    "timeSec": 208800,
+    "power": 43989
+   },
+   {
+    "level": 5,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "scutum",
+      "level": 4
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 24
+     }
+    ],
+    "cost": {
+     "food": 2030000,
+     "wood": 2030000,
+     "stone": 1520000,
+     "gold": 1010000
+    },
+    "timeSec": 414000,
+    "power": 78302
+   },
+   {
+    "level": 6,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "scutum",
+      "level": 5
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 24
+     }
+    ],
+    "cost": {
+     "food": 3040000,
+     "wood": 3040000,
+     "stone": 2280000,
+     "gold": 1520000
+    },
+    "timeSec": 828000,
+    "power": 138066
+   },
+   {
+    "level": 7,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "scutum",
+      "level": 6
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 24
+     }
+    ],
+    "cost": {
+     "food": 4560000,
+     "wood": 4560000,
+     "stone": 3420000,
+     "gold": 2740000
+    },
+    "timeSec": 1659600,
+    "power": 246584
+   },
+   {
+    "level": 8,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "scutum",
+      "level": 7
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 24
+     }
+    ],
+    "cost": {
+     "food": 6840000,
+     "wood": 6840000,
+     "stone": 5130000,
+     "gold": 4100000
+    },
+    "timeSec": 3319200,
+    "power": 442538
+   },
+   {
+    "level": 9,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "scutum",
+      "level": 8
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 24
+     }
+    ],
+    "cost": {
+     "food": 10250000,
+     "wood": 10250000,
+     "stone": 7700000,
+     "gold": 6150000
+    },
+    "timeSec": 6634800,
+    "power": 802824
+   },
+   {
+    "level": 10,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "wootz_steel",
+      "level": 10
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 25
+     }
+    ],
+    "cost": {
+     "food": 15380000,
+     "wood": 15380000,
+     "stone": 11540000,
+     "gold": 9230000
+    },
+    "timeSec": 13302000,
+    "power": 1475963
+   }
+  ]
+ },
+ {
+  "id": "pavise",
+  "tree": "military",
+  "tier": 11,
+  "maxLevel": 10,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 23
+     }
+    ],
+    "cost": {
+     "food": 400000,
+     "wood": 400000,
+     "stone": 300000,
+     "gold": 200000
+    },
+    "timeSec": 25920,
+    "power": 4536
+   },
+   {
+    "level": 2,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "pavise",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 23
+     }
+    ],
+    "cost": {
+     "food": 600000,
+     "wood": 600000,
+     "stone": 450000,
+     "gold": 300000
+    },
+    "timeSec": 51840,
+    "power": 11859
+   },
+   {
+    "level": 3,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "pavise",
+      "level": 2
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 23
+     }
+    ],
+    "cost": {
+     "food": 900000,
+     "wood": 900000,
+     "stone": 675000,
+     "gold": 450000
+    },
+    "timeSec": 104400,
+    "power": 23881
+   },
+   {
+    "level": 4,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "pavise",
+      "level": 3
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 23
+     }
+    ],
+    "cost": {
+     "food": 1350000,
+     "wood": 1350000,
+     "stone": 1010000,
+     "gold": 675000
+    },
+    "timeSec": 208800,
+    "power": 43989
+   },
+   {
+    "level": 5,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "pavise",
+      "level": 4
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 24
+     }
+    ],
+    "cost": {
+     "food": 2030000,
+     "wood": 2030000,
+     "stone": 1520000,
+     "gold": 1010000
+    },
+    "timeSec": 414000,
+    "power": 78302
+   },
+   {
+    "level": 6,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "pavise",
+      "level": 5
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 24
+     }
+    ],
+    "cost": {
+     "food": 3040000,
+     "wood": 3040000,
+     "stone": 2280000,
+     "gold": 1520000
+    },
+    "timeSec": 828000,
+    "power": 138066
+   },
+   {
+    "level": 7,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "pavise",
+      "level": 6
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 24
+     }
+    ],
+    "cost": {
+     "food": 4560000,
+     "wood": 4560000,
+     "stone": 3420000,
+     "gold": 2740000
+    },
+    "timeSec": 1659600,
+    "power": 246584
+   },
+   {
+    "level": 8,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "pavise",
+      "level": 7
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 24
+     }
+    ],
+    "cost": {
+     "food": 6840000,
+     "wood": 6840000,
+     "stone": 5130000,
+     "gold": 4100000
+    },
+    "timeSec": 3319200,
+    "power": 442538
+   },
+   {
+    "level": 9,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "pavise",
+      "level": 8
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 24
+     }
+    ],
+    "cost": {
+     "food": 10250000,
+     "wood": 10250000,
+     "stone": 7700000,
+     "gold": 6150000
+    },
+    "timeSec": 6634800,
+    "power": 802824
+   },
+   {
+    "level": 10,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "pavise",
+      "level": 9
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 24
+     }
+    ],
+    "cost": {
+     "food": 0,
+     "wood": 0,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 0,
+    "power": 1475963
+   }
+  ]
+ },
+ {
+  "id": "plate_armor",
+  "tree": "military",
+  "tier": 11,
+  "maxLevel": 10,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 23
+     }
+    ],
+    "cost": {
+     "food": 400000,
+     "wood": 400000,
+     "stone": 300000,
+     "gold": 200000
+    },
+    "timeSec": 25920,
+    "power": 4536
+   },
+   {
+    "level": 2,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "plate_armor",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 23
+     }
+    ],
+    "cost": {
+     "food": 600000,
+     "wood": 600000,
+     "stone": 450000,
+     "gold": 300000
+    },
+    "timeSec": 51840,
+    "power": 11859
+   },
+   {
+    "level": 3,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "plate_armor",
+      "level": 2
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 23
+     }
+    ],
+    "cost": {
+     "food": 900000,
+     "wood": 900000,
+     "stone": 675000,
+     "gold": 450000
+    },
+    "timeSec": 104400,
+    "power": 23881
+   },
+   {
+    "level": 4,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "plate_armor",
+      "level": 3
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 23
+     }
+    ],
+    "cost": {
+     "food": 1350000,
+     "wood": 1350000,
+     "stone": 1010000,
+     "gold": 675000
+    },
+    "timeSec": 208800,
+    "power": 43989
+   },
+   {
+    "level": 5,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "plate_armor",
+      "level": 4
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 24
+     }
+    ],
+    "cost": {
+     "food": 2030000,
+     "wood": 2030000,
+     "stone": 1520000,
+     "gold": 1010000
+    },
+    "timeSec": 414000,
+    "power": 78302
+   },
+   {
+    "level": 6,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "plate_armor",
+      "level": 5
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 24
+     }
+    ],
+    "cost": {
+     "food": 3040000,
+     "wood": 3040000,
+     "stone": 2280000,
+     "gold": 1520000
+    },
+    "timeSec": 828000,
+    "power": 138066
+   },
+   {
+    "level": 7,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "plate_armor",
+      "level": 6
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 24
+     }
+    ],
+    "cost": {
+     "food": 4560000,
+     "wood": 4560000,
+     "stone": 3420000,
+     "gold": 2740000
+    },
+    "timeSec": 1659600,
+    "power": 246584
+   },
+   {
+    "level": 8,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "plate_armor",
+      "level": 7
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 24
+     }
+    ],
+    "cost": {
+     "food": 6840000,
+     "wood": 6840000,
+     "stone": 5130000,
+     "gold": 4100000
+    },
+    "timeSec": 3319200,
+    "power": 442538
+   },
+   {
+    "level": 9,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "plate_armor",
+      "level": 8
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 24
+     }
+    ],
+    "cost": {
+     "food": 10250000,
+     "wood": 10250000,
+     "stone": 7700000,
+     "gold": 6150000
+    },
+    "timeSec": 6634800,
+    "power": 802824
+   },
+   {
+    "level": 10,
+    "requirements": [],
+    "cost": {
+     "food": 15400000,
+     "wood": 15400000,
+     "stone": 11500000,
+     "gold": 9200000
+    },
+    "timeSec": 0,
+    "power": 1475963
+   }
+  ]
+ },
+ {
+  "id": "heavy_frame",
+  "tree": "military",
+  "tier": 11,
+  "maxLevel": 10,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 23
+     }
+    ],
+    "cost": {
+     "food": 400000,
+     "wood": 400000,
+     "stone": 300000,
+     "gold": 200000
+    },
+    "timeSec": 38880,
+    "power": 5055
+   },
+   {
+    "level": 2,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "heavy_frame",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 23
+     }
+    ],
+    "cost": {
+     "food": 600000,
+     "wood": 600000,
+     "stone": 450000,
+     "gold": 300000
+    },
+    "timeSec": 77760,
+    "power": 13415
+   },
+   {
+    "level": 3,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "heavy_frame",
+      "level": 2
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 23
+     }
+    ],
+    "cost": {
+     "food": 900000,
+     "wood": 900000,
+     "stone": 675000,
+     "gold": 450000
+    },
+    "timeSec": 154800,
+    "power": 27510
+   },
+   {
+    "level": 4,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "heavy_frame",
+      "level": 3
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 23
+     }
+    ],
+    "cost": {
+     "food": 1350000,
+     "wood": 1350000,
+     "stone": 1010000,
+     "gold": 675000
+    },
+    "timeSec": 309600,
+    "power": 51765
+   },
+   {
+    "level": 5,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "heavy_frame",
+      "level": 4
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 24
+     }
+    ],
+    "cost": {
+     "food": 2030000,
+     "wood": 2030000,
+     "stone": 1520000,
+     "gold": 1010000
+    },
+    "timeSec": 622800,
+    "power": 94373
+   },
+   {
+    "level": 6,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "heavy_frame",
+      "level": 5
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 24
+     }
+    ],
+    "cost": {
+     "food": 3040000,
+     "wood": 3040000,
+     "stone": 2280000,
+     "gold": 1520000
+    },
+    "timeSec": 1245600,
+    "power": 170726
+   },
+   {
+    "level": 7,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "heavy_frame",
+      "level": 6
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 24
+     }
+    ],
+    "cost": {
+     "food": 4560000,
+     "wood": 4560000,
+     "stone": 3420000,
+     "gold": 2740000
+    },
+    "timeSec": 2487600,
+    "power": 312421
+   },
+   {
+    "level": 8,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "heavy_frame",
+      "level": 7
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 24
+     }
+    ],
+    "cost": {
+     "food": 6840000,
+     "wood": 6840000,
+     "stone": 5130000,
+     "gold": 4100000
+    },
+    "timeSec": 4975200,
+    "power": 574730
+   },
+   {
+    "level": 9,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "heavy_frame",
+      "level": 8
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 24
+     }
+    ],
+    "cost": {
+     "food": 10250000,
+     "wood": 10250000,
+     "stone": 7700000,
+     "gold": 6150000
+    },
+    "timeSec": 9954000,
+    "power": 1067727
+   },
+   {
+    "level": 10,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "heavy_frame",
+      "level": 9
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 24
+     }
+    ],
+    "cost": {
+     "food": 0,
+     "wood": 0,
+     "stone": 0,
+     "gold": 0
+    },
+    "timeSec": 0,
+    "power": 2006287
+   }
+  ]
+ },
+ {
+  "id": "medical_corps",
+  "tree": "military",
+  "tier": 12,
+  "maxLevel": 10,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "scutum",
+      "level": 1
+     },
+     {
+      "type": "research",
+      "id": "pavise",
+      "level": 1
+     },
+     {
+      "type": "research",
+      "id": "plate_armor",
+      "level": 1
+     },
+     {
+      "type": "research",
+      "id": "heavy_frame",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 23
+     }
+    ],
+    "cost": {
+     "food": 500000,
+     "wood": 500000,
+     "stone": 375000,
+     "gold": 250000
+    },
+    "timeSec": 38880,
+    "power": 5930
+   },
+   {
+    "level": 2,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "medical_corps",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 23
+     }
+    ],
+    "cost": {
+     "food": 750000,
+     "wood": 750000,
+     "stone": 563000,
+     "gold": 375000
+    },
+    "timeSec": 77760,
+    "power": 15604
+   },
+   {
+    "level": 3,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "medical_corps",
+      "level": 2
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 23
+     }
+    ],
+    "cost": {
+     "food": 1130000,
+     "wood": 1130000,
+     "stone": 845000,
+     "gold": 563000
+    },
+    "timeSec": 154800,
+    "power": 31674
+   },
+   {
+    "level": 4,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "medical_corps",
+      "level": 3
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 23
+     }
+    ],
+    "cost": {
+     "food": 1690000,
+     "wood": 1690000,
+     "stone": 1270000,
+     "gold": 844000
+    },
+    "timeSec": 309600,
+    "power": 58891
+   },
+   {
+    "level": 5,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "medical_corps",
+      "level": 4
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 24
+     }
+    ],
+    "cost": {
+     "food": 2530000,
+     "wood": 2530000,
+     "stone": 1900000,
+     "gold": 1270000
+    },
+    "timeSec": 622800,
+    "power": 105938
+   },
+   {
+    "level": 6,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "combined_arms",
+      "level": 5
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 24
+     }
+    ],
+    "cost": {
+     "food": 3800000,
+     "wood": 3800000,
+     "stone": 2850000,
+     "gold": 1900000
+    },
+    "timeSec": 1245600,
+    "power": 188950
+   },
+   {
+    "level": 7,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "medical_corps",
+      "level": 6
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 24
+     }
+    ],
+    "cost": {
+     "food": 5700000,
+     "wood": 5700000,
+     "stone": 4280000,
+     "gold": 3420000
+    },
+    "timeSec": 2487600,
+    "power": 341205
+   },
+   {
+    "level": 8,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "medical_corps",
+      "level": 7
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 24
+     }
+    ],
+    "cost": {
+     "food": 8550000,
+     "wood": 8550000,
+     "stone": 6420000,
+     "gold": 5130000
+    },
+    "timeSec": 4975200,
+    "power": 619354
+   },
+   {
+    "level": 9,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "medical_corps",
+      "level": 8
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 24
+     }
+    ],
+    "cost": {
+     "food": 12820000,
+     "wood": 12820000,
+     "stone": 9630000,
+     "gold": 7690000
+    },
+    "timeSec": 9954000,
+    "power": 1136111
+   },
+   {
+    "level": 10,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "medical_corps",
+      "level": 9
+     },
+     {
+      "type": "research",
+      "id": "combined_arms",
+      "level": 10
+     },
+     {
+      "type": "research",
+      "id": "encampment",
+      "level": 10
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 24
+     }
+    ],
+    "cost": {
+     "food": 19200000,
+     "wood": 19200000,
+     "stone": 14400000,
+     "gold": 11500000
+    },
+    "timeSec": 20008800,
+    "power": 2110314
+   }
+  ]
+ },
+ {
+  "id": "combined_arms",
+  "tree": "military",
+  "tier": 13,
+  "maxLevel": 10,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "medical_corps",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 23
+     }
+    ],
+    "cost": {
+     "food": 500000,
+     "wood": 500000,
+     "stone": 375000,
+     "gold": 250000
+    },
+    "timeSec": 38880,
+    "power": 5930
+   },
+   {
+    "level": 2,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "combined_arms",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 23
+     }
+    ],
+    "cost": {
+     "food": 750000,
+     "wood": 750000,
+     "stone": 563000,
+     "gold": 375000
+    },
+    "timeSec": 77760,
+    "power": 15604
+   },
+   {
+    "level": 3,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "combined_arms",
+      "level": 2
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 23
+     }
+    ],
+    "cost": {
+     "food": 1130000,
+     "wood": 1130000,
+     "stone": 845000,
+     "gold": 563000
+    },
+    "timeSec": 154800,
+    "power": 31674
+   },
+   {
+    "level": 4,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "combined_arms",
+      "level": 3
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 23
+     }
+    ],
+    "cost": {
+     "food": 1690000,
+     "wood": 1690000,
+     "stone": 1270000,
+     "gold": 844000
+    },
+    "timeSec": 309600,
+    "power": 58891
+   },
+   {
+    "level": 5,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "combined_arms",
+      "level": 4
+     },
+     {
+      "type": "research",
+      "id": "camouflage",
+      "level": 24
+     }
+    ],
+    "cost": {
+     "food": 2530000,
+     "wood": 2530000,
+     "stone": 1900000,
+     "gold": 1270000
+    },
+    "timeSec": 622800,
+    "power": 105938
+   },
+   {
+    "level": 6,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "combined_arms",
+      "level": 5
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 24
+     }
+    ],
+    "cost": {
+     "food": 3800000,
+     "wood": 3800000,
+     "stone": 2850000,
+     "gold": 1900000
+    },
+    "timeSec": 1245600,
+    "power": 188950
+   },
+   {
+    "level": 7,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "combined_arms",
+      "level": 6
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 24
+     }
+    ],
+    "cost": {
+     "food": 5700000,
+     "wood": 5700000,
+     "stone": 4280000,
+     "gold": 3420000
+    },
+    "timeSec": 2487600,
+    "power": 341205
+   },
+   {
+    "level": 8,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "combined_arms",
+      "level": 7
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 24
+     }
+    ],
+    "cost": {
+     "food": 8550000,
+     "wood": 8550000,
+     "stone": 6420000,
+     "gold": 5130000
+    },
+    "timeSec": 4975200,
+    "power": 619354
+   },
+   {
+    "level": 9,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "combined_arms",
+      "level": 8
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 24
+     }
+    ],
+    "cost": {
+     "food": 12820000,
+     "wood": 12820000,
+     "stone": 9630000,
+     "gold": 7690000
+    },
+    "timeSec": 9954000,
+    "power": 1136111
+   },
+   {
+    "level": 10,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "carriage",
+      "level": 9
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 25
+     }
+    ],
+    "cost": {
+     "food": 19200000,
+     "wood": 19200000,
+     "stone": 14400000,
+     "gold": 11500000
+    },
+    "timeSec": 20008800,
+    "power": 2110314
+   }
+  ]
+ },
+ {
+  "id": "encampment",
+  "tree": "military",
+  "tier": 13,
+  "maxLevel": 10,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "medical_corps",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 23
+     }
+    ],
+    "cost": {
+     "food": 500000,
+     "wood": 500000,
+     "stone": 375000,
+     "gold": 250000
+    },
+    "timeSec": 38880,
+    "power": 5930
+   },
+   {
+    "level": 2,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "encampment",
+      "level": 1
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 23
+     }
+    ],
+    "cost": {
+     "food": 750000,
+     "wood": 750000,
+     "stone": 563000,
+     "gold": 375000
+    },
+    "timeSec": 77760,
+    "power": 15604
+   },
+   {
+    "level": 3,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "encampment",
+      "level": 2
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 23
+     }
+    ],
+    "cost": {
+     "food": 1130000,
+     "wood": 1130000,
+     "stone": 845000,
+     "gold": 563000
+    },
+    "timeSec": 154800,
+    "power": 31674
+   },
+   {
+    "level": 4,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "encampment",
+      "level": 3
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 23
+     }
+    ],
+    "cost": {
+     "food": 1690000,
+     "wood": 1690000,
+     "stone": 1270000,
+     "gold": 844000
+    },
+    "timeSec": 309600,
+    "power": 58891
+   },
+   {
+    "level": 5,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "cartography",
+      "level": 4
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 24
+     }
+    ],
+    "cost": {
+     "food": 2530000,
+     "wood": 2530000,
+     "stone": 1900000,
+     "gold": 1270000
+    },
+    "timeSec": 622800,
+    "power": 105938
+   },
+   {
+    "level": 6,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "encampment",
+      "level": 5
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 24
+     }
+    ],
+    "cost": {
+     "food": 3800000,
+     "wood": 3800000,
+     "stone": 2850000,
+     "gold": 1900000
+    },
+    "timeSec": 1245600,
+    "power": 188950
+   },
+   {
+    "level": 7,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "encampment",
+      "level": 6
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 24
+     }
+    ],
+    "cost": {
+     "food": 5700000,
+     "wood": 5700000,
+     "stone": 4280000,
+     "gold": 3420000
+    },
+    "timeSec": 2487600,
+    "power": 341205
+   },
+   {
+    "level": 8,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "encampment",
+      "level": 7
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 24
+     }
+    ],
+    "cost": {
+     "food": 8550000,
+     "wood": 8550000,
+     "stone": 6420000,
+     "gold": 5130000
+    },
+    "timeSec": 4975200,
+    "power": 619354
+   },
+   {
+    "level": 9,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "encampment",
+      "level": 8
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 24
+     }
+    ],
+    "cost": {
+     "food": 12820000,
+     "wood": 12820000,
+     "stone": 9630000,
+     "gold": 7690000
+    },
+    "timeSec": 9954000,
+    "power": 1136111
+   },
+   {
+    "level": 10,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "encampment",
+      "level": 9
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 25
+     }
+    ],
+    "cost": {
+     "food": 19200000,
+     "wood": 19200000,
+     "stone": 14400000,
+     "gold": 11500000
+    },
+    "timeSec": 20008800,
+    "power": 2110314
+   }
+  ]
+ },
+ {
+  "id": "royal_guard",
+  "tree": "military",
+  "tier": 14,
+  "maxLevel": 1,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "medical_corps",
+      "level": 10
+     },
+     {
+      "type": "research",
+      "id": "scutum",
+      "level": 10
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 25
+     }
+    ],
+    "cost": {
+     "food": 10000000,
+     "wood": 10000000,
+     "stone": 7500000,
+     "gold": 10000000
+    },
+    "timeSec": 8643600,
+    "power": 485748
+   }
+  ]
+ },
+ {
+  "id": "royal_crossbowman",
+  "tree": "military",
+  "tier": 14,
+  "maxLevel": 1,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "medical_corps",
+      "level": 10
+     },
+     {
+      "type": "research",
+      "id": "pavise",
+      "level": 10
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 25
+     }
+    ],
+    "cost": {
+     "food": 10000000,
+     "wood": 10000000,
+     "stone": 7500000,
+     "gold": 10000000
+    },
+    "timeSec": 8643600,
+    "power": 485748
+   }
+  ]
+ },
+ {
+  "id": "royal_knight",
+  "tree": "military",
+  "tier": 14,
+  "maxLevel": 1,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "medical_corps",
+      "level": 10
+     },
+     {
+      "type": "research",
+      "id": "plate_armor",
+      "level": 10
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 25
+     }
+    ],
+    "cost": {
+     "food": 10000000,
+     "wood": 10000000,
+     "stone": 7500000,
+     "gold": 10000000
+    },
+    "timeSec": 8643600,
+    "power": 485748
+   }
+  ]
+ },
+ {
+  "id": "trebuchet",
+  "tree": "military",
+  "tier": 14,
+  "maxLevel": 1,
+  "levels": [
+   {
+    "level": 1,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "medical_corps",
+      "level": 10
+     },
+     {
+      "type": "research",
+      "id": "heavy_frame",
+      "level": 10
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 25
+     }
+    ],
+    "cost": {
+     "food": 10000000,
+     "wood": 10000000,
+     "stone": 7500000,
+     "gold": 10000000
+    },
+    "timeSec": 12965400,
+    "power": 672382
+   }
+  ]
+ }
+]

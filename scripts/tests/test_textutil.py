@@ -12,6 +12,16 @@ def test_parse_amount_none_and_empty():
     assert parse_amount("None") == 0
     assert parse_amount("") == 0
 
+def test_parse_amount_space_thousands():
+    assert parse_amount("1 351") == 1351
+
+def test_parse_amount_dotted_thousands():
+    assert parse_amount("5.250.000") == 5250000
+
+def test_parse_amount_placeholder():
+    assert parse_amount("?") == 0
+    assert parse_amount("???") == 0
+
 def test_parse_duration_units():
     assert parse_duration("2s") == 2
     assert parse_duration("5m") == 300
@@ -19,6 +29,13 @@ def test_parse_duration_units():
     assert parse_duration("22h") == 79200
     assert parse_duration("3d 12h") == 302400
     assert parse_duration("None") == 0
+
+def test_parse_duration_placeholder():
+    assert parse_duration("?") == 0
+
+def test_parse_duration_bare_number_is_seconds():
+    assert parse_duration("5") == 5
+    assert parse_duration("0") == 0
 
 def test_slugify():
     assert slugify("City Hall") == "city_hall"

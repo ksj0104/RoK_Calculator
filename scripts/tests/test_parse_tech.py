@@ -30,6 +30,19 @@ def test_masonry_table():
     assert {"type": "research", "id": "masonry", "level": 1} in lv2["requirements"]
 
 
+def test_placeholder_time_value_becomes_zero_with_warning():
+    # 일부 연구는 위키에 시간이 아직 "?"로만 적혀 있다 (예: Stone Saw, Machinery).
+    html = (
+        '<table class="tech-table"><tr><th>Level</th><th>Requirements</th><th>Cost</th>'
+        "<th>Time</th><th>Power</th></tr>"
+        "<tr><td>1</td><td>None</td><td>None</td><td>?</td><td>5</td></tr></table>"
+    )
+    warnings: list[str] = []
+    rows = parse_tech_table(html, "stone_saw", warnings)
+    assert rows[0]["timeSec"] == 0
+    assert any("unknown time value" in w for w in warnings)
+
+
 def test_requirements_redlink_kind_by_identity_not_markup_shape():
     # 레드링크(<span class="new">)로 렌더링된다는 것만으로 building이 되어서는 안 된다.
     # Academy는 building, 미작성 tech 페이지는 여전히 research여야 한다.
