@@ -12,6 +12,7 @@ export function CityTab({ state, dispatch }: { state: UserState; dispatch: Dispa
   const { t, name } = useLang();
   const configuredBuildings = Object.values(state.buildings).filter((level) => level > 0).length;
   const configuredResearch = Object.values(state.research).filter((level) => level > 0).length;
+  const buffHelpImage = `${import.meta.env.BASE_URL}images/buff-speed-example.png`;
   return (
     <div className="city-tab">
       <p className="drawer-intro">{t('city.intro')}</p>
@@ -59,7 +60,21 @@ export function CityTab({ state, dispatch }: { state: UserState; dispatch: Dispa
       <details className="drawer-section">
         <summary><span><span className="section-icon">✦</span>{t('city.buffs')}</span></summary>
         <div className="drawer-section-body buff-fields">
-          <p className="field-note">{t('city.buffNote')}</p>
+          <div className="buff-intro">
+            <p className="field-note">{t('city.buffNote')}</p>
+            <details className="buff-help">
+              <summary aria-label={t('city.buffHelpLabel')}>?</summary>
+              <div className="buff-help-card">
+                <strong>{t('city.buffHelpTitle')}</strong>
+                <p>{t('city.buffHelpBody')}</p>
+                <figure>
+                  <img src={buffHelpImage} alt={t('city.buffHelpImageAlt')} />
+                  <figcaption>{t('city.buffHelpExample')}</figcaption>
+                </figure>
+                <p className="buff-help-auto">{t('city.buffHelpAuto')}</p>
+              </div>
+            </details>
+          </div>
           <label><span>{t('city.buildingSpeed')}</span>
             <span className="number-field"><input type="number" min={0} max={500}
               value={state.buffs.buildingSpeedPct}
