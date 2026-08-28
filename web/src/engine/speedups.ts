@@ -1,5 +1,5 @@
 import type { ScheduleOptions, ScheduledTask } from './scheduler';
-import { effectiveDuration, schedule } from './scheduler';
+import { schedule } from './scheduler';
 import type { NodeId, SpeedupInventory, SpeedupType, TaskNode } from './types';
 import { SPEEDUP_DURATIONS } from './types';
 
@@ -58,8 +58,8 @@ export function allocateSpeedups(
     research: { ...inventory.research },
   };
   const used: SpeedupAllocation['used'] = {};
-  const override = new Map<NodeId, number>(opts.durationOverride ?? []);
-  const optsWith = () => ({ ...opts, durationOverride: override });
+  const reductions = new Map<NodeId, number>(opts.durationReduction ?? []);
+  const optsWith = () => ({ ...opts, durationReduction: reductions });
 
   let tasks = schedule(nodes, optsWith());
   const failed = new Set<NodeId>();
@@ -71,7 +71,7 @@ export function allocateSpeedups(
     let improved = false;
     for (const t of chain) {
       const node = nodes.get(t.key)!;
-      const current = override.get(t.key) ?? effectiveDuration(node, opts);
+      const current = t.durationSec;
       if (current <= 0) continue;
       const kinds: SpeedupType[] =
         node.kind === 'building' ? ['building', 'universal'] : ['research', 'universal'];
@@ -79,7 +79,7 @@ export function allocateSpeedups(
       const reduced = applyToTask(current, kinds, remaining, usedForTask);
       if (reduced > 0) {
         used[t.key] = usedForTask;
-        override.set(t.key, current - reduced);
+        reductions.set(t.key, (reductions.get(t.key) ?? 0) + reduced);
         improved = true;
         break; // 스케줄 재계산 후 다음 크리티컬 체인으로
       }

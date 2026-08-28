@@ -1,4 +1,5 @@
 import { criticalWeights } from './critical';
+import { researchBonus } from './speedBonuses';
 import type { NodeId, NodeKind, TaskNode } from './types';
 
 export interface ScheduleOptions {
@@ -6,6 +7,9 @@ export interface ScheduleOptions {
   buildingSpeedPct: number;
   researchSpeedPct: number;
   durationOverride?: Map<NodeId, number>; // 가속 적용 후 시간 (speedups.ts가 사용)
+  durationReduction?: Map<NodeId, number>;
+  researchLevels?: Readonly<Record<string, number>>;
+  preferredNodes?: ReadonlySet<NodeId>;
 }
 
 export interface ScheduledTask {
@@ -13,19 +17,26 @@ export interface ScheduledTask {
   startSec: number; endSec: number; durationSec: number;
 }
 
-export function effectiveDuration(node: TaskNode, opts: ScheduleOptions): number {
+export function effectiveDuration(
+  node: TaskNode,
+  opts: ScheduleOptions,
+  researchLevels: Readonly<Record<string, number>> = opts.researchLevels ?? {},
+): number {
   const override = opts.durationOverride?.get(node.key);
   if (override !== undefined) return override;
-  const pct = node.kind === 'building' ? opts.buildingSpeedPct : opts.researchSpeedPct;
-  return Math.ceil(node.timeSec / (1 + pct / 100));
+  const basePct = node.kind === 'building' ? opts.buildingSpeedPct : opts.researchSpeedPct;
+  const pct = basePct + researchBonus(node.kind, researchLevels);
+  const reduction = opts.durationReduction?.get(node.key) ?? 0;
+  return Math.max(0, Math.ceil(node.timeSec / (1 + pct / 100)) - reduction);
 }
 
 /** 이산 사건 시뮬레이션. 큐 0..builders-1 = 건설, builders = 연구. */
 export function schedule(
   nodes: Map<NodeId, TaskNode>, opts: ScheduleOptions,
 ): ScheduledTask[] {
-  const dur = (n: TaskNode) => effectiveDuration(n, opts);
-  const weights = criticalWeights(nodes, dur);
+  const estimate = (n: TaskNode) => effectiveDuration(n, opts);
+  const weights = criticalWeights(nodes, estimate);
+  const completedResearch = { ...(opts.researchLevels ?? {}) };
 
   const pendingDeps = new Map<NodeId, number>();
   const dependents = new Map<NodeId, NodeId[]>();
@@ -41,7 +52,11 @@ export function schedule(
   const pushReady = (key: NodeId) => {
     const kind = nodes.get(key)!.kind;
     ready[kind].push(key);
-    ready[kind].sort((a, b) => weights.get(b)! - weights.get(a)!); // 가중치 큰 순
+    ready[kind].sort((a, b) => {
+      const preferred = Number(opts.preferredNodes?.has(b) ?? false)
+        - Number(opts.preferredNodes?.has(a) ?? false);
+      return preferred || weights.get(b)! - weights.get(a)!;
+    });
   };
   for (const n of nodes.values()) if (n.deps.length === 0) pushReady(n.key);
 
@@ -60,7 +75,7 @@ export function schedule(
       const key = ready[kind].shift();
       if (key === undefined) continue;
       const node = nodes.get(key)!;
-      const d = dur(node);
+      const d = effectiveDuration(node, opts, completedResearch);
       const task: ScheduledTask = {
         key, kind, queue: q, startSec: now, endSec: now + d, durationSec: d,
       };
@@ -80,6 +95,13 @@ export function schedule(
         running[q] = null;
         queueFreeAt[q] = now;
         done++;
+        const completedNode = nodes.get(r.task.key)!;
+        if (completedNode.kind === 'research') {
+          completedResearch[completedNode.id] = Math.max(
+            completedResearch[completedNode.id] ?? 0,
+            completedNode.level,
+          );
+        }
         for (const dep of dependents.get(r.task.key) ?? []) {
           const left = pendingDeps.get(dep)! - 1;
           pendingDeps.set(dep, left);

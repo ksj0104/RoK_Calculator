@@ -22,6 +22,8 @@ export interface CatalogEntry {
 
 export interface Goal { type: NodeKind; id: string; level: number }
 
+export type PlanMode = 'fastest' | 'efficient';
+
 export type NodeId = string; // `${kind}:${id}:${level}`
 export const nodeId = (kind: NodeKind, id: string, level: number): NodeId =>
   `${kind}:${id}:${level}`;

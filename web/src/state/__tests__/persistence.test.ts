@@ -81,6 +81,23 @@ describe('buildExport / parseImport', () => {
     const parsed = parseImport(bad);
     expect(parsed.goals).toEqual([{ type: 'building', id: 'city_hall', level: 5 }]);
   });
+
+  it('sanitizes malformed and negative state values', () => {
+    const dirty = JSON.stringify({
+      version: 1,
+      state: {
+        buildings: { city_hall: -4, wall: 2.9 }, research: null,
+        speedups: { universal: null, building: { '1m': -2 }, research: { '5m': 3.8 } },
+        buffs: { buildingSpeedPct: 999, researchSpeedPct: -5 }, secondBuilder: 'yes',
+      },
+      goals: [],
+    });
+    const parsed = parseImport(dirty);
+    expect(parsed.state.buildings).toMatchObject({ city_hall: 0, wall: 2 });
+    expect(parsed.state.speedups).toEqual({ universal: {}, building: { '1m': 0 }, research: { '5m': 3 } });
+    expect(parsed.state.buffs).toEqual({ buildingSpeedPct: 500, researchSpeedPct: 0 });
+    expect(parsed.state.secondBuilder).toBe(false);
+  });
 });
 
 describe('userState reducer replace action', () => {
@@ -89,5 +106,12 @@ describe('userState reducer replace action', () => {
     const next = sampleState();
     const result = reducer(initial, { type: 'replace', state: next });
     expect(result).toEqual(next);
+  });
+
+  it('clamps numeric actions to safe ranges', () => {
+    let state = reducer(defaultUserState(), { type: 'setSpeedup', speedupType: 'building', duration: '1m', count: -3 });
+    state = reducer(state, { type: 'setBuff', key: 'buildingSpeedPct', value: 999 });
+    expect(state.speedups.building['1m']).toBe(0);
+    expect(state.buffs.buildingSpeedPct).toBe(500);
   });
 });

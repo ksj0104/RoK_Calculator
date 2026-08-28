@@ -1,25 +1,37 @@
 import { useMemo } from 'react';
 import { catalog, iconUrl } from '../catalog';
 import { computePlan } from '../engine/plan';
-import type { Goal, Resource, UserState } from '../engine/types';
-import { useLang } from '../i18n';
+import type { Goal, PlanMode, Resource, UserState } from '../engine/types';
+import { useLang } from '../i18n/useLang';
 import { formatDuration, formatNumber } from './format';
+import { PlanTree } from './PlanTree';
 
 const RESOURCES: Resource[] = ['food', 'wood', 'stone', 'gold'];
 
-export function ResultTab({ state, goals }: { state: UserState; goals: Goal[] }) {
+export function ResultTab({ state, goals, mode }: { state: UserState; goals: Goal[]; mode: PlanMode }) {
   const { t, name } = useLang();
   const plan = useMemo(
-    () => (goals.length > 0 ? computePlan(catalog, state, goals) : null),
-    [state, goals]);
+    () => (goals.length > 0 ? computePlan(catalog, state, goals, mode) : null),
+    [state, goals, mode]);
 
-  if (!plan) return <section><p>{t('result.noGoals')}</p></section>;
-  if (plan.tasks.length === 0) return <section><p>{t('result.done')}</p></section>;
+  if (!plan) {
+    return (
+      <section className="result-panel result-empty">
+        <span className="step-number">03</span>
+        <div className="empty-orbit" aria-hidden="true"><span>⌁</span></div>
+        <h2>{t('result.waiting')}</h2>
+        <p>{t('result.noGoals')}</p>
+      </section>
+    );
+  }
+  if (plan.tasks.length === 0) {
+    return <section className="result-panel result-empty"><h2>{t('result.done')}</h2></section>;
+  }
 
-  const queueName = (q: number) => {
+  const queueName = (queue: number) => {
     const builders = state.secondBuilder ? 2 : 1;
-    if (q >= builders) return t('result.queue.research');
-    return t(q === 0 ? 'result.queue.builder1' : 'result.queue.builder2');
+    if (queue >= builders) return t('result.queue.research');
+    return t(queue === 0 ? 'result.queue.builder1' : 'result.queue.builder2');
   };
 
   const usedSummary: Record<string, number> = {};
@@ -33,63 +45,78 @@ export function ResultTab({ state, goals }: { state: UserState; goals: Goal[] })
   }
 
   return (
-    <div>
-      <section>
-        <h2>{t('result.totalTime')}</h2>
-        <div className="stat-cards">
-          <div className="stat-card">
-            <div>{t('result.beforeSpeedups')}</div>
-            <div className="value">{formatDuration(plan.totalSecRaw, t)}</div>
-          </div>
-          <div className="stat-card">
-            <div>{t('result.afterSpeedups')}</div>
-            <div className="value">{formatDuration(plan.totalSecWithSpeedups, t)}</div>
-          </div>
-          <div className="stat-card">
-            <div>{t('result.totalPower')}</div>
-            <div className="value">+{formatNumber(plan.totalPower)}</div>
-          </div>
+    <section className="result-panel">
+      <div className="section-heading result-heading">
+        <div>
+          <span className="step-number">03</span>
+          <div><h2>{t('result.title')}</h2><p>{t(`result.${mode}Route`)}</p></div>
         </div>
-      </section>
-      <section>
-        <h2>{t('result.totalCost')}</h2>
-        <div className="stat-cards">
-          {RESOURCES.map((r) => (
-            <div className="stat-card" key={r}>
-              <div>{t(`res.${r}`)}</div>
-              <div className="value">{formatNumber(plan.totalCost[r])}</div>
-            </div>
-          ))}
-        </div>
-      </section>
-      {Object.keys(usedSummary).length > 0 && (
-        <section>
-          <h2>{t('result.speedupsUsed')}</h2>
-          <ul>{Object.entries(usedSummary).map(([k, v]) => <li key={k}>{k} × {v}</li>)}</ul>
-        </section>
-      )}
-      <section>
-        <h2>{t('result.timeline')}</h2>
-        <table className="timeline">
-          <thead>
-            <tr><th>#</th><th /><th>{t('result.start')}</th><th>{t('result.duration')}</th><th /></tr>
-          </thead>
-          <tbody>
-            {plan.tasks.map((task, i) => (
-              <tr key={task.key}>
-                <td>{i + 1}</td>
-                <td>
-                  <img src={iconUrl(task.kind, task.node.id)} alt="" />
-                  {name(task.node.id)} {t('level')}{task.node.level}
-                </td>
-                <td>{formatDuration(task.startSec, t)}</td>
-                <td>{formatDuration(task.durationSec, t)}</td>
-                <td>{queueName(task.queue)}</td>
-              </tr>
+        <span className={`mode-badge ${mode}`}>{t(`mode.${mode}`)}</span>
+      </div>
+
+      {plan.selectedBoosts.length > 0 && (
+        <div className="optimization-callout">
+          <span className="callout-icon">⌁</span>
+          <div><strong>{t('result.optimized')}</strong><p>{t('result.optimizedDesc')}</p></div>
+          <div className="boost-list">
+            {plan.selectedBoosts.map((boost) => (
+              <span key={boost.id}>
+                <img src={iconUrl('research', boost.id)} alt="" />
+                {name(boost.id)} {t('level')}{boost.level} · +{boost.bonusPct}%
+              </span>
             ))}
-          </tbody>
-        </table>
-      </section>
-    </div>
+          </div>
+        </div>
+      )}
+
+      <div className="result-stats">
+        <article className="primary-stat">
+          <span>{t('result.afterSpeedups')}</span>
+          <strong>{formatDuration(plan.totalSecWithSpeedups, t)}</strong>
+          <small>{t('result.beforeSpeedups')}: {formatDuration(plan.totalSecRaw, t)}</small>
+        </article>
+        <article><span>{t('result.tasks')}</span><strong>{formatNumber(plan.tasks.length)}</strong></article>
+        <article><span>{t('result.totalPower')}</span><strong>+{formatNumber(plan.totalPower)}</strong></article>
+        {RESOURCES.map((resource) => (
+          <article key={resource}><span>{t(`res.${resource}`)}</span>
+            <strong>{formatNumber(plan.totalCost[resource])}</strong></article>
+        ))}
+      </div>
+
+      {Object.keys(usedSummary).length > 0 && (
+        <div className="speedup-summary">
+          <strong>{t('result.speedupsUsed')}</strong>
+          {Object.entries(usedSummary).map(([key, value]) => <span key={key}>{key} × {value}</span>)}
+        </div>
+      )}
+
+      <div className="tree-heading">
+        <div><h3>{t('result.techTree')}</h3><p>{t('result.techTreeDesc')}</p></div>
+        <span>{t('result.scrollHint')}</span>
+      </div>
+      <PlanTree plan={plan} />
+
+      <details className="timeline-details">
+        <summary>{t('result.timeline')} · {plan.tasks.length}</summary>
+        <div className="timeline-scroll">
+          <table className="timeline">
+            <thead><tr><th>#</th><th>{t('result.task')}</th><th>{t('result.start')}</th>
+              <th>{t('result.duration')}</th><th>{t('result.queue')}</th></tr></thead>
+            <tbody>
+              {plan.tasks.map((task, index) => (
+                <tr key={task.key}>
+                  <td>{index + 1}</td>
+                  <td><img src={iconUrl(task.kind, task.node.id)} alt="" />
+                    {name(task.node.id)} {t('level')}{task.node.level}</td>
+                  <td>{formatDuration(task.startSec, t)}</td>
+                  <td>{formatDuration(task.durationSec, t)}</td>
+                  <td>{queueName(task.queue)}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </details>
+    </section>
   );
 }

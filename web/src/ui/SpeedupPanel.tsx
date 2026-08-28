@@ -1,7 +1,7 @@
 import type { Dispatch } from 'react';
 import type { UserState } from '../engine/types';
 import { SPEEDUP_DURATIONS, type SpeedupType } from '../engine/types';
-import { useLang } from '../i18n';
+import { useLang } from '../i18n/useLang';
 import type { Action } from '../state/userState';
 
 const TYPES: SpeedupType[] = ['universal', 'building', 'research'];

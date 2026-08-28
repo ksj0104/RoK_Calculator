@@ -23,4 +23,12 @@ describe('실데이터', () => {
       }
     }
   });
+
+  it('효율 경로는 시청 25의 완료 시간을 최단 경로보다 늘리지 않는다', () => {
+    const goals = [{ type: 'building' as const, id: 'city_hall', level: 25 }];
+    const fastest = computePlan(catalog, defaultUserState(), goals, 'fastest');
+    const efficient = computePlan(catalog, defaultUserState(), goals, 'efficient');
+    expect(efficient.totalSecWithSpeedups).toBeLessThanOrEqual(fastest.totalSecWithSpeedups);
+    expect(efficient.selectedBoosts.length).toBeGreaterThan(0);
+  });
 });

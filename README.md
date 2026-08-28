@@ -17,6 +17,12 @@ npm install
 npm run dev
 ```
 
+## GitHub Pages 배포
+
+`master` 브랜치에 변경 사항을 푸시하면 `.github/workflows/deploy.yml`이 린트, 테스트, 프로덕션 빌드를 검증한 뒤 GitHub Pages에 자동 배포합니다. Vite는 상대 경로로 빌드되므로 저장소 이름 아래의 프로젝트 페이지에서도 아이콘과 번들이 정상 로드됩니다.
+
+최초 배포 후 저장소의 **Settings → Pages**에서 배포 소스가 **GitHub Actions**인지 확인하세요. 수동 재배포는 **Actions → Deploy to GitHub Pages → Run workflow**에서 실행할 수 있습니다.
+
 브라우저에서 안내된 주소(기본 `http://localhost:5173`)로 접속하면 됩니다.
 
 ## 데이터 재수집
