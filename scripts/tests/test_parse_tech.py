@@ -2,7 +2,12 @@ from pathlib import Path
 
 from bs4 import BeautifulSoup
 
-from rok_wiki.parse_tech import _requirements_from_cell, parse_tech_list, parse_tech_table
+from rok_wiki.parse_tech import (
+    _requirements_from_cell,
+    parse_tech_effect_name,
+    parse_tech_list,
+    parse_tech_table,
+)
 
 FIX = Path(__file__).parent / "fixtures"
 
@@ -28,6 +33,27 @@ def test_masonry_table():
     assert lv1["power"] == 269
     lv2 = rows[1]
     assert {"type": "research", "id": "masonry", "level": 1} in lv2["requirements"]
+
+
+def test_effect_column_parsed_into_rows_and_name():
+    # Masonry 표의 두 번째 컬럼("Building Speed")이 효과다 — 헤더명과 레벨별 수치를 추출한다.
+    html = (FIX / "masonry.html").read_text(encoding="utf-8")
+    assert parse_tech_effect_name(html) == "Building Speed"
+    rows = parse_tech_table(html, "masonry")
+    assert rows[0]["effect"] == "+1.0%"
+    assert rows[1]["effect"] == "+3.0%"
+
+
+def test_no_effect_column_gives_none_and_no_effect_key():
+    # 병종 해금 연구(예: Bowman)는 효과 컬럼이 없다.
+    html = (
+        '<table class="tech-table"><tr><th>Level</th><th>Requirements</th><th>Cost</th>'
+        "<th>Time</th><th>Power</th></tr>"
+        "<tr><td>1</td><td>None</td><td>None</td><td>10s</td><td>5</td></tr></table>"
+    )
+    assert parse_tech_effect_name(html) is None
+    rows = parse_tech_table(html, "bowman")
+    assert "effect" not in rows[0]
 
 
 def test_missing_power_column_defaults_to_zero_with_warning():

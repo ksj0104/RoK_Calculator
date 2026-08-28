@@ -6,5 +6,15 @@
    }
   }
  },
- "research": {}
+ "research": {
+  "quarrying": {
+   "effectName": "Stone Gathering Unlock"
+  },
+  "metallurgy": {
+   "effectName": "Gold Gathering Unlock"
+  },
+  "jewelry": {
+   "effectName": "Gem Gathering Unlock"
+  }
+ }
 }

@@ -10,13 +10,15 @@ export interface LevelData {
   cost: Cost;
   timeSec: number;
   power: number;
+  effect?: string;       // 연구 효과 수치(예: '+1.0%') — 위키 효과 컬럼 원문
 }
 
 export interface CatalogEntry {
   id: string;
   kind: NodeKind;
-  category: string;      // building: economic|military|other, research: economic|military(tree)
+  category: string;      // building: economic|military(tree), research: economic|military(tree)
   maxLevel: number;
+  effectName?: string | null;  // 연구 효과명(예: 'Building Speed'), null이면 병종 해금 연구
   levels: LevelData[];
 }
 

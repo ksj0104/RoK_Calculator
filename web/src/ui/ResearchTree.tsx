@@ -3,6 +3,7 @@ import { iconUrl, research } from '../catalog';
 import type { UserState } from '../engine/types';
 import { useLang } from '../i18n/useLang';
 import type { Action } from '../state/userState';
+import { effectLabel, effectRange } from './effects';
 
 export function ResearchTree({ state, dispatch }: { state: UserState; dispatch: Dispatch<Action> }) {
   const { t, name } = useLang();
@@ -23,10 +24,15 @@ export function ResearchTree({ state, dispatch }: { state: UserState; dispatch: 
           <div className="city-category" key={tier}>
             <h3>{t('tree.tier', { n: tier })}</h3>
             <div className="building-grid">
-              {items.filter((r) => Number((r as CatalogWithTier).tier) === tier).map((r) => (
+              {items.filter((r) => Number((r as CatalogWithTier).tier) === tier).map((r) => {
+                const label = effectLabel(r.effectName, t);
+                const range = effectRange(r);
+                const effectText = range ? `${label} ${range}` : label;
+                return (
                 <label className="level-card" key={r.id}>
                   <img src={iconUrl('research', r.id)} alt="" loading="lazy" />
                   <span className="card-name">{name(r.id)}</span>
+                  <span className="card-effect" title={effectText}>{effectText}</span>
                   <select aria-label={`${name(r.id)} ${t('level')}`}
                     value={state.research[r.id] ?? 0}
                     onChange={(e) => dispatch({ type: 'setResearch', id: r.id, level: Number(e.target.value) })}
@@ -36,7 +42,8 @@ export function ResearchTree({ state, dispatch }: { state: UserState; dispatch: 
                     ))}
                   </select>
                 </label>
-              ))}
+                );
+              })}
             </div>
           </div>
         ))}

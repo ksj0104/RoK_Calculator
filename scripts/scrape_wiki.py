@@ -13,7 +13,7 @@ from typing import Callable
 from rok_wiki.api import fetch_html, fetch_parse
 from rok_wiki.icons import download_all_icons
 from rok_wiki.parse_buildings import parse_building_table
-from rok_wiki.parse_tech import parse_tech_list, parse_tech_table
+from rok_wiki.parse_tech import parse_tech_effect_name, parse_tech_list, parse_tech_table
 from rok_wiki.textutil import slugify
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -42,9 +42,13 @@ def _redirect_target(wikitext: str) -> str | None:
 
 def apply_overrides(entries: list[dict], overrides: dict, section: str) -> None:
     """overrides.json 형식: {"buildings": {"city_hall": {"5": {"timeSec": 3600}}}, "research": {...}}
-    id → 레벨(문자열) → 덮어쓸 필드 부분 dict."""
+    id → 레벨(문자열) → 덮어쓸 필드 부분 dict. 레벨 대신 "effectName" 키를 쓰면
+    항목 수준의 효과명을 덮어쓴다 (예: 효과 컬럼이 없는 채집 해금 연구)."""
     for entry in entries:
         for level_str, patch in overrides.get(section, {}).get(entry["id"], {}).items():
+            if level_str == "effectName":
+                entry["effectName"] = patch
+                continue
             for row in entry["levels"]:
                 if row["level"] == int(level_str):
                     row.update(patch)
@@ -52,11 +56,12 @@ def apply_overrides(entries: list[dict], overrides: dict, section: str) -> None:
 
 def resolve_research(
     tech_list: list[dict],
-    parse_one: Callable[[str], list[dict]],
+    parse_one: Callable[[str], dict],
     fetch_wikitext: Callable[[str], str],
     warnings: list[str],
 ) -> tuple[list[dict], dict[str, str], list[tuple[str, str]]]:
     """tech_list의 각 항목을 parse_one으로 실제 파싱해 research 리스트를 만든다.
+    parse_one은 {"levels": [...], "effectName": str | None} 형태를 반환한다.
 
     문명별 병사 명칭(예: Legionary)은 공용 연구 페이지(Long Swordsman)로 가는 위키
     리다이렉트인 경우가 있다 — parse_one이 실패하면 fetch_wikitext로 리다이렉트 여부를
@@ -73,9 +78,11 @@ def resolve_research(
     aliases: list[tuple[str, str]] = []
 
     def add(tech_name: str, tid: str, tree: str, tier: int) -> None:
-        levels = parse_one(tech_name)
+        parsed = parse_one(tech_name)
+        levels = parsed["levels"]
         names_en[tid] = tech_name
         research.append({"id": tid, "tree": tree, "tier": tier,
+                         "effectName": parsed["effectName"],
                          "maxLevel": max(r["level"] for r in levels), "levels": levels})
         research_ids.add(tid)
 
@@ -144,9 +151,11 @@ def main() -> int:
         buildings.append({"id": bid, "category": category,
                           "maxLevel": max(r["level"] for r in levels), "levels": levels})
 
-    def parse_one(tech_name: str) -> list[dict]:
+    def parse_one(tech_name: str) -> dict:
         page = f"Technology/{tech_name.replace(' ', '_')}"
-        return parse_tech_table(fetch_html(page), slugify(tech_name), warnings)
+        html = fetch_html(page)
+        return {"levels": parse_tech_table(html, slugify(tech_name), warnings),
+                "effectName": parse_tech_effect_name(html)}
 
     def fetch_wikitext(tech_name: str) -> str:
         return fetch_parse(f"Technology/{tech_name.replace(' ', '_')}")["wikitext"]

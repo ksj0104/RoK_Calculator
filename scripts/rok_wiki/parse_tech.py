@@ -73,16 +73,11 @@ def _requirements_from_cell(cell) -> list[dict]:
     return reqs
 
 
-def parse_tech_table(html: str, tech_id: str, warnings: list[str] | None = None) -> list[dict]:
-    if warnings is None:
-        warnings = []
-    soup = BeautifulSoup(html, "html.parser")
-    table = soup.find("table", class_="tech-table") or soup.find("table", class_="article-table")
-    if table is None:
-        raise ValueError(f"{tech_id}: no tech table found")
+def _find_tech_table(soup):
+    return soup.find("table", class_="tech-table") or soup.find("table", class_="article-table")
 
-    header_cells = [th.get_text(" ", strip=True).lower() for th in table.find_all("th")]
 
+def _column_indices(header_cells: list[str]) -> dict[str, int | None]:
     def col(*names: str) -> int | None:
         # 정확 일치 우선 — parse_buildings.parse_building_table의 col()과 동일한 이유
         # (부분일치만 쓰면 예: "Time"이 다른 헤더에 잘못 매치될 수 있다).
@@ -94,13 +89,48 @@ def parse_tech_table(html: str, tech_id: str, warnings: list[str] | None = None)
                 return i
         return None
 
-    idx = {
+    return {
         "level": col("level", "lvl"),
         "requirement": col("requirement"),
         "cost": col("cost", "resources"),
         "time": col("time"),
         "power": col("power"),
     }
+
+
+def _effect_index(header_cells: list[str], idx: dict[str, int | None]) -> int | None:
+    """알려진 컬럼(레벨/요구/비용/시간/파워)에 배정되지 않은 첫 헤더가 효과 컬럼이다
+    (예: "Building Speed", "Siege Unit Attack"). 병종 해금 연구는 효과 컬럼이 없다."""
+    claimed = {i for i in idx.values() if i is not None}
+    for i in range(len(header_cells)):
+        if i not in claimed:
+            return i
+    return None
+
+
+def parse_tech_effect_name(html: str) -> str | None:
+    """연구 표의 효과 컬럼 헤더명(원문 표기)을 반환한다. 효과 컬럼이 없으면 None."""
+    soup = BeautifulSoup(html, "html.parser")
+    table = _find_tech_table(soup)
+    if table is None:
+        return None
+    headers_raw = [th.get_text(" ", strip=True) for th in table.find_all("th")]
+    header_cells = [h.lower() for h in headers_raw]
+    i = _effect_index(header_cells, _column_indices(header_cells))
+    return headers_raw[i] if i is not None else None
+
+
+def parse_tech_table(html: str, tech_id: str, warnings: list[str] | None = None) -> list[dict]:
+    if warnings is None:
+        warnings = []
+    soup = BeautifulSoup(html, "html.parser")
+    table = _find_tech_table(soup)
+    if table is None:
+        raise ValueError(f"{tech_id}: no tech table found")
+
+    header_cells = [th.get_text(" ", strip=True).lower() for th in table.find_all("th")]
+    idx = _column_indices(header_cells)
+    effect_idx = _effect_index(header_cells, idx)
     for required in ("level", "cost", "time"):
         if idx[required] is None:
             raise ValueError(f"{tech_id}: missing column {required!r} in {header_cells}")
@@ -129,12 +159,17 @@ def parse_tech_table(html: str, tech_id: str, warnings: list[str] | None = None)
         if idx["power"] is not None and is_placeholder(power_text):
             warnings.append(f"{tech_id} level {level}: unknown power value {power_text!r} on wiki, using 0")
 
-        rows.append({
+        row = {
             "level": level,
             "requirements": _requirements_from_cell(cells[idx["requirement"]]) if idx["requirement"] is not None else [],
             "cost": _cost_from_cell(cost_cell),
             "timeSec": parse_duration(time_text),
             "power": parse_amount(power_text),
-        })
+        }
+        if effect_idx is not None and len(cells) > effect_idx:
+            effect_text = cells[effect_idx].get_text(" ", strip=True)
+            if effect_text:
+                row["effect"] = effect_text
+        rows.append(row)
     rows.sort(key=lambda r: r["level"])
     return rows

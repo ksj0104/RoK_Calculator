@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react';
 import { buildings, iconUrl, research } from '../catalog';
 import type { CatalogEntry, Goal, NodeKind, PlanMode } from '../engine/types';
 import { useLang } from '../i18n/useLang';
+import { effectLabel, effectValueAt, requirementsUpTo } from './effects';
 
 const CH_PRESETS = [8, 11, 16, 17, 21, 22, 25];
 
@@ -136,6 +137,38 @@ export function GoalsTab({ goals, setGoals, mode, setMode }: GoalsTabProps) {
             onClick={() => addGoal({ type: kind, id: selected.id, level: Math.min(level, selected.maxLevel) })}>
             {t('goals.add')}
           </button>
+        </div>
+
+        <div className="goal-detail">
+          {kind === 'research' && (
+            <div className="goal-detail-row">
+              <span>{t('goals.effect')}</span>
+              <strong>
+                {effectLabel(selected.effectName, t)}
+                {(() => {
+                  const value = effectValueAt(selected, Math.min(level, selected.maxLevel));
+                  return value ? ` ${value}` : '';
+                })()}
+              </strong>
+            </div>
+          )}
+          <div className="goal-detail-row">
+            <span>{t('goals.requires')}</span>
+            {(() => {
+              const requirements = requirementsUpTo(selected, Math.min(level, selected.maxLevel));
+              if (requirements.length === 0) return <em>{t('goals.requiresNone')}</em>;
+              return (
+                <span className="req-chips">
+                  {requirements.map((req) => (
+                    <span className="req-chip" key={`${req.type}:${req.id}`}>
+                      <img src={iconUrl(req.type, req.id)} alt="" loading="lazy" />
+                      {name(req.id)} {t('level')}{req.level}
+                    </span>
+                  ))}
+                </span>
+              );
+            })()}
+          </div>
         </div>
       </section>
 

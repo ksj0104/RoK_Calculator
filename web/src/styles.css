@@ -79,6 +79,8 @@ button:focus-visible, input:focus-visible, select:focus-visible, summary:focus-v
   color: var(--text); font-size: .64rem; line-height: 1.15; text-align: center; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
 .level-card select { width: 100%; padding: 3px; border: 1px solid var(--line); border-radius: 5px;
   background: var(--surface-2); color: var(--muted); font-size: .66rem; }
+.card-effect { width: 100%; margin: -2px 0 4px; overflow: hidden; color: var(--gold-soft);
+  font-size: .58rem; text-align: center; text-overflow: ellipsis; white-space: nowrap; }
 .segmented { display: inline-flex; padding: 3px; border: 1px solid var(--line); border-radius: 9px; background: var(--bg); }
 .segmented button { border: 0; border-radius: 6px; padding: 7px 14px; background: transparent; color: var(--muted); font-size: .78rem; }
 .segmented button.active { background: var(--surface-3); color: var(--gold-soft); box-shadow: inset 0 0 0 1px var(--line-bright); }
@@ -183,6 +185,16 @@ button:focus-visible, input:focus-visible, select:focus-visible, summary:focus-v
   background: var(--bg); color: var(--text); }
 .primary-button { padding: 9px 15px; border: 1px solid #e3bd6c; border-radius: 8px;
   background: var(--gold); color: #17140e; font-size: .76rem; font-weight: 800; }
+.goal-detail { margin-top: 8px; padding: 9px 12px; display: flex; flex-direction: column; gap: 7px;
+  border: 1px dashed var(--line); border-radius: 8px; font-size: .7rem; }
+.goal-detail-row { display: flex; align-items: baseline; gap: 9px; }
+.goal-detail-row > span:first-child { flex-shrink: 0; color: var(--muted); }
+.goal-detail-row strong { color: var(--gold-soft); }
+.goal-detail-row em { color: var(--muted); font-style: normal; }
+.req-chips { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; }
+.req-chip { display: inline-flex; align-items: center; gap: 5px; padding: 3px 7px;
+  border-radius: 5px; background: var(--surface-2); color: var(--text); }
+.req-chip img { width: 16px; height: 16px; object-fit: contain; }
 .primary-button:hover { background: var(--gold-soft); }
 .compact-heading { margin-bottom: 12px; }
 .selected-goals { display: flex; flex-wrap: wrap; gap: 8px; }

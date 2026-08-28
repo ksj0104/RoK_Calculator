@@ -3,6 +3,7 @@
   "id": "quarrying",
   "tree": "economic",
   "tier": 1,
+  "effectName": "Stone Gathering Unlock",
   "maxLevel": 1,
   "levels": [
    {
@@ -29,6 +30,7 @@
   "id": "irrigation",
   "tree": "economic",
   "tier": 2,
+  "effectName": "Food Production",
   "maxLevel": 5,
   "levels": [
    {
@@ -52,7 +54,8 @@
      "gold": 0
     },
     "timeSec": 600,
-    "power": 44
+    "power": 44,
+    "effect": "+1.0%"
    },
    {
     "level": 2,
@@ -75,7 +78,8 @@
      "gold": 0
     },
     "timeSec": 900,
-    "power": 142
+    "power": 142,
+    "effect": "+3.0%"
    },
    {
     "level": 3,
@@ -98,7 +102,8 @@
      "gold": 0
     },
     "timeSec": 2000,
-    "power": 347
+    "power": 347,
+    "effect": "+6.0%"
    },
    {
     "level": 4,
@@ -121,7 +126,8 @@
      "gold": 0
     },
     "timeSec": 4980,
-    "power": 797
+    "power": 797,
+    "effect": "+10.0%"
    },
    {
     "level": 5,
@@ -144,7 +150,8 @@
      "gold": 0
     },
     "timeSec": 9960,
-    "power": 1697
+    "power": 1697,
+    "effect": "+15.0%"
    }
   ]
  },
@@ -152,6 +159,7 @@
   "id": "handsaw",
   "tree": "economic",
   "tier": 2,
+  "effectName": "Wood Production",
   "maxLevel": 5,
   "levels": [
    {
@@ -175,7 +183,8 @@
      "gold": 0
     },
     "timeSec": 600,
-    "power": 44
+    "power": 44,
+    "effect": "+1.0%"
    },
    {
     "level": 2,
@@ -198,7 +207,8 @@
      "gold": 0
     },
     "timeSec": 900,
-    "power": 142
+    "power": 142,
+    "effect": "+3.0%"
    },
    {
     "level": 3,
@@ -221,7 +231,8 @@
      "gold": 0
     },
     "timeSec": 2000,
-    "power": 347
+    "power": 347,
+    "effect": "+6.0%"
    },
    {
     "level": 4,
@@ -244,7 +255,8 @@
      "gold": 0
     },
     "timeSec": 4980,
-    "power": 797
+    "power": 797,
+    "effect": "+10.0%"
    },
    {
     "level": 5,
@@ -267,7 +279,8 @@
      "gold": 0
     },
     "timeSec": 10020,
-    "power": 1697
+    "power": 1697,
+    "effect": "+15.0%"
    }
   ]
  },
@@ -275,6 +288,7 @@
   "id": "sickle",
   "tree": "economic",
   "tier": 3,
+  "effectName": "Gathering Speed",
   "maxLevel": 5,
   "levels": [
    {
@@ -298,7 +312,8 @@
      "gold": 0
     },
     "timeSec": 900,
-    "power": 161
+    "power": 161,
+    "effect": "+1.0%"
    },
    {
     "level": 2,
@@ -321,7 +336,8 @@
      "gold": 0
     },
     "timeSec": 1800,
-    "power": 483
+    "power": 483,
+    "effect": "+3.0%"
    },
    {
     "level": 3,
@@ -344,7 +360,8 @@
      "gold": 0
     },
     "timeSec": 3600,
-    "power": 1127
+    "power": 1127,
+    "effect": "+6.0%"
    },
    {
     "level": 4,
@@ -367,7 +384,8 @@
      "gold": 0
     },
     "timeSec": 7200,
-    "power": 2415
+    "power": 2415,
+    "effect": "+10.0%"
    },
    {
     "level": 5,
@@ -390,7 +408,8 @@
      "gold": 0
     },
     "timeSec": 14400,
-    "power": 4991
+    "power": 4991,
+    "effect": "+15.0%"
    }
   ]
  },
@@ -398,6 +417,7 @@
   "id": "masonry",
   "tree": "economic",
   "tier": 3,
+  "effectName": "Building Speed",
   "maxLevel": 5,
   "levels": [
    {
@@ -426,7 +446,8 @@
      "gold": 0
     },
     "timeSec": 3600,
-    "power": 269
+    "power": 269,
+    "effect": "+1.0%"
    },
    {
     "level": 2,
@@ -449,7 +470,8 @@
      "gold": 0
     },
     "timeSec": 5400,
-    "power": 672
+    "power": 672,
+    "effect": "+3.0%"
    },
    {
     "level": 3,
@@ -472,7 +494,8 @@
      "gold": 0
     },
     "timeSec": 7200,
-    "power": 1272
+    "power": 1272,
+    "effect": "+6.0%"
    },
    {
     "level": 4,
@@ -495,7 +518,8 @@
      "gold": 0
     },
     "timeSec": 10800,
-    "power": 2141
+    "power": 2141,
+    "effect": "+10.0%"
    },
    {
     "level": 5,
@@ -518,7 +542,8 @@
      "gold": 0
     },
     "timeSec": 28800,
-    "power": 3918
+    "power": 3918,
+    "effect": "+15.0%"
    }
   ]
  },
@@ -526,6 +551,7 @@
   "id": "handaxe",
   "tree": "economic",
   "tier": 3,
+  "effectName": "Gathering Speed",
   "maxLevel": 5,
   "levels": [
    {
@@ -549,7 +575,8 @@
      "gold": 0
     },
     "timeSec": 900,
-    "power": 161
+    "power": 161,
+    "effect": "+1.0%"
    },
    {
     "level": 2,
@@ -572,7 +599,8 @@
      "gold": 0
     },
     "timeSec": 1800,
-    "power": 483
+    "power": 483,
+    "effect": "+3.0%"
    },
    {
     "level": 3,
@@ -595,7 +623,8 @@
      "gold": 0
     },
     "timeSec": 3600,
-    "power": 1127
+    "power": 1127,
+    "effect": "+6.0%"
    },
    {
     "level": 4,
@@ -618,7 +647,8 @@
      "gold": 0
     },
     "timeSec": 7200,
-    "power": 2415
+    "power": 2415,
+    "effect": "+10.0%"
    },
    {
     "level": 5,
@@ -641,7 +671,8 @@
      "gold": 0
     },
     "timeSec": 14400,
-    "power": 4991
+    "power": 4991,
+    "effect": "+15.0%"
    }
   ]
  },
@@ -649,6 +680,7 @@
   "id": "metallurgy",
   "tree": "economic",
   "tier": 4,
+  "effectName": "Gold Gathering Unlock",
   "maxLevel": 1,
   "levels": [
    {
@@ -680,6 +712,7 @@
   "id": "chisel",
   "tree": "economic",
   "tier": 5,
+  "effectName": "Stone Production",
   "maxLevel": 5,
   "levels": [
    {
@@ -703,7 +736,8 @@
      "gold": 15000
     },
     "timeSec": 3600,
-    "power": 406
+    "power": 406,
+    "effect": "+1.0%"
    },
    {
     "level": 2,
@@ -726,7 +760,8 @@
      "gold": 30000
     },
     "timeSec": 5400,
-    "power": 1147
+    "power": 1147,
+    "effect": "+3.0%"
    },
    {
     "level": 3,
@@ -749,7 +784,8 @@
      "gold": 60000
     },
     "timeSec": 7200,
-    "power": 2485
+    "power": 2485,
+    "effect": "+6.0%"
    },
    {
     "level": 4,
@@ -772,7 +808,8 @@
      "gold": 120000
     },
     "timeSec": 14400,
-    "power": 5161
+    "power": 5161,
+    "effect": "+10.0%"
    },
    {
     "level": 5,
@@ -795,7 +832,8 @@
      "gold": 240000
     },
     "timeSec": 28800,
-    "power": 10513
+    "power": 10513,
+    "effect": "+15.0%"
    }
   ]
  },
@@ -803,6 +841,7 @@
   "id": "writing",
   "tree": "economic",
   "tier": 5,
+  "effectName": "Research Speed",
   "maxLevel": 5,
   "levels": [
    {
@@ -826,7 +865,8 @@
      "gold": 25000
     },
     "timeSec": 7200,
-    "power": 725
+    "power": 725,
+    "effect": "+1.0%"
    },
    {
     "level": 2,
@@ -849,7 +889,8 @@
      "gold": 50000
     },
     "timeSec": 14400,
-    "power": 2176
+    "power": 2176,
+    "effect": "+2.0%"
    },
    {
     "level": 3,
@@ -872,7 +913,8 @@
      "gold": 100000
     },
     "timeSec": 28800,
-    "power": 5078
+    "power": 5078,
+    "effect": "+4.0%"
    },
    {
     "level": 4,
@@ -895,7 +937,8 @@
      "gold": 200000
     },
     "timeSec": 57600,
-    "power": 10882
+    "power": 10882,
+    "effect": "+6.0%"
    },
    {
     "level": 5,
@@ -918,7 +961,8 @@
      "gold": 400000
     },
     "timeSec": 115200,
-    "power": 22490
+    "power": 22490,
+    "effect": "+10.0%"
    }
   ]
  },
@@ -926,6 +970,7 @@
   "id": "metalworking",
   "tree": "economic",
   "tier": 5,
+  "effectName": "Gold Production",
   "maxLevel": 5,
   "levels": [
    {
@@ -949,7 +994,8 @@
      "gold": 15000
     },
     "timeSec": 3600,
-    "power": 406
+    "power": 406,
+    "effect": "+1.0%"
    },
    {
     "level": 2,
@@ -972,7 +1018,8 @@
      "gold": 30000
     },
     "timeSec": 5400,
-    "power": 1147
+    "power": 1147,
+    "effect": "+3.0%"
    },
    {
     "level": 3,
@@ -995,7 +1042,8 @@
      "gold": 60000
     },
     "timeSec": 7200,
-    "power": 2485
+    "power": 2485,
+    "effect": "+6.0%"
    },
    {
     "level": 4,
@@ -1018,7 +1066,8 @@
      "gold": 120000
     },
     "timeSec": 14400,
-    "power": 5161
+    "power": 5161,
+    "effect": "+10.0%"
    },
    {
     "level": 5,
@@ -1041,7 +1090,8 @@
      "gold": 240000
     },
     "timeSec": 28800,
-    "power": 10513
+    "power": 10513,
+    "effect": "+15.0%"
    }
   ]
  },
@@ -1049,6 +1099,7 @@
   "id": "handcart",
   "tree": "economic",
   "tier": 6,
+  "effectName": "Gathering Speed",
   "maxLevel": 5,
   "levels": [
    {
@@ -1072,7 +1123,8 @@
      "gold": 25000
     },
     "timeSec": 3600,
-    "power": 581
+    "power": 581,
+    "effect": "+1.0%"
    },
    {
     "level": 2,
@@ -1095,7 +1147,8 @@
      "gold": 50000
     },
     "timeSec": 5400,
-    "power": 1672
+    "power": 1672,
+    "effect": "+3.0%"
    },
    {
     "level": 3,
@@ -1118,7 +1171,8 @@
      "gold": 100000
     },
     "timeSec": 7200,
-    "power": 3710
+    "power": 3710,
+    "effect": "+6.0%"
    },
    {
     "level": 4,
@@ -1141,7 +1195,8 @@
      "gold": 200000
     },
     "timeSec": 14400,
-    "power": 7786
+    "power": 7786,
+    "effect": "+10.0%"
    },
    {
     "level": 5,
@@ -1164,7 +1219,8 @@
      "gold": 400000
     },
     "timeSec": 28800,
-    "power": 15938
+    "power": 15938,
+    "effect": "+15.0%"
    }
   ]
  },
@@ -1172,6 +1228,7 @@
   "id": "multilayer_structure",
   "tree": "economic",
   "tier": 6,
+  "effectName": "Resource Protection Capacity",
   "maxLevel": 5,
   "levels": [
    {
@@ -1190,7 +1247,8 @@
      "gold": 20000
     },
     "timeSec": 3600,
-    "power": 494
+    "power": 494,
+    "effect": "+1.0%"
    },
    {
     "level": 2,
@@ -1213,7 +1271,8 @@
      "gold": 40000
     },
     "timeSec": 7200,
-    "power": 1482
+    "power": 1482,
+    "effect": "+3.0%"
    },
    {
     "level": 3,
@@ -1236,7 +1295,8 @@
      "gold": 80000
     },
     "timeSec": 14400,
-    "power": 3458
+    "power": 3458,
+    "effect": "+6.0%"
    },
    {
     "level": 4,
@@ -1259,7 +1319,8 @@
      "gold": 160000
     },
     "timeSec": 28800,
-    "power": 7410
+    "power": 7410,
+    "effect": "+10.0%"
    },
    {
     "level": 5,
@@ -1282,7 +1343,8 @@
      "gold": 320000
     },
     "timeSec": 57600,
-    "power": 15314
+    "power": 15314,
+    "effect": "+15.0%"
    }
   ]
  },
@@ -1290,6 +1352,7 @@
   "id": "placer_mining",
   "tree": "economic",
   "tier": 6,
+  "effectName": "Gathering Speed",
   "maxLevel": 5,
   "levels": [
    {
@@ -1308,7 +1371,8 @@
      "gold": 25000
     },
     "timeSec": 3600,
-    "power": 581
+    "power": 581,
+    "effect": "+1.0%"
    },
    {
     "level": 2,
@@ -1331,7 +1395,8 @@
      "gold": 50000
     },
     "timeSec": 5400,
-    "power": 1672
+    "power": 1672,
+    "effect": "+3.0%"
    },
    {
     "level": 3,
@@ -1354,7 +1419,8 @@
      "gold": 100000
     },
     "timeSec": 7200,
-    "power": 3710
+    "power": 3710,
+    "effect": "+6.0%"
    },
    {
     "level": 4,
@@ -1377,7 +1443,8 @@
      "gold": 200000
     },
     "timeSec": 14400,
-    "power": 7786
+    "power": 7786,
+    "effect": "+10.0%"
    },
    {
     "level": 5,
@@ -1400,7 +1467,8 @@
      "gold": 400000
     },
     "timeSec": 28800,
-    "power": 15938
+    "power": 15938,
+    "effect": "+15.0%"
    }
   ]
  },
@@ -1408,6 +1476,7 @@
   "id": "wheel",
   "tree": "economic",
   "tier": 7,
+  "effectName": "Troops Load",
   "maxLevel": 5,
   "levels": [
    {
@@ -1426,7 +1495,8 @@
      "gold": 30000
     },
     "timeSec": 3600,
-    "power": 669
+    "power": 669,
+    "effect": "+1.0%"
    },
    {
     "level": 2,
@@ -1449,7 +1519,8 @@
      "gold": 60000
     },
     "timeSec": 7200,
-    "power": 2007
+    "power": 2007,
+    "effect": "+2.0%"
    },
    {
     "level": 3,
@@ -1472,7 +1543,8 @@
      "gold": 120000
     },
     "timeSec": 14400,
-    "power": 4683
+    "power": 4683,
+    "effect": "+3.0%"
    },
    {
     "level": 4,
@@ -1495,7 +1567,8 @@
      "gold": 240000
     },
     "timeSec": 28800,
-    "power": 10035
+    "power": 10035,
+    "effect": "+4.0%"
    },
    {
     "level": 5,
@@ -1518,7 +1591,8 @@
      "gold": 480000
     },
     "timeSec": 57600,
-    "power": 20739
+    "power": 20739,
+    "effect": "+5.0%"
    }
   ]
  },
@@ -1526,6 +1600,7 @@
   "id": "jewelry",
   "tree": "economic",
   "tier": 7,
+  "effectName": "Gem Gathering Unlock",
   "maxLevel": 1,
   "levels": [
    {
@@ -1557,6 +1632,7 @@
   "id": "plow",
   "tree": "economic",
   "tier": 8,
+  "effectName": "Food Production",
   "maxLevel": 10,
   "levels": [
    {
@@ -1580,7 +1656,8 @@
      "gold": 50000
     },
     "timeSec": 28800,
-    "power": 2027
+    "power": 2027,
+    "effect": "+1.0%"
    },
    {
     "level": 2,
@@ -1603,7 +1680,8 @@
      "gold": 75000
     },
     "timeSec": 40320,
-    "power": 4953
+    "power": 4953,
+    "effect": "+3.0%"
    },
    {
     "level": 3,
@@ -1626,7 +1704,8 @@
      "gold": 113000
     },
     "timeSec": 56460,
-    "power": 9185
+    "power": 9185,
+    "effect": "+6.0%"
    },
    {
     "level": 4,
@@ -1649,7 +1728,8 @@
      "gold": 170000
     },
     "timeSec": 79020,
-    "power": 15313
+    "power": 15313,
+    "effect": "+10.0%"
    },
    {
     "level": 5,
@@ -1672,7 +1752,8 @@
      "gold": 255000
     },
     "timeSec": 111600,
-    "power": 24190
+    "power": 24190,
+    "effect": "+15.0%"
    },
    {
     "level": 6,
@@ -1695,7 +1776,8 @@
      "gold": 383000
     },
     "timeSec": 154800,
-    "power": 37069
+    "power": 37069,
+    "effect": "+20.0%"
    },
    {
     "level": 7,
@@ -1718,7 +1800,8 @@
      "gold": 575000
     },
     "timeSec": 216000,
-    "power": 55775
+    "power": 55775,
+    "effect": "+25.0%"
    },
    {
     "level": 8,
@@ -1741,7 +1824,8 @@
      "gold": 863000
     },
     "timeSec": 302400,
-    "power": 82970
+    "power": 82970,
+    "effect": "+30.0%"
    },
    {
     "level": 9,
@@ -1764,7 +1848,8 @@
      "gold": 1300000
     },
     "timeSec": 424800,
-    "power": 122555
+    "power": 122555,
+    "effect": "+40.0%"
    },
    {
     "level": 10,
@@ -1787,7 +1872,8 @@
      "gold": 1940000
     },
     "timeSec": 594000,
-    "power": 180236
+    "power": 180236,
+    "effect": "+55.0%"
    }
   ]
  },
@@ -1795,6 +1881,7 @@
   "id": "sawmill",
   "tree": "economic",
   "tier": 8,
+  "effectName": "Wood Production",
   "maxLevel": 10,
   "levels": [
    {
@@ -1818,7 +1905,8 @@
      "gold": 50000
     },
     "timeSec": 28800,
-    "power": 2027
+    "power": 2027,
+    "effect": "+1.0%"
    },
    {
     "level": 2,
@@ -1841,7 +1929,8 @@
      "gold": 75000
     },
     "timeSec": 40320,
-    "power": 4953
+    "power": 4953,
+    "effect": "+3.0%"
    },
    {
     "level": 3,
@@ -1864,7 +1953,8 @@
      "gold": 113000
     },
     "timeSec": 56460,
-    "power": 9185
+    "power": 9185,
+    "effect": "+6.0%"
    },
    {
     "level": 4,
@@ -1887,7 +1977,8 @@
      "gold": 170000
     },
     "timeSec": 79020,
-    "power": 15313
+    "power": 15313,
+    "effect": "+10.0%"
    },
    {
     "level": 5,
@@ -1910,7 +2001,8 @@
      "gold": 255000
     },
     "timeSec": 111600,
-    "power": 24190
+    "power": 24190,
+    "effect": "+15.0%"
    },
    {
     "level": 6,
@@ -1933,7 +2025,8 @@
      "gold": 383000
     },
     "timeSec": 154800,
-    "power": 37069
+    "power": 37069,
+    "effect": "+20.0%"
    },
    {
     "level": 7,
@@ -1956,7 +2049,8 @@
      "gold": 575000
     },
     "timeSec": 216000,
-    "power": 55775
+    "power": 55775,
+    "effect": "+25.0%"
    },
    {
     "level": 8,
@@ -1979,7 +2073,8 @@
      "gold": 863000
     },
     "timeSec": 302400,
-    "power": 82970
+    "power": 82970,
+    "effect": "+30.0%"
    },
    {
     "level": 9,
@@ -2002,7 +2097,8 @@
      "gold": 1300000
     },
     "timeSec": 424800,
-    "power": 122555
+    "power": 122555,
+    "effect": "+40.0%"
    },
    {
     "level": 10,
@@ -2025,7 +2121,8 @@
      "gold": 1940000
     },
     "timeSec": 594000,
-    "power": 180236
+    "power": 180236,
+    "effect": "+55.0%"
    }
   ]
  },
@@ -2033,6 +2130,7 @@
   "id": "scythe",
   "tree": "economic",
   "tier": 9,
+  "effectName": "Gathering Speed",
   "maxLevel": 10,
   "levels": [
    {
@@ -2051,7 +2149,8 @@
      "gold": 100000
     },
     "timeSec": 36000,
-    "power": 3190
+    "power": 3190,
+    "effect": "+1.0%"
    },
    {
     "level": 2,
@@ -2074,7 +2173,8 @@
      "gold": 150000
     },
     "timeSec": 50400,
-    "power": 7831
+    "power": 7831,
+    "effect": "+3.0%"
    },
    {
     "level": 3,
@@ -2097,7 +2197,8 @@
      "gold": 225000
     },
     "timeSec": 70560,
-    "power": 14592
+    "power": 14592,
+    "effect": "+6.0%"
    },
    {
     "level": 4,
@@ -2120,7 +2221,8 @@
      "gold": 338000
     },
     "timeSec": 97200,
-    "power": 24454
+    "power": 24454,
+    "effect": "+10.0%"
    },
    {
     "level": 5,
@@ -2143,7 +2245,8 @@
      "gold": 507000
     },
     "timeSec": 136800,
-    "power": 38855
+    "power": 38855,
+    "effect": "+14.0%"
    },
    {
     "level": 6,
@@ -2166,7 +2269,8 @@
      "gold": 761000
     },
     "timeSec": 194400,
-    "power": 59910
+    "power": 59910,
+    "effect": "+18.0%"
    },
    {
     "level": 7,
@@ -2189,7 +2293,8 @@
      "gold": 1140000
     },
     "timeSec": 270000,
-    "power": 90721
+    "power": 90721,
+    "effect": "+22.0%"
    },
    {
     "level": 8,
@@ -2212,7 +2317,8 @@
      "gold": 1710000
     },
     "timeSec": 378000,
-    "power": 135855
+    "power": 135855,
+    "effect": "+26.0%"
    },
    {
     "level": 9,
@@ -2235,7 +2341,8 @@
      "gold": 2570000
     },
     "timeSec": 532800,
-    "power": 202041
+    "power": 202041,
+    "effect": "+30.0%"
    },
    {
     "level": 10,
@@ -2258,7 +2365,8 @@
      "gold": 3860000
     },
     "timeSec": 745200,
-    "power": 299196
+    "power": 299196,
+    "effect": "+35.0%"
    }
   ]
  },
@@ -2266,6 +2374,7 @@
   "id": "engineering",
   "tree": "economic",
   "tier": 9,
+  "effectName": "Building Speed",
   "maxLevel": 10,
   "levels": [
    {
@@ -2294,7 +2403,8 @@
      "gold": 125000
     },
     "timeSec": 43200,
-    "power": 3915
+    "power": 3915,
+    "effect": "+1.0%"
    },
    {
     "level": 2,
@@ -2317,7 +2427,8 @@
      "gold": 188000
     },
     "timeSec": 60480,
-    "power": 9620
+    "power": 9620,
+    "effect": "+3.0%"
    },
    {
     "level": 3,
@@ -2340,7 +2451,8 @@
      "gold": 282000
     },
     "timeSec": 84660,
-    "power": 17937
+    "power": 17937,
+    "effect": "+6.0%"
    },
    {
     "level": 4,
@@ -2363,7 +2475,8 @@
      "gold": 423000
     },
     "timeSec": 118800,
-    "power": 30078
+    "power": 30078,
+    "effect": "+10.0%"
    },
    {
     "level": 5,
@@ -2386,7 +2499,8 @@
      "gold": 635000
     },
     "timeSec": 165600,
-    "power": 47822
+    "power": 47822,
+    "effect": "+14.0%"
    },
    {
     "level": 6,
@@ -2409,7 +2523,8 @@
      "gold": 953000
     },
     "timeSec": 234000,
-    "power": 73778
+    "power": 73778,
+    "effect": "+18.0%"
    },
    {
     "level": 7,
@@ -2432,7 +2547,8 @@
      "gold": 1430000
     },
     "timeSec": 324000,
-    "power": 111786
+    "power": 111786,
+    "effect": "+22.0%"
    },
    {
     "level": 8,
@@ -2455,7 +2571,8 @@
      "gold": 2150000
     },
     "timeSec": 453600,
-    "power": 167500
+    "power": 167500,
+    "effect": "+26.0%"
    },
    {
     "level": 9,
@@ -2478,7 +2595,8 @@
      "gold": 3220000
     },
     "timeSec": 637200,
-    "power": 249252
+    "power": 249252,
+    "effect": "+30.0%"
    },
    {
     "level": 10,
@@ -2501,7 +2619,8 @@
      "gold": 4830000
     },
     "timeSec": 892800,
-    "power": 369332
+    "power": 369332,
+    "effect": "+35.0%"
    }
   ]
  },
@@ -2509,6 +2628,7 @@
   "id": "whipsaw",
   "tree": "economic",
   "tier": 9,
+  "effectName": "Gathering Speed",
   "maxLevel": 10,
   "levels": [
    {
@@ -2527,7 +2647,8 @@
      "gold": 100000
     },
     "timeSec": 36000,
-    "power": 3190
+    "power": 3190,
+    "effect": "+1.0%"
    },
    {
     "level": 2,
@@ -2550,7 +2671,8 @@
      "gold": 150000
     },
     "timeSec": 50400,
-    "power": 7831
+    "power": 7831,
+    "effect": "+3.0%"
    },
    {
     "level": 3,
@@ -2573,7 +2695,8 @@
      "gold": 225000
     },
     "timeSec": 70560,
-    "power": 14592
+    "power": 14592,
+    "effect": "+6.0%"
    },
    {
     "level": 4,
@@ -2596,7 +2719,8 @@
      "gold": 338000
     },
     "timeSec": 97200,
-    "power": 24454
+    "power": 24454,
+    "effect": "+10.0%"
    },
    {
     "level": 5,
@@ -2619,7 +2743,8 @@
      "gold": 507000
     },
     "timeSec": 136800,
-    "power": 38855
+    "power": 38855,
+    "effect": "+14.0%"
    },
    {
     "level": 6,
@@ -2642,7 +2767,8 @@
      "gold": 761000
     },
     "timeSec": 194400,
-    "power": 59910
+    "power": 59910,
+    "effect": "+18.0%"
    },
    {
     "level": 7,
@@ -2665,7 +2791,8 @@
      "gold": 1140000
     },
     "timeSec": 270000,
-    "power": 90721
+    "power": 90721,
+    "effect": "+22.0%"
    },
    {
     "level": 8,
@@ -2688,7 +2815,8 @@
      "gold": 1710000
     },
     "timeSec": 378000,
-    "power": 135855
+    "power": 135855,
+    "effect": "+26.0%"
    },
    {
     "level": 9,
@@ -2711,7 +2839,8 @@
      "gold": 2570000
     },
     "timeSec": 532800,
-    "power": 202041
+    "power": 202041,
+    "effect": "+30.0%"
    },
    {
     "level": 10,
@@ -2734,7 +2863,8 @@
      "gold": 3860000
     },
     "timeSec": 745200,
-    "power": 299196
+    "power": 299196,
+    "effect": "+35.0%"
    }
   ]
  },
@@ -2742,6 +2872,7 @@
   "id": "mathematics",
   "tree": "economic",
   "tier": 10,
+  "effectName": "Research Speed",
   "maxLevel": 10,
   "levels": [
    {
@@ -2765,7 +2896,8 @@
      "gold": 125000
     },
     "timeSec": 43200,
-    "power": 3915
+    "power": 3915,
+    "effect": "+1.0%"
    },
    {
     "level": 2,
@@ -2788,7 +2920,8 @@
      "gold": 188000
     },
     "timeSec": 60480,
-    "power": 9620
+    "power": 9620,
+    "effect": "+2.0%"
    },
    {
     "level": 3,
@@ -2811,7 +2944,8 @@
      "gold": 282000
     },
     "timeSec": 84660,
-    "power": 17937
+    "power": 17937,
+    "effect": "+3.0%"
    },
    {
     "level": 4,
@@ -2834,7 +2968,8 @@
      "gold": 423000
     },
     "timeSec": 118800,
-    "power": 30078
+    "power": 30078,
+    "effect": "+4.0%"
    },
    {
     "level": 5,
@@ -2857,7 +2992,8 @@
      "gold": 635000
     },
     "timeSec": 165600,
-    "power": 47822
+    "power": 47822,
+    "effect": "+5.0%"
    },
    {
     "level": 6,
@@ -2880,7 +3016,8 @@
      "gold": 953000
     },
     "timeSec": 234000,
-    "power": 73778
+    "power": 73778,
+    "effect": "+6.0%"
    },
    {
     "level": 7,
@@ -2903,7 +3040,8 @@
      "gold": 1430000
     },
     "timeSec": 324000,
-    "power": 111786
+    "power": 111786,
+    "effect": "+8.0%"
    },
    {
     "level": 8,
@@ -2926,7 +3064,8 @@
      "gold": 2150000
     },
     "timeSec": 453600,
-    "power": 167500
+    "power": 167500,
+    "effect": "+10.0%"
    },
    {
     "level": 9,
@@ -2949,7 +3088,8 @@
      "gold": 3220000
     },
     "timeSec": 637200,
-    "power": 249252
+    "power": 249252,
+    "effect": "+12.0%"
    },
    {
     "level": 10,
@@ -2972,7 +3112,8 @@
      "gold": 4830000
     },
     "timeSec": 892800,
-    "power": 369332
+    "power": 369332,
+    "effect": "+15.0%"
    }
   ]
  },
@@ -2980,6 +3121,7 @@
   "id": "open_pit_quarry",
   "tree": "economic",
   "tier": 11,
+  "effectName": "Stone Production",
   "maxLevel": 10,
   "levels": [
    {
@@ -2998,7 +3140,8 @@
      "gold": 100000
     },
     "timeSec": 36000,
-    "power": 3190
+    "power": 3190,
+    "effect": "+1.0%"
    },
    {
     "level": 2,
@@ -3021,7 +3164,8 @@
      "gold": 150000
     },
     "timeSec": 50400,
-    "power": 7831
+    "power": 7831,
+    "effect": "+3.0%"
    },
    {
     "level": 3,
@@ -3044,7 +3188,8 @@
      "gold": 225000
     },
     "timeSec": 70560,
-    "power": 14592
+    "power": 14592,
+    "effect": "+6.0%"
    },
    {
     "level": 4,
@@ -3067,7 +3212,8 @@
      "gold": 338000
     },
     "timeSec": 97200,
-    "power": 24454
+    "power": 24454,
+    "effect": "+10.0%"
    },
    {
     "level": 5,
@@ -3090,7 +3236,8 @@
      "gold": 507000
     },
     "timeSec": 136800,
-    "power": 38855
+    "power": 38855,
+    "effect": "+15.0%"
    },
    {
     "level": 6,
@@ -3113,7 +3260,8 @@
      "gold": 761000
     },
     "timeSec": 194400,
-    "power": 59910
+    "power": 59910,
+    "effect": "+20.0%"
    },
    {
     "level": 7,
@@ -3136,7 +3284,8 @@
      "gold": 1140000
     },
     "timeSec": 270000,
-    "power": 90721
+    "power": 90721,
+    "effect": "+25.0%"
    },
    {
     "level": 8,
@@ -3159,7 +3308,8 @@
      "gold": 1710000
     },
     "timeSec": 378000,
-    "power": 135855
+    "power": 135855,
+    "effect": "+30.0%"
    },
    {
     "level": 9,
@@ -3182,7 +3332,8 @@
      "gold": 2570000
     },
     "timeSec": 532800,
-    "power": 202041
+    "power": 202041,
+    "effect": "+40.0%"
    },
    {
     "level": 10,
@@ -3205,7 +3356,8 @@
      "gold": 3860000
     },
     "timeSec": 745200,
-    "power": 299196
+    "power": 299196,
+    "effect": "+55.0%"
    }
   ]
  },
@@ -3213,6 +3365,7 @@
   "id": "coinage",
   "tree": "economic",
   "tier": 11,
+  "effectName": "Gold Production",
   "maxLevel": 10,
   "levels": [
    {
@@ -3231,7 +3384,8 @@
      "gold": 100000
     },
     "timeSec": 36000,
-    "power": 3190
+    "power": 3190,
+    "effect": "+1.0%"
    },
    {
     "level": 2,
@@ -3254,7 +3408,8 @@
      "gold": 150000
     },
     "timeSec": 50400,
-    "power": 7831
+    "power": 7831,
+    "effect": "+3.0%"
    },
    {
     "level": 3,
@@ -3277,7 +3432,8 @@
      "gold": 225000
     },
     "timeSec": 70560,
-    "power": 14592
+    "power": 14592,
+    "effect": "+6.0%"
    },
    {
     "level": 4,
@@ -3300,7 +3456,8 @@
      "gold": 338000
     },
     "timeSec": 97200,
-    "power": 24454
+    "power": 24454,
+    "effect": "+10.0%"
    },
    {
     "level": 5,
@@ -3323,7 +3480,8 @@
      "gold": 507000
     },
     "timeSec": 136800,
-    "power": 38855
+    "power": 38855,
+    "effect": "+15.0%"
    },
    {
     "level": 6,
@@ -3346,7 +3504,8 @@
      "gold": 761000
     },
     "timeSec": 194400,
-    "power": 59910
+    "power": 59910,
+    "effect": "+20.0%"
    },
    {
     "level": 7,
@@ -3369,7 +3528,8 @@
      "gold": 1140000
     },
     "timeSec": 270000,
-    "power": 90721
+    "power": 90721,
+    "effect": "+25.0%"
    },
    {
     "level": 8,
@@ -3392,7 +3552,8 @@
      "gold": 1710000
     },
     "timeSec": 378000,
-    "power": 135855
+    "power": 135855,
+    "effect": "+30.0%"
    },
    {
     "level": 9,
@@ -3415,7 +3576,8 @@
      "gold": 2570000
     },
     "timeSec": 532800,
-    "power": 202041
+    "power": 202041,
+    "effect": "+40.0%"
    },
    {
     "level": 10,
@@ -3438,7 +3600,8 @@
      "gold": 3860000
     },
     "timeSec": 745200,
-    "power": 299196
+    "power": 299196,
+    "effect": "+55.0%"
    }
   ]
  },
@@ -3446,6 +3609,7 @@
   "id": "stone_saw",
   "tree": "economic",
   "tier": 12,
+  "effectName": "Gathering Speed",
   "maxLevel": 10,
   "levels": [
    {
@@ -3469,7 +3633,8 @@
      "gold": 150000
     },
     "timeSec": 36000,
-    "power": 4065
+    "power": 4065,
+    "effect": "+1.0%"
    },
    {
     "level": 2,
@@ -3492,7 +3657,8 @@
      "gold": 225000
     },
     "timeSec": 50400,
-    "power": 10020
+    "power": 10020,
+    "effect": "+3.0%"
    },
    {
     "level": 3,
@@ -3515,7 +3681,8 @@
      "gold": 338000
     },
     "timeSec": 70560,
-    "power": 18753
+    "power": 18753,
+    "effect": "+6.0%"
    },
    {
     "level": 4,
@@ -3538,7 +3705,8 @@
      "gold": 507000
     },
     "timeSec": 97200,
-    "power": 31574
+    "power": 31574,
+    "effect": "+10.0%"
    },
    {
     "level": 5,
@@ -3561,7 +3729,8 @@
      "gold": 761000
     },
     "timeSec": 136800,
-    "power": 50416
+    "power": 50416,
+    "effect": "+14.0%"
    },
    {
     "level": 6,
@@ -3584,7 +3753,8 @@
      "gold": 1140000
     },
     "timeSec": 194400,
-    "power": 78129
+    "power": 78129,
+    "effect": "+18.0%"
    },
    {
     "level": 7,
@@ -3607,7 +3777,8 @@
      "gold": 1710000
     },
     "timeSec": 270000,
-    "power": 118926
+    "power": 118926,
+    "effect": "+22.0%"
    },
    {
     "level": 8,
@@ -3630,7 +3801,8 @@
      "gold": 2570000
     },
     "timeSec": 378000,
-    "power": 179040
+    "power": 179040,
+    "effect": "+26.0%"
    },
    {
     "level": 9,
@@ -3653,7 +3825,8 @@
      "gold": 3860000
     },
     "timeSec": 532800,
-    "power": 267695
+    "power": 267695,
+    "effect": "+30.0%"
    },
    {
     "level": 10,
@@ -3676,7 +3849,8 @@
      "gold": 5800000
     },
     "timeSec": 0,
-    "power": 398558
+    "power": 398558,
+    "effect": "+35.0%"
    }
   ]
  },
@@ -3684,6 +3858,7 @@
   "id": "machinery",
   "tree": "economic",
   "tier": 12,
+  "effectName": "Gathering Speed",
   "maxLevel": 10,
   "levels": [
    {
@@ -3702,7 +3877,8 @@
      "gold": 175000
     },
     "timeSec": 36000,
-    "power": 4540
+    "power": 4540,
+    "effect": "+1.0%"
    },
    {
     "level": 2,
@@ -3725,7 +3901,8 @@
      "gold": 263000
     },
     "timeSec": 50400,
-    "power": 11210
+    "power": 11210,
+    "effect": "+2.0%"
    },
    {
     "level": 3,
@@ -3748,7 +3925,8 @@
      "gold": 395000
     },
     "timeSec": 70560,
-    "power": 21019
+    "power": 21019,
+    "effect": "+3.0%"
    },
    {
     "level": 4,
@@ -3771,7 +3949,8 @@
      "gold": 593000
     },
     "timeSec": 97200,
-    "power": 35453
+    "power": 35453,
+    "effect": "+5.0%"
    },
    {
     "level": 5,
@@ -3794,7 +3973,8 @@
      "gold": 890000
     },
     "timeSec": 136800,
-    "power": 56711
+    "power": 56711,
+    "effect": "+7.0%"
    },
    {
     "level": 6,
@@ -3817,7 +3997,8 @@
      "gold": 1340000
     },
     "timeSec": 194400,
-    "power": 88049
+    "power": 88049,
+    "effect": "+10.0%"
    },
    {
     "level": 7,
@@ -3840,7 +4021,8 @@
      "gold": 2000000
     },
     "timeSec": 270000,
-    "power": 134286
+    "power": 134286,
+    "effect": "+13.0%"
    },
    {
     "level": 8,
@@ -3863,7 +4045,8 @@
      "gold": 3010000
     },
     "timeSec": 378000,
-    "power": 202560
+    "power": 202560,
+    "effect": "+16.0%"
    },
    {
     "level": 9,
@@ -3896,7 +4079,8 @@
      "gold": 4510000
     },
     "timeSec": 532800,
-    "power": 303458
+    "power": 303458,
+    "effect": "+20.0%"
    },
    {
     "level": 10,
@@ -3929,7 +4113,8 @@
      "gold": 6800000
     },
     "timeSec": 0,
-    "power": 452681
+    "power": 452681,
+    "effect": "+25.0%"
    }
   ]
  },
@@ -3937,6 +4122,7 @@
   "id": "shaft_mining",
   "tree": "economic",
   "tier": 12,
+  "effectName": "Gathering Speed",
   "maxLevel": 10,
   "levels": [
    {
@@ -3960,7 +4146,8 @@
      "gold": 150000
     },
     "timeSec": 36000,
-    "power": 4065
+    "power": 4065,
+    "effect": "+1.0%"
    },
    {
     "level": 2,
@@ -3983,7 +4170,8 @@
      "gold": 225000
     },
     "timeSec": 50400,
-    "power": 10020
+    "power": 10020,
+    "effect": "+3.0%"
    },
    {
     "level": 3,
@@ -4006,7 +4194,8 @@
      "gold": 338000
     },
     "timeSec": 70560,
-    "power": 18753
+    "power": 18753,
+    "effect": "+6.0%"
    },
    {
     "level": 4,
@@ -4029,7 +4218,8 @@
      "gold": 507000
     },
     "timeSec": 97200,
-    "power": 31574
+    "power": 31574,
+    "effect": "+10.0%"
    },
    {
     "level": 5,
@@ -4052,7 +4242,8 @@
      "gold": 761000
     },
     "timeSec": 136800,
-    "power": 50416
+    "power": 50416,
+    "effect": "+14.0%"
    },
    {
     "level": 6,
@@ -4075,7 +4266,8 @@
      "gold": 1140000
     },
     "timeSec": 194400,
-    "power": 78129
+    "power": 78129,
+    "effect": "+18.0%"
    },
    {
     "level": 7,
@@ -4098,7 +4290,8 @@
      "gold": 1710000
     },
     "timeSec": 270000,
-    "power": 118926
+    "power": 118926,
+    "effect": "+22.0%"
    },
    {
     "level": 8,
@@ -4121,7 +4314,8 @@
      "gold": 2570000
     },
     "timeSec": 378000,
-    "power": 179040
+    "power": 179040,
+    "effect": "+26.0%"
    },
    {
     "level": 9,
@@ -4144,7 +4338,8 @@
      "gold": 3860000
     },
     "timeSec": 532800,
-    "power": 267695
+    "power": 267695,
+    "effect": "+30.0%"
    },
    {
     "level": 10,
@@ -4167,7 +4362,8 @@
      "gold": 6
     },
     "timeSec": 0,
-    "power": 398558
+    "power": 398558,
+    "effect": "+35.0%"
    }
   ]
  },
@@ -4175,6 +4371,7 @@
   "id": "carriage",
   "tree": "economic",
   "tier": 13,
+  "effectName": "Troops Load",
   "maxLevel": 10,
   "levels": [
    {
@@ -4193,7 +4390,8 @@
      "gold": 200000
     },
     "timeSec": 48000,
-    "power": 5420
+    "power": 5420,
+    "effect": "+1.0%"
    },
    {
     "level": 2,
@@ -4216,7 +4414,8 @@
      "gold": 300000
     },
     "timeSec": 72000,
-    "power": 13550
+    "power": 13550,
+    "effect": "+2.0%"
    },
    {
     "level": 3,
@@ -4239,7 +4438,8 @@
      "gold": 450000
     },
     "timeSec": 108000,
-    "power": 25745
+    "power": 25745,
+    "effect": "+3.0%"
    },
    {
     "level": 4,
@@ -4262,7 +4462,8 @@
      "gold": 675000
     },
     "timeSec": 162000,
-    "power": 44039
+    "power": 44039,
+    "effect": "+5.0%"
    },
    {
     "level": 5,
@@ -4285,7 +4486,8 @@
      "gold": 1010000
     },
     "timeSec": 244800,
-    "power": 71484
+    "power": 71484,
+    "effect": "+7.0%"
    },
    {
     "level": 6,
@@ -4308,7 +4510,8 @@
      "gold": 1520000
     },
     "timeSec": 363600,
-    "power": 112656
+    "power": 112656,
+    "effect": "+10.0%"
    },
    {
     "level": 7,
@@ -4331,7 +4534,8 @@
      "gold": 2300000
     },
     "timeSec": 547200,
-    "power": 174414
+    "power": 174414,
+    "effect": "+13.0%"
    },
    {
     "level": 8,
@@ -4354,7 +4558,8 @@
      "gold": 3420000
     },
     "timeSec": 820800,
-    "power": 267053
+    "power": 267053,
+    "effect": "+16.0%"
    },
    {
     "level": 9,
@@ -4387,7 +4592,8 @@
      "gold": 5130000
     },
     "timeSec": 1231200,
-    "power": 406011
+    "power": 406011,
+    "effect": "+20.0%"
    },
    {
     "level": 10,
@@ -4420,7 +4626,8 @@
      "gold": 7695000
     },
     "timeSec": 2462400,
-    "power": 614450
+    "power": 614450,
+    "effect": "+25.0%"
    }
   ]
  },
@@ -4428,6 +4635,7 @@
   "id": "cutting_and_polishing",
   "tree": "economic",
   "tier": 13,
+  "effectName": "Gathering Speed",
   "maxLevel": 10,
   "levels": [
    {
@@ -4446,7 +4654,8 @@
      "gold": 200000
     },
     "timeSec": 48000,
-    "power": 5420
+    "power": 5420,
+    "effect": "+1.0%"
    },
    {
     "level": 2,
@@ -4469,7 +4678,8 @@
      "gold": 300000
     },
     "timeSec": 67200,
-    "power": 13358
+    "power": 13358,
+    "effect": "+3.0%"
    },
    {
     "level": 3,
@@ -4492,7 +4702,8 @@
      "gold": 450000
     },
     "timeSec": 93600,
-    "power": 24996
+    "power": 24996,
+    "effect": "+6.0%"
    },
    {
     "level": 4,
@@ -4515,7 +4726,8 @@
      "gold": 675000
     },
     "timeSec": 133200,
-    "power": 42078
+    "power": 42078,
+    "effect": "+10.0%"
    },
    {
     "level": 5,
@@ -4538,7 +4750,8 @@
      "gold": 1010000
     },
     "timeSec": 183600,
-    "power": 67178
+    "power": 67178,
+    "effect": "+14.0%"
    },
    {
     "level": 6,
@@ -4561,7 +4774,8 @@
      "gold": 1520000
     },
     "timeSec": 259200,
-    "power": 104096
+    "power": 104096,
+    "effect": "+18.0%"
    },
    {
     "level": 7,
@@ -4584,7 +4798,8 @@
      "gold": 2280000
     },
     "timeSec": 360000,
-    "power": 158440
+    "power": 158440,
+    "effect": "+22.0%"
    },
    {
     "level": 8,
@@ -4607,7 +4822,8 @@
      "gold": 3420000
     },
     "timeSec": 507600,
-    "power": 238513
+    "power": 238513,
+    "effect": "+26.0%"
    },
    {
     "level": 9,
@@ -4630,7 +4846,8 @@
      "gold": 5130000
     },
     "timeSec": 709200,
-    "power": 356599
+    "power": 356599,
+    "effect": "+30.0%"
    },
    {
     "level": 10,
@@ -4658,7 +4875,8 @@
      "gold": 7700000
     },
     "timeSec": 1418400,
-    "power": 576232
+    "power": 576232,
+    "effect": "+35.0%"
    }
   ]
  },
@@ -4666,6 +4884,7 @@
   "id": "military_discipline",
   "tree": "military",
   "tier": 1,
+  "effectName": "Training Speed",
   "maxLevel": 1,
   "levels": [
    {
@@ -4684,7 +4903,8 @@
      "gold": 0
     },
     "timeSec": 900,
-    "power": 56
+    "power": 56,
+    "effect": "+20.0%"
    }
   ]
  },
@@ -4692,6 +4912,7 @@
   "id": "iron_working",
   "tree": "military",
   "tier": 2,
+  "effectName": "Infantry Attack",
   "maxLevel": 5,
   "levels": [
    {
@@ -4715,7 +4936,8 @@
      "gold": 0
     },
     "timeSec": 3600,
-    "power": 184
+    "power": 184,
+    "effect": "+1.0%"
    },
    {
     "level": 2,
@@ -4738,7 +4960,8 @@
      "gold": 0
     },
     "timeSec": 4320,
-    "power": 436
+    "power": 436,
+    "effect": "+2.0%"
    },
    {
     "level": 3,
@@ -4761,7 +4984,8 @@
      "gold": 0
     },
     "timeSec": 5160,
-    "power": 893
+    "power": 893,
+    "effect": "+4.0%"
    },
    {
     "level": 4,
@@ -4784,7 +5008,8 @@
      "gold": 0
     },
     "timeSec": 6240,
-    "power": 1641
+    "power": 1641,
+    "effect": "+6.0%"
    },
    {
     "level": 5,
@@ -4807,7 +5032,8 @@
      "gold": 0
     },
     "timeSec": 7440,
-    "power": 2939
+    "power": 2939,
+    "effect": "+10.0%"
    }
   ]
  },
@@ -4815,6 +5041,7 @@
   "id": "improved_fletching",
   "tree": "military",
   "tier": 2,
+  "effectName": "Archer Attack",
   "maxLevel": 5,
   "levels": [
    {
@@ -4838,7 +5065,8 @@
      "gold": 0
     },
     "timeSec": 3600,
-    "power": 184
+    "power": 184,
+    "effect": "+1.0%"
    },
    {
     "level": 2,
@@ -4861,7 +5089,8 @@
      "gold": 0
     },
     "timeSec": 4320,
-    "power": 436
+    "power": 436,
+    "effect": "+2.0%"
    },
    {
     "level": 3,
@@ -4884,7 +5113,8 @@
      "gold": 0
     },
     "timeSec": 5160,
-    "power": 893
+    "power": 893,
+    "effect": "+4.0%"
    },
    {
     "level": 4,
@@ -4907,7 +5137,8 @@
      "gold": 0
     },
     "timeSec": 6240,
-    "power": 1641
+    "power": 1641,
+    "effect": "+6.0%"
    },
    {
     "level": 5,
@@ -4930,7 +5161,8 @@
      "gold": 0
     },
     "timeSec": 7440,
-    "power": 2939
+    "power": 2939,
+    "effect": "+10.0%"
    }
   ]
  },
@@ -4938,6 +5170,7 @@
   "id": "horsemanship",
   "tree": "military",
   "tier": 2,
+  "effectName": "Cavalry Attack",
   "maxLevel": 5,
   "levels": [
    {
@@ -4961,7 +5194,8 @@
      "gold": 0
     },
     "timeSec": 3600,
-    "power": 184
+    "power": 184,
+    "effect": "+1.0%"
    },
    {
     "level": 2,
@@ -4984,7 +5218,8 @@
      "gold": 0
     },
     "timeSec": 4320,
-    "power": 436
+    "power": 436,
+    "effect": "+2.0%"
    },
    {
     "level": 3,
@@ -5007,7 +5242,8 @@
      "gold": 0
     },
     "timeSec": 5160,
-    "power": 893
+    "power": 893,
+    "effect": "+4.0%"
    },
    {
     "level": 4,
@@ -5030,7 +5266,8 @@
      "gold": 0
     },
     "timeSec": 6240,
-    "power": 1641
+    "power": 1641,
+    "effect": "+6.0%"
    },
    {
     "level": 5,
@@ -5053,7 +5290,8 @@
      "gold": 0
     },
     "timeSec": 7440,
-    "power": 2939
+    "power": 2939,
+    "effect": "+10.0%"
    }
   ]
  },
@@ -5061,6 +5299,7 @@
   "id": "flaming_projectile",
   "tree": "military",
   "tier": 2,
+  "effectName": "Siege Unit Attack",
   "maxLevel": 5,
   "levels": [
    {
@@ -5084,7 +5323,8 @@
      "gold": 0
     },
     "timeSec": 3600,
-    "power": 184
+    "power": 184,
+    "effect": "+1.0%"
    },
    {
     "level": 2,
@@ -5107,7 +5347,8 @@
      "gold": 0
     },
     "timeSec": 4320,
-    "power": 436
+    "power": 436,
+    "effect": "+2.0%"
    },
    {
     "level": 3,
@@ -5130,7 +5371,8 @@
      "gold": 0
     },
     "timeSec": 5160,
-    "power": 893
+    "power": 893,
+    "effect": "+4.0%"
    },
    {
     "level": 4,
@@ -5153,7 +5395,8 @@
      "gold": 0
     },
     "timeSec": 6240,
-    "power": 1641
+    "power": 1641,
+    "effect": "+6.0%"
    },
    {
     "level": 5,
@@ -5176,7 +5419,8 @@
      "gold": 0
     },
     "timeSec": 7440,
-    "power": 2939
+    "power": 2939,
+    "effect": "+10.0%"
    }
   ]
  },
@@ -5184,6 +5428,7 @@
   "id": "swordsman",
   "tree": "military",
   "tier": 3,
+  "effectName": null,
   "maxLevel": 1,
   "levels": [
    {
@@ -5215,6 +5460,7 @@
   "id": "bowman",
   "tree": "military",
   "tier": 3,
+  "effectName": null,
   "maxLevel": 1,
   "levels": [
    {
@@ -5246,6 +5492,7 @@
   "id": "light_cavalry",
   "tree": "military",
   "tier": 3,
+  "effectName": null,
   "maxLevel": 1,
   "levels": [
    {
@@ -5277,6 +5524,7 @@
   "id": "arcuballista",
   "tree": "military",
   "tier": 3,
+  "effectName": null,
   "maxLevel": 1,
   "levels": [
    {
@@ -5308,6 +5556,7 @@
   "id": "tracking",
   "tree": "military",
   "tier": 4,
+  "effectName": "Feature",
   "maxLevel": 5,
   "levels": [
    {
@@ -5336,7 +5585,8 @@
      "gold": 0
     },
     "timeSec": 7200,
-    "power": 381
+    "power": 381,
+    "effect": "Able to detect target's resource reserves"
    },
    {
     "level": 2,
@@ -5359,7 +5609,8 @@
      "gold": 0
     },
     "timeSec": 10080,
-    "power": 971
+    "power": 971,
+    "effect": "Able to detect the approximate total of target's troops"
    },
    {
     "level": 3,
@@ -5382,7 +5633,8 @@
      "gold": 0
     },
     "timeSec": 14100,
-    "power": 1910
+    "power": 1910,
+    "effect": "Able to detect the unit type and approximate number of target's troops"
    },
    {
     "level": 4,
@@ -5405,7 +5657,8 @@
      "gold": 0
     },
     "timeSec": 19740,
-    "power": 3450
+    "power": 3450,
+    "effect": "Able to detect the level, attack, and health of target's watchtower"
    },
    {
     "level": 5,
@@ -5428,7 +5681,8 @@
      "gold": 0
     },
     "timeSec": 27660,
-    "power": 6056
+    "power": 6056,
+    "effect": "Able to detect the unit type and exact number of target's troops"
    }
   ]
  },
@@ -5436,6 +5690,7 @@
   "id": "pathfinding",
   "tree": "military",
   "tier": 4,
+  "effectName": "March Speed",
   "maxLevel": 5,
   "levels": [
    {
@@ -5464,7 +5719,8 @@
      "gold": 0
     },
     "timeSec": 7200,
-    "power": 381
+    "power": 381,
+    "effect": "+1.0%"
    },
    {
     "level": 2,
@@ -5487,7 +5743,8 @@
      "gold": 0
     },
     "timeSec": 10080,
-    "power": 971
+    "power": 971,
+    "effect": "+3.0%"
    },
    {
     "level": 3,
@@ -5510,7 +5767,8 @@
      "gold": 0
     },
     "timeSec": 14100,
-    "power": 1910
+    "power": 1910,
+    "effect": "+6.0%"
    },
    {
     "level": 4,
@@ -5533,7 +5791,8 @@
      "gold": 0
     },
     "timeSec": 19740,
-    "power": 3450
+    "power": 3450,
+    "effect": "+10.0%"
    },
    {
     "level": 5,
@@ -5556,7 +5815,8 @@
      "gold": 0
     },
     "timeSec": 27660,
-    "power": 6056
+    "power": 6056,
+    "effect": "+15.0%"
    }
   ]
  },
@@ -5564,6 +5824,7 @@
   "id": "buckler",
   "tree": "military",
   "tier": 5,
+  "effectName": "Infantry Defense",
   "maxLevel": 5,
   "levels": [
    {
@@ -5587,7 +5848,8 @@
      "gold": 20000
     },
     "timeSec": 21600,
-    "power": 1214
+    "power": 1214,
+    "effect": "+1.0%"
    },
    {
     "level": 2,
@@ -5610,7 +5872,8 @@
      "gold": 40000
     },
     "timeSec": 30240,
-    "power": 3123
+    "power": 3123,
+    "effect": "+2.0%"
    },
    {
     "level": 3,
@@ -5633,7 +5896,8 @@
      "gold": 80000
     },
     "timeSec": 42360,
-    "power": 6216
+    "power": 6216,
+    "effect": "+4.0%"
    },
    {
     "level": 4,
@@ -5656,7 +5920,8 @@
      "gold": 160000
     },
     "timeSec": 59280,
-    "power": 11386
+    "power": 11386,
+    "effect": "+6.0%"
    },
    {
     "level": 5,
@@ -5679,7 +5944,8 @@
      "gold": 320000
     },
     "timeSec": 82980,
-    "power": 20305
+    "power": 20305,
+    "effect": "+10.0%"
    }
   ]
  },
@@ -5687,6 +5953,7 @@
   "id": "leather_armor",
   "tree": "military",
   "tier": 5,
+  "effectName": "Archer Defense",
   "maxLevel": 5,
   "levels": [
    {
@@ -5710,7 +5977,8 @@
      "gold": 20000
     },
     "timeSec": 21600,
-    "power": 1214
+    "power": 1214,
+    "effect": "+1.0%"
    },
    {
     "level": 2,
@@ -5733,7 +6001,8 @@
      "gold": 40000
     },
     "timeSec": 30240,
-    "power": 3123
+    "power": 3123,
+    "effect": "+2.0%"
    },
    {
     "level": 3,
@@ -5756,7 +6025,8 @@
      "gold": 80000
     },
     "timeSec": 42360,
-    "power": 6216
+    "power": 6216,
+    "effect": "+4.0%"
    },
    {
     "level": 4,
@@ -5779,7 +6049,8 @@
      "gold": 160000
     },
     "timeSec": 59280,
-    "power": 11386
+    "power": 11386,
+    "effect": "+6.0%"
    },
    {
     "level": 5,
@@ -5802,7 +6073,8 @@
      "gold": 320000
     },
     "timeSec": 82980,
-    "power": 20305
+    "power": 20305,
+    "effect": "+10.0%"
    }
   ]
  },
@@ -5810,6 +6082,7 @@
   "id": "scale_armor",
   "tree": "military",
   "tier": 5,
+  "effectName": "Cavalry Defense",
   "maxLevel": 5,
   "levels": [
    {
@@ -5833,7 +6106,8 @@
      "gold": 20000
     },
     "timeSec": 21600,
-    "power": 1214
+    "power": 1214,
+    "effect": "+1.0%"
    },
    {
     "level": 2,
@@ -5856,7 +6130,8 @@
      "gold": 40000
     },
     "timeSec": 30240,
-    "power": 3123
+    "power": 3123,
+    "effect": "+2.0%"
    },
    {
     "level": 3,
@@ -5879,7 +6154,8 @@
      "gold": 80000
     },
     "timeSec": 42360,
-    "power": 6216
+    "power": 6216,
+    "effect": "+4.0%"
    },
    {
     "level": 4,
@@ -5902,7 +6178,8 @@
      "gold": 160000
     },
     "timeSec": 59280,
-    "power": 11386
+    "power": 11386,
+    "effect": "+6.0%"
    },
    {
     "level": 5,
@@ -5925,7 +6202,8 @@
      "gold": 320000
     },
     "timeSec": 82980,
-    "power": 20305
+    "power": 20305,
+    "effect": "+10.0%"
    }
   ]
  },
@@ -5933,6 +6211,7 @@
   "id": "enhanced_axle",
   "tree": "military",
   "tier": 5,
+  "effectName": "Siege Unit Defense",
   "maxLevel": 5,
   "levels": [
    {
@@ -5956,7 +6235,8 @@
      "gold": 20000
     },
     "timeSec": 21600,
-    "power": 1214
+    "power": 1214,
+    "effect": "+1.0%"
    },
    {
     "level": 2,
@@ -5979,7 +6259,8 @@
      "gold": 40000
     },
     "timeSec": 30240,
-    "power": 3123
+    "power": 3123,
+    "effect": "+2.0%"
    },
    {
     "level": 3,
@@ -6002,7 +6283,8 @@
      "gold": 80000
     },
     "timeSec": 42360,
-    "power": 6216
+    "power": 6216,
+    "effect": "+4.0%"
    },
    {
     "level": 4,
@@ -6025,7 +6307,8 @@
      "gold": 160000
     },
     "timeSec": 59280,
-    "power": 11386
+    "power": 11386,
+    "effect": "+6.0%"
    },
    {
     "level": 5,
@@ -6048,7 +6331,8 @@
      "gold": 320000
     },
     "timeSec": 82980,
-    "power": 20305
+    "power": 20305,
+    "effect": "+10.0%"
    }
   ]
  },
@@ -6056,6 +6340,7 @@
   "id": "spearman",
   "tree": "military",
   "tier": 6,
+  "effectName": null,
   "maxLevel": 1,
   "levels": [
    {
@@ -6087,6 +6372,7 @@
   "id": "composite_bowman",
   "tree": "military",
   "tier": 6,
+  "effectName": null,
   "maxLevel": 1,
   "levels": [
    {
@@ -6118,6 +6404,7 @@
   "id": "heavy_cavalry",
   "tree": "military",
   "tier": 6,
+  "effectName": null,
   "maxLevel": 1,
   "levels": [
    {
@@ -6149,6 +6436,7 @@
   "id": "mangonel",
   "tree": "military",
   "tier": 6,
+  "effectName": null,
   "maxLevel": 1,
   "levels": [
    {
@@ -6175,6 +6463,7 @@
   "id": "camouflage",
   "tree": "military",
   "tier": 7,
+  "effectName": "Feature",
   "maxLevel": 5,
   "levels": [
    {
@@ -6193,7 +6482,8 @@
      "gold": 200000
     },
     "timeSec": 18000,
-    "power": 4220
+    "power": 4220,
+    "effect": "Able to detect the level, star level, and skill level of target's commanders"
    },
    {
     "level": 2,
@@ -6216,7 +6506,8 @@
      "gold": 300000
     },
     "timeSec": 54000,
-    "power": 11630
+    "power": 11630,
+    "effect": "Able to detect the unit type and approximate number of target's city reinforcements"
    },
    {
     "level": 3,
@@ -6239,7 +6530,8 @@
      "gold": 540000
     },
     "timeSec": 162000,
-    "power": 26435
+    "power": 26435,
+    "effect": "Able to detect the unit type and approximate number of target's alliance rallied troops"
    },
    {
     "level": 4,
@@ -6262,7 +6554,8 @@
      "gold": 810000
     },
     "timeSec": 486000,
-    "power": 58362
+    "power": 58362,
+    "effect": "Able to detect the unit type and exact number of target's city reinforcements"
    },
    {
     "level": 5,
@@ -6285,7 +6578,8 @@
      "gold": 1220000
     },
     "timeSec": 1458000,
-    "power": 135413
+    "power": 135413,
+    "effect": "Able to detect the unit type and exact number of target's alliance rallied troops"
    }
   ]
  },
@@ -6293,6 +6587,7 @@
   "id": "combat_tactics",
   "tree": "military",
   "tier": 8,
+  "effectName": "Attack",
   "maxLevel": 10,
   "levels": [
    {
@@ -6316,7 +6611,8 @@
      "gold": 250000
     },
     "timeSec": 32400,
-    "power": 5671
+    "power": 5671,
+    "effect": "+0.5%"
    },
    {
     "level": 2,
@@ -6339,7 +6635,8 @@
      "gold": 375000
     },
     "timeSec": 64800,
-    "power": 14827
+    "power": 14827,
+    "effect": "+1.0%"
    },
    {
     "level": 3,
@@ -6362,7 +6659,8 @@
      "gold": 675000
     },
     "timeSec": 129600,
-    "power": 30421
+    "power": 30421,
+    "effect": "+1.5%"
    },
    {
     "level": 4,
@@ -6385,7 +6683,8 @@
      "gold": 1010000
     },
     "timeSec": 259200,
-    "power": 56408
+    "power": 56408,
+    "effect": "+2.0%"
    },
    {
     "level": 5,
@@ -6408,7 +6707,8 @@
      "gold": 1520000
     },
     "timeSec": 518400,
-    "power": 100570
+    "power": 100570,
+    "effect": "+3.0%"
    },
    {
     "level": 6,
@@ -6436,7 +6736,8 @@
      "gold": 2280000
     },
     "timeSec": 1036800,
-    "power": 177222
+    "power": 177222,
+    "effect": "+4.0%"
    },
    {
     "level": 7,
@@ -6459,7 +6760,8 @@
      "gold": 3420000
     },
     "timeSec": 2073600,
-    "power": 312936
+    "power": 312936,
+    "effect": "+6.0%"
    },
    {
     "level": 8,
@@ -6482,7 +6784,8 @@
      "gold": 5130000
     },
     "timeSec": 4147200,
-    "power": 557994
+    "power": 557994,
+    "effect": "+8.0%"
    },
    {
     "level": 9,
@@ -6505,7 +6808,8 @@
      "gold": 7700000
     },
     "timeSec": 8294400,
-    "power": 1008570
+    "power": 1008570,
+    "effect": "+11.0%"
    },
    {
     "level": 10,
@@ -6528,7 +6832,8 @@
      "gold": 11550000
     },
     "timeSec": 16588800,
-    "power": 1850342
+    "power": 1850342,
+    "effect": "+15.0%"
    }
   ]
  },
@@ -6536,6 +6841,7 @@
   "id": "defensive_formation",
   "tree": "military",
   "tier": 8,
+  "effectName": "Defense",
   "maxLevel": 10,
   "levels": [
    {
@@ -6559,7 +6865,8 @@
      "gold": 250000
     },
     "timeSec": 32400,
-    "power": 5671
+    "power": 5671,
+    "effect": "+0.5%"
    },
    {
     "level": 2,
@@ -6582,7 +6889,8 @@
      "gold": 375000
     },
     "timeSec": 64800,
-    "power": 14827
+    "power": 14827,
+    "effect": "+1.0%"
    },
    {
     "level": 3,
@@ -6605,7 +6913,8 @@
      "gold": 675000
     },
     "timeSec": 129600,
-    "power": 30421
+    "power": 30421,
+    "effect": "+1.5%"
    },
    {
     "level": 4,
@@ -6628,7 +6937,8 @@
      "gold": 1010000
     },
     "timeSec": 259200,
-    "power": 56408
+    "power": 56408,
+    "effect": "+2.0%"
    },
    {
     "level": 5,
@@ -6651,7 +6961,8 @@
      "gold": 1520000
     },
     "timeSec": 518400,
-    "power": 100570
+    "power": 100570,
+    "effect": "+3.0%"
    },
    {
     "level": 6,
@@ -6679,7 +6990,8 @@
      "gold": 2280000
     },
     "timeSec": 1036800,
-    "power": 177222
+    "power": 177222,
+    "effect": "+4.0%"
    },
    {
     "level": 7,
@@ -6702,7 +7014,8 @@
      "gold": 3420000
     },
     "timeSec": 2073600,
-    "power": 312936
+    "power": 312936,
+    "effect": "+6.0%"
    },
    {
     "level": 8,
@@ -6725,7 +7038,8 @@
      "gold": 5130000
     },
     "timeSec": 4147200,
-    "power": 557994
+    "power": 557994,
+    "effect": "+8.0%"
    },
    {
     "level": 9,
@@ -6748,7 +7062,8 @@
      "gold": 7700000
     },
     "timeSec": 8294400,
-    "power": 1008570
+    "power": 1008570,
+    "effect": "+11.0%"
    },
    {
     "level": 10,
@@ -6771,7 +7086,8 @@
      "gold": 11550000
     },
     "timeSec": 16588800,
-    "power": 1850342
+    "power": 1850342,
+    "effect": "+15.0%"
    }
   ]
  },
@@ -6779,6 +7095,7 @@
   "id": "herbal_medicine",
   "tree": "military",
   "tier": 8,
+  "effectName": "Health",
   "maxLevel": 10,
   "levels": [
    {
@@ -6802,7 +7119,8 @@
      "gold": 250000
     },
     "timeSec": 32400,
-    "power": 5671
+    "power": 5671,
+    "effect": "+0.5%"
    },
    {
     "level": 2,
@@ -6825,7 +7143,8 @@
      "gold": 375000
     },
     "timeSec": 64800,
-    "power": 14827
+    "power": 14827,
+    "effect": "+1.0%"
    },
    {
     "level": 3,
@@ -6848,7 +7167,8 @@
      "gold": 675000
     },
     "timeSec": 129600,
-    "power": 30421
+    "power": 30421,
+    "effect": "+1.5%"
    },
    {
     "level": 4,
@@ -6871,7 +7191,8 @@
      "gold": 1010000
     },
     "timeSec": 259200,
-    "power": 56408
+    "power": 56408,
+    "effect": "+2.0%"
    },
    {
     "level": 5,
@@ -6894,7 +7215,8 @@
      "gold": 1520000
     },
     "timeSec": 518400,
-    "power": 100570
+    "power": 100570,
+    "effect": "+3.0%"
    },
    {
     "level": 6,
@@ -6922,7 +7244,8 @@
      "gold": 2280000
     },
     "timeSec": 1036800,
-    "power": 177222
+    "power": 177222,
+    "effect": "+4.0%"
    },
    {
     "level": 7,
@@ -6945,7 +7268,8 @@
      "gold": 3420000
     },
     "timeSec": 2073600,
-    "power": 312936
+    "power": 312936,
+    "effect": "+6.0%"
    },
    {
     "level": 8,
@@ -6968,7 +7292,8 @@
      "gold": 5130000
     },
     "timeSec": 4147200,
-    "power": 557994
+    "power": 557994,
+    "effect": "+8.0%"
    },
    {
     "level": 9,
@@ -6991,7 +7316,8 @@
      "gold": 7700000
     },
     "timeSec": 8294400,
-    "power": 1008570
+    "power": 1008570,
+    "effect": "+11.0%"
    },
    {
     "level": 10,
@@ -7014,7 +7340,8 @@
      "gold": 11550000
     },
     "timeSec": 16588800,
-    "power": 1850342
+    "power": 1850342,
+    "effect": "+15.0%"
    }
   ]
  },
@@ -7022,6 +7349,7 @@
   "id": "cartography",
   "tree": "military",
   "tier": 9,
+  "effectName": "March Speed",
   "maxLevel": 5,
   "levels": [
    {
@@ -7055,7 +7383,8 @@
      "gold": 425000
     },
     "timeSec": 36000,
-    "power": 8877
+    "power": 8877,
+    "effect": "+1.0%"
    },
    {
     "level": 2,
@@ -7078,7 +7407,8 @@
      "gold": 638000
     },
     "timeSec": 54000,
-    "power": 22198
+    "power": 22198,
+    "effect": "+3.0%"
    },
    {
     "level": 3,
@@ -7106,7 +7436,8 @@
      "gold": 1150000
     },
     "timeSec": 81000,
-    "power": 43136
+    "power": 43136,
+    "effect": "+6.0%"
    },
    {
     "level": 4,
@@ -7144,7 +7475,8 @@
      "gold": 1720000
     },
     "timeSec": 122400,
-    "power": 74543
+    "power": 74543,
+    "effect": "+10.0%"
    },
    {
     "level": 5,
@@ -7182,7 +7514,8 @@
      "gold": 2580000
     },
     "timeSec": 183600,
-    "power": 121648
+    "power": 121648,
+    "effect": "+15.0%"
    }
   ]
  },
@@ -7190,6 +7523,7 @@
   "id": "long_swordsman",
   "tree": "military",
   "tier": 10,
+  "effectName": null,
   "maxLevel": 1,
   "levels": [
    {
@@ -7221,6 +7555,7 @@
   "id": "crossbowman",
   "tree": "military",
   "tier": 10,
+  "effectName": null,
   "maxLevel": 1,
   "levels": [
    {
@@ -7252,6 +7587,7 @@
   "id": "knight",
   "tree": "military",
   "tier": 10,
+  "effectName": null,
   "maxLevel": 1,
   "levels": [
    {
@@ -7283,6 +7619,7 @@
   "id": "ballista",
   "tree": "military",
   "tier": 10,
+  "effectName": null,
   "maxLevel": 1,
   "levels": [
    {
@@ -7314,6 +7651,7 @@
   "id": "wootz_steel",
   "tree": "military",
   "tier": 10,
+  "effectName": "Infantry Attack",
   "maxLevel": 10,
   "levels": [
    {
@@ -7337,7 +7675,8 @@
      "gold": 200000
     },
     "timeSec": 17280,
-    "power": 4191
+    "power": 4191,
+    "effect": "+1.0%"
    },
    {
     "level": 2,
@@ -7360,7 +7699,8 @@
      "gold": 300000
     },
     "timeSec": 34560,
-    "power": 10823
+    "power": 10823,
+    "effect": "+2.0%"
    },
    {
     "level": 3,
@@ -7383,7 +7723,8 @@
      "gold": 450000
     },
     "timeSec": 69120,
-    "power": 21462
+    "power": 21462,
+    "effect": "+3.0%"
    },
    {
     "level": 4,
@@ -7406,7 +7747,8 @@
      "gold": 675000
     },
     "timeSec": 136800,
-    "power": 38805
+    "power": 38805,
+    "effect": "+4.0%"
    },
    {
     "level": 5,
@@ -7429,7 +7771,8 @@
      "gold": 1010000
     },
     "timeSec": 277200,
-    "power": 67589
+    "power": 67589,
+    "effect": "+5.0%"
    },
    {
     "level": 6,
@@ -7452,7 +7795,8 @@
      "gold": 1520000
     },
     "timeSec": 554400,
-    "power": 116294
+    "power": 116294,
+    "effect": "+7.0%"
    },
    {
     "level": 7,
@@ -7475,7 +7819,8 @@
      "gold": 2740000
     },
     "timeSec": 1105200,
-    "power": 202693
+    "power": 202693,
+    "effect": "+9.0%"
    },
    {
     "level": 8,
@@ -7498,7 +7843,8 @@
      "gold": 4100000
     },
     "timeSec": 2210400,
-    "power": 354410
+    "power": 354410,
+    "effect": "+11.0%"
    },
    {
     "level": 9,
@@ -7521,7 +7867,8 @@
      "gold": 6150000
     },
     "timeSec": 4424400,
-    "power": 626223
+    "power": 626223,
+    "effect": "+14.0%"
    },
    {
     "level": 10,
@@ -7544,7 +7891,8 @@
      "gold": 9225000
     },
     "timeSec": 9453600,
-    "power": 1122415
+    "power": 1122415,
+    "effect": "+20.0%"
    }
   ]
  },
@@ -7552,6 +7900,7 @@
   "id": "bodkin_arrows",
   "tree": "military",
   "tier": 10,
+  "effectName": "Archer Attack",
   "maxLevel": 10,
   "levels": [
    {
@@ -7575,7 +7924,8 @@
      "gold": 200000
     },
     "timeSec": 17280,
-    "power": 4191
+    "power": 4191,
+    "effect": "+1.0%"
    },
    {
     "level": 2,
@@ -7598,7 +7948,8 @@
      "gold": 300000
     },
     "timeSec": 34560,
-    "power": 10823
+    "power": 10823,
+    "effect": "+2.0%"
    },
    {
     "level": 3,
@@ -7621,7 +7972,8 @@
      "gold": 450000
     },
     "timeSec": 69120,
-    "power": 21462
+    "power": 21462,
+    "effect": "+3.0%"
    },
    {
     "level": 4,
@@ -7644,7 +7996,8 @@
      "gold": 675000
     },
     "timeSec": 136800,
-    "power": 38805
+    "power": 38805,
+    "effect": "+4.0%"
    },
    {
     "level": 5,
@@ -7667,7 +8020,8 @@
      "gold": 1010000
     },
     "timeSec": 277200,
-    "power": 67589
+    "power": 67589,
+    "effect": "+5.0%"
    },
    {
     "level": 6,
@@ -7690,7 +8044,8 @@
      "gold": 1520000
     },
     "timeSec": 554400,
-    "power": 116294
+    "power": 116294,
+    "effect": "+7.0%"
    },
    {
     "level": 7,
@@ -7713,7 +8068,8 @@
      "gold": 2740000
     },
     "timeSec": 1105200,
-    "power": 202693
+    "power": 202693,
+    "effect": "+9.0%"
    },
    {
     "level": 8,
@@ -7736,7 +8092,8 @@
      "gold": 4100000
     },
     "timeSec": 2210400,
-    "power": 354410
+    "power": 354410,
+    "effect": "+11.0%"
    },
    {
     "level": 9,
@@ -7759,7 +8116,8 @@
      "gold": 6150000
     },
     "timeSec": 4424400,
-    "power": 626223
+    "power": 626223,
+    "effect": "+14.0%"
    },
    {
     "level": 10,
@@ -7782,7 +8140,8 @@
      "gold": 9225000
     },
     "timeSec": 9453600,
-    "power": 1122415
+    "power": 1122415,
+    "effect": "+20.0%"
    }
   ]
  },
@@ -7790,6 +8149,7 @@
   "id": "stirrups",
   "tree": "military",
   "tier": 10,
+  "effectName": "Cavalry Attack",
   "maxLevel": 10,
   "levels": [
    {
@@ -7813,7 +8173,8 @@
      "gold": 200000
     },
     "timeSec": 17280,
-    "power": 4191
+    "power": 4191,
+    "effect": "+1.0%"
    },
    {
     "level": 2,
@@ -7836,7 +8197,8 @@
      "gold": 300000
     },
     "timeSec": 34560,
-    "power": 10823
+    "power": 10823,
+    "effect": "+2.0%"
    },
    {
     "level": 3,
@@ -7859,7 +8221,8 @@
      "gold": 450000
     },
     "timeSec": 69120,
-    "power": 21462
+    "power": 21462,
+    "effect": "+3.0%"
    },
    {
     "level": 4,
@@ -7882,7 +8245,8 @@
      "gold": 675000
     },
     "timeSec": 136800,
-    "power": 38805
+    "power": 38805,
+    "effect": "+4.0%"
    },
    {
     "level": 5,
@@ -7905,7 +8269,8 @@
      "gold": 1010000
     },
     "timeSec": 277200,
-    "power": 67589
+    "power": 67589,
+    "effect": "+5.0%"
    },
    {
     "level": 6,
@@ -7928,7 +8293,8 @@
      "gold": 1520000
     },
     "timeSec": 554400,
-    "power": 116294
+    "power": 116294,
+    "effect": "+7.0%"
    },
    {
     "level": 7,
@@ -7951,7 +8317,8 @@
      "gold": 2740000
     },
     "timeSec": 1105200,
-    "power": 202693
+    "power": 202693,
+    "effect": "+9.0%"
    },
    {
     "level": 8,
@@ -7974,7 +8341,8 @@
      "gold": 4100000
     },
     "timeSec": 2210400,
-    "power": 354410
+    "power": 354410,
+    "effect": "+11.0%"
    },
    {
     "level": 9,
@@ -7997,7 +8365,8 @@
      "gold": 6150000
     },
     "timeSec": 4424400,
-    "power": 626223
+    "power": 626223,
+    "effect": "+14.0%"
    },
    {
     "level": 10,
@@ -8020,7 +8389,8 @@
      "gold": 9225000
     },
     "timeSec": 9453600,
-    "power": 1122415
+    "power": 1122415,
+    "effect": "+20.0%"
    }
   ]
  },
@@ -8028,6 +8398,7 @@
   "id": "ballistics",
   "tree": "military",
   "tier": 10,
+  "effectName": "Siege Unit Attack",
   "maxLevel": 10,
   "levels": [
    {
@@ -8051,7 +8422,8 @@
      "gold": 200000
     },
     "timeSec": 25920,
-    "power": 4536
+    "power": 4536,
+    "effect": "+1.0%"
    },
    {
     "level": 2,
@@ -8074,7 +8446,8 @@
      "gold": 300000
     },
     "timeSec": 51840,
-    "power": 11859
+    "power": 11859,
+    "effect": "+2.0%"
    },
    {
     "level": 3,
@@ -8097,7 +8470,8 @@
      "gold": 450000
     },
     "timeSec": 104400,
-    "power": 23881
+    "power": 23881,
+    "effect": "+3.0%"
    },
    {
     "level": 4,
@@ -8120,7 +8494,8 @@
      "gold": 675000
     },
     "timeSec": 208800,
-    "power": 43989
+    "power": 43989,
+    "effect": "+4.0%"
    },
    {
     "level": 5,
@@ -8143,7 +8518,8 @@
      "gold": 1010000
     },
     "timeSec": 414000,
-    "power": 78302
+    "power": 78302,
+    "effect": "+5.0%"
    },
    {
     "level": 6,
@@ -8166,7 +8542,8 @@
      "gold": 1520000
     },
     "timeSec": 828000,
-    "power": 138066
+    "power": 138066,
+    "effect": "+7.0%"
    },
    {
     "level": 7,
@@ -8189,7 +8566,8 @@
      "gold": 2740000
     },
     "timeSec": 1659600,
-    "power": 246584
+    "power": 246584,
+    "effect": "+9.0%"
    },
    {
     "level": 8,
@@ -8212,7 +8590,8 @@
      "gold": 4100000
     },
     "timeSec": 3319200,
-    "power": 442538
+    "power": 442538,
+    "effect": "+11.0%"
    },
    {
     "level": 9,
@@ -8235,7 +8614,8 @@
      "gold": 6150000
     },
     "timeSec": 6634800,
-    "power": 802824
+    "power": 802824,
+    "effect": "+14.0%"
    },
    {
     "level": 10,
@@ -8258,7 +8638,8 @@
      "gold": 9225000
     },
     "timeSec": 0,
-    "power": 1475963
+    "power": 1475963,
+    "effect": "+20.0%"
    }
   ]
  },
@@ -8266,6 +8647,7 @@
   "id": "scutum",
   "tree": "military",
   "tier": 11,
+  "effectName": "Infantry Defense",
   "maxLevel": 10,
   "levels": [
    {
@@ -8289,7 +8671,8 @@
      "gold": 200000
     },
     "timeSec": 25920,
-    "power": 4536
+    "power": 4536,
+    "effect": "+1.0%"
    },
    {
     "level": 2,
@@ -8312,7 +8695,8 @@
      "gold": 300000
     },
     "timeSec": 51840,
-    "power": 11859
+    "power": 11859,
+    "effect": "+2.0%"
    },
    {
     "level": 3,
@@ -8335,7 +8719,8 @@
      "gold": 450000
     },
     "timeSec": 104400,
-    "power": 23881
+    "power": 23881,
+    "effect": "+3.0%"
    },
    {
     "level": 4,
@@ -8358,7 +8743,8 @@
      "gold": 675000
     },
     "timeSec": 208800,
-    "power": 43989
+    "power": 43989,
+    "effect": "+4.0%"
    },
    {
     "level": 5,
@@ -8381,7 +8767,8 @@
      "gold": 1010000
     },
     "timeSec": 414000,
-    "power": 78302
+    "power": 78302,
+    "effect": "+5.0%"
    },
    {
     "level": 6,
@@ -8404,7 +8791,8 @@
      "gold": 1520000
     },
     "timeSec": 828000,
-    "power": 138066
+    "power": 138066,
+    "effect": "+7.0%"
    },
    {
     "level": 7,
@@ -8427,7 +8815,8 @@
      "gold": 2740000
     },
     "timeSec": 1659600,
-    "power": 246584
+    "power": 246584,
+    "effect": "+9.0%"
    },
    {
     "level": 8,
@@ -8450,7 +8839,8 @@
      "gold": 4100000
     },
     "timeSec": 3319200,
-    "power": 442538
+    "power": 442538,
+    "effect": "+11.0%"
    },
    {
     "level": 9,
@@ -8473,7 +8863,8 @@
      "gold": 6150000
     },
     "timeSec": 6634800,
-    "power": 802824
+    "power": 802824,
+    "effect": "+14.0%"
    },
    {
     "level": 10,
@@ -8501,7 +8892,8 @@
      "gold": 9230000
     },
     "timeSec": 13302000,
-    "power": 1475963
+    "power": 1475963,
+    "effect": "+20.0%"
    }
   ]
  },
@@ -8509,6 +8901,7 @@
   "id": "pavise",
   "tree": "military",
   "tier": 11,
+  "effectName": "Archer Defense",
   "maxLevel": 10,
   "levels": [
    {
@@ -8527,7 +8920,8 @@
      "gold": 200000
     },
     "timeSec": 25920,
-    "power": 4536
+    "power": 4536,
+    "effect": "+1.0%"
    },
    {
     "level": 2,
@@ -8550,7 +8944,8 @@
      "gold": 300000
     },
     "timeSec": 51840,
-    "power": 11859
+    "power": 11859,
+    "effect": "+2.0%"
    },
    {
     "level": 3,
@@ -8573,7 +8968,8 @@
      "gold": 450000
     },
     "timeSec": 104400,
-    "power": 23881
+    "power": 23881,
+    "effect": "+3.0%"
    },
    {
     "level": 4,
@@ -8596,7 +8992,8 @@
      "gold": 675000
     },
     "timeSec": 208800,
-    "power": 43989
+    "power": 43989,
+    "effect": "+4.0%"
    },
    {
     "level": 5,
@@ -8619,7 +9016,8 @@
      "gold": 1010000
     },
     "timeSec": 414000,
-    "power": 78302
+    "power": 78302,
+    "effect": "+5.0%"
    },
    {
     "level": 6,
@@ -8642,7 +9040,8 @@
      "gold": 1520000
     },
     "timeSec": 828000,
-    "power": 138066
+    "power": 138066,
+    "effect": "+7.0%"
    },
    {
     "level": 7,
@@ -8665,7 +9064,8 @@
      "gold": 2740000
     },
     "timeSec": 1659600,
-    "power": 246584
+    "power": 246584,
+    "effect": "+9.0%"
    },
    {
     "level": 8,
@@ -8688,7 +9088,8 @@
      "gold": 4100000
     },
     "timeSec": 3319200,
-    "power": 442538
+    "power": 442538,
+    "effect": "+11.0%"
    },
    {
     "level": 9,
@@ -8711,7 +9112,8 @@
      "gold": 6150000
     },
     "timeSec": 6634800,
-    "power": 802824
+    "power": 802824,
+    "effect": "+14.0%"
    },
    {
     "level": 10,
@@ -8734,7 +9136,8 @@
      "gold": 0
     },
     "timeSec": 0,
-    "power": 1475963
+    "power": 1475963,
+    "effect": "+20.0%"
    }
   ]
  },
@@ -8742,6 +9145,7 @@
   "id": "plate_armor",
   "tree": "military",
   "tier": 11,
+  "effectName": "Cavalry Defense",
   "maxLevel": 10,
   "levels": [
    {
@@ -8760,7 +9164,8 @@
      "gold": 200000
     },
     "timeSec": 25920,
-    "power": 4536
+    "power": 4536,
+    "effect": "+1.0%"
    },
    {
     "level": 2,
@@ -8783,7 +9188,8 @@
      "gold": 300000
     },
     "timeSec": 51840,
-    "power": 11859
+    "power": 11859,
+    "effect": "+2.0%"
    },
    {
     "level": 3,
@@ -8806,7 +9212,8 @@
      "gold": 450000
     },
     "timeSec": 104400,
-    "power": 23881
+    "power": 23881,
+    "effect": "+3.0%"
    },
    {
     "level": 4,
@@ -8829,7 +9236,8 @@
      "gold": 675000
     },
     "timeSec": 208800,
-    "power": 43989
+    "power": 43989,
+    "effect": "+4.0%"
    },
    {
     "level": 5,
@@ -8852,7 +9260,8 @@
      "gold": 1010000
     },
     "timeSec": 414000,
-    "power": 78302
+    "power": 78302,
+    "effect": "+5.0%"
    },
    {
     "level": 6,
@@ -8875,7 +9284,8 @@
      "gold": 1520000
     },
     "timeSec": 828000,
-    "power": 138066
+    "power": 138066,
+    "effect": "+7.0%"
    },
    {
     "level": 7,
@@ -8898,7 +9308,8 @@
      "gold": 2740000
     },
     "timeSec": 1659600,
-    "power": 246584
+    "power": 246584,
+    "effect": "+9.0%"
    },
    {
     "level": 8,
@@ -8921,7 +9332,8 @@
      "gold": 4100000
     },
     "timeSec": 3319200,
-    "power": 442538
+    "power": 442538,
+    "effect": "+11.0%"
    },
    {
     "level": 9,
@@ -8944,7 +9356,8 @@
      "gold": 6150000
     },
     "timeSec": 6634800,
-    "power": 802824
+    "power": 802824,
+    "effect": "+14.0%"
    },
    {
     "level": 10,
@@ -8956,7 +9369,8 @@
      "gold": 9200000
     },
     "timeSec": 0,
-    "power": 1475963
+    "power": 1475963,
+    "effect": "+20.0%"
    }
   ]
  },
@@ -8964,6 +9378,7 @@
   "id": "heavy_frame",
   "tree": "military",
   "tier": 11,
+  "effectName": "Siege Defense",
   "maxLevel": 10,
   "levels": [
    {
@@ -8982,7 +9397,8 @@
      "gold": 200000
     },
     "timeSec": 38880,
-    "power": 5055
+    "power": 5055,
+    "effect": "+1.0%"
    },
    {
     "level": 2,
@@ -9005,7 +9421,8 @@
      "gold": 300000
     },
     "timeSec": 77760,
-    "power": 13415
+    "power": 13415,
+    "effect": "+2.0%"
    },
    {
     "level": 3,
@@ -9028,7 +9445,8 @@
      "gold": 450000
     },
     "timeSec": 154800,
-    "power": 27510
+    "power": 27510,
+    "effect": "+3.0%"
    },
    {
     "level": 4,
@@ -9051,7 +9469,8 @@
      "gold": 675000
     },
     "timeSec": 309600,
-    "power": 51765
+    "power": 51765,
+    "effect": "+4.0%"
    },
    {
     "level": 5,
@@ -9074,7 +9493,8 @@
      "gold": 1010000
     },
     "timeSec": 622800,
-    "power": 94373
+    "power": 94373,
+    "effect": "+5.0%"
    },
    {
     "level": 6,
@@ -9097,7 +9517,8 @@
      "gold": 1520000
     },
     "timeSec": 1245600,
-    "power": 170726
+    "power": 170726,
+    "effect": "+7.0%"
    },
    {
     "level": 7,
@@ -9120,7 +9541,8 @@
      "gold": 2740000
     },
     "timeSec": 2487600,
-    "power": 312421
+    "power": 312421,
+    "effect": "+9.0%"
    },
    {
     "level": 8,
@@ -9143,7 +9565,8 @@
      "gold": 4100000
     },
     "timeSec": 4975200,
-    "power": 574730
+    "power": 574730,
+    "effect": "+11.0%"
    },
    {
     "level": 9,
@@ -9166,7 +9589,8 @@
      "gold": 6150000
     },
     "timeSec": 9954000,
-    "power": 1067727
+    "power": 1067727,
+    "effect": "+14.0%"
    },
    {
     "level": 10,
@@ -9189,7 +9613,8 @@
      "gold": 0
     },
     "timeSec": 0,
-    "power": 2006287
+    "power": 2006287,
+    "effect": "+20.0%"
    }
   ]
  },
@@ -9197,6 +9622,7 @@
   "id": "medical_corps",
   "tree": "military",
   "tier": 12,
+  "effectName": "Health",
   "maxLevel": 10,
   "levels": [
    {
@@ -9235,7 +9661,8 @@
      "gold": 250000
     },
     "timeSec": 38880,
-    "power": 5930
+    "power": 5930,
+    "effect": "+1.0%"
    },
    {
     "level": 2,
@@ -9258,7 +9685,8 @@
      "gold": 375000
     },
     "timeSec": 77760,
-    "power": 15604
+    "power": 15604,
+    "effect": "+2.0%"
    },
    {
     "level": 3,
@@ -9281,7 +9709,8 @@
      "gold": 563000
     },
     "timeSec": 154800,
-    "power": 31674
+    "power": 31674,
+    "effect": "+3.0%"
    },
    {
     "level": 4,
@@ -9304,7 +9733,8 @@
      "gold": 844000
     },
     "timeSec": 309600,
-    "power": 58891
+    "power": 58891,
+    "effect": "+4.0%"
    },
    {
     "level": 5,
@@ -9327,7 +9757,8 @@
      "gold": 1270000
     },
     "timeSec": 622800,
-    "power": 105938
+    "power": 105938,
+    "effect": "+5.0%"
    },
    {
     "level": 6,
@@ -9350,7 +9781,8 @@
      "gold": 1900000
     },
     "timeSec": 1245600,
-    "power": 188950
+    "power": 188950,
+    "effect": "+7.0%"
    },
    {
     "level": 7,
@@ -9373,7 +9805,8 @@
      "gold": 3420000
     },
     "timeSec": 2487600,
-    "power": 341205
+    "power": 341205,
+    "effect": "+9.0%"
    },
    {
     "level": 8,
@@ -9396,7 +9829,8 @@
      "gold": 5130000
     },
     "timeSec": 4975200,
-    "power": 619354
+    "power": 619354,
+    "effect": "+12.0%"
    },
    {
     "level": 9,
@@ -9419,7 +9853,8 @@
      "gold": 7690000
     },
     "timeSec": 9954000,
-    "power": 1136111
+    "power": 1136111,
+    "effect": "+16.0%"
    },
    {
     "level": 10,
@@ -9452,7 +9887,8 @@
      "gold": 11500000
     },
     "timeSec": 20008800,
-    "power": 2110314
+    "power": 2110314,
+    "effect": "+25.0%"
    }
   ]
  },
@@ -9460,6 +9896,7 @@
   "id": "combined_arms",
   "tree": "military",
   "tier": 13,
+  "effectName": "Attack",
   "maxLevel": 10,
   "levels": [
    {
@@ -9483,7 +9920,8 @@
      "gold": 250000
     },
     "timeSec": 38880,
-    "power": 5930
+    "power": 5930,
+    "effect": "+1.0%"
    },
    {
     "level": 2,
@@ -9506,7 +9944,8 @@
      "gold": 375000
     },
     "timeSec": 77760,
-    "power": 15604
+    "power": 15604,
+    "effect": "+2.0%"
    },
    {
     "level": 3,
@@ -9529,7 +9968,8 @@
      "gold": 563000
     },
     "timeSec": 154800,
-    "power": 31674
+    "power": 31674,
+    "effect": "+3.0%"
    },
    {
     "level": 4,
@@ -9552,7 +9992,8 @@
      "gold": 844000
     },
     "timeSec": 309600,
-    "power": 58891
+    "power": 58891,
+    "effect": "+4.0%"
    },
    {
     "level": 5,
@@ -9580,7 +10021,8 @@
      "gold": 1270000
     },
     "timeSec": 622800,
-    "power": 105938
+    "power": 105938,
+    "effect": "+5.0%"
    },
    {
     "level": 6,
@@ -9603,7 +10045,8 @@
      "gold": 1900000
     },
     "timeSec": 1245600,
-    "power": 188950
+    "power": 188950,
+    "effect": "+7.0%"
    },
    {
     "level": 7,
@@ -9626,7 +10069,8 @@
      "gold": 3420000
     },
     "timeSec": 2487600,
-    "power": 341205
+    "power": 341205,
+    "effect": "+9.0%"
    },
    {
     "level": 8,
@@ -9649,7 +10093,8 @@
      "gold": 5130000
     },
     "timeSec": 4975200,
-    "power": 619354
+    "power": 619354,
+    "effect": "+12.0%"
    },
    {
     "level": 9,
@@ -9672,7 +10117,8 @@
      "gold": 7690000
     },
     "timeSec": 9954000,
-    "power": 1136111
+    "power": 1136111,
+    "effect": "+16.0%"
    },
    {
     "level": 10,
@@ -9705,7 +10151,8 @@
      "gold": 11500000
     },
     "timeSec": 20008800,
-    "power": 2110314
+    "power": 2110314,
+    "effect": "+25.0%"
    }
   ]
  },
@@ -9713,6 +10160,7 @@
   "id": "encampment",
   "tree": "military",
   "tier": 13,
+  "effectName": "Defense",
   "maxLevel": 10,
   "levels": [
    {
@@ -9736,7 +10184,8 @@
      "gold": 250000
     },
     "timeSec": 38880,
-    "power": 5930
+    "power": 5930,
+    "effect": "+1.0%"
    },
    {
     "level": 2,
@@ -9759,7 +10208,8 @@
      "gold": 375000
     },
     "timeSec": 77760,
-    "power": 15604
+    "power": 15604,
+    "effect": "+2.0%"
    },
    {
     "level": 3,
@@ -9782,7 +10232,8 @@
      "gold": 563000
     },
     "timeSec": 154800,
-    "power": 31674
+    "power": 31674,
+    "effect": "+3.0%"
    },
    {
     "level": 4,
@@ -9805,7 +10256,8 @@
      "gold": 844000
     },
     "timeSec": 309600,
-    "power": 58891
+    "power": 58891,
+    "effect": "+4.0%"
    },
    {
     "level": 5,
@@ -9833,7 +10285,8 @@
      "gold": 1270000
     },
     "timeSec": 622800,
-    "power": 105938
+    "power": 105938,
+    "effect": "+5.0%"
    },
    {
     "level": 6,
@@ -9856,7 +10309,8 @@
      "gold": 1900000
     },
     "timeSec": 1245600,
-    "power": 188950
+    "power": 188950,
+    "effect": "+7.0%"
    },
    {
     "level": 7,
@@ -9879,7 +10333,8 @@
      "gold": 3420000
     },
     "timeSec": 2487600,
-    "power": 341205
+    "power": 341205,
+    "effect": "+9.0%"
    },
    {
     "level": 8,
@@ -9902,7 +10357,8 @@
      "gold": 5130000
     },
     "timeSec": 4975200,
-    "power": 619354
+    "power": 619354,
+    "effect": "+12.0%"
    },
    {
     "level": 9,
@@ -9925,7 +10381,8 @@
      "gold": 7690000
     },
     "timeSec": 9954000,
-    "power": 1136111
+    "power": 1136111,
+    "effect": "+16.0%"
    },
    {
     "level": 10,
@@ -9948,7 +10405,8 @@
      "gold": 11500000
     },
     "timeSec": 20008800,
-    "power": 2110314
+    "power": 2110314,
+    "effect": "+25.0%"
    }
   ]
  },
@@ -9956,6 +10414,7 @@
   "id": "royal_guard",
   "tree": "military",
   "tier": 14,
+  "effectName": null,
   "maxLevel": 1,
   "levels": [
    {
@@ -9992,6 +10451,7 @@
   "id": "royal_crossbowman",
   "tree": "military",
   "tier": 14,
+  "effectName": null,
   "maxLevel": 1,
   "levels": [
    {
@@ -10028,6 +10488,7 @@
   "id": "royal_knight",
   "tree": "military",
   "tier": 14,
+  "effectName": null,
   "maxLevel": 1,
   "levels": [
    {
@@ -10064,6 +10525,7 @@
   "id": "trebuchet",
   "tree": "military",
   "tier": 14,
+  "effectName": null,
   "maxLevel": 1,
   "levels": [
    {

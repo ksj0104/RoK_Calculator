@@ -25,6 +25,8 @@ export default {
   'goals.search': 'Search buildings or research', 'goals.noMatches': 'No matching items.',
   'goals.maxLevel': 'Max Lv.{n}', 'goals.target': 'Selected item', 'goals.targetLevel': 'Target level',
   'goals.add': 'Add goal', 'goals.remove': 'Remove', 'goals.empty': 'Add a goal from the icon grid above.',
+  'goals.effect': 'Effect', 'goals.requires': 'Prerequisites', 'goals.requiresNone': 'None',
+  'effect.unlock': 'Unit unlock',
   'mode.title': 'Route mode', 'mode.fastest': 'Shortest route', 'mode.efficient': 'Efficiency route',
   'mode.fastestDesc': 'Required prerequisites only', 'mode.efficientDesc': 'Evaluate time-saving technology',
   'result.title': 'Growth roadmap', 'result.waiting': 'Choose a goal to reveal your route',
