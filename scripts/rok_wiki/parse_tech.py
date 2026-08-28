@@ -37,7 +37,9 @@ def _requirements_from_cell(cell) -> list[dict]:
     # "/Technology/Name" 형태는 아닐 수 있다). 따라서 markup 모양이 아니라 해석된 이름
     # (slug)과 href로 판단한다: building은 href에 "/Buildings/"가 있거나 slug가
     # "academy"인 경우로 한정하고, 그 외(selflink, 레드링크, 그 외 <a>)는 전부 research다.
-    for part in re.split(r"<br\s*/?>", cell.decode_contents()):
+    # 일부 페이지는 요구사항을 <br>이 아니라 <p>로 구분한다 (예: Combined Arms) — 둘 다로 분할해야
+    # 서로 다른 요구사항의 이름과 레벨이 한 조각으로 뒤섞이지 않는다.
+    for part in re.split(r"<br\s*/?>|</?p>", cell.decode_contents()):
         frag = BeautifulSoup(part, "html.parser")
         m = re.search(r"(?:Lv\.?|Level)\s*(\d+)", frag.get_text())
         if not m:
@@ -56,8 +58,17 @@ def _requirements_from_cell(cell) -> list[dict]:
             href = ""
         else:
             continue
-        slug = slugify(name)
-        kind = "building" if ("/Buildings/" in href or slug == "academy") else "research"
+        # 건물 링크는 href가 "/Buildings/<Page>" 형태다. 링크 텍스트는 보통 건물명 그대로지만
+        # (예: "Academy"는 "Buildings/Academy"로) 페이지 제목 전체를 텍스트로 쓰는 경우가 있어
+        # 그 경우 텍스트를 그대로 slugify하면 "buildings_academy" 같은 잘못된 id가 된다.
+        # href에서 실제 페이지명을 뽑아 사용하면 텍스트 표기와 무관하게 안정적이다.
+        if "/Buildings/" in href:
+            page = href.split("/Buildings/", 1)[1].split("#", 1)[0]
+            slug = slugify(page.replace("_", " "))
+            kind = "building"
+        else:
+            slug = slugify(name)
+            kind = "building" if slug == "academy" else "research"
         reqs.append({"type": kind, "id": slug, "level": int(m.group(1))})
     return reqs
 

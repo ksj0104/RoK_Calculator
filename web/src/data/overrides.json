@@ -1,1 +1,10 @@
-{ "buildings": {}, "research": {} }
+{
+ "buildings": {
+  "city_hall": {
+   "24": {
+    "power": 1322480
+   }
+  }
+ },
+ "research": {}
+}
