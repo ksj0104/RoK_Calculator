@@ -58,18 +58,41 @@ describe('computePlan', () => {
     ]);
   });
 
-  it('완료 전에 시작되는 작업만 있으면 불필요한 속도 연구를 추가하지 않는다', () => {
+  it('총 시간이 늘지 않으면 속도 연구를 최대 레벨까지 추가한다 (연구 큐 유휴 활용)', () => {
     const cost = { food: 0, wood: 0, stone: 0, gold: 0 };
     const speedCatalog = [
       { id: 'tower', kind: 'building' as const, category: 'other', maxLevel: 1, levels: [
         { level: 1, requirements: [], cost, timeSec: 10_000, power: 0 },
       ]},
-      { id: 'masonry', kind: 'research' as const, category: 'economic', maxLevel: 1, levels: [
+      { id: 'masonry', kind: 'research' as const, category: 'economic', maxLevel: 2, levels: [
         { level: 1, requirements: [], cost, timeSec: 100, power: 0 },
+        { level: 2, requirements: [], cost, timeSec: 100, power: 0 },
       ]},
     ];
     const efficient = computePlan(speedCatalog, freshState(),
       [{ type: 'building', id: 'tower', level: 1 }], 'efficient');
+    // 건물은 이미 시작되어 단축 효과는 없지만, 연구 큐가 놀고 있으므로 총 시간이 그대로다 → 최대 레벨까지 추가
+    expect(efficient.totalSecWithSpeedups).toBe(10_000);
+    expect(efficient.tasks).toHaveLength(3);
+    expect(efficient.selectedBoosts).toEqual([
+      { id: 'masonry', level: 2, kind: 'building', bonusPct: 3 },
+    ]);
+  });
+
+  it('속도 연구가 총 시간을 늘리면 추가하지 않는다', () => {
+    const cost = { food: 0, wood: 0, stone: 0, gold: 0 };
+    const speedCatalog = [
+      { id: 'astronomy', kind: 'research' as const, category: 'economic', maxLevel: 1, levels: [
+        { level: 1, requirements: [], cost, timeSec: 1_000, power: 0 },
+      ]},
+      { id: 'masonry', kind: 'research' as const, category: 'economic', maxLevel: 1, levels: [
+        { level: 1, requirements: [], cost, timeSec: 100, power: 0 },
+      ]},
+    ];
+    // 목표가 연구뿐이라 연구 큐가 꽉 차 있고, 석공술(건설 속도)은 연구 시간을 줄이지 못한다
+    const efficient = computePlan(speedCatalog, freshState(),
+      [{ type: 'research', id: 'astronomy', level: 1 }], 'efficient');
+    expect(efficient.totalSecWithSpeedups).toBe(1_000);
     expect(efficient.tasks).toHaveLength(1);
     expect(efficient.selectedBoosts).toHaveLength(0);
   });

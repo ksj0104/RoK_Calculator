@@ -121,6 +121,7 @@ function makePlan(
 function efficientGoals(catalog: CatalogEntry[], state: UserState, goals: Goal[]): Goal[] {
   const extras: Goal[] = [];
   let best = makePlan(catalog, state, goals, 'efficient');
+  const totalLevels = (list: Goal[]) => list.reduce((sum, goal) => sum + goal.level, 0);
 
   for (let pass = 0; pass < SPEED_TECHNOLOGIES.length * 3; pass++) {
     let bestCandidate: { extras: Goal[]; plan: Plan } | null = null;
@@ -136,11 +137,12 @@ function efficientGoals(catalog: CatalogEntry[], state: UserState, goals: Goal[]
         ]);
         const candidateGoals = mergeGoals([...goals, ...candidateExtras]);
         const candidatePlan = makePlan(catalog, state, candidateGoals, 'efficient', candidateExtras);
-        if (candidatePlan.totalSecWithSpeedups >= best.totalSecWithSpeedups) continue;
+        // 총 완료 시간이 늘지 않는 한 속도 연구를 계속 채운다 (동률이면 더 높은 레벨 선택)
+        if (candidatePlan.totalSecWithSpeedups > best.totalSecWithSpeedups) continue;
         if (!bestCandidate
           || candidatePlan.totalSecWithSpeedups < bestCandidate.plan.totalSecWithSpeedups
           || (candidatePlan.totalSecWithSpeedups === bestCandidate.plan.totalSecWithSpeedups
-            && candidatePlan.tasks.length < bestCandidate.plan.tasks.length)) {
+            && totalLevels(candidateExtras) > totalLevels(bestCandidate.extras))) {
           bestCandidate = { extras: candidateExtras, plan: candidatePlan };
         }
       }
