@@ -8,7 +8,8 @@ export interface ScheduleOptions {
   researchSpeedPct: number;
   durationOverride?: Map<NodeId, number>; // 가속 적용 후 시간 (speedups.ts가 사용)
   durationReduction?: Map<NodeId, number>;
-  allianceReductionSec?: number;  // 연맹 지원: 작업마다 차감되는 총 시간(횟수 × 회당 감소)
+  allianceHelpCount?: number;  // 연맹 지원 횟수 (작업마다 적용)
+  allianceHelpSec?: number;    // 연맹 스킬: 지원 1회당 최소 감소 시간(초)
   researchLevels?: Readonly<Record<string, number>>;
   preferredNodes?: ReadonlySet<NodeId>;
 }
@@ -16,6 +17,17 @@ export interface ScheduleOptions {
 export interface ScheduledTask {
   key: NodeId; kind: NodeKind; queue: number;
   startSec: number; endSec: number; durationSec: number;
+}
+
+/** 연맹 지원: 1회마다 남은 시간의 1%와 회당 감소 시간(연맹 스킬) 중 큰 값을 차감한다. */
+export function applyAllianceHelps(
+  timeSec: number, helpCount: number, perHelpSec: number,
+): number {
+  let remaining = timeSec;
+  for (let i = 0; i < helpCount && remaining > 0; i++) {
+    remaining = Math.max(0, remaining - Math.max(Math.ceil(remaining / 100), perHelpSec));
+  }
+  return remaining;
 }
 
 export function effectiveDuration(
@@ -27,8 +39,9 @@ export function effectiveDuration(
   if (override !== undefined) return override;
   const basePct = node.kind === 'building' ? opts.buildingSpeedPct : opts.researchSpeedPct;
   const pct = basePct + researchBonus(node.kind, researchLevels);
-  const reduction = (opts.allianceReductionSec ?? 0) + (opts.durationReduction?.get(node.key) ?? 0);
-  return Math.max(0, Math.ceil(node.timeSec / (1 + pct / 100)) - reduction);
+  const buffed = Math.ceil(node.timeSec / (1 + pct / 100));
+  const helped = applyAllianceHelps(buffed, opts.allianceHelpCount ?? 0, opts.allianceHelpSec ?? 0);
+  return Math.max(0, helped - (opts.durationReduction?.get(node.key) ?? 0));
 }
 
 /** 이산 사건 시뮬레이션. 큐 0..builders-1 = 건설, builders = 연구. */

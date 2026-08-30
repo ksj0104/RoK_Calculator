@@ -14,7 +14,7 @@ export default {
   'city.buffHelpAuto': 'The excluded Technology bonus is calculated automatically from your Masonry, Engineering, Writing, and Mathematics levels.',
   'city.buffHelpImageAlt': 'In-game buff details showing 37% building speed split into 16% Technology, 1% Alliance Technology, 5% civilization trait, and 15% VIP',
   'city.allianceHelpCount': 'Alliance helps (per task)', 'city.allianceHelpReduction': 'Time reduced per help',
-  'city.allianceHelpNote': 'Each construction/research task is shortened by helps × reduction per help.',
+  'city.allianceHelpNote': 'Each help reduces the greater of 1% of remaining time or the per-help reduction (alliance skill). Applied to every construction/research task.',
   'city.secondBuilder': 'Use second building queue', 'city.reset': 'Reset city profile',
   'speedup.universal': 'Universal', 'speedup.building': 'Building', 'speedup.research': 'Research',
   'goals.title': 'How far will your kingdom grow?',

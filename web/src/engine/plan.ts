@@ -59,7 +59,8 @@ function makePlan(
     builders: state.secondBuilder ? 2 : 1,
     buildingSpeedPct: state.buffs.buildingSpeedPct,
     researchSpeedPct: state.buffs.researchSpeedPct,
-    allianceReductionSec: state.buffs.allianceHelpCount * state.buffs.allianceHelpSec,
+    allianceHelpCount: state.buffs.allianceHelpCount,
+    allianceHelpSec: state.buffs.allianceHelpSec,
     researchLevels: state.research,
     preferredNodes,
   };

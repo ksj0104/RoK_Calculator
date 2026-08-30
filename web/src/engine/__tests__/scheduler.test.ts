@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { requiredNodes } from '../closure';
 import { buildIndex } from '../graph';
-import { schedule } from '../scheduler';
+import { applyAllianceHelps, schedule } from '../scheduler';
 import { nodeId } from '../types';
 import { fixtureCatalog, freshState } from './fixtures';
 
@@ -50,11 +50,40 @@ describe('schedule', () => {
     expect(Math.max(...tasks.map((t) => t.endSec))).toBe(245);
   });
 
-  it('연맹 지원: 작업마다 총 감소 시간을 빼고 0 밑으로 내려가지 않는다', () => {
+  it('연맹 지원: 짧은 작업은 회당 감소 시간만큼 차감되고 0 밑으로 내려가지 않는다', () => {
     const nodes = requiredNodes(index, goalHall3, freshState());
-    const tasks = schedule(nodes, { ...opts, allianceReductionSec: 55 });
+    // 모든 작업이 500초 이하라 1% < 5초 → 회당 5초 × 11회 = 55초씩 차감
+    const tasks = schedule(nodes, { ...opts, allianceHelpCount: 11, allianceHelpSec: 5 });
     // wall1 50→0, wall2 60→5, hall2 100→45, academy1 80→25, hall3 200→145 = 220
     expect(Math.max(...tasks.map((t) => t.endSec))).toBe(220);
+  });
+
+  it('연맹 지원: 긴 작업은 회당 남은 시간의 1%씩 차감된다', () => {
+    const longCatalog = [
+      { id: 'keep', kind: 'building' as const, category: 'other', maxLevel: 1, levels: [
+        { level: 1, requirements: [], cost: { food: 0, wood: 0, stone: 0, gold: 0 },
+          timeSec: 10_000, power: 0 },
+      ]},
+    ];
+    const nodes = requiredNodes(buildIndex(longCatalog),
+      [{ type: 'building', id: 'keep', level: 1 }], freshState());
+    const tasks = schedule(nodes, { ...opts, allianceHelpCount: 2, allianceHelpSec: 10 });
+    // 1회: max(1% of 10000 = 100, 10) → 9900, 2회: max(ceil(99), 10) → 9801
+    expect(tasks[0].durationSec).toBe(9_801);
+  });
+
+  describe('applyAllianceHelps', () => {
+    it('회당 남은 시간의 1%와 회당 감소 시간 중 큰 값을 순차 차감한다', () => {
+      expect(applyAllianceHelps(10_000, 1, 10)).toBe(9_900);
+      expect(applyAllianceHelps(10_000, 3, 10)).toBe(9_702); // 9900 → 9801 → 9702
+      expect(applyAllianceHelps(500, 3, 60)).toBe(320);      // 1%=5 < 60 → 60씩
+      expect(applyAllianceHelps(150, 2, 100)).toBe(0);       // 50 → 0 (클램프)
+    });
+
+    it('횟수나 시간이 0이면 그대로다', () => {
+      expect(applyAllianceHelps(10_000, 0, 60)).toBe(10_000);
+      expect(applyAllianceHelps(0, 5, 60)).toBe(0);
+    });
   });
 
   it('속도 연구 효과는 완료 후 시작하는 작업부터 적용된다', () => {

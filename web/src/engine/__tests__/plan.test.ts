@@ -14,12 +14,13 @@ describe('computePlan', () => {
     expect(plan.tasks[0].node).toBeDefined();
   });
 
-  it('연맹 지원(횟수 × 회당 감소)이 모든 작업 시간에 반영된다', () => {
+  it('연맹 지원이 모든 작업 시간에 반영된다', () => {
     const state = freshState();
     state.buffs.allianceHelpCount = 10;
-    state.buffs.allianceHelpSec = 5; // 작업당 50초 감소
+    state.buffs.allianceHelpSec = 5;
     const plan = computePlan(fixtureCatalog, state,
       [{ type: 'building', id: 'hall', level: 3 }]);
+    // 모든 작업이 500초 이하라 1% < 5초 → 회당 5초 × 10회 = 50초씩 차감
     // wall1 50→0, wall2 60→10, hall2 100→50, academy1 80→30, hall3 200→150 = 240
     expect(plan.totalSecRaw).toBe(240);
     expect(plan.totalSecWithSpeedups).toBe(240);

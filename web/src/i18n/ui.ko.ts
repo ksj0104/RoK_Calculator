@@ -14,7 +14,7 @@ export default {
   'city.buffHelpAuto': '제외한 기술 보너스는 입력한 석공술·공학·문자·수학 레벨을 기준으로 자동 계산됩니다.',
   'city.buffHelpImageAlt': '건설 속도 37% 중 기술 16%, 연맹 기술 1%, 문명 특성 5%, VIP 15%가 표시된 게임 버프 상세 화면',
   'city.allianceHelpCount': '연맹 지원 횟수', 'city.allianceHelpReduction': '지원 1회당 감소 시간',
-  'city.allianceHelpNote': '건설·연구 작업 하나마다 (지원 횟수 × 회당 감소 시간)만큼 시간이 줄어듭니다.',
+  'city.allianceHelpNote': '지원 1회마다 남은 시간의 1%와 회당 감소 시간(연맹 스킬) 중 큰 값만큼 줄어듭니다. 건설·연구 작업마다 적용됩니다.',
   'city.secondBuilder': '두 번째 건설 대기열 사용', 'city.reset': '도시 정보 초기화',
   'speedup.universal': '범용', 'speedup.building': '건설', 'speedup.research': '연구',
   'goals.title': '어디까지 성장할까요?',
