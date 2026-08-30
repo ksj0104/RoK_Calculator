@@ -59,6 +59,7 @@ export interface UserState {
   buffs: {
     buildingSpeedPct: number;
     researchSpeedPct: number;
+    trainingSpeedPct: number;
     allianceHelpCount: number;
     allianceHelpSec: number;
   };
@@ -73,6 +74,7 @@ export const defaultUserState = (): UserState => ({
   buildings: { city_hall: 1 },
   research: {},
   speedups: emptySpeedups(),
-  buffs: { buildingSpeedPct: 0, researchSpeedPct: 0, allianceHelpCount: 0, allianceHelpSec: 0 },
+  buffs: { buildingSpeedPct: 0, researchSpeedPct: 0, trainingSpeedPct: 0,
+    allianceHelpCount: 0, allianceHelpSec: 0 },
   secondBuilder: false,
 });

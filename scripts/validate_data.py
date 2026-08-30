@@ -59,11 +59,38 @@ KNOWN_ZERO_WARNINGS = KNOWN_ZERO_PLACEHOLDERS | KNOWN_DATA_GAPS
 def main() -> int:
     buildings = json.loads((DATA / "buildings.json").read_text(encoding="utf-8"))
     research = json.loads((DATA / "research.json").read_text(encoding="utf-8"))
+    troops = json.loads((DATA / "troops.json").read_text(encoding="utf-8"))
     errors: list[str] = []
     warnings: list[str] = []
 
     catalog = {("building", b["id"]): b for b in buildings}
     catalog.update({("research", r["id"]): r for r in research})
+
+    # Troop catalog: four facilities, five tiers, complete non-negative costs.
+    expected_tiers = {str(tier) for tier in range(1, 6)}
+    expected_resources = {"food", "wood", "stone", "gold"}
+    if len(troops.get("facilityCapacity", [])) != 25:
+        errors.append("troops: facilityCapacity must contain levels 1..25")
+    elif any(value <= 0 for value in troops["facilityCapacity"]):
+        errors.append("troops: facilityCapacity values must be positive")
+    if set(troops.get("tiers", {})) != expected_tiers:
+        errors.append("troops: tiers must contain T1..T5")
+    for tier_id, tier in troops.get("tiers", {}).items():
+        if any(tier.get(field, 0) <= 0 for field in ("power", "timeSec", "academyLevel")):
+            errors.append(f"troops:T{tier_id}: power, timeSec, and academyLevel must be positive")
+    for troop_type, troop in troops.get("types", {}).items():
+        if ("building", troop.get("facility")) not in catalog:
+            errors.append(f"troops:{troop_type}: unknown facility {troop.get('facility')}")
+        if set(troop.get("costs", {})) != expected_tiers:
+            errors.append(f"troops:{troop_type}: costs must contain T1..T5")
+        for tier_id, cost in troop.get("costs", {}).items():
+            if set(cost) != expected_resources or any(value < 0 for value in cost.values()):
+                errors.append(f"troops:{troop_type}:T{tier_id}: invalid resource cost")
+    if set(troops.get("types", {})) != {"infantry", "archer", "cavalry", "siege"}:
+        errors.append("troops: types must contain infantry, archer, cavalry, and siege")
+    for item in troops.get("shopSpeedups", []):
+        if item.get("minutes", 0) <= 0 or item.get("gems", 0) <= 0:
+            errors.append("troops: Shop speedup minutes and gems must be positive")
 
     # 1, 3, 4
     for (kind, cid), entry in catalog.items():

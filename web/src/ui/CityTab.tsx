@@ -93,6 +93,11 @@ export function CityTab({ state, dispatch }: { state: UserState; dispatch: Dispa
               value={state.buffs.researchSpeedPct}
               onChange={(e) => dispatch({ type: 'setBuff', key: 'researchSpeedPct', value: Number(e.target.value) })} />%</span>
           </label>
+          <label><span>{t('city.trainingSpeed')}</span>
+            <span className="number-field"><input type="number" min={0} max={500}
+              value={state.buffs.trainingSpeedPct}
+              onChange={(e) => dispatch({ type: 'setBuff', key: 'trainingSpeedPct', value: Number(e.target.value) })} />%</span>
+          </label>
           <label><span>{t('city.allianceHelpCount')}</span>
             <span className="number-field"><input type="number" min={0} max={100}
               value={state.buffs.allianceHelpCount}

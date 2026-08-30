@@ -1,0 +1,75 @@
+{
+  "verifiedAt": "2026-08-31",
+  "sources": [
+    "https://rok-calculator.com/mge-training-calculator",
+    "https://onechilledgamer.com/rise-of-kingdoms-troops-guide/",
+    "https://riseofkingdomsguides.com/siege-workshop/",
+    "https://riseofkingdoms.fandom.com/wiki/Buildings/Shop"
+  ],
+  "facilityCapacity": [
+    20, 50, 100, 150, 200, 250, 300, 350, 400, 450,
+    500, 550, 600, 700, 800, 900, 1000, 1100, 1200, 1300,
+    1400, 1500, 1600, 1700, 2000
+  ],
+  "tiers": {
+    "1": { "power": 1, "timeSec": 15, "academyLevel": 1 },
+    "2": { "power": 2, "timeSec": 30, "academyLevel": 8 },
+    "3": { "power": 3, "timeSec": 60, "academyLevel": 16 },
+    "4": { "power": 4, "timeSec": 80, "academyLevel": 21 },
+    "5": { "power": 10, "timeSec": 120, "academyLevel": 25 }
+  },
+  "types": {
+    "infantry": {
+      "facility": "barracks",
+      "costs": {
+        "1": { "food": 50, "wood": 50, "stone": 0, "gold": 0 },
+        "2": { "food": 100, "wood": 100, "stone": 0, "gold": 0 },
+        "3": { "food": 150, "wood": 150, "stone": 0, "gold": 10 },
+        "4": { "food": 300, "wood": 300, "stone": 0, "gold": 20 },
+        "5": { "food": 800, "wood": 800, "stone": 0, "gold": 400 }
+      }
+    },
+    "archer": {
+      "facility": "archery_range",
+      "costs": {
+        "1": { "food": 40, "wood": 60, "stone": 0, "gold": 0 },
+        "2": { "food": 0, "wood": 100, "stone": 75, "gold": 0 },
+        "3": { "food": 0, "wood": 150, "stone": 112, "gold": 10 },
+        "4": { "food": 0, "wood": 300, "stone": 225, "gold": 20 },
+        "5": { "food": 0, "wood": 800, "stone": 600, "gold": 400 }
+      }
+    },
+    "cavalry": {
+      "facility": "stable",
+      "costs": {
+        "1": { "food": 60, "wood": 40, "stone": 0, "gold": 0 },
+        "2": { "food": 100, "wood": 0, "stone": 75, "gold": 0 },
+        "3": { "food": 150, "wood": 0, "stone": 112, "gold": 10 },
+        "4": { "food": 300, "wood": 0, "stone": 225, "gold": 20 },
+        "5": { "food": 800, "wood": 0, "stone": 600, "gold": 400 }
+      }
+    },
+    "siege": {
+      "facility": "siege_workshop",
+      "costs": {
+        "1": { "food": 60, "wood": 60, "stone": 0, "gold": 0 },
+        "2": { "food": 65, "wood": 65, "stone": 50, "gold": 0 },
+        "3": { "food": 100, "wood": 100, "stone": 75, "gold": 10 },
+        "4": { "food": 200, "wood": 200, "stone": 150, "gold": 20 },
+        "5": { "food": 500, "wood": 500, "stone": 400, "gold": 400 }
+      }
+    }
+  },
+  "shopSpeedups": [
+    { "minutes": 1, "gems": 3 },
+    { "minutes": 15, "gems": 40 },
+    { "minutes": 60, "gems": 120 },
+    { "minutes": 180, "gems": 300 },
+    { "minutes": 480, "gems": 600 },
+    { "minutes": 900, "gems": 1000 },
+    { "minutes": 1440, "gems": 1500 },
+    { "minutes": 4320, "gems": 4400 },
+    { "minutes": 10080, "gems": 10000 },
+    { "minutes": 43200, "gems": 40000 }
+  ]
+}

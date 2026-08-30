@@ -18,7 +18,7 @@ const nonNegativeInteger = (value: number): number =>
   Number.isFinite(value) ? Math.max(0, Math.floor(value)) : 0;
 
 export const BUFF_MAX: Record<keyof UserState['buffs'], number> = {
-  buildingSpeedPct: 500, researchSpeedPct: 500,
+  buildingSpeedPct: 500, researchSpeedPct: 500, trainingSpeedPct: 500,
   allianceHelpCount: 100, allianceHelpSec: 3600,
 };
 

@@ -13,6 +13,10 @@ export const SPEED_TECHNOLOGIES: readonly SpeedTechnology[] = [
   { id: 'mathematics', kind: 'research', cumulativePct: [1, 2, 3, 4, 5, 6, 8, 10, 12, 15] },
 ];
 
+export const TRAINING_SPEED_TECHNOLOGIES: readonly SpeedTechnology[] = [
+  { id: 'military_discipline', kind: 'research', cumulativePct: [20] },
+];
+
 export function technologyBonus(id: string, level: number): number {
   const technology = SPEED_TECHNOLOGIES.find((item) => item.id === id);
   if (!technology || level <= 0) return 0;
@@ -26,4 +30,12 @@ export function researchBonus(
   return SPEED_TECHNOLOGIES
     .filter((technology) => technology.kind === kind)
     .reduce((sum, technology) => sum + technologyBonus(technology.id, levels[technology.id] ?? 0), 0);
+}
+
+export function trainingTechnologyBonus(levels: Readonly<Record<string, number>>): number {
+  return TRAINING_SPEED_TECHNOLOGIES.reduce((sum, technology) => {
+    const level = levels[technology.id] ?? 0;
+    if (level <= 0) return sum;
+    return sum + (technology.cumulativePct[Math.min(level, technology.cumulativePct.length) - 1] ?? 0);
+  }, 0);
 }
