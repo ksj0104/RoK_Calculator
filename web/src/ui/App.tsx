@@ -9,6 +9,7 @@ import { CityTab } from './CityTab';
 import { GoalsTab } from './GoalsTab';
 import { ResultTab } from './ResultTab';
 import { TroopTrainingCalculator } from './TroopTrainingCalculator';
+import { PurchaseValueGuide } from './PurchaseValueGuide';
 
 const GOALS_STORAGE_KEY = 'rok-calculator-goals-v1';
 
@@ -38,7 +39,7 @@ function Shell() {
   const [goals, setGoals] = useState<Goal[]>(loadGoals);
   const [mode, setMode] = useState<PlanMode>(() =>
     localStorage.getItem('rok-calculator-mode-v1') === 'efficient' ? 'efficient' : 'fastest');
-  const [workspace, setWorkspace] = useState<'growth' | 'training'>('growth');
+  const [workspace, setWorkspace] = useState<'growth' | 'training' | 'purchases'>('growth');
   const [cityOpen, setCityOpen] = useState(() => window.innerWidth > 820);
   const [status, setStatus] = useState<{ kind: 'ok' | 'error'; text: string } | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -141,11 +142,16 @@ function Shell() {
           <button className={workspace === 'training' ? 'active' : ''} onClick={() => setWorkspace('training')}>
             {t('app.trainingCalculator')}
           </button>
+          <button className={workspace === 'purchases' ? 'active' : ''} onClick={() => setWorkspace('purchases')}>
+            {t('app.purchaseGuide')}
+          </button>
         </nav>
         {workspace === 'growth' ? <>
           <GoalsTab goals={goals} setGoals={setGoals} mode={mode} setMode={setMode} />
           <ResultTab state={state} goals={goals} mode={mode} />
-        </> : <TroopTrainingCalculator state={state} dispatch={dispatch} />}
+        </> : workspace === 'training'
+          ? <TroopTrainingCalculator state={state} dispatch={dispatch} />
+          : <PurchaseValueGuide />}
       </main>
     </div>
   );

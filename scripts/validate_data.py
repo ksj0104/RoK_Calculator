@@ -60,6 +60,7 @@ def main() -> int:
     buildings = json.loads((DATA / "buildings.json").read_text(encoding="utf-8"))
     research = json.loads((DATA / "research.json").read_text(encoding="utf-8"))
     troops = json.loads((DATA / "troops.json").read_text(encoding="utf-8"))
+    purchases = json.loads((DATA / "purchases.json").read_text(encoding="utf-8"))
     errors: list[str] = []
     warnings: list[str] = []
 
@@ -91,6 +92,20 @@ def main() -> int:
     for item in troops.get("shopSpeedups", []):
         if item.get("minutes", 0) <= 0 or item.get("gems", 0) <= 0:
             errors.append("troops: Shop speedup minutes and gems must be positive")
+
+    purchase_rows = purchases.get("products", [])
+    purchase_ids = [row.get("id") for row in purchase_rows]
+    purchase_ranks = [row.get("rank") for row in purchase_rows]
+    if len(purchase_ids) != len(set(purchase_ids)):
+        errors.append("purchases: product ids must be unique")
+    if sorted(purchase_ranks) != list(range(1, len(purchase_rows) + 1)):
+        errors.append("purchases: ranks must be contiguous from 1")
+    for row in purchase_rows:
+        if row.get("tier") not in {"S", "A", "B", "C", "D", "조건부"}:
+            errors.append(f"purchases:{row.get('id')}: invalid tier")
+        for field in ("priceUsd", "nameKo", "nameEn", "valueKo", "valueEn", "noteKo", "noteEn"):
+            if not row.get(field):
+                errors.append(f"purchases:{row.get('id')}: missing {field}")
 
     # 1, 3, 4
     for (kind, cid), entry in catalog.items():
