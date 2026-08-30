@@ -331,6 +331,26 @@ button:focus-visible, input:focus-visible, select:focus-visible, summary:focus-v
 .training-stat-grid span, .training-stat-grid small { color: var(--muted); font-size: .62rem; }
 .training-stat-grid strong { margin: 5px 0 3px; overflow: hidden; font-size: .93rem; text-overflow: ellipsis; }
 .training-stat-grid .primary-stat strong { color: var(--gold-soft); font-family: Georgia, serif; font-size: 1.22rem; }
+.gem-efficiency-callout { margin-top: 9px; padding: 13px; display: grid; grid-template-columns: 1.4fr repeat(3, 1fr);
+  gap: 8px; border: 1px solid rgb(120 154 104 / 55%); border-radius: 9px; background: rgb(120 154 104 / 8%); }
+.gem-efficiency-callout > div { min-width: 0; padding: 5px 8px; display: flex; flex-direction: column; justify-content: center;
+  border-left: 1px solid rgb(120 154 104 / 24%); }
+.gem-efficiency-callout > div:first-child { border-left: 0; }
+.gem-efficiency-callout span, .gem-efficiency-callout small { color: var(--muted); font-size: .61rem; }
+.gem-efficiency-callout strong { margin: 4px 0 2px; color: #b9d3ad; font-size: .9rem; }
+.gem-efficiency-callout .gem-efficiency-main strong { color: var(--gold-soft); font-family: Georgia, serif; font-size: 1.18rem; }
+.facility-efficiency-panel { margin-top: 9px; padding: 13px; border: 1px solid var(--line); border-radius: 9px; background: var(--bg); }
+.facility-efficiency-heading { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.facility-efficiency-heading > div { min-width: 0; }
+.facility-efficiency-heading span, .facility-efficiency-heading small { display: block; color: var(--muted); font-size: .61rem; }
+.facility-efficiency-heading strong { display: block; margin: 4px 0; color: var(--gold-soft); font-size: .9rem; }
+.facility-ranking { margin-top: 11px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px; }
+.facility-ranking article { position: relative; padding: 9px 10px; border: 1px solid var(--line); border-radius: 7px; background: var(--surface); }
+.facility-ranking article.best { border-color: rgb(120 154 104 / 65%); background: rgb(120 154 104 / 8%); }
+.facility-ranking article > span { position: absolute; right: 7px; top: 6px; color: var(--green); font-size: .58rem; }
+.facility-ranking strong, .facility-ranking small { display: block; }
+.facility-ranking strong { color: var(--text); font-size: .75rem; }
+.facility-ranking small { margin-top: 4px; color: var(--muted); font-size: .58rem; line-height: 1.45; }
 .training-detail-grid { margin-top: 9px; display: grid; grid-template-columns: 1.5fr 1fr; gap: 9px; }
 .training-detail-grid > article { padding: 14px; border: 1px solid var(--line); border-radius: 9px; background: var(--bg); }
 .training-detail-grid h3 { margin: 0 0 11px; color: var(--gold-soft); font-size: .75rem; }
@@ -379,7 +399,10 @@ button:focus-visible, input:focus-visible, select:focus-visible, summary:focus-v
   .training-target { width: 100%; }
   .training-controls, .training-results { padding: 17px 15px; }
   .training-stat-grid { grid-template-columns: repeat(2, 1fr); }
+  .gem-efficiency-callout { grid-template-columns: repeat(2, 1fr); }
+  .gem-efficiency-callout > div:nth-child(3) { border-left: 0; }
   .training-detail-grid { grid-template-columns: 1fr; }
+  .facility-ranking { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 560px) {
@@ -399,6 +422,9 @@ button:focus-visible, input:focus-visible, select:focus-visible, summary:focus-v
   .training-controls { grid-template-columns: 1fr; }
   .training-fields { grid-column: auto; grid-template-columns: 1fr; }
   .resource-results { grid-template-columns: repeat(2, 1fr); }
+  .gem-efficiency-callout { grid-template-columns: 1fr; }
+  .gem-efficiency-callout > div { border-left: 0; border-top: 1px solid rgb(120 154 104 / 24%); }
+  .gem-efficiency-callout > div:first-child { border-top: 0; }
 }
 
 @media (prefers-reduced-motion: reduce) {

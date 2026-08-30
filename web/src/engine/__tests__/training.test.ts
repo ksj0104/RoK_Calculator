@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
-import { calculateTraining, facilityCapacity, minimumShopGemCost } from '../training';
+import { calculateTraining, facilityCapacity, minimumShopGemCost, rankGemFacilityLevels,
+  recommendGemBatch } from '../training';
 import { trainingTechnologyBonus } from '../speedBonuses';
 
 describe('troop training calculator', () => {
@@ -55,5 +56,38 @@ describe('troop training calculator', () => {
   it('adds Military Discipline only when the user has researched it', () => {
     expect(trainingTechnologyBonus({})).toBe(0);
     expect(trainingTechnologyBonus({ military_discipline: 1 })).toBe(20);
+  });
+
+  it('prices separate facility queues separately instead of combining their time', () => {
+    const result = calculateTraining({
+      troopType: 'infantry', tier: 4, targetPower: 16_000,
+      trainingSpeedPct: 100 / 3, facilityLevel: 25,
+    });
+    expect(result.troops).toBe(4_000);
+    expect(result.batches).toBe(2);
+    expect(result.shopGemCost).toBe(4_550);
+  });
+
+  it('finds the 24-hour price breakpoint as the efficient batch size', () => {
+    const recommendation = recommendGemBatch({
+      troopType: 'infantry', tier: 4, targetPower: 80_000,
+      trainingSpeedPct: 100 / 3, facilityLevel: 25,
+    });
+    expect(recommendation.troopsPerBatch).toBe(1_440);
+    expect(recommendation.timePerBatchSec).toBe(86_400);
+    expect(recommendation.gemsPerBatch).toBe(1_500);
+    expect(recommendation.gemSavings).toBeGreaterThan(0);
+  });
+
+  it('ranks only the current and higher facility levels by full-queue gem efficiency', () => {
+    const ranking = rankGemFacilityLevels({
+      troopType: 'infantry', tier: 4, targetPower: 100_000,
+      trainingSpeedPct: 100 / 3, facilityLevel: 20,
+    });
+    expect(ranking).toHaveLength(6);
+    expect(ranking.every((candidate) => candidate.level >= 20)).toBe(true);
+    expect(ranking[0].level).toBe(21);
+    expect(ranking[0].capacity).toBe(1_400);
+    expect(ranking[0].gems).toBe(1_500);
   });
 });

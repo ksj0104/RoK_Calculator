@@ -1,7 +1,8 @@
 import { useMemo, useState, type Dispatch } from 'react';
 import { iconUrl } from '../catalog';
 import troopData from '../data/troops.json';
-import { calculateTraining, type TroopTier, type TroopType } from '../engine/training';
+import { calculateTraining, rankGemFacilityLevels, recommendGemBatch,
+  type TroopTier, type TroopType } from '../engine/training';
 import { trainingTechnologyBonus } from '../engine/speedBonuses';
 import type { Resource, UserState } from '../engine/types';
 import { useLang } from '../i18n/useLang';
@@ -35,6 +36,21 @@ export function TroopTrainingCalculator({ state, dispatch }: {
     trainingSpeedPct: totalTrainingSpeedPct,
     facilityLevel,
   }), [calculatedTargetPower, facilityLevel, tier, totalTrainingSpeedPct, troopType]);
+  const gemRecommendation = useMemo(() => recommendGemBatch({
+    troopType,
+    tier,
+    targetPower: calculatedTargetPower,
+    trainingSpeedPct: totalTrainingSpeedPct,
+    facilityLevel,
+  }), [calculatedTargetPower, facilityLevel, tier, totalTrainingSpeedPct, troopType]);
+  const facilityRanking = useMemo(() => rankGemFacilityLevels({
+    troopType,
+    tier,
+    targetPower: calculatedTargetPower,
+    trainingSpeedPct: totalTrainingSpeedPct,
+    facilityLevel,
+  }), [calculatedTargetPower, facilityLevel, tier, totalTrainingSpeedPct, troopType]);
+  const bestFacility = facilityRanking[0];
   const number = (value: number) => new Intl.NumberFormat(lang === 'ko' ? 'ko-KR' : 'en-US').format(value);
   const academyLevel = state.buildings.academy ?? 0;
 
@@ -136,9 +152,52 @@ export function TroopTrainingCalculator({ state, dispatch }: {
           <article><span>{t('training.speedupsNeeded')}</span><strong>{formatDuration(result.totalTimeSec, t)}</strong>
             <small>{number(result.speedupMinutes)} {t('unit.min')}</small></article>
           <article><span>{t('training.gemsNeeded')}</span><strong>{number(result.shopGemCost)}</strong>
-            <small>{t('training.shopPrice')}</small></article>
+            <small>{t('training.capacityPlan')}</small></article>
           <article><span>{t('training.batches')}</span><strong>{number(result.batches)}</strong>
             <small>{t('training.capacity', { n: number(result.facilityCapacity) })}</small></article>
+        </div>
+
+        <div className="gem-efficiency-callout">
+          <div className="gem-efficiency-main">
+            <span>{t('training.bestGemBatch')}</span>
+            <strong>{number(gemRecommendation.troopsPerBatch)}{t('training.troopsUnit')}</strong>
+            <small>{t('training.perBatchGemTime', {
+              gems: number(gemRecommendation.gemsPerBatch),
+              time: formatDuration(gemRecommendation.timePerBatchSec, t),
+            })}</small>
+          </div>
+          <div><span>{t('training.powerPerGem')}</span>
+            <strong>{gemRecommendation.powerPerGem.toFixed(3)}</strong></div>
+          <div><span>{t('training.recommendedTotalGems')}</span>
+            <strong>{number(gemRecommendation.targetGemCost)}</strong></div>
+          <div><span>{t('training.gemSavings')}</span>
+            <strong>{number(gemRecommendation.gemSavings)}</strong>
+            <small>{t('training.vsCapacity')}</small></div>
+        </div>
+
+        <div className="facility-efficiency-panel">
+          <div className="facility-efficiency-heading">
+            <div>
+              <span>{t('training.bestFacilityLevel')}</span>
+              <strong>{name(facilityId)} {t('level')}{bestFacility.level}</strong>
+              <small>{t('training.bestFacilityDesc', {
+                current: facilityLevel, capacity: number(bestFacility.capacity),
+              })}</small>
+            </div>
+            <span>{t('training.fullQueueBasis')}</span>
+          </div>
+          <div className="facility-ranking">
+            {facilityRanking.slice(0, 3).map((candidate, index) => (
+              <article key={candidate.level} className={index === 0 ? 'best' : ''}>
+                <span>#{index + 1}</span>
+                <strong>{t('level')}{candidate.level}</strong>
+                <small>{t('training.facilityCandidate', {
+                  capacity: number(candidate.capacity), gems: number(candidate.gems),
+                  efficiency: candidate.powerPerGem.toFixed(3),
+                })}</small>
+              </article>
+            ))}
+          </div>
         </div>
 
         <div className="training-detail-grid">
