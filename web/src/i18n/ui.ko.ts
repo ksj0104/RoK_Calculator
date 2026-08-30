@@ -101,7 +101,7 @@ export default {
   'purchase.description': '공개 자료로 확인된 과금 상품을 장기 계정 가치 순으로 비교하고 현재 목적에 맞게 걸러볼 수 있습니다.',
   'purchase.notice': '{date} 공개 자료 기준 · {currency} 가격 · 지역·플랫폼·계정·시즌에 따라 실제 구성과 가격이 달라질 수 있습니다.',
   'purchase.methodTitle': '순위 산정 방식',
-  'purchase.method': '2026년 공개 가이드들의 공통 평가를 기준으로 정렬했습니다. 범용 보석·금머리·장비 재료·범용 가속을 채집 가능한 자원보다 높게 평가하며, 구성이 변하는 상품에는 임의의 보석 환산값을 부여하지 않고 용도별 등급을 적용합니다.',
+  'purchase.method': '2026년 공개 가이드들의 공통 평가를 기준으로 정렬했습니다. 보석·전설 사령관 조각상(공용)·장비 재료·가속 아이템을 채집 가능한 자원보다 높게 평가하며, 구성이 변하는 상품에는 임의의 보석 환산값을 부여하지 않고 용도별 등급을 적용합니다.',
   'purchase.conditional': '조건부', 'purchase.goalFilter': '과금 목적 필터',
   'purchase.goal.all': '전체', 'purchase.goal.general': '범용 성장', 'purchase.goal.commander': '사령관',
   'purchase.goal.equipment': '장비', 'purchase.goal.speedup': '가속',
@@ -122,6 +122,6 @@ export default {
   'purchase.confidence': '출처 신뢰도: {value}', 'purchase.confidence.high': '높음',
   'purchase.confidence.medium': '보통', 'purchase.confidence.low': '낮음',
   'purchase.sources': '공개 자료 출처',
-  'purchase.sourcesNote': 'Lilith의 공식 가격표가 아닌 독립 비교 자료입니다. 구매 전 게임에서 최종 구성과 원화 가격을 반드시 확인하세요.',
+  'purchase.sourcesNote': '상품명·아이템명은 공개된 한국 서비스 화면 자료와 교차 확인했습니다. 가격과 구성은 Lilith 공식 가격표가 아닌 독립 비교 자료이므로 구매 전 게임에서 최종 내용을 반드시 확인하세요.',
   'level': 'Lv.',
 } as Record<string, string>;
