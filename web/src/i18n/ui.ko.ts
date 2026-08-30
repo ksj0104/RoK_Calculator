@@ -67,6 +67,8 @@ export default {
   'city.trainingSpeed': '훈련 속도 (기술 제외)',
   'training.title': '병력 생산 계획기',
   'training.description': '목표 전투력을 입력하면 생산 병력 수, 순차 훈련 시간, 필요 자원과 상점 정가 기준 보석 환산값을 계산합니다.',
+  'training.targetMode': '목표 입력 방식', 'training.byPower': '전투력 기준',
+  'training.byTroops': '병력 수 기준', 'training.targetTroops': '생산할 병력 수',
   'training.targetPower': '목표 전투력 증가', 'training.troopType': '병종',
   'training.tier': '티어', 'training.speed': '총 훈련 속도',
   'training.speedExcludingTech': '훈련 속도 (기술 제외)',

@@ -293,6 +293,12 @@ button:focus-visible, input:focus-visible, select:focus-visible, summary:focus-v
 .training-hero h2 { margin: 5px 0 8px; font-family: Georgia, serif; font-size: clamp(1.55rem, 3vw, 2.2rem); font-weight: 500; }
 .training-hero p { max-width: 690px; margin: 0; color: var(--muted); font-size: .83rem; line-height: 1.55; }
 .training-target { width: min(280px, 100%); flex: 0 0 auto; }
+.training-target-switch { margin-bottom: 9px; padding: 3px; display: grid; grid-template-columns: 1fr 1fr;
+  border: 1px solid var(--line); border-radius: 8px; background: var(--surface); }
+.training-target-switch button { padding: 6px 8px; border: 0; border-radius: 6px; background: transparent;
+  color: var(--muted); font-size: .66rem; }
+.training-target-switch button.active { background: var(--surface-3); color: var(--gold-soft);
+  box-shadow: inset 0 0 0 1px var(--line-bright); }
 .training-target label, .training-control-block > span { display: block; margin-bottom: 7px; color: var(--muted); font-size: .68rem; }
 .training-target input { width: 100%; padding: 12px 13px; border: 1px solid var(--line-bright); border-radius: 9px;
   background: var(--bg); color: var(--gold-soft); font-size: 1.15rem; font-weight: 750; text-align: right; }

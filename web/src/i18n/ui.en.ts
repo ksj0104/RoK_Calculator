@@ -54,6 +54,8 @@ export default {
   'city.trainingSpeed': 'Training speed (excluding Technology)',
   'training.title': 'Troop production planner',
   'training.description': 'Set a power target and calculate troop count, serial training time, resources, and Shop-price gem equivalents.',
+  'training.targetMode': 'Target input mode', 'training.byPower': 'By power',
+  'training.byTroops': 'By troop count', 'training.targetTroops': 'Troops to produce',
   'training.targetPower': 'Target power gain', 'training.troopType': 'Troop type',
   'training.tier': 'Tier', 'training.speed': 'Total training speed',
   'training.speedExcludingTech': 'Training speed (excluding Technology)',

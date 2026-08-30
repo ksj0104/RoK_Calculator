@@ -19,18 +19,22 @@ export function TroopTrainingCalculator({ state, dispatch }: {
   const { t, name, lang } = useLang();
   const [troopType, setTroopType] = useState<TroopType>('infantry');
   const [tier, setTier] = useState<TroopTier>(4);
+  const [targetMode, setTargetMode] = useState<'power' | 'troops'>('power');
   const [targetPower, setTargetPower] = useState(100_000);
+  const [targetTroops, setTargetTroops] = useState(25_000);
   const facilityId = troopData.types[troopType].facility;
   const facilityLevel = Math.min(25, Math.max(1, state.buildings[facilityId] ?? 0));
   const technologySpeedPct = trainingTechnologyBonus(state.research);
   const totalTrainingSpeedPct = state.buffs.trainingSpeedPct + technologySpeedPct;
+  const powerPerTroop = troopData.tiers[String(tier) as keyof typeof troopData.tiers].power;
+  const calculatedTargetPower = targetMode === 'power' ? targetPower : targetTroops * powerPerTroop;
   const result = useMemo(() => calculateTraining({
     troopType,
     tier,
-    targetPower,
+    targetPower: calculatedTargetPower,
     trainingSpeedPct: totalTrainingSpeedPct,
     facilityLevel,
-  }), [facilityLevel, targetPower, tier, totalTrainingSpeedPct, troopType]);
+  }), [calculatedTargetPower, facilityLevel, tier, totalTrainingSpeedPct, troopType]);
   const number = (value: number) => new Intl.NumberFormat(lang === 'ko' ? 'ko-KR' : 'en-US').format(value);
   const academyLevel = state.buildings.academy ?? 0;
 
@@ -43,9 +47,25 @@ export function TroopTrainingCalculator({ state, dispatch }: {
           <p>{t('training.description')}</p>
         </div>
         <div className="training-target">
-          <label htmlFor="training-target-power">{t('training.targetPower')}</label>
-          <input id="training-target-power" type="number" min={0} step={1000} value={targetPower}
-            onChange={(event) => setTargetPower(Math.max(0, Number(event.target.value) || 0))} />
+          <div className="training-target-switch" role="group" aria-label={t('training.targetMode')}>
+            <button className={targetMode === 'power' ? 'active' : ''} onClick={() => {
+              setTargetPower(result.actualPower);
+              setTargetMode('power');
+            }}>{t('training.byPower')}</button>
+            <button className={targetMode === 'troops' ? 'active' : ''} onClick={() => {
+              setTargetTroops(result.troops);
+              setTargetMode('troops');
+            }}>{t('training.byTroops')}</button>
+          </div>
+          <label htmlFor="training-target">{targetMode === 'power'
+            ? t('training.targetPower') : t('training.targetTroops')}</label>
+          <input id="training-target" type="number" min={0} step={targetMode === 'power' ? 1000 : 100}
+            value={targetMode === 'power' ? targetPower : targetTroops}
+            onChange={(event) => {
+              const value = Math.max(0, Math.floor(Number(event.target.value) || 0));
+              if (targetMode === 'power') setTargetPower(value);
+              else setTargetTroops(value);
+            }} />
         </div>
       </section>
 
