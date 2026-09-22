@@ -1,8 +1,9 @@
 import { useMemo, useState } from 'react';
 import { buildings, iconUrl, research } from '../catalog';
-import type { CatalogEntry, Goal, NodeKind, PlanMode } from '../engine/types';
+import type { CatalogEntry, Goal, NodeKind, PlanMode, UserState } from '../engine/types';
 import { useLang } from '../i18n/useLang';
-import { effectLabel, effectValueAt, requirementsUpTo } from './effects';
+import { effectLabel, effectValueAt } from './effects';
+import { RequirementBlock } from './RequirementBlock';
 
 const CH_PRESETS = [8, 11, 16, 17, 21, 22, 25];
 
@@ -11,9 +12,10 @@ interface GoalsTabProps {
   setGoals: (goals: Goal[]) => void;
   mode: PlanMode;
   setMode: (mode: PlanMode) => void;
+  state: UserState;
 }
 
-export function GoalsTab({ goals, setGoals, mode, setMode }: GoalsTabProps) {
+export function GoalsTab({ goals, setGoals, mode, setMode, state }: GoalsTabProps) {
   const { t, name } = useLang();
   const [kind, setKind] = useState<NodeKind>('building');
   const [selectedId, setSelectedId] = useState('city_hall');
@@ -152,23 +154,8 @@ export function GoalsTab({ goals, setGoals, mode, setMode }: GoalsTabProps) {
               </strong>
             </div>
           )}
-          <div className="goal-detail-row">
-            <span>{t('goals.requires')}</span>
-            {(() => {
-              const requirements = requirementsUpTo(selected, Math.min(level, selected.maxLevel));
-              if (requirements.length === 0) return <em>{t('goals.requiresNone')}</em>;
-              return (
-                <span className="req-chips">
-                  {requirements.map((req) => (
-                    <span className="req-chip" key={`${req.type}:${req.id}`}>
-                      <img src={iconUrl(req.type, req.id)} alt="" loading="lazy" />
-                      {name(req.id)} {t('level')}{req.level}
-                    </span>
-                  ))}
-                </span>
-              );
-            })()}
-          </div>
+          <RequirementBlock className="goal-detail-reqs" kind={kind} id={selected.id}
+            level={Math.min(level, selected.maxLevel)} state={state} />
         </div>
       </section>
 

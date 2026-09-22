@@ -1,6 +1,6 @@
 import { catalog, iconUrl } from '../catalog';
 import type { Plan } from '../engine/plan';
-import type { NodeId } from '../engine/types';
+import type { NodeId, UserState } from '../engine/types';
 import { useLang } from '../i18n/useLang';
 import { formatDuration } from './format';
 import { LevelInfoCard } from './InfoHover';
@@ -8,7 +8,7 @@ import { useInfoTip } from './useInfoTip';
 
 const entryByKey = new Map(catalog.map((entry) => [`${entry.kind}:${entry.id}`, entry]));
 
-export function PlanTree({ plan }: { plan: Plan }) {
+export function PlanTree({ plan, state }: { plan: Plan; state: UserState }) {
   const { t, name } = useLang();
   const { bind, portal } = useInfoTip();
   const taskByKey = new Map(plan.tasks.map((task) => [task.key, task]));
@@ -45,7 +45,8 @@ export function PlanTree({ plan }: { plan: Plan }) {
                 <article className={`tree-node ${task.kind} ${boostIds.has(task.node.id) ? 'boost' : ''}`}
                   key={task.key}
                   {...(entry && row
-                    ? bind(<LevelInfoCard entry={entry} row={row} durationSec={task.durationSec} />)
+                    ? bind(task.key,
+                      <LevelInfoCard entry={entry} row={row} state={state} durationSec={task.durationSec} />)
                     : {})}>
                   <img src={iconUrl(task.kind, task.node.id)} alt="" />
                   <div>

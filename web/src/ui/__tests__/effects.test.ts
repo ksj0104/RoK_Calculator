@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import type { CatalogEntry } from '../../engine/types';
-import { effectLabel, effectRange, effectValueAt, requirementsUpTo } from '../effects';
+import { effectLabel, effectRange, effectValueAt } from '../effects';
 
 const dict: Record<string, string> = {
   'effect.building_speed': '건설 속도',
@@ -67,18 +67,3 @@ describe('effectValueAt / effectRange', () => {
   });
 });
 
-describe('requirementsUpTo', () => {
-  it('목표 레벨까지의 선행을 항목별 최고 레벨로 합산하고 자기 자신은 제외한다', () => {
-    expect(requirementsUpTo(entry, 3)).toEqual([
-      { type: 'research', id: 'irrigation', level: 1 },
-      { type: 'building', id: 'academy', level: 9 },
-    ]);
-  });
-
-  it('목표 레벨보다 위의 요구사항은 포함하지 않는다', () => {
-    expect(requirementsUpTo(entry, 1)).toEqual([
-      { type: 'research', id: 'irrigation', level: 1 },
-      { type: 'building', id: 'academy', level: 5 },
-    ]);
-  });
-});

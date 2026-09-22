@@ -1,10 +1,12 @@
 import { useState, type Dispatch } from 'react';
-import { iconUrl, research } from '../catalog';
+import { catalogIndex, iconUrl, research } from '../catalog';
+import { transitiveRequirements } from '../engine/requirements';
 import type { UserState } from '../engine/types';
 import { useLang } from '../i18n/useLang';
 import type { Action } from '../state/userState';
 import { effectLabel, effectRange } from './effects';
 import { LevelInfoCard } from './InfoHover';
+import { LevelStepper } from './LevelStepper';
 import { useInfoTip } from './useInfoTip';
 import { upgradeTarget } from './levelInfo';
 
@@ -32,22 +34,20 @@ export function ResearchTree({ state, dispatch }: { state: UserState; dispatch: 
                 const label = effectLabel(r.effectName, t);
                 const range = effectRange(r);
                 const effectText = range ? `${label} ${range}` : label;
-                const target = upgradeTarget(r, state.research[r.id] ?? 0);
+                const level = state.research[r.id] ?? 0;
+                const target = upgradeTarget(r, level);
                 return (
-                <label className="level-card" key={r.id}
-                  {...(target ? bind(<LevelInfoCard entry={r} row={target.row} isMax={target.isMax} />) : {})}>
+                <div className="level-card" key={r.id}
+                  {...(target ? bind(r.id,
+                    <LevelInfoCard entry={r} row={target.row} isMax={target.isMax} state={state} />) : {})}>
                   <img src={iconUrl('research', r.id)} alt="" loading="lazy" />
                   <span className="card-name">{name(r.id)}</span>
                   <span className="card-effect" title={effectText}>{effectText}</span>
-                  <select aria-label={`${name(r.id)} ${t('level')}`}
-                    value={state.research[r.id] ?? 0}
-                    onChange={(e) => dispatch({ type: 'setResearch', id: r.id, level: Number(e.target.value) })}
-                  >
-                    {Array.from({ length: r.maxLevel + 1 }, (_, i) => (
-                      <option key={i} value={i}>{t('level')}{i}</option>
-                    ))}
-                  </select>
-                </label>
+                  <LevelStepper value={level} max={r.maxLevel}
+                    label={`${name(r.id)} ${t('level')}`}
+                    onChange={(next) => dispatch({ type: 'setResearch', id: r.id, level: next,
+                      implied: transitiveRequirements(catalogIndex, 'research', r.id, next) })} />
+                </div>
                 );
               })}
             </div>

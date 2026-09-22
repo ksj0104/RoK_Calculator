@@ -1,4 +1,4 @@
-import type { CatalogEntry, Requirement } from '../engine/types';
+import type { CatalogEntry } from '../engine/types';
 
 /** 위키 효과명 → i18n 키 (예: 'Siege Unit Attack' → 'effect.siege_unit_attack') */
 const effectKey = (effectName: string): string =>
@@ -25,19 +25,4 @@ export function effectRange(entry: CatalogEntry): string | null {
   const first = values[0]!;
   const last = values[values.length - 1]!;
   return first === last ? first : `${first} → ${last}`;
-}
-
-/** 목표 레벨까지 필요한 직접 선행을 항목별 최고 레벨로 합산한다. 자기 자신(이전 레벨)은 제외. */
-export function requirementsUpTo(entry: CatalogEntry, level: number): Requirement[] {
-  const best = new Map<string, Requirement>();
-  for (const row of entry.levels) {
-    if (row.level > level) continue;
-    for (const req of row.requirements) {
-      if (req.type === entry.kind && req.id === entry.id) continue;
-      const key = `${req.type}:${req.id}`;
-      const previous = best.get(key);
-      if (!previous || req.level > previous.level) best.set(key, req);
-    }
-  }
-  return [...best.values()];
 }

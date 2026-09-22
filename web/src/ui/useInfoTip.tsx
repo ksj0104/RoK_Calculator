@@ -1,23 +1,13 @@
-import { useEffect, useLayoutEffect, useRef, useState, type ReactNode } from 'react';
-import { createPortal } from 'react-dom';
-import { clampTipPosition, type AnchorRect } from './levelInfo';
+import { useEffect, useRef, useState, type ReactNode } from 'react';
+import type { AnchorRect } from './levelInfo';
+import { InfoTipFrame } from './InfoTipFrame';
 
-/** 카드 요소에 {...bind(<LevelInfoCard …/>)}를 얹고, 컴포넌트 루트에 {portal}을 렌더링한다.
+/** 카드 요소에 {...bind(키, <LevelInfoCard …/>)}를 얹고, 컴포넌트 루트에 {portal}을 렌더링한다.
+ *  내용은 키로 보관해 렌더마다 갱신되므로 호버 중 레벨을 바꿔도 카드가 따라 바뀐다.
  *  포털 + fixed 좌표라 스크롤 컨테이너에 잘리지 않는다. 스크롤하면 닫힌다. */
 export function useInfoTip() {
-  const [tip, setTip] = useState<{ anchor: AnchorRect; content: ReactNode } | null>(null);
-  const [pos, setPos] = useState<{ x: number; y: number } | null>(null);
-  const cardRef = useRef<HTMLDivElement>(null);
-
-  useLayoutEffect(() => {
-    if (!tip || !cardRef.current) {
-      setPos(null);
-      return;
-    }
-    const { width, height } = cardRef.current.getBoundingClientRect();
-    setPos(clampTipPosition(tip.anchor, { width, height },
-      { width: window.innerWidth, height: window.innerHeight }));
-  }, [tip]);
+  const [tip, setTip] = useState<{ key: string; anchor: AnchorRect } | null>(null);
+  const contents = useRef(new Map<string, ReactNode>());
 
   useEffect(() => {
     if (!tip) return;
@@ -26,19 +16,18 @@ export function useInfoTip() {
     return () => window.removeEventListener('scroll', close, { capture: true });
   }, [tip]);
 
-  const bind = (content: ReactNode) => ({
-    onMouseEnter: (e: React.MouseEvent<HTMLElement>) =>
-      setTip({ anchor: e.currentTarget.getBoundingClientRect(), content }),
-    onMouseLeave: () => setTip(null),
-  });
+  const bind = (key: string, content: ReactNode) => {
+    contents.current.set(key, content);
+    return {
+      onMouseEnter: (event: React.MouseEvent<HTMLElement>) =>
+        setTip({ key, anchor: event.currentTarget.getBoundingClientRect() }),
+      onMouseLeave: () => setTip(null),
+    };
+  };
 
-  const portal = tip ? createPortal(
-    <div ref={cardRef} className="info-card" role="tooltip"
-      style={pos ? { left: pos.x, top: pos.y } : { left: 0, top: 0, visibility: 'hidden' }}>
-      {tip.content}
-    </div>,
-    document.body,
-  ) : null;
+  const portal = tip
+    ? <InfoTipFrame anchor={tip.anchor} contents={contents} tipKey={tip.key} />
+    : null;
 
   return { bind, portal };
 }

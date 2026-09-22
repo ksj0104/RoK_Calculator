@@ -1,9 +1,11 @@
 import type { Dispatch } from 'react';
-import { buildings, iconUrl } from '../catalog';
+import { buildings, catalogIndex, iconUrl } from '../catalog';
+import { transitiveRequirements } from '../engine/requirements';
 import type { UserState } from '../engine/types';
 import { useLang } from '../i18n/useLang';
 import type { Action } from '../state/userState';
 import { LevelInfoCard } from './InfoHover';
+import { LevelStepper } from './LevelStepper';
 import { useInfoTip } from './useInfoTip';
 import { upgradeTarget } from './levelInfo';
 import { ResearchTree } from './ResearchTree';
@@ -31,22 +33,19 @@ export function CityTab({ state, dispatch }: { state: UserState; dispatch: Dispa
               <h3>{t(cat === 'other' ? 'category.other' : `tree.${cat}`)}</h3>
               <div className="building-grid">
                 {buildings.filter((b) => b.category === cat).map((b) => {
-                  const target = upgradeTarget(b, state.buildings[b.id] ?? 0);
+                  const level = state.buildings[b.id] ?? 0;
+                  const target = upgradeTarget(b, level);
                   return (
-                  <label className="level-card" key={b.id}
-                    {...(target ? bind(<LevelInfoCard entry={b} row={target.row} isMax={target.isMax} />) : {})}>
+                  <div className="level-card" key={b.id}
+                    {...(target ? bind(b.id,
+                      <LevelInfoCard entry={b} row={target.row} isMax={target.isMax} state={state} />) : {})}>
                     <img src={iconUrl('building', b.id)} alt="" loading="lazy" />
                     <span className="card-name">{name(b.id)}</span>
-                    <select
-                      aria-label={`${name(b.id)} ${t('level')}`}
-                      value={state.buildings[b.id] ?? 0}
-                      onChange={(e) => dispatch({ type: 'setBuilding', id: b.id, level: Number(e.target.value) })}
-                    >
-                      {Array.from({ length: b.maxLevel + 1 }, (_, i) => (
-                        <option key={i} value={i}>{t('level')}{i}</option>
-                      ))}
-                    </select>
-                  </label>
+                    <LevelStepper value={level} max={b.maxLevel}
+                      label={`${name(b.id)} ${t('level')}`}
+                      onChange={(next) => dispatch({ type: 'setBuilding', id: b.id, level: next,
+                        implied: transitiveRequirements(catalogIndex, 'building', b.id, next) })} />
+                  </div>
                   );
                 })}
               </div>

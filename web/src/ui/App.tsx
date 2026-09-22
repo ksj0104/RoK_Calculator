@@ -147,7 +147,7 @@ function Shell() {
           </button>
         </nav>
         {workspace === 'growth' ? <>
-          <GoalsTab goals={goals} setGoals={setGoals} mode={mode} setMode={setMode} />
+          <GoalsTab goals={goals} setGoals={setGoals} mode={mode} setMode={setMode} state={state} />
           <ResultTab state={state} goals={goals} mode={mode} />
         </> : workspace === 'training'
           ? <TroopTrainingCalculator state={state} dispatch={dispatch} />

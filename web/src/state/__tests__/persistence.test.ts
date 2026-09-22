@@ -7,7 +7,7 @@ import { reducer } from '../userState';
 const sampleState = (): UserState => ({
   buildings: { city_hall: 5, wall: 2 },
   research: { agriculture: 3 },
-  speedups: { universal: { '1m': 4 }, building: { '5m': 1 }, research: {} },
+  speedups: { universal: 240, building: 300, research: 0 },
   buffs: { buildingSpeedPct: 10, researchSpeedPct: 5, trainingSpeedPct: 20,
     allianceHelpCount: 30, allianceHelpSec: 90 },
   secondBuilder: true,
@@ -54,16 +54,38 @@ describe('buildExport / parseImport', () => {
     expect(() => parseImport(bad)).toThrow('invalid');
   });
 
-  it('merges missing speedups subkeys to empty inventories without crashing', () => {
-    const bad = JSON.stringify({
+  it('예전 개수 방식 백업은 총 보유 시간(초)으로 변환한다', () => {
+    const old = JSON.stringify({
       version: 1,
-      state: { buildings: { city_hall: 1 }, research: {}, speedups: { universal: { '1m': 2 } },
+      state: { buildings: { city_hall: 1 }, research: {},
+        speedups: { universal: { '1m': 2, '3h': 1 }, building: { '24h': 1 } },
         buffs: {}, secondBuilder: false },
       goals: [],
     });
-    const parsed = parseImport(bad);
-    expect(parsed.state.speedups).toEqual({ ...emptySpeedups(), universal: { '1m': 2 } });
+    const parsed = parseImport(old);
+    expect(parsed.state.speedups).toEqual({
+      universal: 2 * 60 + 10_800, building: 86_400, research: 0,
+    });
     expect(parsed.state.buffs).toEqual(defaultUserState().buffs);
+  });
+
+  it('알 수 없는 지속시간 키는 무시하고 나머지만 합산한다', () => {
+    const old = JSON.stringify({
+      version: 1,
+      state: { buildings: {}, research: {},
+        speedups: { universal: { '1m': 2, 'bogus': 99 } }, buffs: {}, secondBuilder: false },
+      goals: [],
+    });
+    expect(parseImport(old).state.speedups.universal).toBe(120);
+  });
+
+  it('speedups가 없으면 0으로 채운다', () => {
+    const bare = JSON.stringify({
+      version: 1,
+      state: { buildings: { city_hall: 1 }, research: {}, buffs: {}, secondBuilder: false },
+      goals: [],
+    });
+    expect(parseImport(bare).state.speedups).toEqual(emptySpeedups());
   });
 
   it('filters out malformed goal entries', () => {
@@ -88,7 +110,7 @@ describe('buildExport / parseImport', () => {
       version: 1,
       state: {
         buildings: { city_hall: -4, wall: 2.9 }, research: null,
-        speedups: { universal: null, building: { '1m': -2 }, research: { '5m': 3.8 } },
+        speedups: { universal: null, building: -500, research: 3.8 },
         buffs: { buildingSpeedPct: 999, researchSpeedPct: -5, trainingSpeedPct: 777,
           allianceHelpCount: 9999, allianceHelpSec: -30 }, secondBuilder: 'yes',
       },
@@ -96,7 +118,7 @@ describe('buildExport / parseImport', () => {
     });
     const parsed = parseImport(dirty);
     expect(parsed.state.buildings).toMatchObject({ city_hall: 0, wall: 2 });
-    expect(parsed.state.speedups).toEqual({ universal: {}, building: { '1m': 0 }, research: { '5m': 3 } });
+    expect(parsed.state.speedups).toEqual({ universal: 0, building: 0, research: 3 });
     expect(parsed.state.buffs).toEqual({ buildingSpeedPct: 500, researchSpeedPct: 0, trainingSpeedPct: 500,
       allianceHelpCount: 100, allianceHelpSec: 0 });
     expect(parsed.state.secondBuilder).toBe(false);
@@ -112,10 +134,30 @@ describe('userState reducer replace action', () => {
   });
 
   it('clamps numeric actions to safe ranges', () => {
-    let state = reducer(defaultUserState(), { type: 'setSpeedup', speedupType: 'building', duration: '1m', count: -3 });
+    let state = reducer(defaultUserState(), { type: 'setSpeedup', speedupType: 'building', seconds: -3 });
     state = reducer(state, { type: 'setBuff', key: 'buildingSpeedPct', value: 999 });
-    expect(state.speedups.building['1m']).toBe(0);
+    expect(state.speedups.building).toBe(0);
     expect(state.buffs.buildingSpeedPct).toBe(500);
+  });
+
+  it('implied 선행은 더 낮은 레벨만 올리고 높은 레벨은 유지한다', () => {
+    let state = reducer(defaultUserState(), { type: 'setResearch', id: 'masonry', level: 3 });
+    state = reducer(state, { type: 'setBuilding', id: 'academy', level: 20, implied: [
+      { type: 'building', id: 'city_hall', level: 20 },  // 기본값 1 → 20으로 상향
+      { type: 'research', id: 'masonry', level: 1 },     // 이미 3이므로 그대로
+    ]});
+    expect(state.buildings.academy).toBe(20);
+    expect(state.buildings.city_hall).toBe(20);
+    expect(state.research.masonry).toBe(3);
+  });
+
+  it('implied 없이 레벨만 내리면 다른 항목은 건드리지 않는다', () => {
+    let state = reducer(defaultUserState(), { type: 'setBuilding', id: 'academy', level: 20, implied: [
+      { type: 'building', id: 'city_hall', level: 20 },
+    ]});
+    state = reducer(state, { type: 'setBuilding', id: 'academy', level: 5 });
+    expect(state.buildings.academy).toBe(5);
+    expect(state.buildings.city_hall).toBe(20);
   });
 
   it('clamps alliance help buffs to their own ranges', () => {
