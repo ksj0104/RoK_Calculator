@@ -1,5 +1,5 @@
 import type { Goal, UserState } from '../engine/types';
-import { defaultUserState, emptySpeedups } from '../engine/types';
+import { SPEEDUP_DURATIONS, defaultUserState, emptySpeedups } from '../engine/types';
 
 export interface BackupFile {
   version: 1;
@@ -18,6 +18,18 @@ function isPlainObject(value: unknown): value is Record<string, unknown> {
 const nonNegativeInteger = (value: unknown): number =>
   typeof value === 'number' && Number.isFinite(value) ? Math.max(0, Math.floor(value)) : 0;
 
+/** 총 보유 시간(초). 예전 { '1m': 2, '3h': 1 } 개수 방식 저장값도 합산해 받아들인다. */
+function speedupSeconds(value: unknown): number {
+  if (typeof value === 'number') return nonNegativeInteger(value);
+  if (!isPlainObject(value)) return 0;
+  let total = 0;
+  for (const [unit, count] of Object.entries(value)) {
+    const unitSec = SPEEDUP_DURATIONS[unit];
+    if (unitSec) total += unitSec * nonNegativeInteger(count);
+  }
+  return total;
+}
+
 function levelRecord(value: unknown): Record<string, number> {
   if (!isPlainObject(value)) return {};
   return Object.fromEntries(Object.entries(value).map(([id, level]) => [id, nonNegativeInteger(level)]));
@@ -29,7 +41,7 @@ export function normalizeState(raw: unknown): UserState {
   const rawSpeedups = isPlainObject(raw.speedups) ? raw.speedups : {};
   const speedups = emptySpeedups();
   for (const type of ['universal', 'building', 'research'] as const) {
-    speedups[type] = levelRecord(rawSpeedups[type]);
+    speedups[type] = speedupSeconds(rawSpeedups[type]);
   }
   const rawBuffs = isPlainObject(raw.buffs) ? raw.buffs : {};
   return {

@@ -42,9 +42,10 @@ export interface TaskNode {
 }
 
 export type SpeedupType = 'universal' | 'building' | 'research';
-/** 가속 종류 → { 지속시간 id → 개수 }. 지속시간 id는 SPEEDUP_DURATIONS의 키. */
-export type SpeedupInventory = Record<SpeedupType, Record<string, number>>;
+/** 가속 종류 → 보유한 총 시간(초). 아이템 단위가 아니라 합계로 다룬다. */
+export type SpeedupInventory = Record<SpeedupType, number>;
 
+/** 예전 저장값(아이템 개수 방식)을 총 보유 시간으로 변환할 때 쓰는 지속시간 표. */
 export const SPEEDUP_DURATIONS: Record<string, number> = {
   '1m': 60, '5m': 300, '10m': 600, '15m': 900, '30m': 1800, '60m': 3600,
   '3h': 10800, '8h': 28800, '15h': 54000, '24h': 86400,
@@ -67,7 +68,7 @@ export interface UserState {
 }
 
 export const emptySpeedups = (): SpeedupInventory => ({
-  universal: {}, building: {}, research: {},
+  universal: 0, building: 0, research: 0,
 });
 
 export const defaultUserState = (): UserState => ({

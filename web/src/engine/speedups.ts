@@ -1,15 +1,17 @@
 import type { ScheduleOptions, ScheduledTask } from './scheduler';
 import { schedule } from './scheduler';
 import type { NodeId, SpeedupInventory, SpeedupType, TaskNode } from './types';
-import { SPEEDUP_DURATIONS } from './types';
 
 export interface SpeedupAllocation {
   finalTasks: ScheduledTask[];
-  used: Record<NodeId, Partial<Record<SpeedupType, Record<string, number>>>>;
+  /** 작업별로 어떤 종류의 가속을 몇 초 썼는지 */
+  used: Record<NodeId, Partial<Record<SpeedupType, number>>>;
   remaining: SpeedupInventory;
 }
 
-const MAX_ITER = 200;
+/** 한 번의 반복이 작업 하나를 줄이고 재스케줄하므로, 상한은 작업 수에 비례해야 한다
+ *  (고정 상한이면 작업이 많은 계획에서 보유 가속이 남는데도 배분이 중단된다). */
+const maxIterations = (taskCount: number) => taskCount * 2 + 10;
 
 /** 크리티컬 체인(makespan을 결정하는 작업 사슬)을 끝에서부터 역추적. */
 function criticalChain(tasks: ScheduledTask[], nodes: Map<NodeId, TaskNode>): ScheduledTask[] {
@@ -29,22 +31,20 @@ function criticalChain(tasks: ScheduledTask[], nodes: Map<NodeId, TaskNode>): Sc
   return chain;
 }
 
-/** 인벤토리에서 작업 하나에 그리디(큰 단위 우선, 초과 금지)로 가속 적용. 줄인 초를 반환. */
+/** 작업 하나에 보유 시간을 붓는다. 전용 가속을 먼저 쓰고 남으면 범용을 쓴다.
+ *  연속된 시간이라 남은 작업 시간만큼만 정확히 소모한다(초과·낭비 없음). 줄인 초를 반환. */
 function applyToTask(
   duration: number, kinds: SpeedupType[], remaining: SpeedupInventory,
-  usedForTask: Partial<Record<SpeedupType, Record<string, number>>>,
+  usedForTask: Partial<Record<SpeedupType, number>>,
 ): number {
   let left = duration;
-  const unitsDesc = Object.entries(SPEEDUP_DURATIONS).sort((a, b) => b[1] - a[1]);
   for (const kind of kinds) {
-    for (const [unitId, unitSec] of unitsDesc) {
-      while ((remaining[kind][unitId] ?? 0) > 0 && unitSec <= left) {
-        remaining[kind][unitId]!--;
-        const bucket = (usedForTask[kind] ??= {});
-        bucket[unitId] = (bucket[unitId] ?? 0) + 1;
-        left -= unitSec;
-      }
-    }
+    if (left <= 0) break;
+    const spend = Math.min(remaining[kind], left);
+    if (spend <= 0) continue;
+    remaining[kind] -= spend;
+    usedForTask[kind] = (usedForTask[kind] ?? 0) + spend;
+    left -= spend;
   }
   return duration - left;
 }
@@ -52,11 +52,7 @@ function applyToTask(
 export function allocateSpeedups(
   nodes: Map<NodeId, TaskNode>, inventory: SpeedupInventory, opts: ScheduleOptions,
 ): SpeedupAllocation {
-  const remaining: SpeedupInventory = {
-    universal: { ...inventory.universal },
-    building: { ...inventory.building },
-    research: { ...inventory.research },
-  };
+  const remaining: SpeedupInventory = { ...inventory };
   const used: SpeedupAllocation['used'] = {};
   const reductions = new Map<NodeId, number>(opts.durationReduction ?? []);
   const optsWith = () => ({ ...opts, durationReduction: reductions });
@@ -64,7 +60,8 @@ export function allocateSpeedups(
   let tasks = schedule(nodes, optsWith());
   const failed = new Set<NodeId>();
 
-  for (let i = 0; i < MAX_ITER; i++) {
+  for (let i = 0; i < maxIterations(nodes.size); i++) {
+    if (remaining.universal + remaining.building + remaining.research <= 0) break;
     const chain = criticalChain(tasks, nodes)
       .filter((t) => !failed.has(t.key))
       .sort((a, b) => b.durationSec - a.durationSec);
@@ -81,7 +78,7 @@ export function allocateSpeedups(
         used[t.key] = usedForTask;
         reductions.set(t.key, (reductions.get(t.key) ?? 0) + reduced);
         improved = true;
-        break; // 스케줄 재계산 후 다음 크리티컬 체인으로
+        break; // 줄인 뒤 크리티컬 체인이 달라지므로 재스케줄하고 다시 고른다
       }
       failed.add(t.key);
     }

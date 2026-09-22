@@ -37,7 +37,8 @@ Windows에서는 저장소 루트의 가상환경을 사용: `..\.venv\Scripts\p
 `scripts/scrape_wiki.py`가 riseofkingdoms.fandom.com을 스크래핑해 `web/src/data/{buildings,research}.json`과 `web/public/icons/`를 생성한다. 프런트엔드는 이 JSON을 빌드 시점에 import할 뿐, 런타임 네트워크 요청이 없다.
 
 - `scripts/rok_wiki/` — 파싱 패키지: `api.py`(위키 API 호출), `parse_buildings.py`, `parse_tech.py`, `icons.py`, `textutil.py`(slugify)
-- `web/src/data/overrides.json` — 위키 원문 오류(오타, "알 수 없음" 값) 보정 패치. 형식: `{"buildings": {id: {레벨문자열: {필드: 값}}}}`. 스크래핑 시 적용됨
+- `web/src/data/overrides.json` — 위키 원문 오류(오타, "알 수 없음" 값) 보정 패치. 형식: `{"buildings": {id: {레벨문자열: {필드: 값}}}}`. 레벨 대신 `effectName` 키를 쓰면 항목 수준 효과명을 덮어쓴다. 스크래핑 시 적용됨
+- `web/src/engine/materials.ts` — 특수 재화(성=계약의 서, 경계탑=저항의 화살, 모든 건물 24→25=청사진)와 보석 환산 단가. **스크래퍼가 만드는 JSON이 아니라 손으로 관리하는 파일**이다(데이터 파일에 넣으면 재수집 때 사라짐)
 - 문명 고유 병종 테크는 위키에서 공용 테크로 리다이렉트되며(`#REDIRECT`), 스크래퍼가 별칭으로 병합한다
 - `validate_data.py` — requirement 참조 무결성, 순환 없음(Kahn), 레벨 연속성, 음수 값, 아이콘 존재 5가지 검사. CI에서 실행됨
 - 건물/연구 데이터 모델을 바꾸면 Python과 TypeScript 양쪽 테스트를 모두 돌려야 한다
@@ -49,7 +50,7 @@ Windows에서는 저장소 루트의 가상환경을 사용: `..\.venv\Scripts\p
 1. `graph.ts` `buildIndex` — 카탈로그 인덱스, `TaskNode` 생성. 노드 키 형식은 `${kind}:${id}:${level}`
 2. `closure.ts` `requiredNodes` — 목표 달성에 필요한 미완료 노드의 전이 폐쇄(현재 보유 레벨 차감)
 3. `scheduler.ts` — `critical.ts`의 최장 경로 가중치 순으로 우선순위 스케줄링. 건설 큐 1~2개(secondBuilder), 건설/연구 가속 버프 %, `speedBonuses.ts`의 연구 완료에 따른 속도 테크 보너스 반영
-4. `speedups.ts` `allocateSpeedups` — 가속 아이템 배분. 작업 남은 시간을 초과하는 아이템은 쓰지 않음(낭비 방지)
+4. `speedups.ts` `allocateSpeedups` — 가속 배분. 보유량은 종류별(범용/건설/연구) 총 초이며, 크리티컬 체인의 긴 작업부터 남은 시간만큼만 부어 쓴다. 반복마다 재스케줄하므로 반복 상한은 작업 수에 비례한다
 
 `PlanMode`는 `fastest`/`efficient` 두 가지. efficient 모드는 속도 테크를 먼저 올리는 최적화 목표를 추가로 탐색한다.
 
