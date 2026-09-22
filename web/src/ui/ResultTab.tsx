@@ -1,5 +1,6 @@
 import { useMemo } from 'react';
 import { catalog, iconUrl } from '../catalog';
+import { MATERIAL_IDS } from '../engine/materials';
 import { computePlan } from '../engine/plan';
 import type { Goal, PlanMode, Resource, UserState } from '../engine/types';
 import { useLang } from '../i18n/useLang';
@@ -36,11 +37,8 @@ export function ResultTab({ state, goals, mode }: { state: UserState; goals: Goa
 
   const usedSummary: Record<string, number> = {};
   for (const perTask of Object.values(plan.speedupsUsed)) {
-    for (const [type, units] of Object.entries(perTask)) {
-      for (const [unit, count] of Object.entries(units as Record<string, number>)) {
-        const key = `${t(`speedup.${type}`)} ${unit}`;
-        usedSummary[key] = (usedSummary[key] ?? 0) + count;
-      }
+    for (const [type, seconds] of Object.entries(perTask)) {
+      usedSummary[type] = (usedSummary[type] ?? 0) + (seconds ?? 0);
     }
   }
 
@@ -90,10 +88,22 @@ export function ResultTab({ state, goals, mode }: { state: UserState; goals: Goa
         ))}
       </div>
 
+      {plan.totalGems > 0 && (
+        <div className="speedup-summary material-summary">
+          <strong>{t('result.materials')}</strong>
+          {MATERIAL_IDS.filter((id) => (plan.totalMaterials[id] ?? 0) > 0).map((id) => (
+            <span key={id}>{t(`material.${id}`)} {formatNumber(plan.totalMaterials[id]!)}</span>
+          ))}
+          <span className="material-gems">{t('result.gemValue')} {formatNumber(plan.totalGems)}</span>
+        </div>
+      )}
+
       {Object.keys(usedSummary).length > 0 && (
         <div className="speedup-summary">
           <strong>{t('result.speedupsUsed')}</strong>
-          {Object.entries(usedSummary).map(([key, value]) => <span key={key}>{key} × {value}</span>)}
+          {Object.entries(usedSummary).map(([type, seconds]) => (
+            <span key={type}>{t(`speedup.${type}`)} {formatDuration(seconds, t)}</span>
+          ))}
         </div>
       )}
 
@@ -101,7 +111,7 @@ export function ResultTab({ state, goals, mode }: { state: UserState; goals: Goa
         <div><h3>{t('result.techTree')}</h3><p>{t('result.techTreeDesc')}</p></div>
         <span>{t('result.scrollHint')}</span>
       </div>
-      <PlanTree plan={plan} />
+      <PlanTree plan={plan} state={state} />
 
       <details className="timeline-details">
         <summary>{t('result.timeline')} · {plan.tasks.length}</summary>

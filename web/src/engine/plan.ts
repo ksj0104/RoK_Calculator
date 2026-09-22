@@ -1,5 +1,7 @@
 import { requiredNodes } from './closure';
 import { buildIndex } from './graph';
+import type { MaterialCount } from './materials';
+import { materialGems, materialsForLevel, sumMaterials } from './materials';
 import type { ScheduledTask } from './scheduler';
 import { schedule } from './scheduler';
 import { SPEED_TECHNOLOGIES, technologyBonus } from './speedBonuses';
@@ -24,6 +26,9 @@ export interface Plan {
   totalSecRaw: number;
   totalSecWithSpeedups: number;
   kindTimes: Record<'building' | 'research', KindTime>;
+  /** 자원 외에 필요한 특수 재화(계약의 서·저항의 화살·청사진)와 보석 환산 합계 */
+  totalMaterials: MaterialCount;
+  totalGems: number;
   totalCost: Cost;
   totalPower: number;
   speedupsUsed: SpeedupAllocation['used'];
@@ -71,6 +76,9 @@ function makePlan(
     for (const k of Object.keys(totalCost) as Array<keyof Cost>) totalCost[k] += n.cost[k];
     totalPower += n.power;
   }
+  const totalMaterials = sumMaterials(
+    [...nodes.values()].map((n) => materialsForLevel(n.kind, n.id, n.level)));
+  const totalGems = materialGems(totalMaterials);
 
   const emptyKindTimes = (): Plan['kindTimes'] => ({
     building: { finishSec: 0, workSec: 0 }, research: { finishSec: 0, workSec: 0 },
@@ -78,7 +86,7 @@ function makePlan(
 
   if (nodes.size === 0) {
     return { tasks: [], totalSecRaw: 0, totalSecWithSpeedups: 0, kindTimes: emptyKindTimes(),
-             totalCost, totalPower,
+             totalMaterials, totalGems, totalCost, totalPower,
              speedupsUsed: {}, speedupsRemaining: state.speedups, mode, selectedBoosts: [] };
   }
 
@@ -112,7 +120,7 @@ function makePlan(
     tasks: finalTasks.map((t) => ({ ...t, node: nodes.get(t.key)! })),
     totalSecRaw,
     totalSecWithSpeedups: Math.max(...finalTasks.map((t) => t.endSec)),
-    kindTimes,
+    kindTimes, totalMaterials, totalGems,
     totalCost, totalPower,
     speedupsUsed: used, speedupsRemaining: remaining,
     mode, selectedBoosts,
@@ -122,6 +130,8 @@ function makePlan(
 function efficientGoals(catalog: CatalogEntry[], state: UserState, goals: Goal[]): Goal[] {
   const extras: Goal[] = [];
   let best = makePlan(catalog, state, goals, 'efficient');
+  // 보유 가속만으로 전부 끝나면 속도 연구로 더 줄일 시간이 없다 (탐색도 낭비)
+  if (best.totalSecWithSpeedups <= 0) return extras;
   const totalLevels = (list: Goal[]) => list.reduce((sum, goal) => sum + goal.level, 0);
 
   for (let pass = 0; pass < SPEED_TECHNOLOGIES.length * 3; pass++) {
@@ -151,6 +161,7 @@ function efficientGoals(catalog: CatalogEntry[], state: UserState, goals: Goal[]
     if (!bestCandidate) break;
     extras.splice(0, extras.length, ...bestCandidate.extras);
     best = bestCandidate.plan;
+    if (best.totalSecWithSpeedups <= 0) break;
   }
   return extras;
 }

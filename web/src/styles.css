@@ -79,6 +79,17 @@ button:focus-visible, input:focus-visible, select:focus-visible, summary:focus-v
   color: var(--text); font-size: .64rem; line-height: 1.15; text-align: center; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
 .level-card select { width: 100%; padding: 3px; border: 1px solid var(--line); border-radius: 5px;
   background: var(--surface-2); color: var(--muted); font-size: .66rem; }
+.level-stepper { width: 100%; display: grid; grid-template-columns: 22px 1fr 22px; gap: 3px; }
+.level-stepper button { padding: 2px 0; border: 1px solid var(--line); border-radius: 5px;
+  background: var(--surface-2); font-size: .82rem; font-weight: 800; line-height: 1.1; }
+.level-stepper .step-up { color: var(--green); }
+.level-stepper .step-down { color: var(--danger); }
+.level-stepper button:disabled { opacity: .3; }
+.level-stepper input { width: 100%; min-width: 0; padding: 3px 1px; border: 1px solid var(--line);
+  border-radius: 5px; background: var(--bg); color: var(--text); font-size: .68rem; text-align: center;
+  appearance: textfield; -moz-appearance: textfield; }
+.level-stepper input::-webkit-outer-spin-button,
+.level-stepper input::-webkit-inner-spin-button { margin: 0; -webkit-appearance: none; }
 .card-effect { width: 100%; margin: -2px 0 4px; overflow: hidden; color: var(--gold-soft);
   font-size: .62rem; text-align: center; text-overflow: ellipsis; white-space: nowrap; }
 .segmented { display: inline-flex; padding: 3px; border: 1px solid var(--line); border-radius: 9px; background: var(--bg); }
@@ -86,11 +97,11 @@ button:focus-visible, input:focus-visible, select:focus-visible, summary:focus-v
 .segmented button.active { background: var(--surface-3); color: var(--gold-soft); box-shadow: inset 0 0 0 1px var(--line-bright); }
 .compact-segmented { width: 100%; margin-top: 8px; }
 .compact-segmented button { flex: 1; }
-.speedup-panel { margin-top: 8px; overflow-x: auto; }
-.speedup-panel table { border-collapse: collapse; font-size: .68rem; }
-.speedup-panel th, .speedup-panel td { padding: 4px 3px; color: var(--muted); white-space: nowrap; }
-.speedup-panel input { width: 47px; padding: 4px; border: 1px solid var(--line); border-radius: 5px;
-  background: var(--bg); color: var(--text); }
+.speedup-panel { margin-top: 8px; }
+.speedup-panel .field-note { margin-bottom: 9px; }
+.speedup-row { margin: 8px 0; display: flex; align-items: center; justify-content: space-between;
+  gap: 10px; color: var(--muted); font-size: .76rem; }
+.speedup-row .number-field input { width: 52px; }
 .buff-fields { padding-top: 11px; }
 .field-note { margin: 0 0 12px; color: var(--muted); font-size: .7rem; line-height: 1.5; }
 .buff-intro { position: relative; }
@@ -201,6 +212,15 @@ button:focus-visible, input:focus-visible, select:focus-visible, summary:focus-v
 .req-chip { display: inline-flex; align-items: center; gap: 5px; padding: 3px 7px;
   border-radius: 5px; background: var(--surface-2); color: var(--text); }
 .req-chip img { width: 16px; height: 16px; object-fit: contain; }
+.req-chip.missing { box-shadow: inset 0 0 0 1px rgb(215 173 86 / 40%); }
+.req-chip.met { opacity: .45; }
+.req-chip.more { color: var(--muted); }
+.req-none { color: var(--muted); font-style: normal; }
+.req-count-missing, .req-count-met { margin-left: 5px; font-size: .92em; font-style: normal; }
+.req-count-missing { color: var(--gold-soft); }
+.req-count-met { color: var(--green); }
+.goal-detail-reqs { display: flex; align-items: baseline; flex-wrap: wrap; gap: 6px; }
+.goal-detail-reqs > span:first-child { flex-shrink: 0; color: var(--muted); }
 .info-card { position: fixed; z-index: 60; width: max-content; max-width: 270px; padding: 10px 12px;
   display: flex; flex-direction: column; gap: 6px; border: 1px solid var(--line-bright); border-radius: 9px;
   background: var(--surface-2); box-shadow: 0 10px 26px rgb(0 0 0 / 45%); font-size: .68rem;
@@ -251,6 +271,7 @@ button:focus-visible, input:focus-visible, select:focus-visible, summary:focus-v
   border: 1px dashed var(--line); border-radius: 8px; color: var(--muted); font-size: .66rem; }
 .speedup-summary strong { margin-right: 5px; color: var(--text); }
 .speedup-summary span { padding: 3px 6px; border-radius: 5px; background: var(--surface-2); }
+.material-summary .material-gems { margin-left: auto; background: transparent; color: var(--gold-soft); }
 .tree-heading { margin: 24px 0 10px; display: flex; align-items: end; justify-content: space-between; gap: 12px; }
 .tree-heading h3 { margin: 0; font-family: Georgia, serif; font-size: 1rem; font-weight: 500; }
 .tree-heading p { margin: 3px 0 0; color: var(--muted); font-size: .67rem; }

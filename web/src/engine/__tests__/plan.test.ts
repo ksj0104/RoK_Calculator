@@ -37,6 +37,27 @@ describe('computePlan', () => {
     expect(plan.kindTimes.research).toEqual({ finishSec: 340, workSec: 110 });
   });
 
+  it('특수 재화와 보석 환산을 합산한다', () => {
+    const cost = { food: 0, wood: 0, stone: 0, gold: 0 };
+    // id가 castle이면 계약의 서를 쓴다 (materials.ts가 id로 판정)
+    const castleCatalog = [{
+      id: 'castle', kind: 'building' as const, category: 'military', maxLevel: 4,
+      levels: [1, 2, 3, 4].map((level) => ({ level, requirements: [], cost, timeSec: 10, power: 0 })),
+    }];
+    const plan = computePlan(castleCatalog, freshState(),
+      [{ type: 'building', id: 'castle', level: 4 }]);
+    // 1→4: 2 + 5 + 8 = 15개, 보석 150
+    expect(plan.totalMaterials).toEqual({ covenant: 15 });
+    expect(plan.totalGems).toBe(150);
+  });
+
+  it('재화가 필요 없는 경로는 빈 집계를 준다', () => {
+    const plan = computePlan(fixtureCatalog, freshState(),
+      [{ type: 'building', id: 'hall', level: 3 }]);
+    expect(plan.totalMaterials).toEqual({});
+    expect(plan.totalGems).toBe(0);
+  });
+
   it('효율 모드는 전체 시간을 줄이는 속도 연구만 경로에 추가한다', () => {
     const cost = { food: 0, wood: 0, stone: 0, gold: 0 };
     const speedCatalog = [
