@@ -1,5 +1,6 @@
 import type { Goal, UserState } from '../engine/types';
-import { SPEEDUP_DURATIONS, defaultUserState, emptySpeedups } from '../engine/types';
+import { MATERIAL_IDS } from '../engine/materials';
+import { SPEEDUP_DURATIONS, defaultUserState, emptyMaterials, emptySpeedups } from '../engine/types';
 
 export interface BackupFile {
   version: 1;
@@ -43,11 +44,16 @@ export function normalizeState(raw: unknown): UserState {
   for (const type of ['universal', 'building', 'research'] as const) {
     speedups[type] = speedupSeconds(rawSpeedups[type]);
   }
+  const rawMaterials = isPlainObject(raw.materials) ? raw.materials : {};
+  const materials = emptyMaterials();
+  for (const id of MATERIAL_IDS) materials[id] = nonNegativeInteger(rawMaterials[id]);
   const rawBuffs = isPlainObject(raw.buffs) ? raw.buffs : {};
   return {
     buildings: { ...defaults.buildings, ...levelRecord(raw.buildings) },
     research: levelRecord(raw.research),
     speedups,
+    materials,
+    gems: nonNegativeInteger(raw.gems),
     buffs: {
       buildingSpeedPct: Math.min(500, nonNegativeInteger(rawBuffs.buildingSpeedPct)),
       researchSpeedPct: Math.min(500, nonNegativeInteger(rawBuffs.researchSpeedPct)),

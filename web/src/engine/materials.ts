@@ -59,3 +59,25 @@ export function sumMaterials(counts: MaterialCount[]): MaterialCount {
 export function materialGems(count: MaterialCount): number {
   return MATERIAL_IDS.reduce((sum, id) => sum + (count[id] ?? 0) * MATERIAL_GEMS[id], 0);
 }
+
+export interface MaterialShortfall {
+  /** 보유량을 뺀 뒤에도 더 필요한 재화 */
+  missing: MaterialCount;
+  /** 부족분을 보석으로 환산한 값 */
+  gemsForMissing: number;
+  /** 보유 보석으로도 모자란 보석 */
+  gemsShort: number;
+}
+
+/** 필요량에서 보유량을 차감하고, 남은 부족분을 보석으로 환산해 보유 보석과 비교한다. */
+export function materialShortfall(
+  required: MaterialCount, owned: MaterialCount, gemsOwned: number,
+): MaterialShortfall {
+  const missing: MaterialCount = {};
+  for (const id of MATERIAL_IDS) {
+    const short = (required[id] ?? 0) - (owned[id] ?? 0);
+    if (short > 0) missing[id] = short;
+  }
+  const gemsForMissing = materialGems(missing);
+  return { missing, gemsForMissing, gemsShort: Math.max(0, gemsForMissing - gemsOwned) };
+}

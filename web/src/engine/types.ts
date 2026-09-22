@@ -1,3 +1,5 @@
+import type { MaterialId } from './materials';
+
 export type Resource = 'food' | 'wood' | 'stone' | 'gold';
 export type Cost = Record<Resource, number>;
 export type NodeKind = 'building' | 'research';
@@ -56,6 +58,10 @@ export interface UserState {
   buildings: Record<string, number>;   // id → 현재 레벨 (없으면 0)
   research: Record<string, number>;
   speedups: SpeedupInventory;
+  /** 보유 중인 특수 재화 개수 */
+  materials: Record<MaterialId, number>;
+  /** 보유 보석 */
+  gems: number;
   /** allianceHelpCount × allianceHelpSec 만큼 각 작업 시간이 차감된다 */
   buffs: {
     buildingSpeedPct: number;
@@ -67,6 +73,10 @@ export interface UserState {
   secondBuilder: boolean;
 }
 
+export const emptyMaterials = (): Record<MaterialId, number> => ({
+  covenant: 0, arrow: 0, blueprint: 0,
+});
+
 export const emptySpeedups = (): SpeedupInventory => ({
   universal: 0, building: 0, research: 0,
 });
@@ -75,6 +85,8 @@ export const defaultUserState = (): UserState => ({
   buildings: { city_hall: 1 },
   research: {},
   speedups: emptySpeedups(),
+  materials: emptyMaterials(),
+  gems: 0,
   buffs: { buildingSpeedPct: 0, researchSpeedPct: 0, trainingSpeedPct: 0,
     allianceHelpCount: 0, allianceHelpSec: 0 },
   secondBuilder: false,

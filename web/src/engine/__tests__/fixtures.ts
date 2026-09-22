@@ -1,5 +1,5 @@
 import type { CatalogEntry, UserState } from '../types';
-import { emptySpeedups } from '../types';
+import { emptyMaterials, emptySpeedups } from '../types';
 
 const cost0 = { food: 0, wood: 0, stone: 0, gold: 0 };
 const lv = (level: number, timeSec: number, requirements: CatalogEntry['levels'][0]['requirements'] = []) =>
@@ -25,6 +25,8 @@ export const freshState = (): UserState => ({
   buildings: { hall: 1 },
   research: {},
   speedups: emptySpeedups(),
+  materials: emptyMaterials(),
+  gems: 0,
   buffs: { buildingSpeedPct: 0, researchSpeedPct: 0, trainingSpeedPct: 0,
     allianceHelpCount: 0, allianceHelpSec: 0 },
   secondBuilder: false,

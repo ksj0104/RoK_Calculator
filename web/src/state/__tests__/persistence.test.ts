@@ -8,6 +8,8 @@ const sampleState = (): UserState => ({
   buildings: { city_hall: 5, wall: 2 },
   research: { agriculture: 3 },
   speedups: { universal: 240, building: 300, research: 0 },
+  materials: { covenant: 1200, arrow: 800, blueprint: 0 },
+  gems: 50_000,
   buffs: { buildingSpeedPct: 10, researchSpeedPct: 5, trainingSpeedPct: 20,
     allianceHelpCount: 30, allianceHelpSec: 90 },
   secondBuilder: true,
@@ -77,6 +79,30 @@ describe('buildExport / parseImport', () => {
       goals: [],
     });
     expect(parseImport(old).state.speedups.universal).toBe(120);
+  });
+
+  it('보유 재화가 없는 예전 백업은 0으로 채운다', () => {
+    const old = JSON.stringify({
+      version: 1,
+      state: { buildings: {}, research: {}, buffs: {}, secondBuilder: false },
+      goals: [],
+    });
+    const parsed = parseImport(old);
+    expect(parsed.state.materials).toEqual({ covenant: 0, arrow: 0, blueprint: 0 });
+    expect(parsed.state.gems).toBe(0);
+  });
+
+  it('보유 재화의 잘못된 값은 0으로 정리한다', () => {
+    const dirty = JSON.stringify({
+      version: 1,
+      state: { buildings: {}, research: {},
+        materials: { covenant: -5, arrow: 12.9, blueprint: 'x' }, gems: -100,
+        buffs: {}, secondBuilder: false },
+      goals: [],
+    });
+    const parsed = parseImport(dirty);
+    expect(parsed.state.materials).toEqual({ covenant: 0, arrow: 12, blueprint: 0 });
+    expect(parsed.state.gems).toBe(0);
   });
 
   it('speedups가 없으면 0으로 채운다', () => {
@@ -158,6 +184,14 @@ describe('userState reducer replace action', () => {
     state = reducer(state, { type: 'setBuilding', id: 'academy', level: 5 });
     expect(state.buildings.academy).toBe(5);
     expect(state.buildings.city_hall).toBe(20);
+  });
+
+  it('보유 재화와 보석을 설정하고 음수는 0으로 막는다', () => {
+    let state = reducer(defaultUserState(), { type: 'setMaterial', material: 'covenant', count: 1500 });
+    state = reducer(state, { type: 'setMaterial', material: 'arrow', count: -3 });
+    state = reducer(state, { type: 'setGems', count: 42_000 });
+    expect(state.materials).toEqual({ covenant: 1500, arrow: 0, blueprint: 0 });
+    expect(state.gems).toBe(42_000);
   });
 
   it('clamps alliance help buffs to their own ranges', () => {

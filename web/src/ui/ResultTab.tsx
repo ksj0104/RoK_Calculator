@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 import { catalog, iconUrl } from '../catalog';
-import { MATERIAL_IDS } from '../engine/materials';
+import { MATERIAL_IDS, materialShortfall } from '../engine/materials';
 import { computePlan } from '../engine/plan';
 import type { Goal, PlanMode, Resource, UserState } from '../engine/types';
 import { useLang } from '../i18n/useLang';
@@ -88,15 +88,34 @@ export function ResultTab({ state, goals, mode }: { state: UserState; goals: Goa
         ))}
       </div>
 
-      {plan.totalGems > 0 && (
-        <div className="speedup-summary material-summary">
-          <strong>{t('result.materials')}</strong>
-          {MATERIAL_IDS.filter((id) => (plan.totalMaterials[id] ?? 0) > 0).map((id) => (
-            <span key={id}>{t(`material.${id}`)} {formatNumber(plan.totalMaterials[id]!)}</span>
-          ))}
-          <span className="material-gems">{t('result.gemValue')} {formatNumber(plan.totalGems)}</span>
-        </div>
-      )}
+      {plan.totalGems > 0 && (() => {
+        const short = materialShortfall(plan.totalMaterials, state.materials, state.gems);
+        const covered = Object.keys(short.missing).length === 0;
+        return (
+          <div className="speedup-summary material-summary">
+            <strong>{t('result.materials')}</strong>
+            {MATERIAL_IDS.filter((id) => (plan.totalMaterials[id] ?? 0) > 0).map((id) => {
+              const need = plan.totalMaterials[id]!;
+              const lack = short.missing[id] ?? 0;
+              return (
+                <span key={id} className={lack > 0 ? 'material-short' : 'material-covered'}>
+                  {t(`material.${id}`)} {formatNumber(need)}
+                  {lack > 0
+                    ? ` · ${t('result.materialShort', { n: formatNumber(lack) })}`
+                    : ` · ${t('result.materialCovered')}`}
+                </span>
+              );
+            })}
+            <span className="material-gems">
+              {covered
+                ? t('result.materialAllCovered')
+                : short.gemsShort > 0
+                  ? `${t('result.gemShort')} ${formatNumber(short.gemsShort)}`
+                  : t('result.gemCovered')}
+            </span>
+          </div>
+        );
+      })()}
 
       {Object.keys(usedSummary).length > 0 && (
         <div className="speedup-summary">

@@ -1,4 +1,5 @@
 import { useEffect, useReducer } from 'react';
+import type { MaterialId } from '../engine/materials';
 import type { Requirement, SpeedupType, UserState } from '../engine/types';
 import { defaultUserState } from '../engine/types';
 import { normalizeState } from './persistence';
@@ -9,6 +10,8 @@ export type Action =
   | { type: 'setBuilding'; id: string; level: number; implied?: Requirement[] }
   | { type: 'setResearch'; id: string; level: number; implied?: Requirement[] }
   | { type: 'setSpeedup'; speedupType: SpeedupType; seconds: number }
+  | { type: 'setMaterial'; material: MaterialId; count: number }
+  | { type: 'setGems'; count: number }
   | { type: 'setBuff'; key: keyof UserState['buffs']; value: number }
   | { type: 'setSecondBuilder'; value: boolean }
   | { type: 'reset' }
@@ -47,6 +50,11 @@ export function reducer(state: UserState, action: Action): UserState {
     case 'setSpeedup':
       return { ...state, speedups: { ...state.speedups,
         [action.speedupType]: nonNegativeInteger(action.seconds) } };
+    case 'setMaterial':
+      return { ...state, materials: { ...state.materials,
+        [action.material]: nonNegativeInteger(action.count) } };
+    case 'setGems':
+      return { ...state, gems: nonNegativeInteger(action.count) };
     case 'setBuff':
       return { ...state, buffs: { ...state.buffs,
         [action.key]: Math.min(BUFF_MAX[action.key], nonNegativeInteger(action.value)) } };

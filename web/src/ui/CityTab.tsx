@@ -5,6 +5,7 @@ import type { UserState } from '../engine/types';
 import { useLang } from '../i18n/useLang';
 import type { Action } from '../state/userState';
 import { LevelInfoCard } from './InfoHover';
+import { MaterialPanel } from './MaterialPanel';
 import { LevelStepper } from './LevelStepper';
 import { useInfoTip } from './useInfoTip';
 import { upgradeTarget } from './levelInfo';
@@ -63,6 +64,10 @@ export function CityTab({ state, dispatch }: { state: UserState; dispatch: Dispa
       <details className="drawer-section">
         <summary><span><span className="section-icon">»</span>{t('city.speedups')}</span></summary>
         <div className="drawer-section-body"><SpeedupPanel state={state} dispatch={dispatch} /></div>
+      </details>
+      <details className="drawer-section">
+        <summary><span><span className="section-icon">◈</span>{t('city.materials')}</span></summary>
+        <div className="drawer-section-body"><MaterialPanel state={state} dispatch={dispatch} /></div>
       </details>
       <details className="drawer-section">
         <summary><span><span className="section-icon">✦</span>{t('city.buffs')}</span></summary>
