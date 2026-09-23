@@ -28,3 +28,12 @@ export function buildIndex(entries: CatalogEntry[]): CatalogIndex {
 
   return { get, makeNode, all: () => entries };
 }
+
+/**
+ * 해당 레벨로 올릴 때 실제로 얻는 전투력.
+ * 카탈로그의 power는 그 레벨에서의 누적 전투력이므로 직전 레벨과의 차이가 증가분이다.
+ */
+export function powerGain(entry: CatalogEntry, level: number): number {
+  const at = (l: number) => entry.levels.find((row) => row.level === l)?.power ?? 0;
+  return at(level) - at(level - 1);
+}

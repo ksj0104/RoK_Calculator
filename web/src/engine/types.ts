@@ -11,6 +11,7 @@ export interface LevelData {
   requirements: Requirement[];
   cost: Cost;
   timeSec: number;
+  /** 위키 Power 컬럼 = 이 레벨에서의 누적 전투력. 업그레이드 증가분은 직전 레벨과의 차이(graph.ts powerGain) */
   power: number;
   effect?: string;       // 연구 효과 수치(예: '+1.0%') — 위키 효과 컬럼 원문
 }

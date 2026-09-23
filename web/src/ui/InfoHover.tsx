@@ -1,3 +1,4 @@
+import { powerGain } from '../engine/graph';
 import { MATERIAL_IDS, materialsForLevel } from '../engine/materials';
 import type { CatalogEntry, LevelData, Resource, UserState } from '../engine/types';
 import { useLang } from '../i18n/useLang';
@@ -34,7 +35,7 @@ export function LevelInfoCard({ entry, row, state, isMax = false, durationSec }:
       {materialText && (
         <div className="info-card-row"><span>{t('result.materials')}</span><b>{materialText}</b></div>
       )}
-      <div className="info-card-row"><span>{t('result.totalPower')}</span><b>+{formatNumber(row.power)}</b></div>
+      <div className="info-card-row"><span>{t('result.totalPower')}</span><b>+{formatNumber(powerGain(entry, row.level))}</b></div>
       <RequirementBlock className="info-card-reqs" kind={entry.kind} id={entry.id}
         level={row.level} state={state} limit={HOVER_CHIP_LIMIT} />
     </>

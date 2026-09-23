@@ -8,10 +8,23 @@ describe('computePlan', () => {
       [{ type: 'building', id: 'hall', level: 3 }]);
     // wall1+wall2+hall2+academy1+hall3 = food (100+200+200+100+300) = 900
     expect(plan.totalCost.food).toBe(900);
-    expect(plan.totalPower).toBe(90);
+    // power는 레벨별 누적값(level*10)이라 증가분만 더한다: hall 1→3(20) + wall 0→2(20) + academy 0→1(10)
+    expect(plan.totalPower).toBe(50);
     expect(plan.totalSecRaw).toBe(490);
     expect(plan.tasks).toHaveLength(5);
     expect(plan.tasks[0].node).toBeDefined();
+  });
+
+  it('전투력은 누적값이 아니라 현재 레벨 대비 증가분을 합산한다', () => {
+    const state = freshState();
+    state.buildings = { hall: 1, wall: 2, academy: 1 };
+    // masonry 2레벨만 남으면 증가분은 20(=level2 누적) − 0(미보유) = 20
+    const fromZero = computePlan(fixtureCatalog, state, [{ type: 'research', id: 'masonry', level: 2 }]);
+    expect(fromZero.totalPower).toBe(20);
+
+    state.research = { masonry: 1 };
+    const fromOne = computePlan(fixtureCatalog, state, [{ type: 'research', id: 'masonry', level: 2 }]);
+    expect(fromOne.totalPower).toBe(10);
   });
 
   it('연맹 지원이 모든 작업 시간에 반영된다', () => {

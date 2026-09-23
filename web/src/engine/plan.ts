@@ -1,5 +1,5 @@
 import { requiredNodes } from './closure';
-import { buildIndex } from './graph';
+import { buildIndex, powerGain } from './graph';
 import type { MaterialCount } from './materials';
 import { materialGems, materialsForLevel, sumMaterials } from './materials';
 import type { ScheduledTask } from './scheduler';
@@ -30,6 +30,7 @@ export interface Plan {
   totalMaterials: MaterialCount;
   totalGems: number;
   totalCost: Cost;
+  /** 계획을 모두 수행해 실제로 늘어나는 전투력(각 항목의 목표 레벨 누적값 − 현재 레벨 누적값) */
   totalPower: number;
   speedupsUsed: SpeedupAllocation['used'];
   speedupsRemaining: SpeedupInventory;
@@ -74,7 +75,7 @@ function makePlan(
   let totalPower = 0;
   for (const n of nodes.values()) {
     for (const k of Object.keys(totalCost) as Array<keyof Cost>) totalCost[k] += n.cost[k];
-    totalPower += n.power;
+    totalPower += powerGain(index.get(n.kind, n.id)!, n.level);
   }
   const totalMaterials = sumMaterials(
     [...nodes.values()].map((n) => materialsForLevel(n.kind, n.id, n.level)));
