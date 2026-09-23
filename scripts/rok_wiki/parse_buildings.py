@@ -12,6 +12,22 @@ from .textutil import is_placeholder, parse_amount, parse_duration, slugify
 
 RESOURCES = ("food", "wood", "stone", "gold")
 
+# 요구사항이 정말로 없는 칸의 표기들. 이 목록 밖의 문구가 하나도 파싱되지 않으면 경고한다.
+_NO_REQUIREMENT = {"", "none", "-", "--", "–", "—", "n/a", "na"}
+
+
+def warn_unparsed_requirements(cell, parsed: list[dict], warnings: list[str],
+                               item_id: str, level: int) -> None:
+    """요구사항 칸에 내용이 있는데 하나도 인식하지 못하면 경고한다. 위키가 값을 채우지 않은
+    자리("?", "0")나 링크 없이 평문으로만 적힌 칸이 조용히 사라지는 것을 막는다."""
+    if parsed:
+        return
+    text = cell.get_text(" ", strip=True)
+    if text.strip().lower() in _NO_REQUIREMENT:
+        return
+    warnings.append(
+        f"{item_id} level {level}: unrecognized requirement cell {text!r} on wiki, treating as none")
+
 
 def _requirements_from_cell(cell) -> list[dict]:
     reqs = []
@@ -114,9 +130,14 @@ def parse_building_table(html: str, building_id: str, warnings: list[str] | None
         if idx["power"] is not None and is_placeholder(power_text):
             warnings.append(f"{building_id} level {level}: unknown power value {power_text!r} on wiki, using 0")
 
+        requirement_cell = cells[idx["requirement"]] if idx["requirement"] is not None else None
+        requirements = _requirements_from_cell(requirement_cell) if requirement_cell is not None else []
+        if requirement_cell is not None:
+            warn_unparsed_requirements(requirement_cell, requirements, warnings, building_id, level)
+
         rows.append({
             "level": level,
-            "requirements": _requirements_from_cell(cells[idx["requirement"]]) if idx["requirement"] is not None else [],
+            "requirements": requirements,
             "cost": _cost_from_cell(cost_cell),
             "timeSec": parse_duration(time_text),
             "power": parse_amount(power_text),

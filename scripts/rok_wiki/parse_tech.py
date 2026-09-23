@@ -3,7 +3,7 @@ import re
 
 from bs4 import BeautifulSoup
 
-from .parse_buildings import _cost_from_cell  # 동일한 BuildingResources 렌더링
+from .parse_buildings import _cost_from_cell, warn_unparsed_requirements  # 동일한 렌더링/검사
 from .textutil import is_placeholder, parse_amount, parse_duration, slugify
 
 
@@ -159,9 +159,14 @@ def parse_tech_table(html: str, tech_id: str, warnings: list[str] | None = None)
         if idx["power"] is not None and is_placeholder(power_text):
             warnings.append(f"{tech_id} level {level}: unknown power value {power_text!r} on wiki, using 0")
 
+        requirement_cell = cells[idx["requirement"]] if idx["requirement"] is not None else None
+        requirements = _requirements_from_cell(requirement_cell) if requirement_cell is not None else []
+        if requirement_cell is not None:
+            warn_unparsed_requirements(requirement_cell, requirements, warnings, tech_id, level)
+
         row = {
             "level": level,
-            "requirements": _requirements_from_cell(cells[idx["requirement"]]) if idx["requirement"] is not None else [],
+            "requirements": requirements,
             "cost": _cost_from_cell(cost_cell),
             "timeSec": parse_duration(time_text),
             "power": parse_amount(power_text),

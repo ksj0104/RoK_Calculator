@@ -118,3 +118,32 @@ def test_placeholder_time_value_becomes_zero_with_warning():
     rows = parse_building_table(html, "blacksmith", warnings)
     assert rows[0]["timeSec"] == 0
     assert any("unknown time value" in w for w in warnings)
+
+
+def test_unrecognized_requirement_cell_warns():
+    # 위키가 Requirements 칸을 "?"(Scout Camp)나 "0"(Alliance Center)으로 비워 두면 선행 조건이
+    # 조용히 사라진다. 경고로 드러나야 overrides.json 보정 대상임을 알 수 있다.
+    html = _table(
+        "<tr><td>7</td><td>?</td><td>None</td><td>1h</td><td>5</td></tr>"
+        "<tr><td>8</td><td>0</td><td>None</td><td>1h</td><td>5</td></tr>",
+        "<th>Level</th><th>Requirements</th><th>Cost</th><th>Time</th><th>Power</th>",
+    )
+    warnings: list[str] = []
+    rows = parse_building_table(html, "scout_camp", warnings)
+    assert [r["requirements"] for r in rows] == [[], []]
+    assert [w for w in warnings if "unrecognized requirement cell" in w] == [
+        "scout_camp level 7: unrecognized requirement cell '?' on wiki, treating as none",
+        "scout_camp level 8: unrecognized requirement cell '0' on wiki, treating as none",
+    ]
+
+
+def test_empty_requirement_cell_does_not_warn():
+    # 위키가 "None"/"-"로 없음을 명시한 칸은 정상이므로 경고하지 않는다 (예: Trading Post 2~9).
+    html = _table(
+        "<tr><td>2</td><td>-</td><td>None</td><td>1h</td><td>5</td></tr>"
+        "<tr><td>3</td><td>None</td><td>None</td><td>1h</td><td>5</td></tr>",
+        "<th>Level</th><th>Requirements</th><th>Cost</th><th>Time</th><th>Power</th>",
+    )
+    warnings: list[str] = []
+    parse_building_table(html, "trading_post", warnings)
+    assert not [w for w in warnings if "unrecognized requirement cell" in w]

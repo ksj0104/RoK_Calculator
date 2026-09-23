@@ -24,6 +24,17 @@ describe('실데이터', () => {
     }
   });
 
+  it('위키가 비워 둔 선행 조건도 계획에 들어간다', () => {
+    // 위키 Requirements 칸이 "?"/"0"/링크 없는 평문이라 누락됐던 자리(overrides.json 보정).
+    const scout = computePlan(catalog, defaultUserState(),
+      [{ type: 'building', id: 'scout_camp', level: 25 }]);
+    expect(scout.tasks.some((t) => t.node.id === 'city_hall' && t.node.level === 25)).toBe(true);
+
+    const plate = computePlan(catalog, defaultUserState(),
+      [{ type: 'research', id: 'plate_armor', level: 10 }]);
+    expect(plate.tasks.some((t) => t.node.id === 'academy' && t.node.level === 25)).toBe(true);
+  });
+
   it('효율 경로는 시청 25의 완료 시간을 최단 경로보다 늘리지 않는다', () => {
     const goals = [{ type: 'building' as const, id: 'city_hall', level: 25 }];
     const fastest = computePlan(catalog, defaultUserState(), goals, 'fastest');

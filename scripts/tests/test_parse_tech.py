@@ -123,3 +123,18 @@ def test_requirements_cell_split_on_p_tags_not_only_br():
     assert {"type": "building", "id": "academy", "level": 24} in reqs
     assert {"type": "research", "id": "camouflage", "level": 5} in reqs
     assert len(reqs) == 2
+
+
+def test_plain_text_requirement_cell_warns():
+    # Plate Armor 10레벨은 요구사항이 링크 없이 평문으로만 적혀 있어(게다가 "Acedemy" 오타)
+    # 하나도 인식되지 않는다. 조용히 사라지지 않도록 경고해야 한다.
+    html = (
+        '<table class="tech-table"><tr><th>Level</th><th>Requirements</th><th>Cost</th>'
+        "<th>Time</th><th>Power</th></tr>"
+        "<tr><td>10</td><td>Plate Armor Level 9 <p>Acedemy Level 25 </p></td>"
+        "<td>None</td><td>10s</td><td>5</td></tr></table>"
+    )
+    warnings: list[str] = []
+    rows = parse_tech_table(html, "plate_armor", warnings)
+    assert rows[0]["requirements"] == []
+    assert any("unrecognized requirement cell" in w for w in warnings)

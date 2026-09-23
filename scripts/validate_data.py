@@ -6,6 +6,7 @@
 3. 레벨은 1..maxLevel 연속
 4. 시간/비용/파워 음수 없음
 5. 모든 id에 아이콘 파일 존재
+6. 낮은 레벨에 있던 선행 조건이 높은 레벨에서 사라지지 않는다 (WARNING)
 
 추가로 위키 원문이 "?"/"???" placeholder이거나(KNOWN_ZERO_PLACEHOLDERS) 최대 레벨에서만
 단조 증가가 갑자기 0으로 끊기는 데이터 누락(KNOWN_DATA_GAPS)이라 0으로 파싱된 값들은
@@ -54,6 +55,11 @@ KNOWN_DATA_GAPS = {
 }
 
 KNOWN_ZERO_WARNINGS = KNOWN_ZERO_PLACEHOLDERS | KNOWN_DATA_GAPS
+
+# 낮은 레벨에 선행 조건이 있다가 높은 레벨에서 사라지면 보통 위키 누락이지만, 위키가 "-"로
+# 없음을 명시한 구간은 정상이다. Trading Post는 시청 12에서 해금된 뒤 10레벨부터 금광 선행이
+# 붙기 전까지 추가 조건이 없다.
+KNOWN_NO_REQUIREMENT_LEVELS = {("building", "trading_post", level) for level in range(2, 10)}
 
 
 def main() -> int:
@@ -134,6 +140,17 @@ def main() -> int:
                     errors.append(f"{kind}:{cid}:{row['level']}: unknown requirement {req['type']}:{req['id']}")
                 elif req["level"] > target["maxLevel"]:
                     errors.append(f"{kind}:{cid}:{row['level']}: requirement {req['id']} Lv{req['level']} > max {target['maxLevel']}")
+
+    # 6. 선행 조건 연속성 — 위키가 특정 레벨의 Requirements 칸을 "?"/"0"으로 비워두면
+    #    조용히 선행 없는 레벨이 되어 계획에서 필요한 상위 건물이 빠진다.
+    for (kind, cid), entry in catalog.items():
+        seen_requirement = False
+        for row in sorted(entry["levels"], key=lambda r: r["level"]):
+            if row["requirements"]:
+                seen_requirement = True
+            elif seen_requirement and (kind, cid, row["level"]) not in KNOWN_NO_REQUIREMENT_LEVELS:
+                warnings.append(
+                    f"{kind}:{cid}:{row['level']}: requirements empty while lower levels have them")
 
     # 2. 순환 검사 — 노드 (kind, id, level), 간선: 이전 레벨 + requirements
     indeg: dict[tuple, int] = defaultdict(int)

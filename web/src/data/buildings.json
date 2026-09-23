@@ -4321,7 +4321,13 @@
    },
    {
     "level": 7,
-    "requirements": [],
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 7
+     }
+    ],
     "cost": {
      "food": 17300,
      "wood": 17300,
@@ -4333,7 +4339,13 @@
    },
    {
     "level": 8,
-    "requirements": [],
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 8
+     }
+    ],
     "cost": {
      "food": 26000,
      "wood": 26000,
@@ -4345,7 +4357,13 @@
    },
    {
     "level": 9,
-    "requirements": [],
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 9
+     }
+    ],
     "cost": {
      "food": 39000,
      "wood": 39000,
@@ -5720,7 +5738,13 @@
    },
    {
     "level": 7,
-    "requirements": [],
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 7
+     }
+    ],
     "cost": {
      "food": 9800,
      "wood": 9800,
@@ -5732,7 +5756,13 @@
    },
    {
     "level": 8,
-    "requirements": [],
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 8
+     }
+    ],
     "cost": {
      "food": 14800,
      "wood": 14800,
@@ -5762,7 +5792,13 @@
    },
    {
     "level": 10,
-    "requirements": [],
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 10
+     }
+    ],
     "cost": {
      "food": 31300,
      "wood": 31300,
@@ -5774,7 +5810,13 @@
    },
    {
     "level": 11,
-    "requirements": [],
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 11
+     }
+    ],
     "cost": {
      "food": 42500,
      "wood": 42500,
@@ -5786,7 +5828,13 @@
    },
    {
     "level": 12,
-    "requirements": [],
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 12
+     }
+    ],
     "cost": {
      "food": 52500,
      "wood": 52500,
@@ -5798,7 +5846,13 @@
    },
    {
     "level": 13,
-    "requirements": [],
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 13
+     }
+    ],
     "cost": {
      "food": 60000,
      "wood": 60000,
@@ -5810,7 +5864,13 @@
    },
    {
     "level": 14,
-    "requirements": [],
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 14
+     }
+    ],
     "cost": {
      "food": 67500,
      "wood": 67500,
@@ -5822,7 +5882,13 @@
    },
    {
     "level": 15,
-    "requirements": [],
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 15
+     }
+    ],
     "cost": {
      "food": 75000,
      "wood": 75000,
@@ -5834,7 +5900,13 @@
    },
    {
     "level": 16,
-    "requirements": [],
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 16
+     }
+    ],
     "cost": {
      "food": 82500,
      "wood": 82500,
@@ -5846,7 +5918,13 @@
    },
    {
     "level": 17,
-    "requirements": [],
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 17
+     }
+    ],
     "cost": {
      "food": 92500,
      "wood": 92500,
@@ -5858,7 +5936,13 @@
    },
    {
     "level": 18,
-    "requirements": [],
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 18
+     }
+    ],
     "cost": {
      "food": 102500,
      "wood": 102500,
@@ -5870,7 +5954,13 @@
    },
    {
     "level": 19,
-    "requirements": [],
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 19
+     }
+    ],
     "cost": {
      "food": 115000,
      "wood": 115000,
@@ -5882,7 +5972,13 @@
    },
    {
     "level": 20,
-    "requirements": [],
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 20
+     }
+    ],
     "cost": {
      "food": 127500,
      "wood": 127500,
@@ -5894,7 +5990,13 @@
    },
    {
     "level": 21,
-    "requirements": [],
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 21
+     }
+    ],
     "cost": {
      "food": 142500,
      "wood": 142500,
@@ -5906,7 +6008,13 @@
    },
    {
     "level": 22,
-    "requirements": [],
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 22
+     }
+    ],
     "cost": {
      "food": 157500,
      "wood": 157500,
@@ -5918,7 +6026,13 @@
    },
    {
     "level": 23,
-    "requirements": [],
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 23
+     }
+    ],
     "cost": {
      "food": 250000,
      "wood": 250000,
@@ -5930,7 +6044,13 @@
    },
    {
     "level": 24,
-    "requirements": [],
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 24
+     }
+    ],
     "cost": {
      "food": 500000,
      "wood": 500000,
@@ -5942,7 +6062,13 @@
    },
    {
     "level": 25,
-    "requirements": [],
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 25
+     }
+    ],
     "cost": {
      "food": 1000000,
      "wood": 1000000,

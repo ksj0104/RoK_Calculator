@@ -9361,7 +9361,18 @@
    },
    {
     "level": 10,
-    "requirements": [],
+    "requirements": [
+     {
+      "type": "research",
+      "id": "plate_armor",
+      "level": 9
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 25
+     }
+    ],
     "cost": {
      "food": 15400000,
      "wood": 15400000,

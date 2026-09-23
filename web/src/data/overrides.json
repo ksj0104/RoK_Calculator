@@ -16,11 +16,191 @@
    }
   },
   "alliance_center": {
+   "7": {
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 7
+     }
+    ]
+   },
+   "8": {
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 8
+     }
+    ]
+   },
+   "9": {
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 9
+     }
+    ]
+   },
    "25": {
     "timeSec": 1767600
    }
   },
   "scout_camp": {
+   "7": {
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 7
+     }
+    ]
+   },
+   "8": {
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 8
+     }
+    ]
+   },
+   "10": {
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 10
+     }
+    ]
+   },
+   "11": {
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 11
+     }
+    ]
+   },
+   "12": {
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 12
+     }
+    ]
+   },
+   "13": {
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 13
+     }
+    ]
+   },
+   "14": {
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 14
+     }
+    ]
+   },
+   "15": {
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 15
+     }
+    ]
+   },
+   "16": {
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 16
+     }
+    ]
+   },
+   "17": {
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 17
+     }
+    ]
+   },
+   "18": {
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 18
+     }
+    ]
+   },
+   "19": {
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 19
+     }
+    ]
+   },
+   "20": {
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 20
+     }
+    ]
+   },
+   "21": {
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 21
+     }
+    ]
+   },
+   "22": {
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 22
+     }
+    ]
+   },
+   "23": {
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 23
+     }
+    ]
+   },
+   "24": {
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 24
+     }
+    ]
+   },
    "25": {
     "timeSec": 633600,
     "cost": {
@@ -28,7 +208,14 @@
      "wood": 1000000,
      "stone": 0,
      "gold": 0
-    }
+    },
+    "requirements": [
+     {
+      "type": "building",
+      "id": "city_hall",
+      "level": 25
+     }
+    ]
    }
   },
   "archery_range": {
@@ -102,7 +289,19 @@
   },
   "plate_armor": {
    "10": {
-    "timeSec": 13302000
+    "timeSec": 13302000,
+    "requirements": [
+     {
+      "type": "research",
+      "id": "plate_armor",
+      "level": 9
+     },
+     {
+      "type": "building",
+      "id": "academy",
+      "level": 25
+     }
+    ]
    }
   },
   "heavy_frame": {
